@@ -371,37 +371,49 @@ body.gr-mobile-scaled .gr-core-speed {
 }
 
 body.gr-mobile-scaled .gr-core-left-inv {
-  top: 66px !important;
-  left: var(--gr-pad-left, 0px) !important;
-  transform: scale(0.86) !important;
+  top: 58px !important;
+  left: var(--gr-pad-left, 6px) !important;
+  transform: scale(0.78) !important;
   transform-origin: top left !important;
 }
 
 body.gr-mobile-scaled .gr-core-right-tracker {
-  top: 66px !important;
-  right: var(--gr-pad-right, 0px) !important;
-  transform: scale(0.84) !important;
+  top: 58px !important;
+  right: var(--gr-pad-right, 6px) !important;
+  transform: scale(0.80) !important;
   transform-origin: top right !important;
 }
 
 body.gr-mobile-scaled .gr-core-bottom-party {
-  bottom: 4px !important;
+  bottom: 2px !important;
   gap: 8px !important;
-  transform: translateX(-50%) scale(0.86) !important;
+  transform: translateX(-50%) scale(0.78) !important;
   transform-origin: bottom center !important;
 }
 
 body.gr-mobile-scaled .gr-core-bottom-left {
-  bottom: 6px !important;
-  left: var(--gr-pad-left, 14px) !important;
-  transform: scale(0.82) !important;
+  bottom: 4px !important;
+  left: var(--gr-pad-left, 10px) !important;
+  transform: scale(0.74) !important;
   transform-origin: bottom left !important;
 }
 
+/* Hide redundant floating Classes box when Shop or Battle Result overlay window is open */
+body.gr-mobile-scaled .screen-shop .gr-core-bottom-left .gr-synergy-panel,
+body.gr-mobile-scaled .screen-shop .gr-core-bottom-left .synergies-panel,
+body.gr-mobile-scaled .screen-shop .gr-core-bottom-left .gr-hud-synergy-panel,
+body.gr-mobile-scaled .screen-shop .gr-core-bottom-left .gr-classes-box,
+body.gr-mobile-scaled .gr-placement-screen:has(.gr-battle-result-overlay) .gr-core-bottom-left .gr-synergy-panel,
+body.gr-mobile-scaled .gr-placement-screen:has(.gr-battle-result-overlay) .gr-core-bottom-left .synergies-panel,
+body.gr-mobile-scaled .gr-placement-screen:has(.gr-battle-result-overlay) .gr-core-bottom-left .gr-hud-synergy-panel,
+body.gr-mobile-scaled .gr-placement-screen:has(.gr-battle-result-overlay) .gr-core-bottom-left .gr-classes-box {
+  display: none !important;
+}
+
 body.gr-mobile-scaled .gr-core-bottom-right {
-  bottom: 6px !important;
-  right: var(--gr-pad-right, 14px) !important;
-  transform: scale(0.85) !important;
+  bottom: 4px !important;
+  right: var(--gr-pad-right, 10px) !important;
+  transform: scale(0.80) !important;
   transform-origin: bottom right !important;
 }
 
@@ -412,9 +424,9 @@ body.gr-mobile-scaled .gr-feedback-input {
 
 /* Stone Circle Hex Board scaled cleanly between top bar and bottom party dock */
 body.gr-mobile-scaled .gr-battlefield-stone-circle {
-  top: 50% !important;
+  top: 49% !important;
   left: 48.5% !important;
-  transform: translate(-50%, -50%) scale(0.76) !important;
+  transform: translate(-50%, -50%) scale(0.75) !important;
   transform-origin: center center !important;
 }
 
@@ -438,10 +450,10 @@ body.gr-mobile-scaled .gr-battlefield-stone-circle {
 
 body.gr-mobile-scaled .gr-fight-btn-placement {
   right: calc(var(--gr-pad-right, 14px) + 18px) !important;
-  bottom: 68px !important;
+  bottom: 62px !important;
   width: 168px !important;
-  height: 48px !important;
-  font-size: 18px !important;
+  height: 46px !important;
+  font-size: 17px !important;
 }
 
 body.gr-mobile-scaled .gr-fight-btn-placement.is-waiting-coop,
@@ -456,22 +468,21 @@ body.gr-mobile-scaled .gr-fight-btn-placement.is-ally-ready-coop {
  * 5. BATTLE WON / RESULT (Screen 5) — Override vw/vh for Mobile Fullscreen
  * ============================================================================ */
 body.gr-mobile-scaled .gr-battle-result-overlay {
-  padding-top: 56px !important;
-  padding-bottom: 52px !important;
+  padding: 44px calc(var(--gr-pad-right, 14px) + 50px) 88px calc(var(--gr-pad-left, 14px) + 52px) !important;
 }
 
 body.gr-mobile-scaled .gr-result-big-title,
 body.gr-mobile-scaled .gr-result-header-title,
 body.gr-mobile-scaled .gr-battle-result-overlay > h1 {
-  font-size: 19px !important;
-  margin-bottom: 5px !important;
+  font-size: 18px !important;
+  margin-bottom: 4px !important;
 }
 
 body.gr-mobile-scaled .gr-result-columns {
-  width: calc(var(--gr-logical-w, 1120px) - 120px) !important;
-  max-width: 980px !important;
-  height: 374px !important;
-  max-height: 374px !important;
+  width: 100% !important;
+  max-width: 960px !important;
+  height: 348px !important;
+  max-height: 348px !important;
   gap: 10px !important;
 }
 
@@ -481,76 +492,149 @@ body.gr-mobile-scaled .gr-result-rewards-panel {
 }
 
 body.gr-mobile-scaled .gr-result-rewards-panel {
-  flex: 0 0 240px !important;
+  flex: 0 0 230px !important;
 }
 
 body.gr-mobile-scaled .gr-result-proceed-btn {
-  width: 190px !important;
-  height: 44px !important;
+  width: 184px !important;
+  height: 42px !important;
 }
 
 /* ============================================================================
  * 6. SHOP & SUPERSHOP (Screen 6) — Override vw/vh for Mobile Fullscreen
  * ============================================================================ */
 body.gr-mobile-scaled .gr-shop-overlay-wrap {
-  padding-top: 36px !important;
-  padding-bottom: 56px !important;
+  padding: 46px calc(var(--gr-pad-right, 14px) + 48px) 88px calc(var(--gr-pad-left, 14px) + 52px) !important;
 }
 
 body.gr-mobile-scaled .gr-shop-window {
-  width: calc(var(--gr-logical-w, 1120px) - 110px) !important;
-  max-width: 1000px !important;
-  height: 420px !important;
-  max-height: 420px !important;
-  padding: 10px 14px !important;
-  gap: 8px !important;
+  width: 100% !important;
+  max-width: 980px !important;
+  height: 392px !important;
+  max-height: 392px !important;
+  padding: 8px 14px !important;
+  gap: 6px !important;
 }
 
 body.gr-mobile-scaled .gr-shop-topbar {
-  margin-bottom: 2px !important;
-  padding-bottom: 6px !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 5px !important;
+  flex-shrink: 0 !important;
 }
 
 body.gr-mobile-scaled .gr-shop-btn {
-  height: 36px !important;
-  font-size: 12px !important;
+  height: 34px !important;
+  font-size: 11.5px !important;
   padding: 0 10px !important;
 }
 
 body.gr-mobile-scaled .gr-shop-sell-zone {
-  height: 38px !important;
+  height: 34px !important;
   padding: 0 10px !important;
-  font-size: 11px !important;
+  font-size: 10.5px !important;
 }
 
 body.gr-mobile-scaled .gr-shop-proceed-btn,
 body.gr-mobile-scaled .gr-shop-topbar .gr-btn-primary {
-  width: 165px !important;
-  height: 40px !important;
-  font-size: 15px !important;
+  width: 156px !important;
+  height: 36px !important;
+  font-size: 14px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-body {
+  gap: 14px !important;
+  min-height: 0 !important;
 }
 
 body.gr-mobile-scaled .gr-shop-left-col {
-  width: 310px !important;
-  flex: 0 0 310px !important;
+  width: 274px !important;
+  flex: 0 0 274px !important;
+  justify-content: flex-start !important;
   overflow-y: auto !important;
-  max-height: 345px !important;
+  max-height: 328px !important;
   gap: 6px !important;
 }
 
+body.gr-mobile-scaled .gr-shop-sec {
+  gap: 3px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-sec-title {
+  font-size: 11.5px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-offers-stack {
+  gap: 5px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-offer-left {
+  width: 46px !important;
+  gap: 2px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-icon-box {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-slot-icon {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-offer-price {
+  font-size: 11px !important;
+}
+
 body.gr-mobile-scaled .gr-shop-offer-textbox {
-  min-height: 62px !important;
-  padding: 5px 8px !important;
+  min-height: 50px !important;
+  padding: 4px 8px !important;
+  gap: 2px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-stat-line,
+body.gr-mobile-scaled .gr-shop-relic-desc {
+  font-size: 10.5px !important;
+  line-height: 1.2 !important;
+}
+
+body.gr-mobile-scaled .gr-shop-mini-avatar {
+  width: 18px !important;
+  height: 18px !important;
 }
 
 body.gr-mobile-scaled .gr-shop-heroes-area {
-  overflow: hidden !important;
+  overflow: visible !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
 }
 
 body.gr-mobile-scaled .gr-shop-heroes-row {
-  gap: 8px !important;
-  transform: scale(0.74) !important;
-  transform-origin: center center !important;
+  transform: none !important;
+  flex: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 18px !important;
+  padding-top: 18px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-hero-col {
+  position: relative !important;
+  width: 148px !important;
+  height: 282px !important;
+  flex: 0 0 148px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-heroes-area .gr-hero-card {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 214px !important;
+  height: 408px !important;
+  transform: scale(0.69) !important;
+  transform-origin: top left !important;
 }
 
 /* ============================================================================
@@ -558,12 +642,12 @@ body.gr-mobile-scaled .gr-shop-heroes-row {
  * ============================================================================ */
 body.gr-mobile-scaled .gr-event-window,
 body.gr-mobile-scaled .gr-campfire-window {
-  width: calc(var(--gr-logical-w, 1120px) - 120px) !important;
-  max-width: 960px !important;
-  height: 400px !important;
-  max-height: 400px !important;
-  margin-top: 36px !important;
-  margin-bottom: 56px !important;
+  width: calc(var(--gr-logical-w, 1120px) - 130px) !important;
+  max-width: 940px !important;
+  height: 380px !important;
+  max-height: 380px !important;
+  margin-top: 44px !important;
+  margin-bottom: 84px !important;
   padding: 12px 16px !important;
 }
 
@@ -586,7 +670,7 @@ body.gr-mobile-scaled .rankup-modal,
 body.gr-mobile-scaled .relic-picker-modal {
   width: calc(var(--gr-logical-w, 1120px) - 80px) !important;
   max-width: 920px !important;
-  max-height: 480px !important;
+  max-height: 460px !important;
   padding: 12px 16px !important;
   overflow-y: auto !important;
 }
@@ -843,15 +927,15 @@ body.gr-mobile-scaled .gr-coop-banner {
 /* Live Real-Time Unit Inspector on Mobile (Mounted inside #app) */
 body.gr-mobile-scaled #gr-live-unit-inspector,
 body.gr-mobile-scaled .gr-live-inspector {
-  top: 52px !important;
-  left: calc(var(--gr-pad-left, 14px) + 56px) !important;
-  width: 390px !important;
+  top: 48px !important;
+  left: calc(var(--gr-pad-left, 14px) + 52px) !important;
+  width: 380px !important;
   max-width: calc(var(--gr-logical-w, 1120px) - 120px) !important;
-  max-height: calc(var(--gr-logical-h, 560px) - 64px) !important;
+  max-height: calc(var(--gr-logical-h, 560px) - 134px) !important;
 }
 
 body.gr-mobile-scaled .gr-live-inspector .gr-insp-body {
-  max-height: calc(var(--gr-logical-h, 560px) - 130px) !important;
+  max-height: calc(var(--gr-logical-h, 560px) - 194px) !important;
   padding: 8px 10px 10px !important;
   gap: 7px !important;
 }

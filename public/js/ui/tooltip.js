@@ -39,11 +39,18 @@ export function showTooltip(content, e) {
   el.classList.add('show');
   if (e) position(e);
 }
-export function hideTooltip() { if (tipEl) tipEl.classList.remove('show'); current = null; }
+export function hideTooltip() {
+  if (tipEl) {
+    tipEl.classList.remove('show');
+    tipEl.innerHTML = '';
+  }
+  current = null;
+}
 
 /** Attach a lazily-built tooltip to an element. */
 export function attachTooltip(el, build) {
   const onEnter = (e) => {
+    if (!el.isConnected) return;
     if (current === el && tipEl?.classList.contains('show')) return;
     current = el;
     let c;
@@ -52,7 +59,10 @@ export function attachTooltip(el, build) {
   };
   el.addEventListener('mouseenter', onEnter);
   el.addEventListener('mouseover', onEnter);
-  el.addEventListener('mousemove', (e) => { if (current === el) position(e); });
+  el.addEventListener('mousemove', (e) => {
+    if (!el.isConnected) { hideTooltip(); return; }
+    if (current === el) position(e);
+  });
   el.addEventListener('mouseleave', () => { if (current === el) hideTooltip(); });
   el.addEventListener('mousedown', hideTooltip);
   el.addEventListener('click', hideTooltip);
