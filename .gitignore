@@ -1,0 +1,6 @@
+node_modules/
+re_data/
+scripts/*.png
+scripts/__pycache__/
+.DS_Store
+Thumbs.db

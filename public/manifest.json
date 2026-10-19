@@ -1,0 +1,27 @@
+{
+  "name": "Guildrun",
+  "short_name": "Guildrun",
+  "description": "Guildrun: Rift Reborn — iOS 18 Pro Fullscreen Tactical Roguelike Auto-Battler",
+  "start_url": "./?ios=1",
+  "scope": "./",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone"],
+  "orientation": "landscape",
+  "background_color": "#070a10",
+  "theme_color": "#070a10",
+  "categories": ["games", "strategy", "rpg"],
+  "icons": [
+    {
+      "src": "./assets/sprites/ui/Guildrun_Logo_Square.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/sprites/ui/Guildrun_Logo_Square.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,7053 @@
+{
+  "version": 1,
+  "base": "/assets/audio/",
+  "logical": {
+    "amb.forest": [
+      "sfx/amb_biom1_forest_loop1.ogg",
+      "sfx/amb_biom1_forest_loop2.ogg",
+      "sfx/amb_biom1_forest_loop3.ogg"
+    ],
+    "amb.menu": [
+      "sfx/amb_main_menu_loop.ogg"
+    ],
+    "amb.portal": [
+      "sfx/amb_portal.ogg"
+    ],
+    "comic.01": [
+      "sfx/260713_comic_01_intro.ogg"
+    ],
+    "comic.02": [
+      "sfx/260713_comic_02_guild.ogg"
+    ],
+    "comic.03": [
+      "sfx/260713_comic_03_death_loop.ogg"
+    ],
+    "hero.ayaka.attack": [
+      "sfx/comb_ayaka_attack_cast_01.ogg",
+      "sfx/comb_ayaka_attack_cast_02.ogg",
+      "sfx/comb_ayaka_attack_cast_03.ogg",
+      "sfx/comb_ayaka_attack_cast_04.ogg"
+    ],
+    "hero.ayaka.skill": [
+      "sfx/comb_ayaka_act_skill_cast_01.ogg"
+    ],
+    "hero.cenk.attack": [
+      "sfx/cenk_attack_cast_01.ogg",
+      "sfx/cenk_attack_cast_02.ogg",
+      "sfx/cenk_attack_cast_03.ogg",
+      "sfx/cenk_attack_cast_04.ogg"
+    ],
+    "hero.cenk.skill": [
+      "sfx/cenk_skill_cast.ogg"
+    ],
+    "hero.demonboss.attack": [
+      "sfx/demonboss_attack_cast_01.ogg",
+      "sfx/demonboss_attack_cast_02.ogg",
+      "sfx/demonboss_attack_cast_03.ogg",
+      "sfx/demonboss_attack_cast_04.ogg"
+    ],
+    "hero.demonboss.skill": [
+      "sfx/demonboss_skill_cast.ogg"
+    ],
+    "hero.dragomir.attack": [
+      "sfx/dragomir_attack_cast_01.ogg",
+      "sfx/dragomir_attack_cast_02.ogg",
+      "sfx/dragomir_attack_cast_03.ogg",
+      "sfx/dragomir_attack_cast_04.ogg"
+    ],
+    "hero.dragomir.skill": [
+      "sfx/dragomir_skill_cast.ogg"
+    ],
+    "hero.fiona.attack": [
+      "sfx/comb_fiona_attack_cast_01.ogg",
+      "sfx/comb_fiona_attack_cast_02.ogg",
+      "sfx/comb_fiona_attack_cast_03.ogg",
+      "sfx/comb_fiona_attack_cast_04.ogg"
+    ],
+    "hero.fiona.hit": [
+      "sfx/comb_fiona_attack_hit_01.ogg",
+      "sfx/comb_fiona_attack_hit_02.ogg",
+      "sfx/comb_fiona_attack_hit_03.ogg"
+    ],
+    "hero.fiona.skill": [
+      "sfx/comb_fiona_act_skill_01.ogg",
+      "sfx/comb_fiona_act_skill_02.ogg"
+    ],
+    "hero.firedragon.attack": [
+      "sfx/dragonfire_attack_cast_01.ogg",
+      "sfx/dragonfire_attack_cast_02.ogg",
+      "sfx/dragonfire_attack_cast_03.ogg",
+      "sfx/dragonfire_attack_cast_04.ogg"
+    ],
+    "hero.firedragon.skill": [
+      "sfx/dragonfire_skill_cast_01.ogg"
+    ],
+    "hero.floeria.attack": [
+      "sfx/comb_floeria_attack_cast_01.ogg",
+      "sfx/comb_floeria_attack_cast_02.ogg",
+      "sfx/comb_floeria_attack_cast_03.ogg",
+      "sfx/comb_floeria_attack_cast_04.ogg"
+    ],
+    "hero.floeria.hit": [
+      "sfx/comb_floeria_attack_hit_01.ogg",
+      "sfx/comb_floeria_attack_hit_02.ogg",
+      "sfx/comb_floeria_attack_hit_03.ogg",
+      "sfx/comb_floeria_attack_hit_04.ogg"
+    ],
+    "hero.floeria.skill": [
+      "sfx/comb_floeria_act_skill1_01.ogg",
+      "sfx/comb_floeria_act_skill2_01.ogg"
+    ],
+    "hero.forestgolem.attack": [
+      "sfx/forestgolem_attack_cast_01.ogg",
+      "sfx/forestgolem_attack_cast_02.ogg",
+      "sfx/forestgolem_attack_cast_03.ogg",
+      "sfx/forestgolem_attack_cast_04.ogg"
+    ],
+    "hero.forestgolem.skill": [
+      "sfx/forestgolem_skill_cast.ogg"
+    ],
+    "hero.frostdragon.attack": [
+      "sfx/dragonice_attack_cast_01.ogg",
+      "sfx/dragonice_attack_cast_02.ogg",
+      "sfx/dragonice_attack_cast_03.ogg",
+      "sfx/dragonice_attack_cast_04.ogg"
+    ],
+    "hero.frostdragon.skill": [
+      "sfx/dragonice_skill_cast_01.ogg"
+    ],
+    "hero.funke.attack": [
+      "vo/comb_funke_attack_cast_01.ogg",
+      "vo/comb_funke_attack_cast_02.ogg",
+      "vo/comb_funke_attack_cast_03.ogg",
+      "vo/comb_funke_attack_cast_04.ogg"
+    ],
+    "hero.funke.hit": [
+      "vo/comb_funke_attack_hit_01.ogg",
+      "vo/comb_funke_attack_hit_02.ogg",
+      "vo/comb_funke_attack_hit_03.ogg",
+      "vo/comb_funke_attack_hit_04.ogg"
+    ],
+    "hero.funke.skill": [
+      "vo/comb_funke_act_skill_cast_01.ogg"
+    ],
+    "hero.gustav.attack": [
+      "sfx/comb_gustav_attack_cast_01.ogg",
+      "sfx/comb_gustav_attack_cast_02.ogg",
+      "sfx/comb_gustav_attack_cast_03.ogg",
+      "sfx/comb_gustav_attack_cast_04.ogg"
+    ],
+    "hero.gustav.hit": [
+      "sfx/comb_gustav_attack_hit_01.ogg",
+      "sfx/comb_gustav_attack_hit_02.ogg",
+      "sfx/comb_gustav_attack_hit_03.ogg",
+      "sfx/comb_gustav_attack_hit_04.ogg"
+    ],
+    "hero.gustav.skill": [
+      "sfx/comb_gustav_act_skill_cast_01.ogg"
+    ],
+    "hero.hoyoung.attack": [
+      "vo/hoyoung_attack_cast_01.ogg",
+      "vo/hoyoung_attack_cast_02.ogg",
+      "vo/hoyoung_attack_cast_03.ogg",
+      "vo/hoyoung_attack_cast_04.ogg"
+    ],
+    "hero.hoyoung.hit": [
+      "vo/hoyoung_attack_hit_01.ogg",
+      "vo/hoyoung_attack_hit_02.ogg",
+      "vo/hoyoung_attack_hit_03.ogg",
+      "vo/hoyoung_attack_hit_04.ogg"
+    ],
+    "hero.hoyoung.skill": [
+      "vo/hoyoung_skill_cast_01.ogg"
+    ],
+    "hero.hoyoung.skill_hit": [
+      "vo/hoyoung_skill_hit_01.ogg"
+    ],
+    "hero.hydra.attack": [
+      "sfx/hydra_attack_cast_01.ogg",
+      "sfx/hydra_attack_cast_02.ogg",
+      "sfx/hydra_attack_cast_03.ogg",
+      "sfx/hydra_attack_cast_04.ogg"
+    ],
+    "hero.irini.attack": [
+      "sfx/irini_attack_cast_01.ogg",
+      "sfx/irini_attack_cast_02.ogg",
+      "sfx/irini_attack_cast_03.ogg",
+      "sfx/irini_attack_cast_04.ogg"
+    ],
+    "hero.irini.hit": [
+      "sfx/irini_attack_hit_01.ogg",
+      "sfx/irini_attack_hit_02.ogg",
+      "sfx/irini_attack_hit_03.ogg",
+      "sfx/irini_attack_hit_04.ogg"
+    ],
+    "hero.irini.skill": [
+      "sfx/irini_skill_cast_01.ogg"
+    ],
+    "hero.irini.skill_hit": [
+      "sfx/irini_skill_hit_01.ogg"
+    ],
+    "hero.javryn.attack": [
+      "vo/javryn_attack_cast_01.ogg",
+      "vo/javryn_attack_cast_02.ogg",
+      "vo/javryn_attack_cast_03.ogg",
+      "vo/javryn_attack_cast_04.ogg"
+    ],
+    "hero.javryn.hit": [
+      "vo/javryn_attack_hit_01.ogg",
+      "vo/javryn_attack_hit_02.ogg",
+      "vo/javryn_attack_hit_03.ogg",
+      "vo/javryn_attack_hit_04.ogg"
+    ],
+    "hero.javryn.skill": [
+      "vo/javryn_skill_cast.ogg"
+    ],
+    "hero.javryn.skill_hit": [
+      "vo/javryn_skill_hit.ogg"
+    ],
+    "hero.josephina.attack": [
+      "sfx/josephina_attack_cast_01.ogg",
+      "sfx/josephina_attack_cast_02.ogg",
+      "sfx/josephina_attack_cast_03.ogg",
+      "sfx/josephina_attack_cast_04.ogg"
+    ],
+    "hero.josephina.hit": [
+      "sfx/josephina_attack_hit_01.ogg",
+      "sfx/josephina_attack_hit_02.ogg",
+      "sfx/josephina_attack_hit_03.ogg",
+      "sfx/josephina_attack_hit_04.ogg"
+    ],
+    "hero.josephina.skill": [
+      "sfx/josephina_skill_cast.ogg"
+    ],
+    "hero.kai.attack": [
+      "sfx/kai_attack_cast_01.ogg",
+      "sfx/kai_attack_cast_02.ogg",
+      "sfx/kai_attack_cast_03.ogg",
+      "sfx/kai_attack_cast_04.ogg"
+    ],
+    "hero.kai.skill": [
+      "sfx/kai_skill_cast.ogg"
+    ],
+    "hero.lizard.attack": [
+      "sfx/lizard_attack_cast_01.ogg",
+      "sfx/lizard_attack_cast_02.ogg",
+      "sfx/lizard_attack_cast_03.ogg",
+      "sfx/lizard_attack_cast_04.ogg"
+    ],
+    "hero.logan.attack": [
+      "sfx/logan_attack_cast_01.ogg",
+      "sfx/logan_attack_cast_02.ogg",
+      "sfx/logan_attack_cast_03.ogg",
+      "sfx/logan_attack_cast_04.ogg"
+    ],
+    "hero.logan.skill": [
+      "sfx/logan_skill_cast.ogg"
+    ],
+    "hero.ming.attack": [
+      "vo/ming_attack_cast_01.ogg",
+      "vo/ming_attack_cast_02.ogg",
+      "vo/ming_attack_cast_03.ogg"
+    ],
+    "hero.ming.skill": [
+      "vo/ming_skill_cast.ogg"
+    ],
+    "hero.mushroomarcher.attack": [
+      "sfx/musharcher_attack_cast_01.ogg",
+      "sfx/musharcher_attack_cast_02.ogg",
+      "sfx/musharcher_attack_cast_03.ogg",
+      "sfx/musharcher_attack_cast_04.ogg"
+    ],
+    "hero.mushroomarcher.hit": [
+      "sfx/musharcher_attack_hit_01.ogg",
+      "sfx/musharcher_attack_hit_02.ogg",
+      "sfx/musharcher_attack_hit_03.ogg",
+      "sfx/musharcher_attack_hit_04.ogg"
+    ],
+    "hero.mushroomarcher.skill": [
+      "sfx/musharcher_skill_cast.ogg"
+    ],
+    "hero.mushroomarcher.skill_hit": [
+      "sfx/musharcher_skill_hit.ogg"
+    ],
+    "hero.mushroomfiremage.attack": [
+      "sfx/mushmage_attack_cast_01.ogg",
+      "sfx/mushmage_attack_cast_02.ogg",
+      "sfx/mushmage_attack_cast_03.ogg",
+      "sfx/mushmage_attack_cast_04.ogg"
+    ],
+    "hero.mushroomfiremage.hit": [
+      "sfx/mushmage_attack_hit_01.ogg",
+      "sfx/mushmage_attack_hit_02.ogg",
+      "sfx/mushmage_attack_hit_03.ogg",
+      "sfx/mushmage_attack_hit_04.ogg"
+    ],
+    "hero.mushroomfiremage.skill": [
+      "sfx/mushmage_skill_cast_01.ogg",
+      "sfx/mushmage_skill_cast_02.ogg"
+    ],
+    "hero.mushroomtank.attack": [
+      "sfx/mushroomtank_attack_cast_01.ogg",
+      "sfx/mushroomtank_attack_cast_02.ogg",
+      "sfx/mushroomtank_attack_cast_03.ogg",
+      "sfx/mushroomtank_attack_cast_04.ogg"
+    ],
+    "hero.mushroomtank.skill": [
+      "sfx/mushroomtank_skill_cast.ogg"
+    ],
+    "hero.niklas.attack": [
+      "vo/comb_niklas_attack_cast_01.ogg",
+      "vo/comb_niklas_attack_cast_02.ogg",
+      "vo/comb_niklas_attack_cast_03.ogg",
+      "vo/comb_niklas_attack_cast_04.ogg"
+    ],
+    "hero.niklas.skill": [
+      "vo/comb_niklas_act_skill_cast_01.ogg"
+    ],
+    "hero.nyxa.attack": [
+      "vo/comb_nyxa_attack_cast_01.ogg",
+      "vo/comb_nyxa_attack_cast_02.ogg",
+      "vo/comb_nyxa_attack_cast_03.ogg",
+      "vo/comb_nyxa_attack_cast_04.ogg",
+      "vo/comb_nyxa_attack_cast_05.ogg"
+    ],
+    "hero.nyxa.skill": [
+      "vo/comb_nyxa_act_skill_cast_01.ogg"
+    ],
+    "hero.pimenta.attack": [
+      "sfx/pimenta_attack_cast_01.ogg",
+      "sfx/pimenta_attack_cast_02.ogg",
+      "sfx/pimenta_attack_cast_03.ogg",
+      "sfx/pimenta_attack_cast_04.ogg"
+    ],
+    "hero.pimenta.skill": [
+      "sfx/pimenta_skill_cast_01.ogg"
+    ],
+    "hero.plantmonster.attack": [
+      "sfx/plantmonster_attack_cast_01.ogg",
+      "sfx/plantmonster_attack_cast_02.ogg",
+      "sfx/plantmonster_attack_cast_03.ogg",
+      "sfx/plantmonster_attack_cast_04.ogg"
+    ],
+    "hero.plantmonster.hit": [
+      "sfx/plantmonster_attack_hit_01.ogg",
+      "sfx/plantmonster_attack_hit_02.ogg",
+      "sfx/plantmonster_attack_hit_03.ogg",
+      "sfx/plantmonster_attack_hit_04.ogg"
+    ],
+    "hero.plantmonster.skill": [
+      "sfx/plantmonster_skill_cast.ogg"
+    ],
+    "hero.poisondragon.attack": [
+      "sfx/dragonpoison_attack_cast_01.ogg",
+      "sfx/dragonpoison_attack_cast_02.ogg",
+      "sfx/dragonpoison_attack_cast_03.ogg",
+      "sfx/dragonpoison_attack_cast_04.ogg"
+    ],
+    "hero.poisondragon.skill": [
+      "sfx/dragonpoison_skill_cast_01.ogg"
+    ],
+    "hero.ratna.attack": [
+      "sfx/ratna_attack_cast_01.ogg",
+      "sfx/ratna_attack_cast_02.ogg",
+      "sfx/ratna_attack_cast_03.ogg",
+      "sfx/ratna_attack_cast_04.ogg"
+    ],
+    "hero.ratna.hit": [
+      "sfx/ratna_attack_hit_01.ogg",
+      "sfx/ratna_attack_hit_02.ogg",
+      "sfx/ratna_attack_hit_03.ogg",
+      "sfx/ratna_attack_hit_04.ogg"
+    ],
+    "hero.ratna.skill": [
+      "sfx/ratna_skill_cast.ogg"
+    ],
+    "hero.reyna.attack": [
+      "sfx/reyna_attack_cast_01.ogg",
+      "sfx/reyna_attack_cast_02.ogg",
+      "sfx/reyna_attack_cast_03.ogg",
+      "sfx/reyna_attack_cast_04.ogg"
+    ],
+    "hero.reyna.skill": [
+      "sfx/reyna_skill_cast_01.ogg"
+    ],
+    "hero.rook.attack": [
+      "sfx/rook_attack_cast_01.ogg",
+      "sfx/rook_attack_cast_02.ogg",
+      "sfx/rook_attack_cast_03.ogg",
+      "sfx/rook_attack_cast_04.ogg"
+    ],
+    "hero.rook.skill": [
+      "sfx/rook_skill_cast.ogg"
+    ],
+    "hero.sal.attack": [
+      "sfx/sal_attack_cast_01.ogg",
+      "sfx/sal_attack_cast_02.ogg",
+      "sfx/sal_attack_cast_03.ogg",
+      "sfx/sal_attack_cast_04.ogg"
+    ],
+    "hero.sal.hit": [
+      "sfx/sal_attack_hit_01.ogg",
+      "sfx/sal_attack_hit_02.ogg",
+      "sfx/sal_attack_hit_03.ogg",
+      "sfx/sal_attack_hit_04.ogg"
+    ],
+    "hero.sal.skill": [
+      "sfx/sal_skill_cast.ogg"
+    ],
+    "hero.sal.skill_hit": [
+      "sfx/sal_skill_hit_01.ogg",
+      "sfx/sal_skill_hit_02.ogg"
+    ],
+    "hero.selkhera.attack": [
+      "sfx/comb_selkhera_attack_cast_01.ogg",
+      "sfx/comb_selkhera_attack_cast_02.ogg",
+      "sfx/comb_selkhera_attack_cast_03.ogg",
+      "sfx/comb_selkhera_attack_cast_04.ogg"
+    ],
+    "hero.selkhera.skill": [
+      "sfx/comb_selkhera_act_skill_cast_01.ogg",
+      "sfx/comb_selkhera_act_skill_cast_layer.ogg"
+    ],
+    "hero.seraphael.attack": [
+      "sfx/seraphael_attack_cast_01.ogg",
+      "sfx/seraphael_attack_cast_02.ogg",
+      "sfx/seraphael_attack_cast_03.ogg",
+      "sfx/seraphael_attack_cast_04.ogg"
+    ],
+    "hero.seraphael.hit": [
+      "sfx/seraphael_attack_hit_01.ogg",
+      "sfx/seraphael_attack_hit_02.ogg",
+      "sfx/seraphael_attack_hit_03.ogg",
+      "sfx/seraphael_attack_hit_04.ogg"
+    ],
+    "hero.seraphael.skill": [
+      "sfx/seraphael_skill_cast.ogg"
+    ],
+    "hero.skorn.attack": [
+      "sfx/skorn_attack_cast_01.ogg",
+      "sfx/skorn_attack_cast_02.ogg",
+      "sfx/skorn_attack_cast_03.ogg",
+      "sfx/skorn_attack_cast_04.ogg"
+    ],
+    "hero.skorn.skill": [
+      "sfx/skorn_skill_cast.ogg"
+    ],
+    "hero.slime.attack": [
+      "sfx/slime_attack_cast_01.ogg",
+      "sfx/slime_attack_cast_02.ogg",
+      "sfx/slime_attack_cast_03.ogg",
+      "sfx/slime_attack_cast_04.ogg"
+    ],
+    "hero.snake.attack": [
+      "sfx/snake_attack_cast_01.ogg",
+      "sfx/snake_attack_cast_02.ogg",
+      "sfx/snake_attack_cast_03.ogg",
+      "sfx/snake_attack_cast_04.ogg"
+    ],
+    "hero.snake.skill": [
+      "sfx/snake_skill_cast.ogg"
+    ],
+    "hero.spider.attack": [
+      "sfx/spider_attack_cast_01.ogg",
+      "sfx/spider_attack_cast_02.ogg",
+      "sfx/spider_attack_cast_03.ogg",
+      "sfx/spider_attack_cast_04.ogg"
+    ],
+    "hero.spider.hit": [
+      "sfx/spider_attack_hit_01.ogg",
+      "sfx/spider_attack_hit_02.ogg",
+      "sfx/spider_attack_hit_03.ogg",
+      "sfx/spider_attack_hit_04.ogg"
+    ],
+    "hero.spider.skill": [
+      "sfx/spider_skill_cast.ogg"
+    ],
+    "hero.spider.skill_hit": [
+      "sfx/spider_skill_hit.ogg"
+    ],
+    "hero.tilly.attack": [
+      "sfx/tilly_attack_cast_01.ogg",
+      "sfx/tilly_attack_cast_02.ogg",
+      "sfx/tilly_attack_cast_03.ogg",
+      "sfx/tilly_attack_cast_04.ogg"
+    ],
+    "hero.tilly.hit": [
+      "sfx/tilly_attack_hit_01.ogg",
+      "sfx/tilly_attack_hit_02.ogg",
+      "sfx/tilly_attack_hit_03.ogg",
+      "sfx/tilly_attack_hit_04.ogg"
+    ],
+    "hero.tilly.skill": [
+      "sfx/tilly_skill_cast.ogg"
+    ],
+    "hero.turtle.attack": [
+      "sfx/turtle_attack_cast_01.ogg",
+      "sfx/turtle_attack_cast_02.ogg",
+      "sfx/turtle_attack_cast_03.ogg",
+      "sfx/turtle_attack_cast_04.ogg"
+    ],
+    "music.boss": [
+      "music/260608_forest_rift_boss.ogg"
+    ],
+    "music.boss_pre": [
+      "music/mus_forest_boss_pre_165bpm.ogg"
+    ],
+    "music.calm": [
+      "music/mus_forest_calm_80bpm.ogg"
+    ],
+    "music.combat": [
+      "music/mus_forest_comb_80bpm.ogg"
+    ],
+    "music.lose": [
+      "music/mus_forest_finalboss_lose_165bpm.ogg"
+    ],
+    "music.menu": [
+      "music/mus_mainmenu_86bpm_premaster.ogg"
+    ],
+    "music.shop": [
+      "music/mus_auction_house_80bpm.ogg"
+    ],
+    "music.sting.fill": [
+      "music/mus_forest_comb_sting_fill01_80bpm.ogg"
+    ],
+    "music.sting.howl": [
+      "music/mus_forest_comb_sting_howl01_80bpm.ogg"
+    ],
+    "music.sting.woosh": [
+      "music/mus_forest_comb_sting_woosh01_80bpm.ogg"
+    ],
+    "music.win": [
+      "music/mus_forest_finalboss_win_165bpm.ogg"
+    ],
+    "sfx.attack": [
+      "sfx/cenk_attack_cast_01.ogg",
+      "sfx/cenk_attack_cast_02.ogg",
+      "sfx/cenk_attack_cast_03.ogg",
+      "sfx/cenk_attack_cast_04.ogg",
+      "sfx/comb_gustav_attack_cast_01.ogg",
+      "sfx/comb_gustav_attack_cast_02.ogg",
+      "sfx/comb_gustav_attack_cast_03.ogg",
+      "sfx/comb_gustav_attack_cast_04.ogg",
+      "sfx/dragomir_attack_cast_01.ogg",
+      "sfx/dragomir_attack_cast_02.ogg",
+      "sfx/dragomir_attack_cast_03.ogg",
+      "sfx/dragomir_attack_cast_04.ogg",
+      "sfx/kai_attack_cast_01.ogg",
+      "sfx/kai_attack_cast_02.ogg",
+      "sfx/kai_attack_cast_03.ogg",
+      "sfx/kai_attack_cast_04.ogg",
+      "sfx/logan_attack_cast_01.ogg",
+      "sfx/logan_attack_cast_02.ogg",
+      "sfx/logan_attack_cast_03.ogg",
+      "sfx/logan_attack_cast_04.ogg",
+      "sfx/skorn_attack_cast_01.ogg",
+      "sfx/skorn_attack_cast_02.ogg",
+      "sfx/skorn_attack_cast_03.ogg",
+      "sfx/skorn_attack_cast_04.ogg"
+    ],
+    "sfx.boss_roar": [
+      "sfx/demonboss_attack_vo_01.ogg",
+      "sfx/demonboss_attack_vo_02.ogg",
+      "sfx/demonboss_attack_vo_03.ogg",
+      "sfx/demonboss_attack_vo_04.ogg"
+    ],
+    "sfx.cast": [
+      "sfx/comb_ayaka_act_skill_cast_01.ogg",
+      "sfx/comb_fiona_act_skill_01.ogg",
+      "sfx/irini_skill_cast_01.ogg",
+      "sfx/reyna_skill_cast_01.ogg"
+    ],
+    "sfx.death": [
+      "sfx/dragon_roar_01.ogg",
+      "sfx/dragon_roar_02.ogg",
+      "sfx/dragon_roar_03.ogg",
+      "sfx/dragon_roar_04.ogg",
+      "sfx/dragon_roar_05.ogg"
+    ],
+    "sfx.hit": [
+      "sfx/comb_gustav_attack_hit_01.ogg",
+      "sfx/comb_gustav_attack_hit_02.ogg",
+      "sfx/comb_gustav_attack_hit_03.ogg",
+      "sfx/comb_gustav_attack_hit_04.ogg",
+      "sfx/irini_attack_hit_01.ogg",
+      "sfx/irini_attack_hit_02.ogg",
+      "sfx/irini_attack_hit_03.ogg",
+      "sfx/irini_attack_hit_04.ogg",
+      "sfx/josephina_attack_hit_01.ogg",
+      "sfx/josephina_attack_hit_02.ogg",
+      "sfx/josephina_attack_hit_03.ogg",
+      "sfx/josephina_attack_hit_04.ogg",
+      "sfx/ratna_attack_hit_01.ogg",
+      "sfx/ratna_attack_hit_02.ogg",
+      "sfx/ratna_attack_hit_03.ogg",
+      "sfx/ratna_attack_hit_04.ogg",
+      "sfx/sal_attack_hit_01.ogg",
+      "sfx/sal_attack_hit_02.ogg",
+      "sfx/sal_attack_hit_03.ogg",
+      "sfx/sal_attack_hit_04.ogg"
+    ],
+    "sfx.ranged": [
+      "sfx/comb_fiona_attack_cast_01.ogg",
+      "sfx/comb_fiona_attack_cast_02.ogg",
+      "sfx/comb_fiona_attack_cast_03.ogg",
+      "sfx/comb_fiona_attack_cast_04.ogg",
+      "sfx/musharcher_attack_cast_01.ogg",
+      "sfx/musharcher_attack_cast_02.ogg",
+      "sfx/musharcher_attack_cast_03.ogg",
+      "sfx/musharcher_attack_cast_04.ogg"
+    ],
+    "ui.buy": [
+      "sfx/ui_shop_item_click.ogg"
+    ],
+    "ui.buy_relic": [
+      "sfx/ui_shop_relic_click.ogg"
+    ],
+    "ui.click": [
+      "sfx/ui_ingamebutton_click.ogg"
+    ],
+    "ui.duplicate": [
+      "sfx/ui_shop_duplicatehero_appear.ogg"
+    ],
+    "ui.equip": [
+      "sfx/ui_bf_item_equip.ogg"
+    ],
+    "ui.fight": [
+      "sfx/ui_ingame_button_fight.ogg"
+    ],
+    "ui.freeze": [
+      "sfx/ui_shop_freeze_click.ogg"
+    ],
+    "ui.hero_drop": [
+      "sfx/ui_hero_move_offclick.ogg"
+    ],
+    "ui.hero_pick": [
+      "sfx/ui_hero_move_onclick.ogg"
+    ],
+    "ui.hero_select": [
+      "sfx/ui_hero_selection_click.ogg"
+    ],
+    "ui.hover": [
+      "sfx/ui_main_menu_hover.ogg"
+    ],
+    "ui.menu_click": [
+      "sfx/ui_main_menu_click.ogg"
+    ],
+    "ui.rankup": [
+      "sfx/ui_hero_selectionrankup_click.ogg"
+    ],
+    "ui.rankup_menu": [
+      "sfx/ui_hero_rankupmenu_click.ogg"
+    ],
+    "ui.reroll": [
+      "sfx/ui_shop_reroll_click.ogg"
+    ],
+    "ui.sell": [
+      "sfx/ui_shop_sell_drop.ogg"
+    ],
+    "ui.shard_select": [
+      "sfx/ui_shards_selection_click.ogg"
+    ],
+    "ui.shards_click": [
+      "sfx/ui_shardsmenu_button_click.ogg"
+    ],
+    "ui.shards_hover": [
+      "sfx/ui_shardsmenu_button_hover.ogg"
+    ],
+    "ui.start": [
+      "sfx/ui_main_menu_startgame_click.ogg"
+    ],
+    "ui.submenu_close": [
+      "sfx/ui_main_menu_submenu_clickclose.ogg"
+    ],
+    "ui.submenu_open": [
+      "sfx/ui_main_menu_submenu_open.ogg"
+    ],
+    "ui.unequip": [
+      "sfx/ui_bf_item_unequip.ogg"
+    ],
+    "ui.unfreeze": [
+      "sfx/ui_shop_unfreeze_click.ogg"
+    ],
+    "vo.ayaka.attack": [
+      "vo/ayaka_aa01.ogg",
+      "vo/ayaka_aa02.ogg",
+      "vo/ayaka_aa03.ogg",
+      "vo/ayaka_aa04.ogg"
+    ],
+    "vo.ayaka.buy": [
+      "vo/ayaka_op.ogg"
+    ],
+    "vo.ayaka.death": [
+      "vo/ayaka_od.ogg",
+      "vo/ayaka_od_lastonestanding.ogg"
+    ],
+    "vo.ayaka.rankup": [
+      "vo/ayaka_or.ogg",
+      "vo/ayaka_or_a.ogg",
+      "vo/ayaka_or_s.ogg"
+    ],
+    "vo.cenk.attack": [
+      "vo/rip_aa_01.ogg",
+      "vo/rip_aa_02.ogg",
+      "vo/rip_aa_03.ogg"
+    ],
+    "vo.cenk.buy": [
+      "vo/rip_op_shop.ogg",
+      "vo/rip_op_start.ogg"
+    ],
+    "vo.cenk.death": [
+      "vo/rip_od_01.ogg",
+      "vo/rip_od_02.ogg",
+      "vo/rip_od_03.ogg"
+    ],
+    "vo.cenk.rankup": [
+      "vo/rip_or_a.ogg",
+      "vo/rip_or_b.ogg",
+      "vo/rip_or_s.ogg"
+    ],
+    "vo.dragomir.attack": [
+      "sfx/dragomir_aa_01.ogg",
+      "sfx/dragomir_aa_02.ogg",
+      "sfx/dragomir_aa_03.ogg",
+      "sfx/dragomir_aa_04.ogg"
+    ],
+    "vo.dragomir.buy": [
+      "vo/dragomir_op_shop_01.ogg",
+      "vo/dragomir_op_shop_02.ogg",
+      "vo/dragomir_op_start.ogg"
+    ],
+    "vo.dragomir.death": [
+      "vo/dragomir_od_01.ogg",
+      "vo/dragomir_od_02.ogg",
+      "vo/dragomir_od_03.ogg"
+    ],
+    "vo.dragomir.line": [
+      "vo/dragomir_disc_bossencounter.ogg",
+      "vo/dragomir_disc_itemgained.ogg",
+      "vo/dragomir_disc_itemremoved.ogg",
+      "vo/dragomir_disc_kill.ogg",
+      "vo/dragomir_disc_rerollmod.ogg",
+      "vo/dragomir_disc_revive.ogg",
+      "vo/dragomir_disc_victory.ogg"
+    ],
+    "vo.dragomir.rankup": [
+      "vo/dragomir_or_a.ogg",
+      "vo/dragomir_or_b.ogg",
+      "vo/dragomir_or_s.ogg"
+    ],
+    "vo.fiona.attack": [
+      "vo/fiona_aa_01.ogg",
+      "vo/fiona_aa_02.ogg"
+    ],
+    "vo.fiona.buy": [
+      "vo/fiona_op_shop.ogg",
+      "vo/fiona_op_start.ogg"
+    ],
+    "vo.fiona.death": [
+      "vo/fiona_od_01.ogg",
+      "vo/fiona_od_02.ogg",
+      "vo/fiona_od_03.ogg",
+      "vo/fiona_od_04.ogg"
+    ],
+    "vo.fiona.rankup": [
+      "vo/fiona_or_a.ogg",
+      "vo/fiona_or_b.ogg",
+      "vo/fiona_or_s.ogg"
+    ],
+    "vo.floeria.attack": [
+      "vo/pollen_aa.ogg"
+    ],
+    "vo.floeria.buy": [
+      "vo/pollen_op_at_start.ogg",
+      "vo/pollen_op_in_shop.ogg"
+    ],
+    "vo.floeria.death": [
+      "vo/pollen_od.ogg"
+    ],
+    "vo.floeria.rankup": [
+      "vo/pollen_or.ogg"
+    ],
+    "vo.floeria.special": [
+      "vo/pollen_osr.ogg"
+    ],
+    "vo.funke.attack": [
+      "vo/funke_aa_01.ogg",
+      "vo/funke_aa_02.ogg"
+    ],
+    "vo.funke.buy": [
+      "vo/funke_op_shop.ogg"
+    ],
+    "vo.funke.death": [
+      "vo/funke_od_01.ogg",
+      "vo/funke_od_02.ogg",
+      "vo/funke_od_03.ogg",
+      "vo/funke_od_start.ogg"
+    ],
+    "vo.funke.rankup": [
+      "vo/funke_or_a.ogg",
+      "vo/funke_or_b.ogg",
+      "vo/funke_or_s.ogg"
+    ],
+    "vo.gustav.attack": [
+      "vo/gustav_aa_01.ogg",
+      "vo/gustav_aa_02.ogg"
+    ],
+    "vo.gustav.buy": [
+      "vo/gustav_op.ogg"
+    ],
+    "vo.gustav.death": [
+      "vo/gustav_od_01.ogg",
+      "vo/gustav_od_02.ogg",
+      "vo/gustav_od_03.ogg"
+    ],
+    "vo.gustav.line": [
+      "vo/gustav_disc_benched.ogg",
+      "vo/gustav_disc_bossencounter.ogg",
+      "vo/gustav_disc_itemgained.ogg",
+      "vo/gustav_disc_rerollmod.ogg",
+      "vo/gustav_disc_teamwipeout.ogg",
+      "vo/gustav_disc_victory.ogg"
+    ],
+    "vo.gustav.rankup": [
+      "vo/gustav_or_a.ogg",
+      "vo/gustav_or_b.ogg",
+      "vo/gustav_or_s.ogg"
+    ],
+    "vo.hoyoung.attack": [
+      "vo/hoyoung_aa01.ogg",
+      "vo/hoyoung_aa02.ogg"
+    ],
+    "vo.hoyoung.buy": [
+      "vo/hoyoung_op01.ogg",
+      "vo/hoyoung_op02.ogg"
+    ],
+    "vo.hoyoung.death": [
+      "vo/hoyoung_od01.ogg",
+      "vo/hoyoung_od02.ogg",
+      "vo/hoyoung_od03.ogg"
+    ],
+    "vo.hoyoung.rankup": [
+      "vo/hoyoung_or.ogg"
+    ],
+    "vo.hoyoung.special": [
+      "vo/hoyoung_osr.ogg"
+    ],
+    "vo.irini.attack": [
+      "vo/irini_aa01.ogg",
+      "vo/irini_aa02.ogg",
+      "vo/irini_aa03.ogg",
+      "vo/irini_aa04.ogg"
+    ],
+    "vo.irini.buy": [
+      "vo/irini_op.ogg"
+    ],
+    "vo.irini.death": [
+      "vo/irini_od.ogg"
+    ],
+    "vo.irini.rankup": [
+      "vo/irini_or_a.ogg",
+      "vo/irini_or_s.ogg",
+      "vo/irini_or_t.ogg",
+      "vo/irini_or_the_olympic.ogg",
+      "vo/irini_or_the_reforged.ogg"
+    ],
+    "vo.javryn.attack": [
+      "vo/zaya_aa.ogg"
+    ],
+    "vo.javryn.buy": [
+      "vo/zaya_op.ogg"
+    ],
+    "vo.javryn.death": [
+      "vo/zaya_od.ogg"
+    ],
+    "vo.javryn.rankup": [
+      "vo/zaya_or_a.ogg",
+      "vo/zaya_or_b_the_breeze.ogg",
+      "vo/zaya_or_b_the_snow.ogg",
+      "vo/zaya_or_b_the_storm.ogg"
+    ],
+    "vo.javryn.special": [
+      "vo/zaya_osr.ogg"
+    ],
+    "vo.josephina.attack": [
+      "vo/grace_aa.ogg"
+    ],
+    "vo.josephina.buy": [
+      "vo/grace_op_atstart.ogg",
+      "vo/grace_op_inshop.ogg"
+    ],
+    "vo.josephina.death": [
+      "vo/grace_od.ogg"
+    ],
+    "vo.josephina.rankup": [
+      "vo/grace_or.ogg",
+      "vo/grace_or_a.ogg",
+      "vo/grace_or_s.ogg"
+    ],
+    "vo.kai.attack": [
+      "vo/kai_aa_grunt_end_01.ogg",
+      "vo/kai_aa_grunt_start_01.ogg",
+      "vo/kai_aa_grunt_start_02.ogg",
+      "vo/kai_aa_start.ogg"
+    ],
+    "vo.kai.buy": [
+      "vo/kai_op_shop.ogg",
+      "vo/kai_op_start.ogg"
+    ],
+    "vo.kai.death": [
+      "vo/kai_od_01.ogg",
+      "vo/kai_od_02.ogg",
+      "vo/kai_od_03.ogg",
+      "vo/kai_od_04.ogg",
+      "vo/kai_od_05.ogg",
+      "vo/kai_od_06.ogg"
+    ],
+    "vo.kai.line": [
+      "vo/kai_disc_benched.ogg",
+      "vo/kai_disc_challengeaccepted.ogg",
+      "vo/kai_disc_crossroads.ogg",
+      "vo/kai_disc_fightwin.ogg",
+      "vo/kai_disc_itemgained.ogg",
+      "vo/kai_disc_itemremoved.ogg",
+      "vo/kai_disc_kill.ogg",
+      "vo/kai_disc_overkill.ogg",
+      "vo/kai_disc_revive.ogg",
+      "vo/kai_disc_teamwipeout.ogg",
+      "vo/kai_disc_victory.ogg"
+    ],
+    "vo.kai.rankup": [
+      "vo/kai_or_a.ogg",
+      "vo/kai_or_b.ogg",
+      "vo/kai_or_s.ogg"
+    ],
+    "vo.logan.attack": [
+      "vo/logan_aa_01.ogg",
+      "vo/logan_aa_02.ogg",
+      "vo/logan_aa_03.ogg",
+      "vo/logan_aa_04.ogg"
+    ],
+    "vo.logan.buy": [
+      "vo/logan_op_shop.ogg",
+      "vo/logan_op_start.ogg"
+    ],
+    "vo.logan.death": [
+      "vo/logan_od.ogg"
+    ],
+    "vo.logan.rankup": [
+      "vo/logan_or_a.ogg",
+      "vo/logan_or_b.ogg",
+      "vo/logan_or_s.ogg"
+    ],
+    "vo.ming.attack": [
+      "vo/ming_aa_end.ogg",
+      "vo/ming_aa_start.ogg",
+      "vo/rr_vo_ming_aa_01.ogg",
+      "vo/rr_vo_ming_aa_02.ogg",
+      "vo/rr_vo_ming_aa_03.ogg"
+    ],
+    "vo.ming.buy": [
+      "vo/ming_op.ogg"
+    ],
+    "vo.ming.death": [
+      "vo/ming_od01.ogg",
+      "vo/ming_od02.ogg"
+    ],
+    "vo.ming.rankup": [
+      "vo/ming_or.ogg",
+      "vo/rr_vo_ming_or_02.ogg"
+    ],
+    "vo.ming.special": [
+      "vo/ming_osr.ogg",
+      "vo/rr_vo_ming_osr_01.ogg",
+      "vo/rr_vo_ming_osr_03.ogg"
+    ],
+    "vo.niklas.attack": [
+      "vo/niklas_aa_kick.ogg",
+      "vo/niklas_aa_punch.ogg"
+    ],
+    "vo.niklas.buy": [
+      "vo/niklas_op.ogg"
+    ],
+    "vo.niklas.death": [
+      "vo/niklas_od.ogg"
+    ],
+    "vo.niklas.rankup": [
+      "vo/niklas_or.ogg"
+    ],
+    "vo.niklas.special": [
+      "vo/niklas_osr.ogg"
+    ],
+    "vo.nyxa.attack": [
+      "vo/nyx_aa.ogg"
+    ],
+    "vo.nyxa.buy": [
+      "vo/nyx_op.ogg"
+    ],
+    "vo.nyxa.death": [
+      "vo/nyx_od.ogg"
+    ],
+    "vo.nyxa.rankup": [
+      "vo/nyx_or.ogg"
+    ],
+    "vo.nyxa.special": [
+      "vo/nyx_osr.ogg"
+    ],
+    "vo.pimenta.attack": [
+      "vo/pimenta_aa.ogg"
+    ],
+    "vo.pimenta.buy": [
+      "vo/pimenta_op.ogg"
+    ],
+    "vo.pimenta.death": [
+      "vo/pimenta_od.ogg"
+    ],
+    "vo.pimenta.rankup": [
+      "vo/pimenta_or_the_lover.ogg",
+      "vo/pimenta_or_the_spicy.ogg"
+    ],
+    "vo.pimenta.special": [
+      "vo/pimenta_osr.ogg"
+    ],
+    "vo.ratna.attack": [
+      "vo/ratna_aa_01.ogg",
+      "vo/ratna_aa_02.ogg",
+      "vo/ratna_aa_03.ogg",
+      "vo/ratna_aa_04.ogg",
+      "vo/ratna_aa_05.ogg",
+      "vo/ratna_aa_06.ogg"
+    ],
+    "vo.ratna.buy": [
+      "vo/ratna_op_shop.ogg",
+      "vo/ratna_op_start.ogg"
+    ],
+    "vo.ratna.death": [
+      "vo/ratna_od_01.ogg",
+      "vo/ratna_od_02.ogg",
+      "vo/ratna_od_03.ogg",
+      "vo/ratna_od_04.ogg",
+      "vo/ratna_od_05.ogg",
+      "vo/ratna_od_06.ogg"
+    ],
+    "vo.ratna.rankup": [
+      "vo/ratna_or_a.ogg",
+      "vo/ratna_or_b.ogg",
+      "vo/ratna_or_s.ogg"
+    ],
+    "vo.reyna.attack": [
+      "vo/reyna_aa01.ogg",
+      "vo/reyna_aa02.ogg",
+      "vo/reyna_aa03.ogg",
+      "vo/reyna_aa04.ogg",
+      "vo/reyna_aa05.ogg"
+    ],
+    "vo.reyna.buy": [
+      "vo/reyna_op.ogg"
+    ],
+    "vo.reyna.death": [
+      "vo/reyna_od.ogg",
+      "vo/reyna_od_firstonedying.ogg"
+    ],
+    "vo.reyna.rankup": [
+      "vo/reyna_or.ogg",
+      "vo/reyna_or_a.ogg",
+      "vo/reyna_or_s.ogg"
+    ],
+    "vo.rook.attack": [
+      "vo/rowan_aa_01.ogg",
+      "vo/rowan_aa_02.ogg",
+      "vo/rowan_aa_03.ogg"
+    ],
+    "vo.rook.buy": [
+      "vo/rowan_op_shop.ogg",
+      "vo/rowan_op_start.ogg"
+    ],
+    "vo.rook.death": [
+      "vo/rowan_od.ogg"
+    ],
+    "vo.rook.rankup": [
+      "vo/rowan_or_a.ogg",
+      "vo/rowan_or_b.ogg",
+      "vo/rowan_or_s.ogg"
+    ],
+    "vo.sal.attack": [
+      "vo/sal_aa.ogg"
+    ],
+    "vo.sal.buy": [
+      "vo/sal_op.ogg"
+    ],
+    "vo.sal.death": [
+      "vo/sal_od01.ogg",
+      "vo/sal_od02.ogg"
+    ],
+    "vo.sal.rankup": [
+      "vo/sal_or.ogg"
+    ],
+    "vo.sal.special": [
+      "vo/sal_osr.ogg"
+    ],
+    "vo.selkhera.attack": [
+      "vo/zuri_aa_01.ogg",
+      "vo/zuri_aa_02.ogg",
+      "vo/zuri_aa_03.ogg"
+    ],
+    "vo.selkhera.buy": [
+      "vo/zuri_op_shop.ogg",
+      "vo/zuri_op_start.ogg"
+    ],
+    "vo.selkhera.death": [
+      "vo/zuri_od_01.ogg",
+      "vo/zuri_od_02.ogg",
+      "vo/zuri_od_03.ogg"
+    ],
+    "vo.selkhera.rankup": [
+      "vo/zuri_or_a.ogg",
+      "vo/zuri_or_b.ogg",
+      "vo/zuri_or_s.ogg"
+    ],
+    "vo.seraphael.attack": [
+      "vo/seraphim_aa.ogg"
+    ],
+    "vo.seraphael.buy": [
+      "vo/seraphim_op.ogg"
+    ],
+    "vo.seraphael.death": [
+      "vo/seraphim_od.ogg"
+    ],
+    "vo.seraphael.rankup": [
+      "vo/seraphim_or.ogg"
+    ],
+    "vo.seraphael.special": [
+      "vo/seraphim_osr.ogg"
+    ],
+    "vo.skorn.attack": [
+      "vo/skorn_aa_01.ogg",
+      "vo/skorn_aa_02.ogg",
+      "vo/skorn_aa_03.ogg",
+      "vo/skorn_aa_04.ogg",
+      "vo/skorn_aa_05.ogg",
+      "vo/skorn_aa_06.ogg",
+      "vo/skorn_aa_07.ogg",
+      "vo/skorn_aa_08.ogg"
+    ],
+    "vo.skorn.buy": [
+      "vo/skorn_op_shop_01.ogg",
+      "vo/skorn_op_shop_02.ogg",
+      "vo/skorn_op_start.ogg"
+    ],
+    "vo.skorn.death": [
+      "vo/skorn_od_01.ogg",
+      "vo/skorn_od_02.ogg",
+      "vo/skorn_od_03.ogg",
+      "vo/skorn_od_04.ogg"
+    ],
+    "vo.skorn.line": [
+      "vo/skorn_disc_benched.ogg",
+      "vo/skorn_disc_bossencounter.ogg",
+      "vo/skorn_disc_crossroads.ogg",
+      "vo/skorn_disc_itemgained.ogg",
+      "vo/skorn_disc_overkill.ogg",
+      "vo/skorn_disc_revive.ogg",
+      "vo/skorn_disc_whentakinglongtimetoprepare.ogg"
+    ],
+    "vo.skorn.rankup": [
+      "vo/skorn_or_a.ogg",
+      "vo/skorn_or_b.ogg",
+      "vo/skorn_or_s.ogg"
+    ],
+    "vo.tilly.attack": [
+      "vo/tilly_aa_01.ogg",
+      "vo/tilly_aa_02.ogg",
+      "vo/tilly_aa_03.ogg",
+      "vo/tilly_aa_04.ogg",
+      "vo/tilly_aa_05.ogg"
+    ],
+    "vo.tilly.buy": [
+      "vo/tilly_op_shop.ogg",
+      "vo/tilly_op_start.ogg"
+    ],
+    "vo.tilly.death": [
+      "vo/tilly_od_01.ogg",
+      "vo/tilly_od_02.ogg",
+      "vo/tilly_od_03.ogg",
+      "vo/tilly_od_04.ogg"
+    ],
+    "vo.tilly.rankup": [
+      "vo/tilly_or_a.ogg",
+      "vo/tilly_or_b.ogg",
+      "vo/tilly_or_s.ogg"
+    ],
+    "hero.funke.skill_hit": [
+      "vo/comb_funke_act_skill_hit_01.ogg"
+    ],
+    "hero.lizard.skill": [
+      "sfx/lizard_step.ogg"
+    ],
+    "hero.hydra.skill": [
+      "sfx/dragon_roar_01.ogg",
+      "sfx/dragon_roar_02.ogg",
+      "sfx/dragon_roar_03.ogg"
+    ],
+    "hero.slime.skill": [
+      "sfx/slime_attack_cast_01.ogg",
+      "sfx/slime_attack_cast_02.ogg",
+      "sfx/slime_attack_cast_03.ogg",
+      "sfx/slime_attack_cast_04.ogg"
+    ],
+    "hero.turtle.skill": [
+      "sfx/turtle_attack_cast_01.ogg",
+      "sfx/turtle_attack_cast_02.ogg",
+      "sfx/turtle_attack_cast_03.ogg",
+      "sfx/turtle_attack_cast_04.ogg"
+    ],
+    "hero.demonboss.roar": [
+      "sfx/demonboss_attack_vo_01.ogg",
+      "sfx/demonboss_attack_vo_02.ogg",
+      "sfx/demonboss_attack_vo_03.ogg",
+      "sfx/demonboss_attack_vo_04.ogg"
+    ],
+    "hero.firedragon.roar": [
+      "sfx/dragon_roar_01.ogg",
+      "sfx/dragon_roar_02.ogg",
+      "sfx/dragon_roar_03.ogg",
+      "sfx/dragon_roar_04.ogg",
+      "sfx/dragon_roar_05.ogg"
+    ],
+    "hero.frostdragon.roar": [
+      "sfx/dragon_roar_01.ogg",
+      "sfx/dragon_roar_02.ogg",
+      "sfx/dragon_roar_03.ogg",
+      "sfx/dragon_roar_04.ogg",
+      "sfx/dragon_roar_05.ogg"
+    ],
+    "hero.poisondragon.roar": [
+      "sfx/dragon_roar_01.ogg",
+      "sfx/dragon_roar_02.ogg",
+      "sfx/dragon_roar_03.ogg",
+      "sfx/dragon_roar_04.ogg",
+      "sfx/dragon_roar_05.ogg"
+    ],
+    "hero.1.attack": [
+      "sfx/irini_attack_cast_01.ogg",
+      "sfx/irini_attack_cast_02.ogg",
+      "sfx/irini_attack_cast_03.ogg",
+      "sfx/irini_attack_cast_04.ogg"
+    ],
+    "hero.1.hit": [
+      "sfx/irini_attack_hit_01.ogg",
+      "sfx/irini_attack_hit_02.ogg",
+      "sfx/irini_attack_hit_03.ogg",
+      "sfx/irini_attack_hit_04.ogg"
+    ],
+    "hero.1.skill": [
+      "sfx/irini_skill_cast_01.ogg"
+    ],
+    "hero.1.skill_hit": [
+      "sfx/irini_skill_hit_01.ogg"
+    ],
+    "vo.irini.special": [
+      "vo/irini_or_a.ogg",
+      "vo/irini_or_s.ogg",
+      "vo/irini_or_t.ogg",
+      "vo/irini_or_the_olympic.ogg",
+      "vo/irini_or_the_reforged.ogg"
+    ],
+    "vo.1.attack": [
+      "vo/irini_aa01.ogg",
+      "vo/irini_aa02.ogg",
+      "vo/irini_aa03.ogg",
+      "vo/irini_aa04.ogg"
+    ],
+    "vo.1.buy": [
+      "vo/irini_op.ogg"
+    ],
+    "vo.1.death": [
+      "vo/irini_od.ogg"
+    ],
+    "vo.1.rankup": [
+      "vo/irini_or_a.ogg",
+      "vo/irini_or_s.ogg",
+      "vo/irini_or_t.ogg",
+      "vo/irini_or_the_olympic.ogg",
+      "vo/irini_or_the_reforged.ogg"
+    ],
+    "vo.1.special": [
+      "vo/irini_or_a.ogg",
+      "vo/irini_or_s.ogg",
+      "vo/irini_or_t.ogg",
+      "vo/irini_or_the_olympic.ogg",
+      "vo/irini_or_the_reforged.ogg"
+    ],
+    "hero.2.attack": [
+      "vo/hoyoung_attack_cast_01.ogg",
+      "vo/hoyoung_attack_cast_02.ogg",
+      "vo/hoyoung_attack_cast_03.ogg",
+      "vo/hoyoung_attack_cast_04.ogg"
+    ],
+    "hero.2.hit": [
+      "vo/hoyoung_attack_hit_01.ogg",
+      "vo/hoyoung_attack_hit_02.ogg",
+      "vo/hoyoung_attack_hit_03.ogg",
+      "vo/hoyoung_attack_hit_04.ogg"
+    ],
+    "hero.2.skill": [
+      "vo/hoyoung_skill_cast_01.ogg"
+    ],
+    "hero.2.skill_hit": [
+      "vo/hoyoung_skill_hit_01.ogg"
+    ],
+    "vo.2.attack": [
+      "vo/hoyoung_aa01.ogg",
+      "vo/hoyoung_aa02.ogg"
+    ],
+    "vo.2.buy": [
+      "vo/hoyoung_op01.ogg",
+      "vo/hoyoung_op02.ogg"
+    ],
+    "vo.2.death": [
+      "vo/hoyoung_od01.ogg",
+      "vo/hoyoung_od02.ogg",
+      "vo/hoyoung_od03.ogg"
+    ],
+    "vo.2.rankup": [
+      "vo/hoyoung_or.ogg"
+    ],
+    "vo.2.special": [
+      "vo/hoyoung_osr.ogg"
+    ],
+    "hero.reyna.hit": [
+      "sfx/musharcher_attack_hit_01.ogg",
+      "sfx/musharcher_attack_hit_02.ogg",
+      "sfx/musharcher_attack_hit_03.ogg",
+      "sfx/musharcher_attack_hit_04.ogg"
+    ],
+    "hero.reyna.skill_hit": [
+      "sfx/musharcher_skill_hit.ogg"
+    ],
+    "hero.3.attack": [
+      "sfx/reyna_attack_cast_01.ogg",
+      "sfx/reyna_attack_cast_02.ogg",
+      "sfx/reyna_attack_cast_03.ogg",
+      "sfx/reyna_attack_cast_04.ogg"
+    ],
+    "hero.3.hit": [
+      "sfx/musharcher_attack_hit_01.ogg",
+      "sfx/musharcher_attack_hit_02.ogg",
+      "sfx/musharcher_attack_hit_03.ogg",
+      "sfx/musharcher_attack_hit_04.ogg"
+    ],
+    "hero.3.skill": [
+      "sfx/reyna_skill_cast_01.ogg"
+    ],
+    "hero.3.skill_hit": [
+      "sfx/musharcher_skill_hit.ogg"
+    ],
+    "vo.reyna.special": [
+      "vo/reyna_or.ogg",
+      "vo/reyna_or_a.ogg",
+      "vo/reyna_or_s.ogg"
+    ],
+    "vo.3.attack": [
+      "vo/reyna_aa01.ogg",
+      "vo/reyna_aa02.ogg",
+      "vo/reyna_aa03.ogg",
+      "vo/reyna_aa04.ogg",
+      "vo/reyna_aa05.ogg"
+    ],
+    "vo.3.buy": [
+      "vo/reyna_op.ogg"
+    ],
+    "vo.3.death": [
+      "vo/reyna_od.ogg",
+      "vo/reyna_od_firstonedying.ogg"
+    ],
+    "vo.3.rankup": [
+      "vo/reyna_or.ogg",
+      "vo/reyna_or_a.ogg",
+      "vo/reyna_or_s.ogg"
+    ],
+    "vo.3.special": [
+      "vo/reyna_or.ogg",
+      "vo/reyna_or_a.ogg",
+      "vo/reyna_or_s.ogg"
+    ],
+    "hero.ayaka.hit": [
+      "vo/javryn_attack_hit_01.ogg",
+      "vo/javryn_attack_hit_02.ogg",
+      "vo/javryn_attack_hit_03.ogg",
+      "vo/javryn_attack_hit_04.ogg"
+    ],
+    "hero.ayaka.skill_hit": [
+      "vo/javryn_skill_hit.ogg"
+    ],
+    "hero.4.attack": [
+      "sfx/comb_ayaka_attack_cast_01.ogg",
+      "sfx/comb_ayaka_attack_cast_02.ogg",
+      "sfx/comb_ayaka_attack_cast_03.ogg",
+      "sfx/comb_ayaka_attack_cast_04.ogg"
+    ],
+    "hero.yuuna.attack": [
+      "sfx/comb_ayaka_attack_cast_01.ogg",
+      "sfx/comb_ayaka_attack_cast_02.ogg",
+      "sfx/comb_ayaka_attack_cast_03.ogg",
+      "sfx/comb_ayaka_attack_cast_04.ogg"
+    ],
+    "hero.4.hit": [
+      "vo/javryn_attack_hit_01.ogg",
+      "vo/javryn_attack_hit_02.ogg",
+      "vo/javryn_attack_hit_03.ogg",
+      "vo/javryn_attack_hit_04.ogg"
+    ],
+    "hero.yuuna.hit": [
+      "vo/javryn_attack_hit_01.ogg",
+      "vo/javryn_attack_hit_02.ogg",
+      "vo/javryn_attack_hit_03.ogg",
+      "vo/javryn_attack_hit_04.ogg"
+    ],
+    "hero.4.skill": [
+      "sfx/comb_ayaka_act_skill_cast_01.ogg"
+    ],
+    "hero.yuuna.skill": [
+      "sfx/comb_ayaka_act_skill_cast_01.ogg"
+    ],
+    "hero.4.skill_hit": [
+      "vo/javryn_skill_hit.ogg"
+    ],
+    "hero.yuuna.skill_hit": [
+      "vo/javryn_skill_hit.ogg"
+    ],
+    "vo.ayaka.special": [
+      "vo/ayaka_or.ogg",
+      "vo/ayaka_or_a.ogg",
+      "vo/ayaka_or_s.ogg"
+    ],
+    "vo.4.attack": [
+      "vo/ayaka_aa01.ogg",
+      "vo/ayaka_aa02.ogg",
+      "vo/ayaka_aa03.ogg",
+      "vo/ayaka_aa04.ogg"
+    ],
+    "vo.yuuna.attack": [
+      "vo/ayaka_aa01.ogg",
+      "vo/ayaka_aa02.ogg",
+      "vo/ayaka_aa03.ogg",
+      "vo/ayaka_aa04.ogg"
+    ],
+    "vo.4.buy": [
+      "vo/ayaka_op.ogg"
+    ],
+    "vo.yuuna.buy": [
+      "vo/ayaka_op.ogg"
+    ],
+    "vo.4.death": [
+      "vo/ayaka_od.ogg",
+      "vo/ayaka_od_lastonestanding.ogg"
+    ],
+    "vo.yuuna.death": [
+      "vo/ayaka_od.ogg",
+      "vo/ayaka_od_lastonestanding.ogg"
+    ],
+    "vo.4.rankup": [
+      "vo/ayaka_or.ogg",
+      "vo/ayaka_or_a.ogg",
+      "vo/ayaka_or_s.ogg"
+    ],
+    "vo.yuuna.rankup": [
+      "vo/ayaka_or.ogg",
+      "vo/ayaka_or_a.ogg",
+      "vo/ayaka_or_s.ogg"
+    ],
+    "vo.4.special": [
+      "vo/ayaka_or.ogg",
+      "vo/ayaka_or_a.ogg",
+      "vo/ayaka_or_s.ogg"
+    ],
+    "vo.yuuna.special": [
+      "vo/ayaka_or.ogg",
+      "vo/ayaka_or_a.ogg",
+      "vo/ayaka_or_s.ogg"
+    ],
+    "hero.selkhera.hit": [
+      "sfx/ratna_attack_hit_01.ogg",
+      "sfx/ratna_attack_hit_02.ogg",
+      "sfx/ratna_attack_hit_03.ogg",
+      "sfx/ratna_attack_hit_04.ogg"
+    ],
+    "hero.selkhera.skill_hit": [
+      "sfx/spider_skill_hit.ogg"
+    ],
+    "hero.5.attack": [
+      "sfx/comb_selkhera_attack_cast_01.ogg",
+      "sfx/comb_selkhera_attack_cast_02.ogg",
+      "sfx/comb_selkhera_attack_cast_03.ogg",
+      "sfx/comb_selkhera_attack_cast_04.ogg"
+    ],
+    "hero.zuri.attack": [
+      "sfx/comb_selkhera_attack_cast_01.ogg",
+      "sfx/comb_selkhera_attack_cast_02.ogg",
+      "sfx/comb_selkhera_attack_cast_03.ogg",
+      "sfx/comb_selkhera_attack_cast_04.ogg"
+    ],
+    "hero.5.hit": [
+      "sfx/ratna_attack_hit_01.ogg",
+      "sfx/ratna_attack_hit_02.ogg",
+      "sfx/ratna_attack_hit_03.ogg",
+      "sfx/ratna_attack_hit_04.ogg"
+    ],
+    "hero.zuri.hit": [
+      "sfx/ratna_attack_hit_01.ogg",
+      "sfx/ratna_attack_hit_02.ogg",
+      "sfx/ratna_attack_hit_03.ogg",
+      "sfx/ratna_attack_hit_04.ogg"
+    ],
+    "hero.5.skill": [
+      "sfx/comb_selkhera_act_skill_cast_01.ogg",
+      "sfx/comb_selkhera_act_skill_cast_layer.ogg"
+    ],
+    "hero.zuri.skill": [
+      "sfx/comb_selkhera_act_skill_cast_01.ogg",
+      "sfx/comb_selkhera_act_skill_cast_layer.ogg"
+    ],
+    "hero.5.skill_hit": [
+      "sfx/spider_skill_hit.ogg"
+    ],
+    "hero.zuri.skill_hit": [
+      "sfx/spider_skill_hit.ogg"
+    ],
+    "vo.selkhera.special": [
+      "vo/zuri_or_a.ogg",
+      "vo/zuri_or_b.ogg",
+      "vo/zuri_or_s.ogg"
+    ],
+    "vo.5.attack": [
+      "vo/zuri_aa_01.ogg",
+      "vo/zuri_aa_02.ogg",
+      "vo/zuri_aa_03.ogg"
+    ],
+    "vo.zuri.attack": [
+      "vo/zuri_aa_01.ogg",
+      "vo/zuri_aa_02.ogg",
+      "vo/zuri_aa_03.ogg"
+    ],
+    "vo.5.buy": [
+      "vo/zuri_op_shop.ogg",
+      "vo/zuri_op_start.ogg"
+    ],
+    "vo.zuri.buy": [
+      "vo/zuri_op_shop.ogg",
+      "vo/zuri_op_start.ogg"
+    ],
+    "vo.5.death": [
+      "vo/zuri_od_01.ogg",
+      "vo/zuri_od_02.ogg",
+      "vo/zuri_od_03.ogg"
+    ],
+    "vo.zuri.death": [
+      "vo/zuri_od_01.ogg",
+      "vo/zuri_od_02.ogg",
+      "vo/zuri_od_03.ogg"
+    ],
+    "vo.5.rankup": [
+      "vo/zuri_or_a.ogg",
+      "vo/zuri_or_b.ogg",
+      "vo/zuri_or_s.ogg"
+    ],
+    "vo.zuri.rankup": [
+      "vo/zuri_or_a.ogg",
+      "vo/zuri_or_b.ogg",
+      "vo/zuri_or_s.ogg"
+    ],
+    "vo.5.special": [
+      "vo/zuri_or_a.ogg",
+      "vo/zuri_or_b.ogg",
+      "vo/zuri_or_s.ogg"
+    ],
+    "vo.zuri.special": [
+      "vo/zuri_or_a.ogg",
+      "vo/zuri_or_b.ogg",
+      "vo/zuri_or_s.ogg"
+    ],
+    "hero.seraphael.skill_hit": [
+      "sfx/irini_skill_hit_01.ogg"
+    ],
+    "hero.6.attack": [
+      "sfx/seraphael_attack_cast_01.ogg",
+      "sfx/seraphael_attack_cast_02.ogg",
+      "sfx/seraphael_attack_cast_03.ogg",
+      "sfx/seraphael_attack_cast_04.ogg"
+    ],
+    "hero.aria.attack": [
+      "sfx/seraphael_attack_cast_01.ogg",
+      "sfx/seraphael_attack_cast_02.ogg",
+      "sfx/seraphael_attack_cast_03.ogg",
+      "sfx/seraphael_attack_cast_04.ogg"
+    ],
+    "hero.6.hit": [
+      "sfx/seraphael_attack_hit_01.ogg",
+      "sfx/seraphael_attack_hit_02.ogg",
+      "sfx/seraphael_attack_hit_03.ogg",
+      "sfx/seraphael_attack_hit_04.ogg"
+    ],
+    "hero.aria.hit": [
+      "sfx/seraphael_attack_hit_01.ogg",
+      "sfx/seraphael_attack_hit_02.ogg",
+      "sfx/seraphael_attack_hit_03.ogg",
+      "sfx/seraphael_attack_hit_04.ogg"
+    ],
+    "hero.6.skill": [
+      "sfx/seraphael_skill_cast.ogg"
+    ],
+    "hero.aria.skill": [
+      "sfx/seraphael_skill_cast.ogg"
+    ],
+    "hero.6.skill_hit": [
+      "sfx/irini_skill_hit_01.ogg"
+    ],
+    "hero.aria.skill_hit": [
+      "sfx/irini_skill_hit_01.ogg"
+    ],
+    "vo.6.attack": [
+      "vo/seraphim_aa.ogg"
+    ],
+    "vo.aria.attack": [
+      "vo/seraphim_aa.ogg"
+    ],
+    "vo.6.buy": [
+      "vo/seraphim_op.ogg"
+    ],
+    "vo.aria.buy": [
+      "vo/seraphim_op.ogg"
+    ],
+    "vo.6.death": [
+      "vo/seraphim_od.ogg"
+    ],
+    "vo.aria.death": [
+      "vo/seraphim_od.ogg"
+    ],
+    "vo.6.rankup": [
+      "vo/seraphim_or.ogg"
+    ],
+    "vo.aria.rankup": [
+      "vo/seraphim_or.ogg"
+    ],
+    "vo.6.special": [
+      "vo/seraphim_osr.ogg"
+    ],
+    "vo.aria.special": [
+      "vo/seraphim_osr.ogg"
+    ],
+    "hero.nyxa.hit": [
+      "vo/javryn_attack_hit_01.ogg",
+      "vo/javryn_attack_hit_02.ogg",
+      "vo/javryn_attack_hit_03.ogg",
+      "vo/javryn_attack_hit_04.ogg"
+    ],
+    "hero.nyxa.skill_hit": [
+      "vo/javryn_skill_hit.ogg"
+    ],
+    "hero.7.attack": [
+      "vo/comb_nyxa_attack_cast_01.ogg",
+      "vo/comb_nyxa_attack_cast_02.ogg",
+      "vo/comb_nyxa_attack_cast_03.ogg",
+      "vo/comb_nyxa_attack_cast_04.ogg",
+      "vo/comb_nyxa_attack_cast_05.ogg"
+    ],
+    "hero.nyx.attack": [
+      "vo/comb_nyxa_attack_cast_01.ogg",
+      "vo/comb_nyxa_attack_cast_02.ogg",
+      "vo/comb_nyxa_attack_cast_03.ogg",
+      "vo/comb_nyxa_attack_cast_04.ogg",
+      "vo/comb_nyxa_attack_cast_05.ogg"
+    ],
+    "hero.7.hit": [
+      "vo/javryn_attack_hit_01.ogg",
+      "vo/javryn_attack_hit_02.ogg",
+      "vo/javryn_attack_hit_03.ogg",
+      "vo/javryn_attack_hit_04.ogg"
+    ],
+    "hero.nyx.hit": [
+      "vo/javryn_attack_hit_01.ogg",
+      "vo/javryn_attack_hit_02.ogg",
+      "vo/javryn_attack_hit_03.ogg",
+      "vo/javryn_attack_hit_04.ogg"
+    ],
+    "hero.7.skill": [
+      "vo/comb_nyxa_act_skill_cast_01.ogg"
+    ],
+    "hero.nyx.skill": [
+      "vo/comb_nyxa_act_skill_cast_01.ogg"
+    ],
+    "hero.7.skill_hit": [
+      "vo/javryn_skill_hit.ogg"
+    ],
+    "hero.nyx.skill_hit": [
+      "vo/javryn_skill_hit.ogg"
+    ],
+    "vo.7.attack": [
+      "vo/nyx_aa.ogg"
+    ],
+    "vo.nyx.attack": [
+      "vo/nyx_aa.ogg"
+    ],
+    "vo.7.buy": [
+      "vo/nyx_op.ogg"
+    ],
+    "vo.nyx.buy": [
+      "vo/nyx_op.ogg"
+    ],
+    "vo.7.death": [
+      "vo/nyx_od.ogg"
+    ],
+    "vo.nyx.death": [
+      "vo/nyx_od.ogg"
+    ],
+    "vo.7.rankup": [
+      "vo/nyx_or.ogg"
+    ],
+    "vo.nyx.rankup": [
+      "vo/nyx_or.ogg"
+    ],
+    "vo.7.special": [
+      "vo/nyx_osr.ogg"
+    ],
+    "vo.nyx.special": [
+      "vo/nyx_osr.ogg"
+    ],
+    "hero.floeria.skill_hit": [
+      "sfx/musharcher_skill_hit.ogg"
+    ],
+    "hero.8.attack": [
+      "sfx/comb_floeria_attack_cast_01.ogg",
+      "sfx/comb_floeria_attack_cast_02.ogg",
+      "sfx/comb_floeria_attack_cast_03.ogg",
+      "sfx/comb_floeria_attack_cast_04.ogg"
+    ],
+    "hero.pollen.attack": [
+      "sfx/comb_floeria_attack_cast_01.ogg",
+      "sfx/comb_floeria_attack_cast_02.ogg",
+      "sfx/comb_floeria_attack_cast_03.ogg",
+      "sfx/comb_floeria_attack_cast_04.ogg"
+    ],
+    "hero.8.hit": [
+      "sfx/comb_floeria_attack_hit_01.ogg",
+      "sfx/comb_floeria_attack_hit_02.ogg",
+      "sfx/comb_floeria_attack_hit_03.ogg",
+      "sfx/comb_floeria_attack_hit_04.ogg"
+    ],
+    "hero.pollen.hit": [
+      "sfx/comb_floeria_attack_hit_01.ogg",
+      "sfx/comb_floeria_attack_hit_02.ogg",
+      "sfx/comb_floeria_attack_hit_03.ogg",
+      "sfx/comb_floeria_attack_hit_04.ogg"
+    ],
+    "hero.8.skill": [
+      "sfx/comb_floeria_act_skill1_01.ogg",
+      "sfx/comb_floeria_act_skill2_01.ogg"
+    ],
+    "hero.pollen.skill": [
+      "sfx/comb_floeria_act_skill1_01.ogg",
+      "sfx/comb_floeria_act_skill2_01.ogg"
+    ],
+    "hero.8.skill_hit": [
+      "sfx/musharcher_skill_hit.ogg"
+    ],
+    "hero.pollen.skill_hit": [
+      "sfx/musharcher_skill_hit.ogg"
+    ],
+    "vo.8.attack": [
+      "vo/pollen_aa.ogg"
+    ],
+    "vo.pollen.attack": [
+      "vo/pollen_aa.ogg"
+    ],
+    "vo.8.buy": [
+      "vo/pollen_op_at_start.ogg",
+      "vo/pollen_op_in_shop.ogg"
+    ],
+    "vo.pollen.buy": [
+      "vo/pollen_op_at_start.ogg",
+      "vo/pollen_op_in_shop.ogg"
+    ],
+    "vo.8.death": [
+      "vo/pollen_od.ogg"
+    ],
+    "vo.pollen.death": [
+      "vo/pollen_od.ogg"
+    ],
+    "vo.8.rankup": [
+      "vo/pollen_or.ogg"
+    ],
+    "vo.pollen.rankup": [
+      "vo/pollen_or.ogg"
+    ],
+    "vo.8.special": [
+      "vo/pollen_osr.ogg"
+    ],
+    "vo.pollen.special": [
+      "vo/pollen_osr.ogg"
+    ],
+    "hero.niklas.hit": [
+      "sfx/tilly_attack_hit_01.ogg",
+      "sfx/tilly_attack_hit_02.ogg",
+      "sfx/tilly_attack_hit_03.ogg",
+      "sfx/tilly_attack_hit_04.ogg"
+    ],
+    "hero.niklas.skill_hit": [
+      "vo/hoyoung_skill_hit_01.ogg"
+    ],
+    "hero.9.attack": [
+      "vo/comb_niklas_attack_cast_01.ogg",
+      "vo/comb_niklas_attack_cast_02.ogg",
+      "vo/comb_niklas_attack_cast_03.ogg",
+      "vo/comb_niklas_attack_cast_04.ogg"
+    ],
+    "hero.9.hit": [
+      "sfx/tilly_attack_hit_01.ogg",
+      "sfx/tilly_attack_hit_02.ogg",
+      "sfx/tilly_attack_hit_03.ogg",
+      "sfx/tilly_attack_hit_04.ogg"
+    ],
+    "hero.9.skill": [
+      "vo/comb_niklas_act_skill_cast_01.ogg"
+    ],
+    "hero.9.skill_hit": [
+      "vo/hoyoung_skill_hit_01.ogg"
+    ],
+    "vo.9.attack": [
+      "vo/niklas_aa_kick.ogg",
+      "vo/niklas_aa_punch.ogg"
+    ],
+    "vo.9.buy": [
+      "vo/niklas_op.ogg"
+    ],
+    "vo.9.death": [
+      "vo/niklas_od.ogg"
+    ],
+    "vo.9.rankup": [
+      "vo/niklas_or.ogg"
+    ],
+    "vo.9.special": [
+      "vo/niklas_osr.ogg"
+    ],
+    "hero.fiona.skill_hit": [
+      "sfx/irini_skill_hit_01.ogg"
+    ],
+    "hero.10.attack": [
+      "sfx/comb_fiona_attack_cast_01.ogg",
+      "sfx/comb_fiona_attack_cast_02.ogg",
+      "sfx/comb_fiona_attack_cast_03.ogg",
+      "sfx/comb_fiona_attack_cast_04.ogg"
+    ],
+    "hero.10.hit": [
+      "sfx/comb_fiona_attack_hit_01.ogg",
+      "sfx/comb_fiona_attack_hit_02.ogg",
+      "sfx/comb_fiona_attack_hit_03.ogg"
+    ],
+    "hero.10.skill": [
+      "sfx/comb_fiona_act_skill_01.ogg",
+      "sfx/comb_fiona_act_skill_02.ogg"
+    ],
+    "hero.10.skill_hit": [
+      "sfx/irini_skill_hit_01.ogg"
+    ],
+    "vo.fiona.special": [
+      "vo/fiona_or_a.ogg",
+      "vo/fiona_or_b.ogg",
+      "vo/fiona_or_s.ogg"
+    ],
+    "vo.10.attack": [
+      "vo/fiona_aa_01.ogg",
+      "vo/fiona_aa_02.ogg"
+    ],
+    "vo.10.buy": [
+      "vo/fiona_op_shop.ogg",
+      "vo/fiona_op_start.ogg"
+    ],
+    "vo.10.death": [
+      "vo/fiona_od_01.ogg",
+      "vo/fiona_od_02.ogg",
+      "vo/fiona_od_03.ogg",
+      "vo/fiona_od_04.ogg"
+    ],
+    "vo.10.rankup": [
+      "vo/fiona_or_a.ogg",
+      "vo/fiona_or_b.ogg",
+      "vo/fiona_or_s.ogg"
+    ],
+    "vo.10.special": [
+      "vo/fiona_or_a.ogg",
+      "vo/fiona_or_b.ogg",
+      "vo/fiona_or_s.ogg"
+    ],
+    "hero.rook.hit": [
+      "sfx/plantmonster_attack_hit_01.ogg",
+      "sfx/plantmonster_attack_hit_02.ogg",
+      "sfx/plantmonster_attack_hit_03.ogg",
+      "sfx/plantmonster_attack_hit_04.ogg"
+    ],
+    "hero.rook.skill_hit": [
+      "sfx/plantmonster_attack_hit_01.ogg",
+      "sfx/plantmonster_attack_hit_02.ogg",
+      "sfx/plantmonster_attack_hit_03.ogg",
+      "sfx/plantmonster_attack_hit_04.ogg"
+    ],
+    "hero.11.attack": [
+      "sfx/rook_attack_cast_01.ogg",
+      "sfx/rook_attack_cast_02.ogg",
+      "sfx/rook_attack_cast_03.ogg",
+      "sfx/rook_attack_cast_04.ogg"
+    ],
+    "hero.rowan.attack": [
+      "sfx/rook_attack_cast_01.ogg",
+      "sfx/rook_attack_cast_02.ogg",
+      "sfx/rook_attack_cast_03.ogg",
+      "sfx/rook_attack_cast_04.ogg"
+    ],
+    "hero.11.hit": [
+      "sfx/plantmonster_attack_hit_01.ogg",
+      "sfx/plantmonster_attack_hit_02.ogg",
+      "sfx/plantmonster_attack_hit_03.ogg",
+      "sfx/plantmonster_attack_hit_04.ogg"
+    ],
+    "hero.rowan.hit": [
+      "sfx/plantmonster_attack_hit_01.ogg",
+      "sfx/plantmonster_attack_hit_02.ogg",
+      "sfx/plantmonster_attack_hit_03.ogg",
+      "sfx/plantmonster_attack_hit_04.ogg"
+    ],
+    "hero.11.skill": [
+      "sfx/rook_skill_cast.ogg"
+    ],
+    "hero.rowan.skill": [
+      "sfx/rook_skill_cast.ogg"
+    ],
+    "hero.11.skill_hit": [
+      "sfx/plantmonster_attack_hit_01.ogg",
+      "sfx/plantmonster_attack_hit_02.ogg",
+      "sfx/plantmonster_attack_hit_03.ogg",
+      "sfx/plantmonster_attack_hit_04.ogg"
+    ],
+    "hero.rowan.skill_hit": [
+      "sfx/plantmonster_attack_hit_01.ogg",
+      "sfx/plantmonster_attack_hit_02.ogg",
+      "sfx/plantmonster_attack_hit_03.ogg",
+      "sfx/plantmonster_attack_hit_04.ogg"
+    ],
+    "vo.rook.special": [
+      "vo/rowan_or_a.ogg",
+      "vo/rowan_or_b.ogg",
+      "vo/rowan_or_s.ogg"
+    ],
+    "vo.11.attack": [
+      "vo/rowan_aa_01.ogg",
+      "vo/rowan_aa_02.ogg",
+      "vo/rowan_aa_03.ogg"
+    ],
+    "vo.rowan.attack": [
+      "vo/rowan_aa_01.ogg",
+      "vo/rowan_aa_02.ogg",
+      "vo/rowan_aa_03.ogg"
+    ],
+    "vo.11.buy": [
+      "vo/rowan_op_shop.ogg",
+      "vo/rowan_op_start.ogg"
+    ],
+    "vo.rowan.buy": [
+      "vo/rowan_op_shop.ogg",
+      "vo/rowan_op_start.ogg"
+    ],
+    "vo.11.death": [
+      "vo/rowan_od.ogg"
+    ],
+    "vo.rowan.death": [
+      "vo/rowan_od.ogg"
+    ],
+    "vo.11.rankup": [
+      "vo/rowan_or_a.ogg",
+      "vo/rowan_or_b.ogg",
+      "vo/rowan_or_s.ogg"
+    ],
+    "vo.rowan.rankup": [
+      "vo/rowan_or_a.ogg",
+      "vo/rowan_or_b.ogg",
+      "vo/rowan_or_s.ogg"
+    ],
+    "vo.11.special": [
+      "vo/rowan_or_a.ogg",
+      "vo/rowan_or_b.ogg",
+      "vo/rowan_or_s.ogg"
+    ],
+    "vo.rowan.special": [
+      "vo/rowan_or_a.ogg",
+      "vo/rowan_or_b.ogg",
+      "vo/rowan_or_s.ogg"
+    ],
+    "hero.skorn.hit": [
+      "sfx/tilly_attack_hit_01.ogg",
+      "sfx/tilly_attack_hit_02.ogg",
+      "sfx/tilly_attack_hit_03.ogg",
+      "sfx/tilly_attack_hit_04.ogg"
+    ],
+    "hero.skorn.skill_hit": [
+      "sfx/irini_skill_hit_01.ogg"
+    ],
+    "hero.12.attack": [
+      "sfx/skorn_attack_cast_01.ogg",
+      "sfx/skorn_attack_cast_02.ogg",
+      "sfx/skorn_attack_cast_03.ogg",
+      "sfx/skorn_attack_cast_04.ogg"
+    ],
+    "hero.12.hit": [
+      "sfx/tilly_attack_hit_01.ogg",
+      "sfx/tilly_attack_hit_02.ogg",
+      "sfx/tilly_attack_hit_03.ogg",
+      "sfx/tilly_attack_hit_04.ogg"
+    ],
+    "hero.12.skill": [
+      "sfx/skorn_skill_cast.ogg"
+    ],
+    "hero.12.skill_hit": [
+      "sfx/irini_skill_hit_01.ogg"
+    ],
+    "vo.skorn.special": [
+      "vo/skorn_or_a.ogg",
+      "vo/skorn_or_b.ogg",
+      "vo/skorn_or_s.ogg"
+    ],
+    "vo.12.attack": [
+      "vo/skorn_aa_01.ogg",
+      "vo/skorn_aa_02.ogg",
+      "vo/skorn_aa_03.ogg",
+      "vo/skorn_aa_04.ogg",
+      "vo/skorn_aa_05.ogg",
+      "vo/skorn_aa_06.ogg",
+      "vo/skorn_aa_07.ogg",
+      "vo/skorn_aa_08.ogg"
+    ],
+    "vo.12.buy": [
+      "vo/skorn_op_shop_01.ogg",
+      "vo/skorn_op_shop_02.ogg",
+      "vo/skorn_op_start.ogg"
+    ],
+    "vo.12.death": [
+      "vo/skorn_od_01.ogg",
+      "vo/skorn_od_02.ogg",
+      "vo/skorn_od_03.ogg",
+      "vo/skorn_od_04.ogg"
+    ],
+    "vo.12.rankup": [
+      "vo/skorn_or_a.ogg",
+      "vo/skorn_or_b.ogg",
+      "vo/skorn_or_s.ogg"
+    ],
+    "vo.12.special": [
+      "vo/skorn_or_a.ogg",
+      "vo/skorn_or_b.ogg",
+      "vo/skorn_or_s.ogg"
+    ],
+    "vo.12.line": [
+      "vo/skorn_disc_benched.ogg",
+      "vo/skorn_disc_bossencounter.ogg",
+      "vo/skorn_disc_crossroads.ogg",
+      "vo/skorn_disc_itemgained.ogg",
+      "vo/skorn_disc_overkill.ogg",
+      "vo/skorn_disc_revive.ogg",
+      "vo/skorn_disc_whentakinglongtimetoprepare.ogg"
+    ],
+    "hero.logan.hit": [
+      "sfx/tilly_attack_hit_01.ogg",
+      "sfx/tilly_attack_hit_02.ogg",
+      "sfx/tilly_attack_hit_03.ogg",
+      "sfx/tilly_attack_hit_04.ogg"
+    ],
+    "hero.logan.skill_hit": [
+      "vo/hoyoung_skill_hit_01.ogg"
+    ],
+    "hero.13.attack": [
+      "sfx/logan_attack_cast_01.ogg",
+      "sfx/logan_attack_cast_02.ogg",
+      "sfx/logan_attack_cast_03.ogg",
+      "sfx/logan_attack_cast_04.ogg"
+    ],
+    "hero.13.hit": [
+      "sfx/tilly_attack_hit_01.ogg",
+      "sfx/tilly_attack_hit_02.ogg",
+      "sfx/tilly_attack_hit_03.ogg",
+      "sfx/tilly_attack_hit_04.ogg"
+    ],
+    "hero.13.skill": [
+      "sfx/logan_skill_cast.ogg"
+    ],
+    "hero.13.skill_hit": [
+      "vo/hoyoung_skill_hit_01.ogg"
+    ],
+    "vo.logan.special": [
+      "vo/logan_or_a.ogg",
+      "vo/logan_or_b.ogg",
+      "vo/logan_or_s.ogg"
+    ],
+    "vo.13.attack": [
+      "vo/logan_aa_01.ogg",
+      "vo/logan_aa_02.ogg",
+      "vo/logan_aa_03.ogg",
+      "vo/logan_aa_04.ogg"
+    ],
+    "vo.13.buy": [
+      "vo/logan_op_shop.ogg",
+      "vo/logan_op_start.ogg"
+    ],
+    "vo.13.death": [
+      "vo/logan_od.ogg"
+    ],
+    "vo.13.rankup": [
+      "vo/logan_or_a.ogg",
+      "vo/logan_or_b.ogg",
+      "vo/logan_or_s.ogg"
+    ],
+    "vo.13.special": [
+      "vo/logan_or_a.ogg",
+      "vo/logan_or_b.ogg",
+      "vo/logan_or_s.ogg"
+    ],
+    "hero.14.attack": [
+      "vo/comb_funke_attack_cast_01.ogg",
+      "vo/comb_funke_attack_cast_02.ogg",
+      "vo/comb_funke_attack_cast_03.ogg",
+      "vo/comb_funke_attack_cast_04.ogg"
+    ],
+    "hero.14.hit": [
+      "vo/comb_funke_attack_hit_01.ogg",
+      "vo/comb_funke_attack_hit_02.ogg",
+      "vo/comb_funke_attack_hit_03.ogg",
+      "vo/comb_funke_attack_hit_04.ogg"
+    ],
+    "hero.14.skill": [
+      "vo/comb_funke_act_skill_cast_01.ogg"
+    ],
+    "hero.14.skill_hit": [
+      "vo/comb_funke_act_skill_hit_01.ogg"
+    ],
+    "vo.funke.special": [
+      "vo/funke_or_a.ogg",
+      "vo/funke_or_b.ogg",
+      "vo/funke_or_s.ogg"
+    ],
+    "vo.14.attack": [
+      "vo/funke_aa_01.ogg",
+      "vo/funke_aa_02.ogg"
+    ],
+    "vo.14.buy": [
+      "vo/funke_op_shop.ogg"
+    ],
+    "vo.14.death": [
+      "vo/funke_od_01.ogg",
+      "vo/funke_od_02.ogg",
+      "vo/funke_od_03.ogg",
+      "vo/funke_od_start.ogg"
+    ],
+    "vo.14.rankup": [
+      "vo/funke_or_a.ogg",
+      "vo/funke_or_b.ogg",
+      "vo/funke_or_s.ogg"
+    ],
+    "vo.14.special": [
+      "vo/funke_or_a.ogg",
+      "vo/funke_or_b.ogg",
+      "vo/funke_or_s.ogg"
+    ],
+    "hero.tilly.skill_hit": [
+      "vo/javryn_skill_hit.ogg"
+    ],
+    "hero.15.attack": [
+      "sfx/tilly_attack_cast_01.ogg",
+      "sfx/tilly_attack_cast_02.ogg",
+      "sfx/tilly_attack_cast_03.ogg",
+      "sfx/tilly_attack_cast_04.ogg"
+    ],
+    "hero.15.hit": [
+      "sfx/tilly_attack_hit_01.ogg",
+      "sfx/tilly_attack_hit_02.ogg",
+      "sfx/tilly_attack_hit_03.ogg",
+      "sfx/tilly_attack_hit_04.ogg"
+    ],
+    "hero.15.skill": [
+      "sfx/tilly_skill_cast.ogg"
+    ],
+    "hero.15.skill_hit": [
+      "vo/javryn_skill_hit.ogg"
+    ],
+    "vo.tilly.special": [
+      "vo/tilly_or_a.ogg",
+      "vo/tilly_or_b.ogg",
+      "vo/tilly_or_s.ogg"
+    ],
+    "vo.15.attack": [
+      "vo/tilly_aa_01.ogg",
+      "vo/tilly_aa_02.ogg",
+      "vo/tilly_aa_03.ogg",
+      "vo/tilly_aa_04.ogg",
+      "vo/tilly_aa_05.ogg"
+    ],
+    "vo.15.buy": [
+      "vo/tilly_op_shop.ogg",
+      "vo/tilly_op_start.ogg"
+    ],
+    "vo.15.death": [
+      "vo/tilly_od_01.ogg",
+      "vo/tilly_od_02.ogg",
+      "vo/tilly_od_03.ogg",
+      "vo/tilly_od_04.ogg"
+    ],
+    "vo.15.rankup": [
+      "vo/tilly_or_a.ogg",
+      "vo/tilly_or_b.ogg",
+      "vo/tilly_or_s.ogg"
+    ],
+    "vo.15.special": [
+      "vo/tilly_or_a.ogg",
+      "vo/tilly_or_b.ogg",
+      "vo/tilly_or_s.ogg"
+    ],
+    "hero.gustav.skill_hit": [
+      "sfx/sal_skill_hit_01.ogg",
+      "sfx/sal_skill_hit_02.ogg"
+    ],
+    "hero.16.attack": [
+      "sfx/comb_gustav_attack_cast_01.ogg",
+      "sfx/comb_gustav_attack_cast_02.ogg",
+      "sfx/comb_gustav_attack_cast_03.ogg",
+      "sfx/comb_gustav_attack_cast_04.ogg"
+    ],
+    "hero.16.hit": [
+      "sfx/comb_gustav_attack_hit_01.ogg",
+      "sfx/comb_gustav_attack_hit_02.ogg",
+      "sfx/comb_gustav_attack_hit_03.ogg",
+      "sfx/comb_gustav_attack_hit_04.ogg"
+    ],
+    "hero.16.skill": [
+      "sfx/comb_gustav_act_skill_cast_01.ogg"
+    ],
+    "hero.16.skill_hit": [
+      "sfx/sal_skill_hit_01.ogg",
+      "sfx/sal_skill_hit_02.ogg"
+    ],
+    "vo.gustav.special": [
+      "vo/gustav_or_a.ogg",
+      "vo/gustav_or_b.ogg",
+      "vo/gustav_or_s.ogg"
+    ],
+    "vo.16.attack": [
+      "vo/gustav_aa_01.ogg",
+      "vo/gustav_aa_02.ogg"
+    ],
+    "vo.16.buy": [
+      "vo/gustav_op.ogg"
+    ],
+    "vo.16.death": [
+      "vo/gustav_od_01.ogg",
+      "vo/gustav_od_02.ogg",
+      "vo/gustav_od_03.ogg"
+    ],
+    "vo.16.rankup": [
+      "vo/gustav_or_a.ogg",
+      "vo/gustav_or_b.ogg",
+      "vo/gustav_or_s.ogg"
+    ],
+    "vo.16.special": [
+      "vo/gustav_or_a.ogg",
+      "vo/gustav_or_b.ogg",
+      "vo/gustav_or_s.ogg"
+    ],
+    "vo.16.line": [
+      "vo/gustav_disc_benched.ogg",
+      "vo/gustav_disc_bossencounter.ogg",
+      "vo/gustav_disc_itemgained.ogg",
+      "vo/gustav_disc_rerollmod.ogg",
+      "vo/gustav_disc_teamwipeout.ogg",
+      "vo/gustav_disc_victory.ogg"
+    ],
+    "hero.ratna.skill_hit": [
+      "sfx/irini_skill_hit_01.ogg"
+    ],
+    "hero.17.attack": [
+      "sfx/ratna_attack_cast_01.ogg",
+      "sfx/ratna_attack_cast_02.ogg",
+      "sfx/ratna_attack_cast_03.ogg",
+      "sfx/ratna_attack_cast_04.ogg"
+    ],
+    "hero.17.hit": [
+      "sfx/ratna_attack_hit_01.ogg",
+      "sfx/ratna_attack_hit_02.ogg",
+      "sfx/ratna_attack_hit_03.ogg",
+      "sfx/ratna_attack_hit_04.ogg"
+    ],
+    "hero.17.skill": [
+      "sfx/ratna_skill_cast.ogg"
+    ],
+    "hero.17.skill_hit": [
+      "sfx/irini_skill_hit_01.ogg"
+    ],
+    "vo.ratna.special": [
+      "vo/ratna_or_a.ogg",
+      "vo/ratna_or_b.ogg",
+      "vo/ratna_or_s.ogg"
+    ],
+    "vo.17.attack": [
+      "vo/ratna_aa_01.ogg",
+      "vo/ratna_aa_02.ogg",
+      "vo/ratna_aa_03.ogg",
+      "vo/ratna_aa_04.ogg",
+      "vo/ratna_aa_05.ogg",
+      "vo/ratna_aa_06.ogg"
+    ],
+    "vo.17.buy": [
+      "vo/ratna_op_shop.ogg",
+      "vo/ratna_op_start.ogg"
+    ],
+    "vo.17.death": [
+      "vo/ratna_od_01.ogg",
+      "vo/ratna_od_02.ogg",
+      "vo/ratna_od_03.ogg",
+      "vo/ratna_od_04.ogg",
+      "vo/ratna_od_05.ogg",
+      "vo/ratna_od_06.ogg"
+    ],
+    "vo.17.rankup": [
+      "vo/ratna_or_a.ogg",
+      "vo/ratna_or_b.ogg",
+      "vo/ratna_or_s.ogg"
+    ],
+    "vo.17.special": [
+      "vo/ratna_or_a.ogg",
+      "vo/ratna_or_b.ogg",
+      "vo/ratna_or_s.ogg"
+    ],
+    "hero.cenk.hit": [
+      "sfx/tilly_attack_hit_01.ogg",
+      "sfx/tilly_attack_hit_02.ogg",
+      "sfx/tilly_attack_hit_03.ogg",
+      "sfx/tilly_attack_hit_04.ogg"
+    ],
+    "hero.cenk.skill_hit": [
+      "sfx/sal_skill_hit_01.ogg",
+      "sfx/sal_skill_hit_02.ogg"
+    ],
+    "hero.18.attack": [
+      "sfx/cenk_attack_cast_01.ogg",
+      "sfx/cenk_attack_cast_02.ogg",
+      "sfx/cenk_attack_cast_03.ogg",
+      "sfx/cenk_attack_cast_04.ogg"
+    ],
+    "hero.rip.attack": [
+      "sfx/cenk_attack_cast_01.ogg",
+      "sfx/cenk_attack_cast_02.ogg",
+      "sfx/cenk_attack_cast_03.ogg",
+      "sfx/cenk_attack_cast_04.ogg"
+    ],
+    "hero.18.hit": [
+      "sfx/tilly_attack_hit_01.ogg",
+      "sfx/tilly_attack_hit_02.ogg",
+      "sfx/tilly_attack_hit_03.ogg",
+      "sfx/tilly_attack_hit_04.ogg"
+    ],
+    "hero.rip.hit": [
+      "sfx/tilly_attack_hit_01.ogg",
+      "sfx/tilly_attack_hit_02.ogg",
+      "sfx/tilly_attack_hit_03.ogg",
+      "sfx/tilly_attack_hit_04.ogg"
+    ],
+    "hero.18.skill": [
+      "sfx/cenk_skill_cast.ogg"
+    ],
+    "hero.rip.skill": [
+      "sfx/cenk_skill_cast.ogg"
+    ],
+    "hero.18.skill_hit": [
+      "sfx/sal_skill_hit_01.ogg",
+      "sfx/sal_skill_hit_02.ogg"
+    ],
+    "hero.rip.skill_hit": [
+      "sfx/sal_skill_hit_01.ogg",
+      "sfx/sal_skill_hit_02.ogg"
+    ],
+    "vo.cenk.special": [
+      "vo/rip_or_a.ogg",
+      "vo/rip_or_b.ogg",
+      "vo/rip_or_s.ogg"
+    ],
+    "vo.18.attack": [
+      "vo/rip_aa_01.ogg",
+      "vo/rip_aa_02.ogg",
+      "vo/rip_aa_03.ogg"
+    ],
+    "vo.rip.attack": [
+      "vo/rip_aa_01.ogg",
+      "vo/rip_aa_02.ogg",
+      "vo/rip_aa_03.ogg"
+    ],
+    "vo.18.buy": [
+      "vo/rip_op_shop.ogg",
+      "vo/rip_op_start.ogg"
+    ],
+    "vo.rip.buy": [
+      "vo/rip_op_shop.ogg",
+      "vo/rip_op_start.ogg"
+    ],
+    "vo.18.death": [
+      "vo/rip_od_01.ogg",
+      "vo/rip_od_02.ogg",
+      "vo/rip_od_03.ogg"
+    ],
+    "vo.rip.death": [
+      "vo/rip_od_01.ogg",
+      "vo/rip_od_02.ogg",
+      "vo/rip_od_03.ogg"
+    ],
+    "vo.18.rankup": [
+      "vo/rip_or_a.ogg",
+      "vo/rip_or_b.ogg",
+      "vo/rip_or_s.ogg"
+    ],
+    "vo.rip.rankup": [
+      "vo/rip_or_a.ogg",
+      "vo/rip_or_b.ogg",
+      "vo/rip_or_s.ogg"
+    ],
+    "vo.18.special": [
+      "vo/rip_or_a.ogg",
+      "vo/rip_or_b.ogg",
+      "vo/rip_or_s.ogg"
+    ],
+    "vo.rip.special": [
+      "vo/rip_or_a.ogg",
+      "vo/rip_or_b.ogg",
+      "vo/rip_or_s.ogg"
+    ],
+    "hero.20.attack": [
+      "vo/javryn_attack_cast_01.ogg",
+      "vo/javryn_attack_cast_02.ogg",
+      "vo/javryn_attack_cast_03.ogg",
+      "vo/javryn_attack_cast_04.ogg"
+    ],
+    "hero.karsu.attack": [
+      "vo/javryn_attack_cast_01.ogg",
+      "vo/javryn_attack_cast_02.ogg",
+      "vo/javryn_attack_cast_03.ogg",
+      "vo/javryn_attack_cast_04.ogg"
+    ],
+    "hero.20.hit": [
+      "vo/javryn_attack_hit_01.ogg",
+      "vo/javryn_attack_hit_02.ogg",
+      "vo/javryn_attack_hit_03.ogg",
+      "vo/javryn_attack_hit_04.ogg"
+    ],
+    "hero.karsu.hit": [
+      "vo/javryn_attack_hit_01.ogg",
+      "vo/javryn_attack_hit_02.ogg",
+      "vo/javryn_attack_hit_03.ogg",
+      "vo/javryn_attack_hit_04.ogg"
+    ],
+    "hero.20.skill": [
+      "vo/javryn_skill_cast.ogg"
+    ],
+    "hero.karsu.skill": [
+      "vo/javryn_skill_cast.ogg"
+    ],
+    "hero.20.skill_hit": [
+      "vo/javryn_skill_hit.ogg"
+    ],
+    "hero.karsu.skill_hit": [
+      "vo/javryn_skill_hit.ogg"
+    ],
+    "vo.20.attack": [
+      "vo/zaya_aa.ogg"
+    ],
+    "vo.karsu.attack": [
+      "vo/zaya_aa.ogg"
+    ],
+    "vo.20.buy": [
+      "vo/zaya_op.ogg"
+    ],
+    "vo.karsu.buy": [
+      "vo/zaya_op.ogg"
+    ],
+    "vo.20.death": [
+      "vo/zaya_od.ogg"
+    ],
+    "vo.karsu.death": [
+      "vo/zaya_od.ogg"
+    ],
+    "vo.20.rankup": [
+      "vo/zaya_or_a.ogg",
+      "vo/zaya_or_b_the_breeze.ogg",
+      "vo/zaya_or_b_the_snow.ogg",
+      "vo/zaya_or_b_the_storm.ogg"
+    ],
+    "vo.karsu.rankup": [
+      "vo/zaya_or_a.ogg",
+      "vo/zaya_or_b_the_breeze.ogg",
+      "vo/zaya_or_b_the_snow.ogg",
+      "vo/zaya_or_b_the_storm.ogg"
+    ],
+    "vo.20.special": [
+      "vo/zaya_osr.ogg"
+    ],
+    "vo.karsu.special": [
+      "vo/zaya_osr.ogg"
+    ],
+    "hero.ming.hit": [
+      "vo/comb_funke_attack_hit_01.ogg",
+      "vo/comb_funke_attack_hit_02.ogg",
+      "vo/comb_funke_attack_hit_03.ogg",
+      "vo/comb_funke_attack_hit_04.ogg"
+    ],
+    "hero.ming.skill_hit": [
+      "vo/comb_funke_act_skill_hit_01.ogg"
+    ],
+    "hero.21.attack": [
+      "vo/ming_attack_cast_01.ogg",
+      "vo/ming_attack_cast_02.ogg",
+      "vo/ming_attack_cast_03.ogg"
+    ],
+    "hero.21.hit": [
+      "vo/comb_funke_attack_hit_01.ogg",
+      "vo/comb_funke_attack_hit_02.ogg",
+      "vo/comb_funke_attack_hit_03.ogg",
+      "vo/comb_funke_attack_hit_04.ogg"
+    ],
+    "hero.21.skill": [
+      "vo/ming_skill_cast.ogg"
+    ],
+    "hero.21.skill_hit": [
+      "vo/comb_funke_act_skill_hit_01.ogg"
+    ],
+    "vo.21.attack": [
+      "vo/ming_aa_end.ogg",
+      "vo/ming_aa_start.ogg",
+      "vo/rr_vo_ming_aa_01.ogg",
+      "vo/rr_vo_ming_aa_02.ogg",
+      "vo/rr_vo_ming_aa_03.ogg"
+    ],
+    "vo.21.buy": [
+      "vo/ming_op.ogg"
+    ],
+    "vo.21.death": [
+      "vo/ming_od01.ogg",
+      "vo/ming_od02.ogg"
+    ],
+    "vo.21.rankup": [
+      "vo/ming_or.ogg",
+      "vo/rr_vo_ming_or_02.ogg"
+    ],
+    "vo.21.special": [
+      "vo/ming_osr.ogg",
+      "vo/rr_vo_ming_osr_01.ogg",
+      "vo/rr_vo_ming_osr_03.ogg"
+    ],
+    "hero.pimenta.hit": [
+      "vo/comb_funke_attack_hit_01.ogg",
+      "vo/comb_funke_attack_hit_02.ogg",
+      "vo/comb_funke_attack_hit_03.ogg",
+      "vo/comb_funke_attack_hit_04.ogg"
+    ],
+    "hero.pimenta.skill_hit": [
+      "vo/comb_funke_act_skill_hit_01.ogg"
+    ],
+    "hero.22.attack": [
+      "sfx/pimenta_attack_cast_01.ogg",
+      "sfx/pimenta_attack_cast_02.ogg",
+      "sfx/pimenta_attack_cast_03.ogg",
+      "sfx/pimenta_attack_cast_04.ogg"
+    ],
+    "hero.22.hit": [
+      "vo/comb_funke_attack_hit_01.ogg",
+      "vo/comb_funke_attack_hit_02.ogg",
+      "vo/comb_funke_attack_hit_03.ogg",
+      "vo/comb_funke_attack_hit_04.ogg"
+    ],
+    "hero.22.skill": [
+      "sfx/pimenta_skill_cast_01.ogg"
+    ],
+    "hero.22.skill_hit": [
+      "vo/comb_funke_act_skill_hit_01.ogg"
+    ],
+    "vo.22.attack": [
+      "vo/pimenta_aa.ogg"
+    ],
+    "vo.22.buy": [
+      "vo/pimenta_op.ogg"
+    ],
+    "vo.22.death": [
+      "vo/pimenta_od.ogg"
+    ],
+    "vo.22.rankup": [
+      "vo/pimenta_or_the_lover.ogg",
+      "vo/pimenta_or_the_spicy.ogg"
+    ],
+    "vo.22.special": [
+      "vo/pimenta_osr.ogg"
+    ],
+    "hero.23.attack": [
+      "sfx/sal_attack_cast_01.ogg",
+      "sfx/sal_attack_cast_02.ogg",
+      "sfx/sal_attack_cast_03.ogg",
+      "sfx/sal_attack_cast_04.ogg"
+    ],
+    "hero.23.hit": [
+      "sfx/sal_attack_hit_01.ogg",
+      "sfx/sal_attack_hit_02.ogg",
+      "sfx/sal_attack_hit_03.ogg",
+      "sfx/sal_attack_hit_04.ogg"
+    ],
+    "hero.23.skill": [
+      "sfx/sal_skill_cast.ogg"
+    ],
+    "hero.23.skill_hit": [
+      "sfx/sal_skill_hit_01.ogg",
+      "sfx/sal_skill_hit_02.ogg"
+    ],
+    "vo.23.attack": [
+      "vo/sal_aa.ogg"
+    ],
+    "vo.23.buy": [
+      "vo/sal_op.ogg"
+    ],
+    "vo.23.death": [
+      "vo/sal_od01.ogg",
+      "vo/sal_od02.ogg"
+    ],
+    "vo.23.rankup": [
+      "vo/sal_or.ogg"
+    ],
+    "vo.23.special": [
+      "vo/sal_osr.ogg"
+    ],
+    "hero.dragomir.hit": [
+      "sfx/tilly_attack_hit_01.ogg",
+      "sfx/tilly_attack_hit_02.ogg",
+      "sfx/tilly_attack_hit_03.ogg",
+      "sfx/tilly_attack_hit_04.ogg"
+    ],
+    "hero.dragomir.skill_hit": [
+      "vo/hoyoung_skill_hit_01.ogg"
+    ],
+    "hero.24.attack": [
+      "sfx/dragomir_attack_cast_01.ogg",
+      "sfx/dragomir_attack_cast_02.ogg",
+      "sfx/dragomir_attack_cast_03.ogg",
+      "sfx/dragomir_attack_cast_04.ogg"
+    ],
+    "hero.24.hit": [
+      "sfx/tilly_attack_hit_01.ogg",
+      "sfx/tilly_attack_hit_02.ogg",
+      "sfx/tilly_attack_hit_03.ogg",
+      "sfx/tilly_attack_hit_04.ogg"
+    ],
+    "hero.24.skill": [
+      "sfx/dragomir_skill_cast.ogg"
+    ],
+    "hero.24.skill_hit": [
+      "vo/hoyoung_skill_hit_01.ogg"
+    ],
+    "vo.dragomir.special": [
+      "vo/dragomir_or_a.ogg",
+      "vo/dragomir_or_b.ogg",
+      "vo/dragomir_or_s.ogg"
+    ],
+    "vo.24.attack": [
+      "sfx/dragomir_aa_01.ogg",
+      "sfx/dragomir_aa_02.ogg",
+      "sfx/dragomir_aa_03.ogg",
+      "sfx/dragomir_aa_04.ogg"
+    ],
+    "vo.24.buy": [
+      "vo/dragomir_op_shop_01.ogg",
+      "vo/dragomir_op_shop_02.ogg",
+      "vo/dragomir_op_start.ogg"
+    ],
+    "vo.24.death": [
+      "vo/dragomir_od_01.ogg",
+      "vo/dragomir_od_02.ogg",
+      "vo/dragomir_od_03.ogg"
+    ],
+    "vo.24.rankup": [
+      "vo/dragomir_or_a.ogg",
+      "vo/dragomir_or_b.ogg",
+      "vo/dragomir_or_s.ogg"
+    ],
+    "vo.24.special": [
+      "vo/dragomir_or_a.ogg",
+      "vo/dragomir_or_b.ogg",
+      "vo/dragomir_or_s.ogg"
+    ],
+    "vo.24.line": [
+      "vo/dragomir_disc_bossencounter.ogg",
+      "vo/dragomir_disc_itemgained.ogg",
+      "vo/dragomir_disc_itemremoved.ogg",
+      "vo/dragomir_disc_kill.ogg",
+      "vo/dragomir_disc_rerollmod.ogg",
+      "vo/dragomir_disc_revive.ogg",
+      "vo/dragomir_disc_victory.ogg"
+    ],
+    "hero.kai.hit": [
+      "sfx/tilly_attack_hit_01.ogg",
+      "sfx/tilly_attack_hit_02.ogg",
+      "sfx/tilly_attack_hit_03.ogg",
+      "sfx/tilly_attack_hit_04.ogg"
+    ],
+    "hero.kai.skill_hit": [
+      "vo/hoyoung_skill_hit_01.ogg"
+    ],
+    "hero.26.attack": [
+      "sfx/kai_attack_cast_01.ogg",
+      "sfx/kai_attack_cast_02.ogg",
+      "sfx/kai_attack_cast_03.ogg",
+      "sfx/kai_attack_cast_04.ogg"
+    ],
+    "hero.joey.attack": [
+      "sfx/kai_attack_cast_01.ogg",
+      "sfx/kai_attack_cast_02.ogg",
+      "sfx/kai_attack_cast_03.ogg",
+      "sfx/kai_attack_cast_04.ogg"
+    ],
+    "hero.26.hit": [
+      "sfx/tilly_attack_hit_01.ogg",
+      "sfx/tilly_attack_hit_02.ogg",
+      "sfx/tilly_attack_hit_03.ogg",
+      "sfx/tilly_attack_hit_04.ogg"
+    ],
+    "hero.joey.hit": [
+      "sfx/tilly_attack_hit_01.ogg",
+      "sfx/tilly_attack_hit_02.ogg",
+      "sfx/tilly_attack_hit_03.ogg",
+      "sfx/tilly_attack_hit_04.ogg"
+    ],
+    "hero.26.skill": [
+      "sfx/kai_skill_cast.ogg"
+    ],
+    "hero.joey.skill": [
+      "sfx/kai_skill_cast.ogg"
+    ],
+    "hero.26.skill_hit": [
+      "vo/hoyoung_skill_hit_01.ogg"
+    ],
+    "hero.joey.skill_hit": [
+      "vo/hoyoung_skill_hit_01.ogg"
+    ],
+    "vo.kai.special": [
+      "vo/kai_or_a.ogg",
+      "vo/kai_or_b.ogg",
+      "vo/kai_or_s.ogg"
+    ],
+    "vo.26.attack": [
+      "vo/kai_aa_grunt_end_01.ogg",
+      "vo/kai_aa_grunt_start_01.ogg",
+      "vo/kai_aa_grunt_start_02.ogg",
+      "vo/kai_aa_start.ogg"
+    ],
+    "vo.joey.attack": [
+      "vo/kai_aa_grunt_end_01.ogg",
+      "vo/kai_aa_grunt_start_01.ogg",
+      "vo/kai_aa_grunt_start_02.ogg",
+      "vo/kai_aa_start.ogg"
+    ],
+    "vo.26.buy": [
+      "vo/kai_op_shop.ogg",
+      "vo/kai_op_start.ogg"
+    ],
+    "vo.joey.buy": [
+      "vo/kai_op_shop.ogg",
+      "vo/kai_op_start.ogg"
+    ],
+    "vo.26.death": [
+      "vo/kai_od_01.ogg",
+      "vo/kai_od_02.ogg",
+      "vo/kai_od_03.ogg",
+      "vo/kai_od_04.ogg",
+      "vo/kai_od_05.ogg",
+      "vo/kai_od_06.ogg"
+    ],
+    "vo.joey.death": [
+      "vo/kai_od_01.ogg",
+      "vo/kai_od_02.ogg",
+      "vo/kai_od_03.ogg",
+      "vo/kai_od_04.ogg",
+      "vo/kai_od_05.ogg",
+      "vo/kai_od_06.ogg"
+    ],
+    "vo.26.rankup": [
+      "vo/kai_or_a.ogg",
+      "vo/kai_or_b.ogg",
+      "vo/kai_or_s.ogg"
+    ],
+    "vo.joey.rankup": [
+      "vo/kai_or_a.ogg",
+      "vo/kai_or_b.ogg",
+      "vo/kai_or_s.ogg"
+    ],
+    "vo.26.special": [
+      "vo/kai_or_a.ogg",
+      "vo/kai_or_b.ogg",
+      "vo/kai_or_s.ogg"
+    ],
+    "vo.joey.special": [
+      "vo/kai_or_a.ogg",
+      "vo/kai_or_b.ogg",
+      "vo/kai_or_s.ogg"
+    ],
+    "vo.26.line": [
+      "vo/kai_disc_benched.ogg",
+      "vo/kai_disc_challengeaccepted.ogg",
+      "vo/kai_disc_crossroads.ogg",
+      "vo/kai_disc_fightwin.ogg",
+      "vo/kai_disc_itemgained.ogg",
+      "vo/kai_disc_itemremoved.ogg",
+      "vo/kai_disc_kill.ogg",
+      "vo/kai_disc_overkill.ogg",
+      "vo/kai_disc_revive.ogg",
+      "vo/kai_disc_teamwipeout.ogg",
+      "vo/kai_disc_victory.ogg"
+    ],
+    "vo.joey.line": [
+      "vo/kai_disc_benched.ogg",
+      "vo/kai_disc_challengeaccepted.ogg",
+      "vo/kai_disc_crossroads.ogg",
+      "vo/kai_disc_fightwin.ogg",
+      "vo/kai_disc_itemgained.ogg",
+      "vo/kai_disc_itemremoved.ogg",
+      "vo/kai_disc_kill.ogg",
+      "vo/kai_disc_overkill.ogg",
+      "vo/kai_disc_revive.ogg",
+      "vo/kai_disc_teamwipeout.ogg",
+      "vo/kai_disc_victory.ogg"
+    ],
+    "hero.josephina.skill_hit": [
+      "sfx/irini_skill_hit_01.ogg"
+    ],
+    "hero.27.attack": [
+      "sfx/josephina_attack_cast_01.ogg",
+      "sfx/josephina_attack_cast_02.ogg",
+      "sfx/josephina_attack_cast_03.ogg",
+      "sfx/josephina_attack_cast_04.ogg"
+    ],
+    "hero.grace.attack": [
+      "sfx/josephina_attack_cast_01.ogg",
+      "sfx/josephina_attack_cast_02.ogg",
+      "sfx/josephina_attack_cast_03.ogg",
+      "sfx/josephina_attack_cast_04.ogg"
+    ],
+    "hero.27.hit": [
+      "sfx/josephina_attack_hit_01.ogg",
+      "sfx/josephina_attack_hit_02.ogg",
+      "sfx/josephina_attack_hit_03.ogg",
+      "sfx/josephina_attack_hit_04.ogg"
+    ],
+    "hero.grace.hit": [
+      "sfx/josephina_attack_hit_01.ogg",
+      "sfx/josephina_attack_hit_02.ogg",
+      "sfx/josephina_attack_hit_03.ogg",
+      "sfx/josephina_attack_hit_04.ogg"
+    ],
+    "hero.27.skill": [
+      "sfx/josephina_skill_cast.ogg"
+    ],
+    "hero.grace.skill": [
+      "sfx/josephina_skill_cast.ogg"
+    ],
+    "hero.27.skill_hit": [
+      "sfx/irini_skill_hit_01.ogg"
+    ],
+    "hero.grace.skill_hit": [
+      "sfx/irini_skill_hit_01.ogg"
+    ],
+    "vo.josephina.special": [
+      "vo/grace_or.ogg",
+      "vo/grace_or_a.ogg",
+      "vo/grace_or_s.ogg"
+    ],
+    "vo.27.attack": [
+      "vo/grace_aa.ogg"
+    ],
+    "vo.grace.attack": [
+      "vo/grace_aa.ogg"
+    ],
+    "vo.27.buy": [
+      "vo/grace_op_atstart.ogg",
+      "vo/grace_op_inshop.ogg"
+    ],
+    "vo.grace.buy": [
+      "vo/grace_op_atstart.ogg",
+      "vo/grace_op_inshop.ogg"
+    ],
+    "vo.27.death": [
+      "vo/grace_od.ogg"
+    ],
+    "vo.grace.death": [
+      "vo/grace_od.ogg"
+    ],
+    "vo.27.rankup": [
+      "vo/grace_or.ogg",
+      "vo/grace_or_a.ogg",
+      "vo/grace_or_s.ogg"
+    ],
+    "vo.grace.rankup": [
+      "vo/grace_or.ogg",
+      "vo/grace_or_a.ogg",
+      "vo/grace_or_s.ogg"
+    ],
+    "vo.27.special": [
+      "vo/grace_or.ogg",
+      "vo/grace_or_a.ogg",
+      "vo/grace_or_s.ogg"
+    ],
+    "vo.grace.special": [
+      "vo/grace_or.ogg",
+      "vo/grace_or_a.ogg",
+      "vo/grace_or_s.ogg"
+    ],
+    "enemy.demonboss.attack": [
+      "sfx/demonboss_attack_cast_01.ogg",
+      "sfx/demonboss_attack_cast_02.ogg",
+      "sfx/demonboss_attack_cast_03.ogg",
+      "sfx/demonboss_attack_cast_04.ogg"
+    ],
+    "enemy.demonboss.skill": [
+      "sfx/demonboss_skill_cast.ogg"
+    ],
+    "enemy.demonboss.roar": [
+      "sfx/demonboss_attack_vo_01.ogg",
+      "sfx/demonboss_attack_vo_02.ogg",
+      "sfx/demonboss_attack_vo_03.ogg",
+      "sfx/demonboss_attack_vo_04.ogg"
+    ],
+    "enemy.demon.attack": [
+      "sfx/demonboss_attack_cast_01.ogg",
+      "sfx/demonboss_attack_cast_02.ogg",
+      "sfx/demonboss_attack_cast_03.ogg",
+      "sfx/demonboss_attack_cast_04.ogg"
+    ],
+    "hero.demon.attack": [
+      "sfx/demonboss_attack_cast_01.ogg",
+      "sfx/demonboss_attack_cast_02.ogg",
+      "sfx/demonboss_attack_cast_03.ogg",
+      "sfx/demonboss_attack_cast_04.ogg"
+    ],
+    "enemy.demon.skill": [
+      "sfx/demonboss_skill_cast.ogg"
+    ],
+    "hero.demon.skill": [
+      "sfx/demonboss_skill_cast.ogg"
+    ],
+    "enemy.demon.roar": [
+      "sfx/demonboss_attack_vo_01.ogg",
+      "sfx/demonboss_attack_vo_02.ogg",
+      "sfx/demonboss_attack_vo_03.ogg",
+      "sfx/demonboss_attack_vo_04.ogg"
+    ],
+    "hero.demon.roar": [
+      "sfx/demonboss_attack_vo_01.ogg",
+      "sfx/demonboss_attack_vo_02.ogg",
+      "sfx/demonboss_attack_vo_03.ogg",
+      "sfx/demonboss_attack_vo_04.ogg"
+    ],
+    "enemy.dragon_fire.attack": [
+      "sfx/dragonfire_attack_cast_01.ogg",
+      "sfx/dragonfire_attack_cast_02.ogg",
+      "sfx/dragonfire_attack_cast_03.ogg",
+      "sfx/dragonfire_attack_cast_04.ogg"
+    ],
+    "hero.dragon_fire.attack": [
+      "sfx/dragonfire_attack_cast_01.ogg",
+      "sfx/dragonfire_attack_cast_02.ogg",
+      "sfx/dragonfire_attack_cast_03.ogg",
+      "sfx/dragonfire_attack_cast_04.ogg"
+    ],
+    "enemy.dragon_fire.skill": [
+      "sfx/dragonfire_skill_cast_01.ogg"
+    ],
+    "hero.dragon_fire.skill": [
+      "sfx/dragonfire_skill_cast_01.ogg"
+    ],
+    "enemy.dragon_fire.roar": [
+      "sfx/dragon_roar_01.ogg",
+      "sfx/dragon_roar_02.ogg",
+      "sfx/dragon_roar_03.ogg",
+      "sfx/dragon_roar_04.ogg",
+      "sfx/dragon_roar_05.ogg"
+    ],
+    "hero.dragon_fire.roar": [
+      "sfx/dragon_roar_01.ogg",
+      "sfx/dragon_roar_02.ogg",
+      "sfx/dragon_roar_03.ogg",
+      "sfx/dragon_roar_04.ogg",
+      "sfx/dragon_roar_05.ogg"
+    ],
+    "enemy.firedragon.attack": [
+      "sfx/dragonfire_attack_cast_01.ogg",
+      "sfx/dragonfire_attack_cast_02.ogg",
+      "sfx/dragonfire_attack_cast_03.ogg",
+      "sfx/dragonfire_attack_cast_04.ogg"
+    ],
+    "enemy.firedragon.skill": [
+      "sfx/dragonfire_skill_cast_01.ogg"
+    ],
+    "enemy.firedragon.roar": [
+      "sfx/dragon_roar_01.ogg",
+      "sfx/dragon_roar_02.ogg",
+      "sfx/dragon_roar_03.ogg",
+      "sfx/dragon_roar_04.ogg",
+      "sfx/dragon_roar_05.ogg"
+    ],
+    "enemy.dragon_frost.attack": [
+      "sfx/dragonice_attack_cast_01.ogg",
+      "sfx/dragonice_attack_cast_02.ogg",
+      "sfx/dragonice_attack_cast_03.ogg",
+      "sfx/dragonice_attack_cast_04.ogg"
+    ],
+    "hero.dragon_frost.attack": [
+      "sfx/dragonice_attack_cast_01.ogg",
+      "sfx/dragonice_attack_cast_02.ogg",
+      "sfx/dragonice_attack_cast_03.ogg",
+      "sfx/dragonice_attack_cast_04.ogg"
+    ],
+    "enemy.dragon_frost.skill": [
+      "sfx/dragonice_skill_cast_01.ogg"
+    ],
+    "hero.dragon_frost.skill": [
+      "sfx/dragonice_skill_cast_01.ogg"
+    ],
+    "enemy.dragon_frost.roar": [
+      "sfx/dragon_roar_01.ogg",
+      "sfx/dragon_roar_02.ogg",
+      "sfx/dragon_roar_03.ogg",
+      "sfx/dragon_roar_04.ogg",
+      "sfx/dragon_roar_05.ogg"
+    ],
+    "hero.dragon_frost.roar": [
+      "sfx/dragon_roar_01.ogg",
+      "sfx/dragon_roar_02.ogg",
+      "sfx/dragon_roar_03.ogg",
+      "sfx/dragon_roar_04.ogg",
+      "sfx/dragon_roar_05.ogg"
+    ],
+    "enemy.frostdragon.attack": [
+      "sfx/dragonice_attack_cast_01.ogg",
+      "sfx/dragonice_attack_cast_02.ogg",
+      "sfx/dragonice_attack_cast_03.ogg",
+      "sfx/dragonice_attack_cast_04.ogg"
+    ],
+    "enemy.frostdragon.skill": [
+      "sfx/dragonice_skill_cast_01.ogg"
+    ],
+    "enemy.frostdragon.roar": [
+      "sfx/dragon_roar_01.ogg",
+      "sfx/dragon_roar_02.ogg",
+      "sfx/dragon_roar_03.ogg",
+      "sfx/dragon_roar_04.ogg",
+      "sfx/dragon_roar_05.ogg"
+    ],
+    "enemy.dragon_poison.attack": [
+      "sfx/dragonpoison_attack_cast_01.ogg",
+      "sfx/dragonpoison_attack_cast_02.ogg",
+      "sfx/dragonpoison_attack_cast_03.ogg",
+      "sfx/dragonpoison_attack_cast_04.ogg"
+    ],
+    "hero.dragon_poison.attack": [
+      "sfx/dragonpoison_attack_cast_01.ogg",
+      "sfx/dragonpoison_attack_cast_02.ogg",
+      "sfx/dragonpoison_attack_cast_03.ogg",
+      "sfx/dragonpoison_attack_cast_04.ogg"
+    ],
+    "enemy.dragon_poison.skill": [
+      "sfx/dragonpoison_skill_cast_01.ogg"
+    ],
+    "hero.dragon_poison.skill": [
+      "sfx/dragonpoison_skill_cast_01.ogg"
+    ],
+    "enemy.dragon_poison.roar": [
+      "sfx/dragon_roar_01.ogg",
+      "sfx/dragon_roar_02.ogg",
+      "sfx/dragon_roar_03.ogg",
+      "sfx/dragon_roar_04.ogg",
+      "sfx/dragon_roar_05.ogg"
+    ],
+    "hero.dragon_poison.roar": [
+      "sfx/dragon_roar_01.ogg",
+      "sfx/dragon_roar_02.ogg",
+      "sfx/dragon_roar_03.ogg",
+      "sfx/dragon_roar_04.ogg",
+      "sfx/dragon_roar_05.ogg"
+    ],
+    "enemy.poisondragon.attack": [
+      "sfx/dragonpoison_attack_cast_01.ogg",
+      "sfx/dragonpoison_attack_cast_02.ogg",
+      "sfx/dragonpoison_attack_cast_03.ogg",
+      "sfx/dragonpoison_attack_cast_04.ogg"
+    ],
+    "enemy.poisondragon.skill": [
+      "sfx/dragonpoison_skill_cast_01.ogg"
+    ],
+    "enemy.poisondragon.roar": [
+      "sfx/dragon_roar_01.ogg",
+      "sfx/dragon_roar_02.ogg",
+      "sfx/dragon_roar_03.ogg",
+      "sfx/dragon_roar_04.ogg",
+      "sfx/dragon_roar_05.ogg"
+    ],
+    "enemy.forestgolem.attack": [
+      "sfx/forestgolem_attack_cast_01.ogg",
+      "sfx/forestgolem_attack_cast_02.ogg",
+      "sfx/forestgolem_attack_cast_03.ogg",
+      "sfx/forestgolem_attack_cast_04.ogg"
+    ],
+    "enemy.forestgolem.skill": [
+      "sfx/forestgolem_skill_cast.ogg"
+    ],
+    "enemy.hydra.attack": [
+      "sfx/hydra_attack_cast_01.ogg",
+      "sfx/hydra_attack_cast_02.ogg",
+      "sfx/hydra_attack_cast_03.ogg",
+      "sfx/hydra_attack_cast_04.ogg"
+    ],
+    "enemy.hydra.skill": [
+      "sfx/dragon_roar_01.ogg",
+      "sfx/dragon_roar_02.ogg",
+      "sfx/dragon_roar_03.ogg"
+    ],
+    "enemy.lizard.attack": [
+      "sfx/lizard_attack_cast_01.ogg",
+      "sfx/lizard_attack_cast_02.ogg",
+      "sfx/lizard_attack_cast_03.ogg",
+      "sfx/lizard_attack_cast_04.ogg"
+    ],
+    "enemy.lizard.skill": [
+      "sfx/lizard_step.ogg"
+    ],
+    "enemy.mushroomarcher.attack": [
+      "sfx/musharcher_attack_cast_01.ogg",
+      "sfx/musharcher_attack_cast_02.ogg",
+      "sfx/musharcher_attack_cast_03.ogg",
+      "sfx/musharcher_attack_cast_04.ogg"
+    ],
+    "enemy.mushroomarcher.hit": [
+      "sfx/musharcher_attack_hit_01.ogg",
+      "sfx/musharcher_attack_hit_02.ogg",
+      "sfx/musharcher_attack_hit_03.ogg",
+      "sfx/musharcher_attack_hit_04.ogg"
+    ],
+    "enemy.mushroomarcher.skill": [
+      "sfx/musharcher_skill_cast.ogg"
+    ],
+    "enemy.mushroomarcher.skill_hit": [
+      "sfx/musharcher_skill_hit.ogg"
+    ],
+    "enemy.mushroommage_fire.attack": [
+      "sfx/mushmage_attack_cast_01.ogg",
+      "sfx/mushmage_attack_cast_02.ogg",
+      "sfx/mushmage_attack_cast_03.ogg",
+      "sfx/mushmage_attack_cast_04.ogg"
+    ],
+    "hero.mushroommage_fire.attack": [
+      "sfx/mushmage_attack_cast_01.ogg",
+      "sfx/mushmage_attack_cast_02.ogg",
+      "sfx/mushmage_attack_cast_03.ogg",
+      "sfx/mushmage_attack_cast_04.ogg"
+    ],
+    "enemy.mushroommage_fire.hit": [
+      "sfx/mushmage_attack_hit_01.ogg",
+      "sfx/mushmage_attack_hit_02.ogg",
+      "sfx/mushmage_attack_hit_03.ogg",
+      "sfx/mushmage_attack_hit_04.ogg"
+    ],
+    "hero.mushroommage_fire.hit": [
+      "sfx/mushmage_attack_hit_01.ogg",
+      "sfx/mushmage_attack_hit_02.ogg",
+      "sfx/mushmage_attack_hit_03.ogg",
+      "sfx/mushmage_attack_hit_04.ogg"
+    ],
+    "enemy.mushroommage_fire.skill": [
+      "sfx/mushmage_skill_cast_01.ogg",
+      "sfx/mushmage_skill_cast_02.ogg"
+    ],
+    "hero.mushroommage_fire.skill": [
+      "sfx/mushmage_skill_cast_01.ogg",
+      "sfx/mushmage_skill_cast_02.ogg"
+    ],
+    "enemy.mushroomfiremage.attack": [
+      "sfx/mushmage_attack_cast_01.ogg",
+      "sfx/mushmage_attack_cast_02.ogg",
+      "sfx/mushmage_attack_cast_03.ogg",
+      "sfx/mushmage_attack_cast_04.ogg"
+    ],
+    "enemy.mushroomfiremage.hit": [
+      "sfx/mushmage_attack_hit_01.ogg",
+      "sfx/mushmage_attack_hit_02.ogg",
+      "sfx/mushmage_attack_hit_03.ogg",
+      "sfx/mushmage_attack_hit_04.ogg"
+    ],
+    "enemy.mushroomfiremage.skill": [
+      "sfx/mushmage_skill_cast_01.ogg",
+      "sfx/mushmage_skill_cast_02.ogg"
+    ],
+    "enemy.mushroommage_ice.attack": [
+      "sfx/mushmage_attack_cast_01.ogg",
+      "sfx/mushmage_attack_cast_02.ogg",
+      "sfx/mushmage_attack_cast_03.ogg",
+      "sfx/mushmage_attack_cast_04.ogg"
+    ],
+    "hero.mushroommage_ice.attack": [
+      "sfx/mushmage_attack_cast_01.ogg",
+      "sfx/mushmage_attack_cast_02.ogg",
+      "sfx/mushmage_attack_cast_03.ogg",
+      "sfx/mushmage_attack_cast_04.ogg"
+    ],
+    "enemy.mushroommage_ice.hit": [
+      "sfx/mushmage_attack_hit_01.ogg",
+      "sfx/mushmage_attack_hit_02.ogg",
+      "sfx/mushmage_attack_hit_03.ogg",
+      "sfx/mushmage_attack_hit_04.ogg"
+    ],
+    "hero.mushroommage_ice.hit": [
+      "sfx/mushmage_attack_hit_01.ogg",
+      "sfx/mushmage_attack_hit_02.ogg",
+      "sfx/mushmage_attack_hit_03.ogg",
+      "sfx/mushmage_attack_hit_04.ogg"
+    ],
+    "enemy.mushroommage_ice.skill": [
+      "sfx/mushmage_skill_cast_01.ogg",
+      "sfx/mushmage_skill_cast_02.ogg"
+    ],
+    "hero.mushroommage_ice.skill": [
+      "sfx/mushmage_skill_cast_01.ogg",
+      "sfx/mushmage_skill_cast_02.ogg"
+    ],
+    "enemy.mushroomfrostmage.attack": [
+      "sfx/mushmage_attack_cast_01.ogg",
+      "sfx/mushmage_attack_cast_02.ogg",
+      "sfx/mushmage_attack_cast_03.ogg",
+      "sfx/mushmage_attack_cast_04.ogg"
+    ],
+    "hero.mushroomfrostmage.attack": [
+      "sfx/mushmage_attack_cast_01.ogg",
+      "sfx/mushmage_attack_cast_02.ogg",
+      "sfx/mushmage_attack_cast_03.ogg",
+      "sfx/mushmage_attack_cast_04.ogg"
+    ],
+    "enemy.mushroomfrostmage.hit": [
+      "sfx/mushmage_attack_hit_01.ogg",
+      "sfx/mushmage_attack_hit_02.ogg",
+      "sfx/mushmage_attack_hit_03.ogg",
+      "sfx/mushmage_attack_hit_04.ogg"
+    ],
+    "hero.mushroomfrostmage.hit": [
+      "sfx/mushmage_attack_hit_01.ogg",
+      "sfx/mushmage_attack_hit_02.ogg",
+      "sfx/mushmage_attack_hit_03.ogg",
+      "sfx/mushmage_attack_hit_04.ogg"
+    ],
+    "enemy.mushroomfrostmage.skill": [
+      "sfx/mushmage_skill_cast_01.ogg",
+      "sfx/mushmage_skill_cast_02.ogg"
+    ],
+    "hero.mushroomfrostmage.skill": [
+      "sfx/mushmage_skill_cast_01.ogg",
+      "sfx/mushmage_skill_cast_02.ogg"
+    ],
+    "enemy.mushroomtank.attack": [
+      "sfx/mushroomtank_attack_cast_01.ogg",
+      "sfx/mushroomtank_attack_cast_02.ogg",
+      "sfx/mushroomtank_attack_cast_03.ogg",
+      "sfx/mushroomtank_attack_cast_04.ogg"
+    ],
+    "enemy.mushroomtank.skill": [
+      "sfx/mushroomtank_skill_cast.ogg"
+    ],
+    "enemy.mushroomknight.attack": [
+      "sfx/mushroomtank_attack_cast_01.ogg",
+      "sfx/mushroomtank_attack_cast_02.ogg",
+      "sfx/mushroomtank_attack_cast_03.ogg",
+      "sfx/mushroomtank_attack_cast_04.ogg"
+    ],
+    "hero.mushroomknight.attack": [
+      "sfx/mushroomtank_attack_cast_01.ogg",
+      "sfx/mushroomtank_attack_cast_02.ogg",
+      "sfx/mushroomtank_attack_cast_03.ogg",
+      "sfx/mushroomtank_attack_cast_04.ogg"
+    ],
+    "enemy.mushroomknight.skill": [
+      "sfx/mushroomtank_skill_cast.ogg"
+    ],
+    "hero.mushroomknight.skill": [
+      "sfx/mushroomtank_skill_cast.ogg"
+    ],
+    "enemy.plantmonster.attack": [
+      "sfx/plantmonster_attack_cast_01.ogg",
+      "sfx/plantmonster_attack_cast_02.ogg",
+      "sfx/plantmonster_attack_cast_03.ogg",
+      "sfx/plantmonster_attack_cast_04.ogg"
+    ],
+    "enemy.plantmonster.hit": [
+      "sfx/plantmonster_attack_hit_01.ogg",
+      "sfx/plantmonster_attack_hit_02.ogg",
+      "sfx/plantmonster_attack_hit_03.ogg",
+      "sfx/plantmonster_attack_hit_04.ogg"
+    ],
+    "enemy.plantmonster.skill": [
+      "sfx/plantmonster_skill_cast.ogg"
+    ],
+    "enemy.slime.attack": [
+      "sfx/slime_attack_cast_01.ogg",
+      "sfx/slime_attack_cast_02.ogg",
+      "sfx/slime_attack_cast_03.ogg",
+      "sfx/slime_attack_cast_04.ogg"
+    ],
+    "enemy.slime.skill": [
+      "sfx/slime_attack_cast_01.ogg",
+      "sfx/slime_attack_cast_02.ogg",
+      "sfx/slime_attack_cast_03.ogg",
+      "sfx/slime_attack_cast_04.ogg"
+    ],
+    "enemy.snake.attack": [
+      "sfx/snake_attack_cast_01.ogg",
+      "sfx/snake_attack_cast_02.ogg",
+      "sfx/snake_attack_cast_03.ogg",
+      "sfx/snake_attack_cast_04.ogg"
+    ],
+    "enemy.snake.skill": [
+      "sfx/snake_skill_cast.ogg"
+    ],
+    "enemy.spider.attack": [
+      "sfx/spider_attack_cast_01.ogg",
+      "sfx/spider_attack_cast_02.ogg",
+      "sfx/spider_attack_cast_03.ogg",
+      "sfx/spider_attack_cast_04.ogg"
+    ],
+    "enemy.spider.hit": [
+      "sfx/spider_attack_hit_01.ogg",
+      "sfx/spider_attack_hit_02.ogg",
+      "sfx/spider_attack_hit_03.ogg",
+      "sfx/spider_attack_hit_04.ogg"
+    ],
+    "enemy.spider.skill": [
+      "sfx/spider_skill_cast.ogg"
+    ],
+    "enemy.spider.skill_hit": [
+      "sfx/spider_skill_hit.ogg"
+    ],
+    "enemy.turtle.attack": [
+      "sfx/turtle_attack_cast_01.ogg",
+      "sfx/turtle_attack_cast_02.ogg",
+      "sfx/turtle_attack_cast_03.ogg",
+      "sfx/turtle_attack_cast_04.ogg"
+    ],
+    "enemy.turtle.skill": [
+      "sfx/turtle_attack_cast_01.ogg",
+      "sfx/turtle_attack_cast_02.ogg",
+      "sfx/turtle_attack_cast_03.ogg",
+      "sfx/turtle_attack_cast_04.ogg"
+    ],
+    "enemy.crab.attack": [
+      "sfx/turtle_attack_cast_01.ogg",
+      "sfx/turtle_attack_cast_02.ogg",
+      "sfx/turtle_attack_cast_03.ogg",
+      "sfx/turtle_attack_cast_04.ogg"
+    ],
+    "hero.crab.attack": [
+      "sfx/turtle_attack_cast_01.ogg",
+      "sfx/turtle_attack_cast_02.ogg",
+      "sfx/turtle_attack_cast_03.ogg",
+      "sfx/turtle_attack_cast_04.ogg"
+    ],
+    "enemy.crab.skill": [
+      "sfx/turtle_attack_cast_01.ogg",
+      "sfx/turtle_attack_cast_02.ogg",
+      "sfx/turtle_attack_cast_03.ogg",
+      "sfx/turtle_attack_cast_04.ogg"
+    ],
+    "hero.crab.skill": [
+      "sfx/turtle_attack_cast_01.ogg",
+      "sfx/turtle_attack_cast_02.ogg",
+      "sfx/turtle_attack_cast_03.ogg",
+      "sfx/turtle_attack_cast_04.ogg"
+    ],
+    "relic": [
+      "sfx/ui_shop_relic_click.ogg"
+    ],
+    "rankUp": [
+      "sfx/ui_hero_selectionrankup_click.ogg"
+    ],
+    "buy": [
+      "sfx/ui_shop_item_click.ogg"
+    ],
+    "equip": [
+      "sfx/ui_bf_item_equip.ogg"
+    ],
+    "battleStart": [
+      "sfx/ui_ingame_button_fight.ogg"
+    ]
+  },
+  "files": {
+    "music/260608_forest_rift_boss": {
+      "file": "music/260608_forest_rift_boss.ogg",
+      "name": "260608 Forest Rift Boss",
+      "bank": "MUSIC.bank",
+      "subsong": 3
+    },
+    "music/mus_auction_house_80bpm": {
+      "file": "music/mus_auction_house_80bpm.ogg",
+      "name": "mus_auction_house_80BPM",
+      "bank": "MUSIC.bank",
+      "subsong": 7
+    },
+    "music/mus_forest_boss_pre_165bpm": {
+      "file": "music/mus_forest_boss_pre_165bpm.ogg",
+      "name": "mus_forest_boss_PRE_165BPM",
+      "bank": "MUSIC.bank",
+      "subsong": 6
+    },
+    "music/mus_forest_calm_80bpm": {
+      "file": "music/mus_forest_calm_80bpm.ogg",
+      "name": "mus_forest_calm_80bpm",
+      "bank": "MUSIC.bank",
+      "subsong": 11
+    },
+    "music/mus_forest_comb_80bpm": {
+      "file": "music/mus_forest_comb_80bpm.ogg",
+      "name": "mus_forest_comb_80bpm",
+      "bank": "MUSIC.bank",
+      "subsong": 4
+    },
+    "music/mus_forest_comb_sting_fill01_80bpm": {
+      "file": "music/mus_forest_comb_sting_fill01_80bpm.ogg",
+      "name": "mus_forest_comb_sting_fill01_80bpm",
+      "bank": "MUSIC.bank",
+      "subsong": 8
+    },
+    "music/mus_forest_comb_sting_howl01_80bpm": {
+      "file": "music/mus_forest_comb_sting_howl01_80bpm.ogg",
+      "name": "mus_forest_comb_sting_howl01_80bpm",
+      "bank": "MUSIC.bank",
+      "subsong": 5
+    },
+    "music/mus_forest_comb_sting_woosh01_80bpm": {
+      "file": "music/mus_forest_comb_sting_woosh01_80bpm.ogg",
+      "name": "mus_forest_comb_sting_woosh01_80bpm",
+      "bank": "MUSIC.bank",
+      "subsong": 9
+    },
+    "music/mus_forest_finalboss_lose_165bpm": {
+      "file": "music/mus_forest_finalboss_lose_165bpm.ogg",
+      "name": "mus_forest_finalboss_lose_165BPM",
+      "bank": "MUSIC.bank",
+      "subsong": 1
+    },
+    "music/mus_forest_finalboss_win_165bpm": {
+      "file": "music/mus_forest_finalboss_win_165bpm.ogg",
+      "name": "mus_forest_finalboss_win_165BPM",
+      "bank": "MUSIC.bank",
+      "subsong": 10
+    },
+    "music/mus_mainmenu_86bpm_premaster": {
+      "file": "music/mus_mainmenu_86bpm_premaster.ogg",
+      "name": "mus_mainmenu_86BPM_premaster",
+      "bank": "MUSIC.bank",
+      "subsong": 2
+    },
+    "sfx/260713_comic_01_intro": {
+      "file": "sfx/260713_comic_01_intro.ogg",
+      "name": "260713_Comic_01_Intro",
+      "bank": "SFX.bank",
+      "subsong": 199
+    },
+    "sfx/260713_comic_02_guild": {
+      "file": "sfx/260713_comic_02_guild.ogg",
+      "name": "260713_Comic_02_Guild",
+      "bank": "SFX.bank",
+      "subsong": 25
+    },
+    "sfx/260713_comic_03_death_loop": {
+      "file": "sfx/260713_comic_03_death_loop.ogg",
+      "name": "260713_Comic_03_Death_Loop",
+      "bank": "SFX.bank",
+      "subsong": 151
+    },
+    "sfx/amb_biom1_forest_loop1": {
+      "file": "sfx/amb_biom1_forest_loop1.ogg",
+      "name": "amb_biom1_forest_loop1",
+      "bank": "SFX.bank",
+      "subsong": 87
+    },
+    "sfx/amb_biom1_forest_loop2": {
+      "file": "sfx/amb_biom1_forest_loop2.ogg",
+      "name": "amb_biom1_forest_loop2",
+      "bank": "SFX.bank",
+      "subsong": 158
+    },
+    "sfx/amb_biom1_forest_loop3": {
+      "file": "sfx/amb_biom1_forest_loop3.ogg",
+      "name": "amb_biom1_forest_loop3",
+      "bank": "SFX.bank",
+      "subsong": 33
+    },
+    "sfx/amb_main_menu_loop": {
+      "file": "sfx/amb_main_menu_loop.ogg",
+      "name": "amb_main_menu_loop",
+      "bank": "SFX.bank",
+      "subsong": 271
+    },
+    "sfx/amb_portal": {
+      "file": "sfx/amb_portal.ogg",
+      "name": "amb_portal",
+      "bank": "SFX.bank",
+      "subsong": 95
+    },
+    "sfx/cenk_attack_cast_01": {
+      "file": "sfx/cenk_attack_cast_01.ogg",
+      "name": "cenk_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 98
+    },
+    "sfx/cenk_attack_cast_02": {
+      "file": "sfx/cenk_attack_cast_02.ogg",
+      "name": "cenk_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 102
+    },
+    "sfx/cenk_attack_cast_03": {
+      "file": "sfx/cenk_attack_cast_03.ogg",
+      "name": "cenk_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 81
+    },
+    "sfx/cenk_attack_cast_04": {
+      "file": "sfx/cenk_attack_cast_04.ogg",
+      "name": "cenk_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 73
+    },
+    "sfx/cenk_skill_cast": {
+      "file": "sfx/cenk_skill_cast.ogg",
+      "name": "cenk_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 50
+    },
+    "sfx/comb_ayaka_act_skill_cast_01": {
+      "file": "sfx/comb_ayaka_act_skill_cast_01.ogg",
+      "name": "comb_ayaka_act_skill_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 37
+    },
+    "sfx/comb_ayaka_attack_cast_01": {
+      "file": "sfx/comb_ayaka_attack_cast_01.ogg",
+      "name": "comb_ayaka_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 254
+    },
+    "sfx/comb_ayaka_attack_cast_02": {
+      "file": "sfx/comb_ayaka_attack_cast_02.ogg",
+      "name": "comb_ayaka_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 30
+    },
+    "sfx/comb_ayaka_attack_cast_03": {
+      "file": "sfx/comb_ayaka_attack_cast_03.ogg",
+      "name": "comb_ayaka_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 213
+    },
+    "sfx/comb_ayaka_attack_cast_04": {
+      "file": "sfx/comb_ayaka_attack_cast_04.ogg",
+      "name": "comb_ayaka_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 139
+    },
+    "sfx/comb_fiona_act_skill_01": {
+      "file": "sfx/comb_fiona_act_skill_01.ogg",
+      "name": "comb_fiona_act_skill_01",
+      "bank": "SFX.bank",
+      "subsong": 129
+    },
+    "sfx/comb_fiona_act_skill_02": {
+      "file": "sfx/comb_fiona_act_skill_02.ogg",
+      "name": "comb_fiona_act_skill_02",
+      "bank": "SFX.bank",
+      "subsong": 218
+    },
+    "sfx/comb_fiona_attack_cast_01": {
+      "file": "sfx/comb_fiona_attack_cast_01.ogg",
+      "name": "comb_fiona_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 162
+    },
+    "sfx/comb_fiona_attack_cast_02": {
+      "file": "sfx/comb_fiona_attack_cast_02.ogg",
+      "name": "comb_fiona_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 105
+    },
+    "sfx/comb_fiona_attack_cast_03": {
+      "file": "sfx/comb_fiona_attack_cast_03.ogg",
+      "name": "comb_fiona_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 82
+    },
+    "sfx/comb_fiona_attack_cast_04": {
+      "file": "sfx/comb_fiona_attack_cast_04.ogg",
+      "name": "comb_fiona_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 22
+    },
+    "sfx/comb_fiona_attack_hit_01": {
+      "file": "sfx/comb_fiona_attack_hit_01.ogg",
+      "name": "comb_fiona_attack_hit_01",
+      "bank": "SFX.bank",
+      "subsong": 236
+    },
+    "sfx/comb_fiona_attack_hit_02": {
+      "file": "sfx/comb_fiona_attack_hit_02.ogg",
+      "name": "comb_fiona_attack_hit_02",
+      "bank": "SFX.bank",
+      "subsong": 172
+    },
+    "sfx/comb_fiona_attack_hit_03": {
+      "file": "sfx/comb_fiona_attack_hit_03.ogg",
+      "name": "comb_fiona_attack_hit_03",
+      "bank": "SFX.bank",
+      "subsong": 238
+    },
+    "sfx/comb_floeria_act_skill1_01": {
+      "file": "sfx/comb_floeria_act_skill1_01.ogg",
+      "name": "comb_floeria_act_skill1_01",
+      "bank": "SFX.bank",
+      "subsong": 34
+    },
+    "sfx/comb_floeria_act_skill2_01": {
+      "file": "sfx/comb_floeria_act_skill2_01.ogg",
+      "name": "comb_floeria_act_skill2_01",
+      "bank": "SFX.bank",
+      "subsong": 121
+    },
+    "sfx/comb_floeria_attack_cast_01": {
+      "file": "sfx/comb_floeria_attack_cast_01.ogg",
+      "name": "comb_floeria_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 178
+    },
+    "sfx/comb_floeria_attack_cast_02": {
+      "file": "sfx/comb_floeria_attack_cast_02.ogg",
+      "name": "comb_floeria_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 106
+    },
+    "sfx/comb_floeria_attack_cast_03": {
+      "file": "sfx/comb_floeria_attack_cast_03.ogg",
+      "name": "comb_floeria_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 256
+    },
+    "sfx/comb_floeria_attack_cast_04": {
+      "file": "sfx/comb_floeria_attack_cast_04.ogg",
+      "name": "comb_floeria_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 16
+    },
+    "sfx/comb_floeria_attack_hit_01": {
+      "file": "sfx/comb_floeria_attack_hit_01.ogg",
+      "name": "comb_floeria_attack_hit_01",
+      "bank": "SFX.bank",
+      "subsong": 128
+    },
+    "sfx/comb_floeria_attack_hit_02": {
+      "file": "sfx/comb_floeria_attack_hit_02.ogg",
+      "name": "comb_floeria_attack_hit_02",
+      "bank": "SFX.bank",
+      "subsong": 88
+    },
+    "sfx/comb_floeria_attack_hit_03": {
+      "file": "sfx/comb_floeria_attack_hit_03.ogg",
+      "name": "comb_floeria_attack_hit_03",
+      "bank": "SFX.bank",
+      "subsong": 193
+    },
+    "sfx/comb_floeria_attack_hit_04": {
+      "file": "sfx/comb_floeria_attack_hit_04.ogg",
+      "name": "comb_floeria_attack_hit_04",
+      "bank": "SFX.bank",
+      "subsong": 116
+    },
+    "sfx/comb_gustav_act_skill_cast_01": {
+      "file": "sfx/comb_gustav_act_skill_cast_01.ogg",
+      "name": "comb_gustav_act_skill_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 173
+    },
+    "sfx/comb_gustav_attack_cast_01": {
+      "file": "sfx/comb_gustav_attack_cast_01.ogg",
+      "name": "comb_gustav_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 40
+    },
+    "sfx/comb_gustav_attack_cast_02": {
+      "file": "sfx/comb_gustav_attack_cast_02.ogg",
+      "name": "comb_gustav_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 184
+    },
+    "sfx/comb_gustav_attack_cast_03": {
+      "file": "sfx/comb_gustav_attack_cast_03.ogg",
+      "name": "comb_gustav_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 42
+    },
+    "sfx/comb_gustav_attack_cast_04": {
+      "file": "sfx/comb_gustav_attack_cast_04.ogg",
+      "name": "comb_gustav_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 188
+    },
+    "sfx/comb_gustav_attack_hit_01": {
+      "file": "sfx/comb_gustav_attack_hit_01.ogg",
+      "name": "comb_gustav_attack_hit_01",
+      "bank": "SFX.bank",
+      "subsong": 74
+    },
+    "sfx/comb_gustav_attack_hit_02": {
+      "file": "sfx/comb_gustav_attack_hit_02.ogg",
+      "name": "comb_gustav_attack_hit_02",
+      "bank": "SFX.bank",
+      "subsong": 15
+    },
+    "sfx/comb_gustav_attack_hit_03": {
+      "file": "sfx/comb_gustav_attack_hit_03.ogg",
+      "name": "comb_gustav_attack_hit_03",
+      "bank": "SFX.bank",
+      "subsong": 226
+    },
+    "sfx/comb_gustav_attack_hit_04": {
+      "file": "sfx/comb_gustav_attack_hit_04.ogg",
+      "name": "comb_gustav_attack_hit_04",
+      "bank": "SFX.bank",
+      "subsong": 6
+    },
+    "sfx/comb_selkhera_act_skill_cast_01": {
+      "file": "sfx/comb_selkhera_act_skill_cast_01.ogg",
+      "name": "comb_selkhera_act_skill_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 55
+    },
+    "sfx/comb_selkhera_act_skill_cast_layer": {
+      "file": "sfx/comb_selkhera_act_skill_cast_layer.ogg",
+      "name": "comb_selkhera_act_skill_cast_layer",
+      "bank": "SFX.bank",
+      "subsong": 103
+    },
+    "sfx/comb_selkhera_attack_cast_01": {
+      "file": "sfx/comb_selkhera_attack_cast_01.ogg",
+      "name": "comb_selkhera_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 228
+    },
+    "sfx/comb_selkhera_attack_cast_02": {
+      "file": "sfx/comb_selkhera_attack_cast_02.ogg",
+      "name": "comb_selkhera_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 9
+    },
+    "sfx/comb_selkhera_attack_cast_03": {
+      "file": "sfx/comb_selkhera_attack_cast_03.ogg",
+      "name": "comb_selkhera_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 222
+    },
+    "sfx/comb_selkhera_attack_cast_04": {
+      "file": "sfx/comb_selkhera_attack_cast_04.ogg",
+      "name": "comb_selkhera_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 45
+    },
+    "sfx/comic_01_lowdrone": {
+      "file": "sfx/comic_01_lowdrone.ogg",
+      "name": "Comic_01_LowDrone",
+      "bank": "SFX.bank",
+      "subsong": 75
+    },
+    "sfx/comic_01_portal_loop": {
+      "file": "sfx/comic_01_portal_loop.ogg",
+      "name": "Comic_01_Portal_Loop",
+      "bank": "SFX.bank",
+      "subsong": 100
+    },
+    "sfx/demonboss_attack_cast_01": {
+      "file": "sfx/demonboss_attack_cast_01.ogg",
+      "name": "demonboss_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 27
+    },
+    "sfx/demonboss_attack_cast_02": {
+      "file": "sfx/demonboss_attack_cast_02.ogg",
+      "name": "demonboss_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 101
+    },
+    "sfx/demonboss_attack_cast_03": {
+      "file": "sfx/demonboss_attack_cast_03.ogg",
+      "name": "demonboss_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 51
+    },
+    "sfx/demonboss_attack_cast_04": {
+      "file": "sfx/demonboss_attack_cast_04.ogg",
+      "name": "demonboss_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 61
+    },
+    "sfx/demonboss_attack_vo_01": {
+      "file": "sfx/demonboss_attack_vo_01.ogg",
+      "name": "demonboss_attack_VO_01",
+      "bank": "SFX.bank",
+      "subsong": 231
+    },
+    "sfx/demonboss_attack_vo_02": {
+      "file": "sfx/demonboss_attack_vo_02.ogg",
+      "name": "demonboss_attack_VO_02",
+      "bank": "SFX.bank",
+      "subsong": 85
+    },
+    "sfx/demonboss_attack_vo_03": {
+      "file": "sfx/demonboss_attack_vo_03.ogg",
+      "name": "demonboss_attack_VO_03",
+      "bank": "SFX.bank",
+      "subsong": 49
+    },
+    "sfx/demonboss_attack_vo_04": {
+      "file": "sfx/demonboss_attack_vo_04.ogg",
+      "name": "demonboss_attack_VO_04",
+      "bank": "SFX.bank",
+      "subsong": 41
+    },
+    "sfx/demonboss_skill_cast": {
+      "file": "sfx/demonboss_skill_cast.ogg",
+      "name": "demonboss_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 57
+    },
+    "sfx/dragomir_aa_01": {
+      "file": "sfx/dragomir_aa_01.ogg",
+      "name": "DRAGOMIR_AA_01",
+      "bank": "SFX.bank",
+      "subsong": 246
+    },
+    "sfx/dragomir_aa_02": {
+      "file": "sfx/dragomir_aa_02.ogg",
+      "name": "DRAGOMIR_AA_02",
+      "bank": "SFX.bank",
+      "subsong": 244
+    },
+    "sfx/dragomir_aa_03": {
+      "file": "sfx/dragomir_aa_03.ogg",
+      "name": "DRAGOMIR_AA_03",
+      "bank": "SFX.bank",
+      "subsong": 123
+    },
+    "sfx/dragomir_aa_04": {
+      "file": "sfx/dragomir_aa_04.ogg",
+      "name": "DRAGOMIR_AA_04",
+      "bank": "SFX.bank",
+      "subsong": 94
+    },
+    "sfx/dragomir_attack_cast_01": {
+      "file": "sfx/dragomir_attack_cast_01.ogg",
+      "name": "dragomir_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 182
+    },
+    "sfx/dragomir_attack_cast_02": {
+      "file": "sfx/dragomir_attack_cast_02.ogg",
+      "name": "dragomir_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 187
+    },
+    "sfx/dragomir_attack_cast_03": {
+      "file": "sfx/dragomir_attack_cast_03.ogg",
+      "name": "dragomir_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 119
+    },
+    "sfx/dragomir_attack_cast_04": {
+      "file": "sfx/dragomir_attack_cast_04.ogg",
+      "name": "dragomir_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 161
+    },
+    "sfx/dragomir_skill_cast": {
+      "file": "sfx/dragomir_skill_cast.ogg",
+      "name": "dragomir_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 157
+    },
+    "sfx/dragon_roar_01": {
+      "file": "sfx/dragon_roar_01.ogg",
+      "name": "dragon_roar_01",
+      "bank": "SFX.bank",
+      "subsong": 147
+    },
+    "sfx/dragon_roar_02": {
+      "file": "sfx/dragon_roar_02.ogg",
+      "name": "dragon_roar_02",
+      "bank": "SFX.bank",
+      "subsong": 205
+    },
+    "sfx/dragon_roar_03": {
+      "file": "sfx/dragon_roar_03.ogg",
+      "name": "dragon_roar_03",
+      "bank": "SFX.bank",
+      "subsong": 107
+    },
+    "sfx/dragon_roar_04": {
+      "file": "sfx/dragon_roar_04.ogg",
+      "name": "dragon_roar_04",
+      "bank": "SFX.bank",
+      "subsong": 229
+    },
+    "sfx/dragon_roar_05": {
+      "file": "sfx/dragon_roar_05.ogg",
+      "name": "dragon_roar_05",
+      "bank": "SFX.bank",
+      "subsong": 160
+    },
+    "sfx/dragonfire_attack_cast_01": {
+      "file": "sfx/dragonfire_attack_cast_01.ogg",
+      "name": "dragonfire_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 240
+    },
+    "sfx/dragonfire_attack_cast_02": {
+      "file": "sfx/dragonfire_attack_cast_02.ogg",
+      "name": "dragonfire_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 270
+    },
+    "sfx/dragonfire_attack_cast_03": {
+      "file": "sfx/dragonfire_attack_cast_03.ogg",
+      "name": "dragonfire_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 150
+    },
+    "sfx/dragonfire_attack_cast_04": {
+      "file": "sfx/dragonfire_attack_cast_04.ogg",
+      "name": "dragonfire_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 204
+    },
+    "sfx/dragonfire_skill_cast_01": {
+      "file": "sfx/dragonfire_skill_cast_01.ogg",
+      "name": "dragonfire_skill_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 170
+    },
+    "sfx/dragonice_attack_cast_01": {
+      "file": "sfx/dragonice_attack_cast_01.ogg",
+      "name": "dragonice_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 257
+    },
+    "sfx/dragonice_attack_cast_02": {
+      "file": "sfx/dragonice_attack_cast_02.ogg",
+      "name": "dragonice_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 167
+    },
+    "sfx/dragonice_attack_cast_03": {
+      "file": "sfx/dragonice_attack_cast_03.ogg",
+      "name": "dragonice_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 142
+    },
+    "sfx/dragonice_attack_cast_04": {
+      "file": "sfx/dragonice_attack_cast_04.ogg",
+      "name": "dragonice_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 217
+    },
+    "sfx/dragonice_skill_cast_01": {
+      "file": "sfx/dragonice_skill_cast_01.ogg",
+      "name": "dragonice_skill_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 141
+    },
+    "sfx/dragonpoison_attack_cast_01": {
+      "file": "sfx/dragonpoison_attack_cast_01.ogg",
+      "name": "dragonpoison_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 140
+    },
+    "sfx/dragonpoison_attack_cast_02": {
+      "file": "sfx/dragonpoison_attack_cast_02.ogg",
+      "name": "dragonpoison_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 99
+    },
+    "sfx/dragonpoison_attack_cast_03": {
+      "file": "sfx/dragonpoison_attack_cast_03.ogg",
+      "name": "dragonpoison_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 255
+    },
+    "sfx/dragonpoison_attack_cast_04": {
+      "file": "sfx/dragonpoison_attack_cast_04.ogg",
+      "name": "dragonpoison_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 190
+    },
+    "sfx/dragonpoison_skill_cast_01": {
+      "file": "sfx/dragonpoison_skill_cast_01.ogg",
+      "name": "dragonpoison_skill_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 273
+    },
+    "sfx/forestgolem_attack_cast_01": {
+      "file": "sfx/forestgolem_attack_cast_01.ogg",
+      "name": "forestgolem_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 269
+    },
+    "sfx/forestgolem_attack_cast_02": {
+      "file": "sfx/forestgolem_attack_cast_02.ogg",
+      "name": "forestgolem_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 223
+    },
+    "sfx/forestgolem_attack_cast_03": {
+      "file": "sfx/forestgolem_attack_cast_03.ogg",
+      "name": "forestgolem_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 39
+    },
+    "sfx/forestgolem_attack_cast_04": {
+      "file": "sfx/forestgolem_attack_cast_04.ogg",
+      "name": "forestgolem_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 189
+    },
+    "sfx/forestgolem_skill_cast": {
+      "file": "sfx/forestgolem_skill_cast.ogg",
+      "name": "forestgolem_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 29
+    },
+    "sfx/hydra_attack_cast_01": {
+      "file": "sfx/hydra_attack_cast_01.ogg",
+      "name": "hydra_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 216
+    },
+    "sfx/hydra_attack_cast_02": {
+      "file": "sfx/hydra_attack_cast_02.ogg",
+      "name": "hydra_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 149
+    },
+    "sfx/hydra_attack_cast_03": {
+      "file": "sfx/hydra_attack_cast_03.ogg",
+      "name": "hydra_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 31
+    },
+    "sfx/hydra_attack_cast_04": {
+      "file": "sfx/hydra_attack_cast_04.ogg",
+      "name": "hydra_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 180
+    },
+    "sfx/irini_attack_cast_01": {
+      "file": "sfx/irini_attack_cast_01.ogg",
+      "name": "irini_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 196
+    },
+    "sfx/irini_attack_cast_02": {
+      "file": "sfx/irini_attack_cast_02.ogg",
+      "name": "irini_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 144
+    },
+    "sfx/irini_attack_cast_03": {
+      "file": "sfx/irini_attack_cast_03.ogg",
+      "name": "irini_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 46
+    },
+    "sfx/irini_attack_cast_04": {
+      "file": "sfx/irini_attack_cast_04.ogg",
+      "name": "irini_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 237
+    },
+    "sfx/irini_attack_hit_01": {
+      "file": "sfx/irini_attack_hit_01.ogg",
+      "name": "irini_attack_hit_01",
+      "bank": "SFX.bank",
+      "subsong": 267
+    },
+    "sfx/irini_attack_hit_02": {
+      "file": "sfx/irini_attack_hit_02.ogg",
+      "name": "irini_attack_hit_02",
+      "bank": "SFX.bank",
+      "subsong": 243
+    },
+    "sfx/irini_attack_hit_03": {
+      "file": "sfx/irini_attack_hit_03.ogg",
+      "name": "irini_attack_hit_03",
+      "bank": "SFX.bank",
+      "subsong": 164
+    },
+    "sfx/irini_attack_hit_04": {
+      "file": "sfx/irini_attack_hit_04.ogg",
+      "name": "irini_attack_hit_04",
+      "bank": "SFX.bank",
+      "subsong": 268
+    },
+    "sfx/irini_skill_cast_01": {
+      "file": "sfx/irini_skill_cast_01.ogg",
+      "name": "irini_skill_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 232
+    },
+    "sfx/irini_skill_hit_01": {
+      "file": "sfx/irini_skill_hit_01.ogg",
+      "name": "irini_skill_hit_01",
+      "bank": "SFX.bank",
+      "subsong": 97
+    },
+    "sfx/josephina_attack_cast_01": {
+      "file": "sfx/josephina_attack_cast_01.ogg",
+      "name": "josephina_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 84
+    },
+    "sfx/josephina_attack_cast_02": {
+      "file": "sfx/josephina_attack_cast_02.ogg",
+      "name": "josephina_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 249
+    },
+    "sfx/josephina_attack_cast_03": {
+      "file": "sfx/josephina_attack_cast_03.ogg",
+      "name": "josephina_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 247
+    },
+    "sfx/josephina_attack_cast_04": {
+      "file": "sfx/josephina_attack_cast_04.ogg",
+      "name": "josephina_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 79
+    },
+    "sfx/josephina_attack_hit_01": {
+      "file": "sfx/josephina_attack_hit_01.ogg",
+      "name": "josephina_attack_hit_01",
+      "bank": "SFX.bank",
+      "subsong": 26
+    },
+    "sfx/josephina_attack_hit_02": {
+      "file": "sfx/josephina_attack_hit_02.ogg",
+      "name": "josephina_attack_hit_02",
+      "bank": "SFX.bank",
+      "subsong": 60
+    },
+    "sfx/josephina_attack_hit_03": {
+      "file": "sfx/josephina_attack_hit_03.ogg",
+      "name": "josephina_attack_hit_03",
+      "bank": "SFX.bank",
+      "subsong": 110
+    },
+    "sfx/josephina_attack_hit_04": {
+      "file": "sfx/josephina_attack_hit_04.ogg",
+      "name": "josephina_attack_hit_04",
+      "bank": "SFX.bank",
+      "subsong": 43
+    },
+    "sfx/josephina_skill_cast": {
+      "file": "sfx/josephina_skill_cast.ogg",
+      "name": "josephina_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 134
+    },
+    "sfx/kai_attack_cast_01": {
+      "file": "sfx/kai_attack_cast_01.ogg",
+      "name": "kai_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 64
+    },
+    "sfx/kai_attack_cast_02": {
+      "file": "sfx/kai_attack_cast_02.ogg",
+      "name": "kai_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 32
+    },
+    "sfx/kai_attack_cast_03": {
+      "file": "sfx/kai_attack_cast_03.ogg",
+      "name": "kai_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 171
+    },
+    "sfx/kai_attack_cast_04": {
+      "file": "sfx/kai_attack_cast_04.ogg",
+      "name": "kai_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 179
+    },
+    "sfx/kai_skill_cast": {
+      "file": "sfx/kai_skill_cast.ogg",
+      "name": "kai_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 48
+    },
+    "sfx/lizard_attack_cast_01": {
+      "file": "sfx/lizard_attack_cast_01.ogg",
+      "name": "lizard_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 131
+    },
+    "sfx/lizard_attack_cast_02": {
+      "file": "sfx/lizard_attack_cast_02.ogg",
+      "name": "lizard_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 52
+    },
+    "sfx/lizard_attack_cast_03": {
+      "file": "sfx/lizard_attack_cast_03.ogg",
+      "name": "lizard_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 201
+    },
+    "sfx/lizard_attack_cast_04": {
+      "file": "sfx/lizard_attack_cast_04.ogg",
+      "name": "lizard_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 137
+    },
+    "sfx/lizard_step": {
+      "file": "sfx/lizard_step.ogg",
+      "name": "lizard_step",
+      "bank": "SFX.bank",
+      "subsong": 194
+    },
+    "sfx/logan_attack_cast_01": {
+      "file": "sfx/logan_attack_cast_01.ogg",
+      "name": "logan_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 266
+    },
+    "sfx/logan_attack_cast_02": {
+      "file": "sfx/logan_attack_cast_02.ogg",
+      "name": "logan_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 72
+    },
+    "sfx/logan_attack_cast_03": {
+      "file": "sfx/logan_attack_cast_03.ogg",
+      "name": "logan_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 148
+    },
+    "sfx/logan_attack_cast_04": {
+      "file": "sfx/logan_attack_cast_04.ogg",
+      "name": "logan_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 86
+    },
+    "sfx/logan_skill_cast": {
+      "file": "sfx/logan_skill_cast.ogg",
+      "name": "logan_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 263
+    },
+    "sfx/musharcher_attack_cast_01": {
+      "file": "sfx/musharcher_attack_cast_01.ogg",
+      "name": "musharcher_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 3
+    },
+    "sfx/musharcher_attack_cast_02": {
+      "file": "sfx/musharcher_attack_cast_02.ogg",
+      "name": "musharcher_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 145
+    },
+    "sfx/musharcher_attack_cast_03": {
+      "file": "sfx/musharcher_attack_cast_03.ogg",
+      "name": "musharcher_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 120
+    },
+    "sfx/musharcher_attack_cast_04": {
+      "file": "sfx/musharcher_attack_cast_04.ogg",
+      "name": "musharcher_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 28
+    },
+    "sfx/musharcher_attack_hit_01": {
+      "file": "sfx/musharcher_attack_hit_01.ogg",
+      "name": "musharcher_attack_hit_01",
+      "bank": "SFX.bank",
+      "subsong": 90
+    },
+    "sfx/musharcher_attack_hit_02": {
+      "file": "sfx/musharcher_attack_hit_02.ogg",
+      "name": "musharcher_attack_hit_02",
+      "bank": "SFX.bank",
+      "subsong": 58
+    },
+    "sfx/musharcher_attack_hit_03": {
+      "file": "sfx/musharcher_attack_hit_03.ogg",
+      "name": "musharcher_attack_hit_03",
+      "bank": "SFX.bank",
+      "subsong": 44
+    },
+    "sfx/musharcher_attack_hit_04": {
+      "file": "sfx/musharcher_attack_hit_04.ogg",
+      "name": "musharcher_attack_hit_04",
+      "bank": "SFX.bank",
+      "subsong": 130
+    },
+    "sfx/musharcher_skill_cast": {
+      "file": "sfx/musharcher_skill_cast.ogg",
+      "name": "musharcher_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 195
+    },
+    "sfx/musharcher_skill_hit": {
+      "file": "sfx/musharcher_skill_hit.ogg",
+      "name": "musharcher_skill_hit",
+      "bank": "SFX.bank",
+      "subsong": 259
+    },
+    "sfx/mushmage_attack_cast_01": {
+      "file": "sfx/mushmage_attack_cast_01.ogg",
+      "name": "mushmage_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 209
+    },
+    "sfx/mushmage_attack_cast_02": {
+      "file": "sfx/mushmage_attack_cast_02.ogg",
+      "name": "mushmage_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 235
+    },
+    "sfx/mushmage_attack_cast_03": {
+      "file": "sfx/mushmage_attack_cast_03.ogg",
+      "name": "mushmage_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 165
+    },
+    "sfx/mushmage_attack_cast_04": {
+      "file": "sfx/mushmage_attack_cast_04.ogg",
+      "name": "mushmage_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 83
+    },
+    "sfx/mushmage_attack_hit_01": {
+      "file": "sfx/mushmage_attack_hit_01.ogg",
+      "name": "mushmage_attack_hit_01",
+      "bank": "SFX.bank",
+      "subsong": 89
+    },
+    "sfx/mushmage_attack_hit_02": {
+      "file": "sfx/mushmage_attack_hit_02.ogg",
+      "name": "mushmage_attack_hit_02",
+      "bank": "SFX.bank",
+      "subsong": 191
+    },
+    "sfx/mushmage_attack_hit_03": {
+      "file": "sfx/mushmage_attack_hit_03.ogg",
+      "name": "mushmage_attack_hit_03",
+      "bank": "SFX.bank",
+      "subsong": 225
+    },
+    "sfx/mushmage_attack_hit_04": {
+      "file": "sfx/mushmage_attack_hit_04.ogg",
+      "name": "mushmage_attack_hit_04",
+      "bank": "SFX.bank",
+      "subsong": 234
+    },
+    "sfx/mushmage_skill_cast_01": {
+      "file": "sfx/mushmage_skill_cast_01.ogg",
+      "name": "mushmage_skill_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 154
+    },
+    "sfx/mushmage_skill_cast_02": {
+      "file": "sfx/mushmage_skill_cast_02.ogg",
+      "name": "mushmage_skill_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 168
+    },
+    "sfx/mushroomtank_attack_cast_01": {
+      "file": "sfx/mushroomtank_attack_cast_01.ogg",
+      "name": "mushroomtank_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 203
+    },
+    "sfx/mushroomtank_attack_cast_02": {
+      "file": "sfx/mushroomtank_attack_cast_02.ogg",
+      "name": "mushroomtank_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 211
+    },
+    "sfx/mushroomtank_attack_cast_03": {
+      "file": "sfx/mushroomtank_attack_cast_03.ogg",
+      "name": "mushroomtank_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 108
+    },
+    "sfx/mushroomtank_attack_cast_04": {
+      "file": "sfx/mushroomtank_attack_cast_04.ogg",
+      "name": "mushroomtank_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 124
+    },
+    "sfx/mushroomtank_skill_cast": {
+      "file": "sfx/mushroomtank_skill_cast.ogg",
+      "name": "mushroomtank_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 143
+    },
+    "sfx/office_loop": {
+      "file": "sfx/office_loop.ogg",
+      "name": "Office_Loop",
+      "bank": "SFX.bank",
+      "subsong": 118
+    },
+    "sfx/pimenta_attack_cast_01": {
+      "file": "sfx/pimenta_attack_cast_01.ogg",
+      "name": "pimenta_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 219
+    },
+    "sfx/pimenta_attack_cast_02": {
+      "file": "sfx/pimenta_attack_cast_02.ogg",
+      "name": "pimenta_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 274
+    },
+    "sfx/pimenta_attack_cast_03": {
+      "file": "sfx/pimenta_attack_cast_03.ogg",
+      "name": "pimenta_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 23
+    },
+    "sfx/pimenta_attack_cast_04": {
+      "file": "sfx/pimenta_attack_cast_04.ogg",
+      "name": "pimenta_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 210
+    },
+    "sfx/pimenta_skill_cast_01": {
+      "file": "sfx/pimenta_skill_cast_01.ogg",
+      "name": "pimenta_skill_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 152
+    },
+    "sfx/plantmonster_attack_cast_01": {
+      "file": "sfx/plantmonster_attack_cast_01.ogg",
+      "name": "plantmonster_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 200
+    },
+    "sfx/plantmonster_attack_cast_02": {
+      "file": "sfx/plantmonster_attack_cast_02.ogg",
+      "name": "plantmonster_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 96
+    },
+    "sfx/plantmonster_attack_cast_03": {
+      "file": "sfx/plantmonster_attack_cast_03.ogg",
+      "name": "plantmonster_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 163
+    },
+    "sfx/plantmonster_attack_cast_04": {
+      "file": "sfx/plantmonster_attack_cast_04.ogg",
+      "name": "plantmonster_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 111
+    },
+    "sfx/plantmonster_attack_hit_01": {
+      "file": "sfx/plantmonster_attack_hit_01.ogg",
+      "name": "plantmonster_attack_hit_01",
+      "bank": "SFX.bank",
+      "subsong": 155
+    },
+    "sfx/plantmonster_attack_hit_02": {
+      "file": "sfx/plantmonster_attack_hit_02.ogg",
+      "name": "plantmonster_attack_hit_02",
+      "bank": "SFX.bank",
+      "subsong": 250
+    },
+    "sfx/plantmonster_attack_hit_03": {
+      "file": "sfx/plantmonster_attack_hit_03.ogg",
+      "name": "plantmonster_attack_hit_03",
+      "bank": "SFX.bank",
+      "subsong": 233
+    },
+    "sfx/plantmonster_attack_hit_04": {
+      "file": "sfx/plantmonster_attack_hit_04.ogg",
+      "name": "plantmonster_attack_hit_04",
+      "bank": "SFX.bank",
+      "subsong": 198
+    },
+    "sfx/plantmonster_skill_cast": {
+      "file": "sfx/plantmonster_skill_cast.ogg",
+      "name": "plantmonster_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 212
+    },
+    "sfx/ratna_attack_cast_01": {
+      "file": "sfx/ratna_attack_cast_01.ogg",
+      "name": "ratna_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 56
+    },
+    "sfx/ratna_attack_cast_02": {
+      "file": "sfx/ratna_attack_cast_02.ogg",
+      "name": "ratna_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 185
+    },
+    "sfx/ratna_attack_cast_03": {
+      "file": "sfx/ratna_attack_cast_03.ogg",
+      "name": "ratna_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 133
+    },
+    "sfx/ratna_attack_cast_04": {
+      "file": "sfx/ratna_attack_cast_04.ogg",
+      "name": "ratna_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 197
+    },
+    "sfx/ratna_attack_hit_01": {
+      "file": "sfx/ratna_attack_hit_01.ogg",
+      "name": "ratna_attack_hit_01",
+      "bank": "SFX.bank",
+      "subsong": 53
+    },
+    "sfx/ratna_attack_hit_02": {
+      "file": "sfx/ratna_attack_hit_02.ogg",
+      "name": "ratna_attack_hit_02",
+      "bank": "SFX.bank",
+      "subsong": 4
+    },
+    "sfx/ratna_attack_hit_03": {
+      "file": "sfx/ratna_attack_hit_03.ogg",
+      "name": "ratna_attack_hit_03",
+      "bank": "SFX.bank",
+      "subsong": 208
+    },
+    "sfx/ratna_attack_hit_04": {
+      "file": "sfx/ratna_attack_hit_04.ogg",
+      "name": "ratna_attack_hit_04",
+      "bank": "SFX.bank",
+      "subsong": 177
+    },
+    "sfx/ratna_skill_cast": {
+      "file": "sfx/ratna_skill_cast.ogg",
+      "name": "ratna_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 1
+    },
+    "sfx/reyna_attack_cast_01": {
+      "file": "sfx/reyna_attack_cast_01.ogg",
+      "name": "reyna_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 265
+    },
+    "sfx/reyna_attack_cast_02": {
+      "file": "sfx/reyna_attack_cast_02.ogg",
+      "name": "reyna_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 242
+    },
+    "sfx/reyna_attack_cast_03": {
+      "file": "sfx/reyna_attack_cast_03.ogg",
+      "name": "reyna_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 202
+    },
+    "sfx/reyna_attack_cast_04": {
+      "file": "sfx/reyna_attack_cast_04.ogg",
+      "name": "reyna_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 63
+    },
+    "sfx/reyna_skill_cast_01": {
+      "file": "sfx/reyna_skill_cast_01.ogg",
+      "name": "reyna_skill_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 169
+    },
+    "sfx/rook_attack_cast_01": {
+      "file": "sfx/rook_attack_cast_01.ogg",
+      "name": "rook_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 272
+    },
+    "sfx/rook_attack_cast_02": {
+      "file": "sfx/rook_attack_cast_02.ogg",
+      "name": "rook_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 76
+    },
+    "sfx/rook_attack_cast_03": {
+      "file": "sfx/rook_attack_cast_03.ogg",
+      "name": "rook_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 112
+    },
+    "sfx/rook_attack_cast_04": {
+      "file": "sfx/rook_attack_cast_04.ogg",
+      "name": "rook_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 67
+    },
+    "sfx/rook_skill_cast": {
+      "file": "sfx/rook_skill_cast.ogg",
+      "name": "rook_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 35
+    },
+    "sfx/sal_attack_cast_01": {
+      "file": "sfx/sal_attack_cast_01.ogg",
+      "name": "sal_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 7
+    },
+    "sfx/sal_attack_cast_02": {
+      "file": "sfx/sal_attack_cast_02.ogg",
+      "name": "sal_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 80
+    },
+    "sfx/sal_attack_cast_03": {
+      "file": "sfx/sal_attack_cast_03.ogg",
+      "name": "sal_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 109
+    },
+    "sfx/sal_attack_cast_04": {
+      "file": "sfx/sal_attack_cast_04.ogg",
+      "name": "sal_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 220
+    },
+    "sfx/sal_attack_hit_01": {
+      "file": "sfx/sal_attack_hit_01.ogg",
+      "name": "sal_attack_hit_01",
+      "bank": "SFX.bank",
+      "subsong": 230
+    },
+    "sfx/sal_attack_hit_02": {
+      "file": "sfx/sal_attack_hit_02.ogg",
+      "name": "sal_attack_hit_02",
+      "bank": "SFX.bank",
+      "subsong": 261
+    },
+    "sfx/sal_attack_hit_03": {
+      "file": "sfx/sal_attack_hit_03.ogg",
+      "name": "sal_attack_hit_03",
+      "bank": "SFX.bank",
+      "subsong": 136
+    },
+    "sfx/sal_attack_hit_04": {
+      "file": "sfx/sal_attack_hit_04.ogg",
+      "name": "sal_attack_hit_04",
+      "bank": "SFX.bank",
+      "subsong": 138
+    },
+    "sfx/sal_skill_cast": {
+      "file": "sfx/sal_skill_cast.ogg",
+      "name": "sal_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 176
+    },
+    "sfx/sal_skill_hit_01": {
+      "file": "sfx/sal_skill_hit_01.ogg",
+      "name": "sal_skill_hit_01",
+      "bank": "SFX.bank",
+      "subsong": 127
+    },
+    "sfx/sal_skill_hit_02": {
+      "file": "sfx/sal_skill_hit_02.ogg",
+      "name": "sal_skill_hit_02",
+      "bank": "SFX.bank",
+      "subsong": 17
+    },
+    "sfx/seraphael_attack_cast_01": {
+      "file": "sfx/seraphael_attack_cast_01.ogg",
+      "name": "seraphael_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 252
+    },
+    "sfx/seraphael_attack_cast_02": {
+      "file": "sfx/seraphael_attack_cast_02.ogg",
+      "name": "seraphael_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 183
+    },
+    "sfx/seraphael_attack_cast_03": {
+      "file": "sfx/seraphael_attack_cast_03.ogg",
+      "name": "seraphael_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 275
+    },
+    "sfx/seraphael_attack_cast_04": {
+      "file": "sfx/seraphael_attack_cast_04.ogg",
+      "name": "seraphael_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 68
+    },
+    "sfx/seraphael_attack_hit_01": {
+      "file": "sfx/seraphael_attack_hit_01.ogg",
+      "name": "seraphael_attack_hit_01",
+      "bank": "SFX.bank",
+      "subsong": 241
+    },
+    "sfx/seraphael_attack_hit_02": {
+      "file": "sfx/seraphael_attack_hit_02.ogg",
+      "name": "seraphael_attack_hit_02",
+      "bank": "SFX.bank",
+      "subsong": 59
+    },
+    "sfx/seraphael_attack_hit_03": {
+      "file": "sfx/seraphael_attack_hit_03.ogg",
+      "name": "seraphael_attack_hit_03",
+      "bank": "SFX.bank",
+      "subsong": 24
+    },
+    "sfx/seraphael_attack_hit_04": {
+      "file": "sfx/seraphael_attack_hit_04.ogg",
+      "name": "seraphael_attack_hit_04",
+      "bank": "SFX.bank",
+      "subsong": 159
+    },
+    "sfx/seraphael_skill_cast": {
+      "file": "sfx/seraphael_skill_cast.ogg",
+      "name": "seraphael_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 214
+    },
+    "sfx/skorn_attack_cast_01": {
+      "file": "sfx/skorn_attack_cast_01.ogg",
+      "name": "skorn_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 175
+    },
+    "sfx/skorn_attack_cast_02": {
+      "file": "sfx/skorn_attack_cast_02.ogg",
+      "name": "skorn_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 104
+    },
+    "sfx/skorn_attack_cast_03": {
+      "file": "sfx/skorn_attack_cast_03.ogg",
+      "name": "skorn_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 20
+    },
+    "sfx/skorn_attack_cast_04": {
+      "file": "sfx/skorn_attack_cast_04.ogg",
+      "name": "skorn_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 2
+    },
+    "sfx/skorn_skill_cast": {
+      "file": "sfx/skorn_skill_cast.ogg",
+      "name": "skorn_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 21
+    },
+    "sfx/slime_attack_cast_01": {
+      "file": "sfx/slime_attack_cast_01.ogg",
+      "name": "slime_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 276
+    },
+    "sfx/slime_attack_cast_02": {
+      "file": "sfx/slime_attack_cast_02.ogg",
+      "name": "slime_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 115
+    },
+    "sfx/slime_attack_cast_03": {
+      "file": "sfx/slime_attack_cast_03.ogg",
+      "name": "slime_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 12
+    },
+    "sfx/slime_attack_cast_04": {
+      "file": "sfx/slime_attack_cast_04.ogg",
+      "name": "slime_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 135
+    },
+    "sfx/snake_attack_cast_01": {
+      "file": "sfx/snake_attack_cast_01.ogg",
+      "name": "snake_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 221
+    },
+    "sfx/snake_attack_cast_02": {
+      "file": "sfx/snake_attack_cast_02.ogg",
+      "name": "snake_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 62
+    },
+    "sfx/snake_attack_cast_03": {
+      "file": "sfx/snake_attack_cast_03.ogg",
+      "name": "snake_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 113
+    },
+    "sfx/snake_attack_cast_04": {
+      "file": "sfx/snake_attack_cast_04.ogg",
+      "name": "snake_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 248
+    },
+    "sfx/snake_skill_cast": {
+      "file": "sfx/snake_skill_cast.ogg",
+      "name": "snake_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 114
+    },
+    "sfx/spider_attack_cast_01": {
+      "file": "sfx/spider_attack_cast_01.ogg",
+      "name": "spider_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 93
+    },
+    "sfx/spider_attack_cast_02": {
+      "file": "sfx/spider_attack_cast_02.ogg",
+      "name": "spider_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 258
+    },
+    "sfx/spider_attack_cast_03": {
+      "file": "sfx/spider_attack_cast_03.ogg",
+      "name": "spider_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 8
+    },
+    "sfx/spider_attack_cast_04": {
+      "file": "sfx/spider_attack_cast_04.ogg",
+      "name": "spider_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 70
+    },
+    "sfx/spider_attack_hit_01": {
+      "file": "sfx/spider_attack_hit_01.ogg",
+      "name": "spider_attack_hit_01",
+      "bank": "SFX.bank",
+      "subsong": 126
+    },
+    "sfx/spider_attack_hit_02": {
+      "file": "sfx/spider_attack_hit_02.ogg",
+      "name": "spider_attack_hit_02",
+      "bank": "SFX.bank",
+      "subsong": 239
+    },
+    "sfx/spider_attack_hit_03": {
+      "file": "sfx/spider_attack_hit_03.ogg",
+      "name": "spider_attack_hit_03",
+      "bank": "SFX.bank",
+      "subsong": 91
+    },
+    "sfx/spider_attack_hit_04": {
+      "file": "sfx/spider_attack_hit_04.ogg",
+      "name": "spider_attack_hit_04",
+      "bank": "SFX.bank",
+      "subsong": 192
+    },
+    "sfx/spider_skill_cast": {
+      "file": "sfx/spider_skill_cast.ogg",
+      "name": "spider_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 264
+    },
+    "sfx/spider_skill_hit": {
+      "file": "sfx/spider_skill_hit.ogg",
+      "name": "spider_skill_hit",
+      "bank": "SFX.bank",
+      "subsong": 36
+    },
+    "sfx/tilly_attack_cast_01": {
+      "file": "sfx/tilly_attack_cast_01.ogg",
+      "name": "tilly_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 13
+    },
+    "sfx/tilly_attack_cast_02": {
+      "file": "sfx/tilly_attack_cast_02.ogg",
+      "name": "tilly_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 66
+    },
+    "sfx/tilly_attack_cast_03": {
+      "file": "sfx/tilly_attack_cast_03.ogg",
+      "name": "tilly_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 174
+    },
+    "sfx/tilly_attack_cast_04": {
+      "file": "sfx/tilly_attack_cast_04.ogg",
+      "name": "tilly_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 125
+    },
+    "sfx/tilly_attack_hit_01": {
+      "file": "sfx/tilly_attack_hit_01.ogg",
+      "name": "tilly_attack_hit_01",
+      "bank": "SFX.bank",
+      "subsong": 224
+    },
+    "sfx/tilly_attack_hit_02": {
+      "file": "sfx/tilly_attack_hit_02.ogg",
+      "name": "tilly_attack_hit_02",
+      "bank": "SFX.bank",
+      "subsong": 18
+    },
+    "sfx/tilly_attack_hit_03": {
+      "file": "sfx/tilly_attack_hit_03.ogg",
+      "name": "tilly_attack_hit_03",
+      "bank": "SFX.bank",
+      "subsong": 253
+    },
+    "sfx/tilly_attack_hit_04": {
+      "file": "sfx/tilly_attack_hit_04.ogg",
+      "name": "tilly_attack_hit_04",
+      "bank": "SFX.bank",
+      "subsong": 77
+    },
+    "sfx/tilly_skill_cast": {
+      "file": "sfx/tilly_skill_cast.ogg",
+      "name": "tilly_skill_cast",
+      "bank": "SFX.bank",
+      "subsong": 11
+    },
+    "sfx/turtle_attack_cast_01": {
+      "file": "sfx/turtle_attack_cast_01.ogg",
+      "name": "turtle_attack_cast_01",
+      "bank": "SFX.bank",
+      "subsong": 92
+    },
+    "sfx/turtle_attack_cast_02": {
+      "file": "sfx/turtle_attack_cast_02.ogg",
+      "name": "turtle_attack_cast_02",
+      "bank": "SFX.bank",
+      "subsong": 78
+    },
+    "sfx/turtle_attack_cast_03": {
+      "file": "sfx/turtle_attack_cast_03.ogg",
+      "name": "turtle_attack_cast_03",
+      "bank": "SFX.bank",
+      "subsong": 54
+    },
+    "sfx/turtle_attack_cast_04": {
+      "file": "sfx/turtle_attack_cast_04.ogg",
+      "name": "turtle_attack_cast_04",
+      "bank": "SFX.bank",
+      "subsong": 132
+    },
+    "sfx/ui_bf_item_equip": {
+      "file": "sfx/ui_bf_item_equip.ogg",
+      "name": "ui_bf_item_equip",
+      "bank": "SFX.bank",
+      "subsong": 215
+    },
+    "sfx/ui_bf_item_unequip": {
+      "file": "sfx/ui_bf_item_unequip.ogg",
+      "name": "ui_bf_item_unequip",
+      "bank": "SFX.bank",
+      "subsong": 5
+    },
+    "sfx/ui_hero_move_offclick": {
+      "file": "sfx/ui_hero_move_offclick.ogg",
+      "name": "ui_hero_move_offclick",
+      "bank": "SFX.bank",
+      "subsong": 227
+    },
+    "sfx/ui_hero_move_onclick": {
+      "file": "sfx/ui_hero_move_onclick.ogg",
+      "name": "ui_hero_move_onclick",
+      "bank": "SFX.bank",
+      "subsong": 146
+    },
+    "sfx/ui_hero_rankupmenu_click": {
+      "file": "sfx/ui_hero_rankupmenu_click.ogg",
+      "name": "ui_hero_rankupMenu_click",
+      "bank": "SFX.bank",
+      "subsong": 156
+    },
+    "sfx/ui_hero_selection_click": {
+      "file": "sfx/ui_hero_selection_click.ogg",
+      "name": "ui_hero_selection_click",
+      "bank": "SFX.bank",
+      "subsong": 71
+    },
+    "sfx/ui_hero_selectionrankup_click": {
+      "file": "sfx/ui_hero_selectionrankup_click.ogg",
+      "name": "ui_hero_selectionRankUp_click",
+      "bank": "SFX.bank",
+      "subsong": 245
+    },
+    "sfx/ui_ingame_button_fight": {
+      "file": "sfx/ui_ingame_button_fight.ogg",
+      "name": "ui_ingame_button_fight",
+      "bank": "SFX.bank",
+      "subsong": 117
+    },
+    "sfx/ui_ingamebutton_click": {
+      "file": "sfx/ui_ingamebutton_click.ogg",
+      "name": "ui_ingamebutton_click",
+      "bank": "SFX.bank",
+      "subsong": 38
+    },
+    "sfx/ui_main_menu_click": {
+      "file": "sfx/ui_main_menu_click.ogg",
+      "name": "ui_main_menu_click",
+      "bank": "SFX.bank",
+      "subsong": 47
+    },
+    "sfx/ui_main_menu_hover": {
+      "file": "sfx/ui_main_menu_hover.ogg",
+      "name": "ui_main_menu_hover",
+      "bank": "SFX.bank",
+      "subsong": 10
+    },
+    "sfx/ui_main_menu_startgame_click": {
+      "file": "sfx/ui_main_menu_startgame_click.ogg",
+      "name": "ui_main_menu_startgame_click",
+      "bank": "SFX.bank",
+      "subsong": 181
+    },
+    "sfx/ui_main_menu_submenu_clickclose": {
+      "file": "sfx/ui_main_menu_submenu_clickclose.ogg",
+      "name": "ui_main_menu_submenu_clickclose",
+      "bank": "SFX.bank",
+      "subsong": 14
+    },
+    "sfx/ui_main_menu_submenu_open": {
+      "file": "sfx/ui_main_menu_submenu_open.ogg",
+      "name": "ui_main_menu_submenu_open",
+      "bank": "SFX.bank",
+      "subsong": 206
+    },
+    "sfx/ui_shards_selection_click": {
+      "file": "sfx/ui_shards_selection_click.ogg",
+      "name": "ui_shards_selection_click",
+      "bank": "SFX.bank",
+      "subsong": 69
+    },
+    "sfx/ui_shards_selection_hover": {
+      "file": "sfx/ui_shards_selection_hover.ogg",
+      "name": "ui_shards_selection_hover",
+      "bank": "SFX.bank",
+      "subsong": 65
+    },
+    "sfx/ui_shardsmenu_button_click": {
+      "file": "sfx/ui_shardsmenu_button_click.ogg",
+      "name": "ui_shardsMenu_button_click",
+      "bank": "SFX.bank",
+      "subsong": 207
+    },
+    "sfx/ui_shardsmenu_button_hover": {
+      "file": "sfx/ui_shardsmenu_button_hover.ogg",
+      "name": "ui_shardsMenu_button_hover",
+      "bank": "SFX.bank",
+      "subsong": 166
+    },
+    "sfx/ui_shop_duplicatehero_appear": {
+      "file": "sfx/ui_shop_duplicatehero_appear.ogg",
+      "name": "ui_shop_duplicateHero_appear",
+      "bank": "SFX.bank",
+      "subsong": 186
+    },
+    "sfx/ui_shop_freeze_click": {
+      "file": "sfx/ui_shop_freeze_click.ogg",
+      "name": "ui_shop_freeze_click",
+      "bank": "SFX.bank",
+      "subsong": 260
+    },
+    "sfx/ui_shop_item_click": {
+      "file": "sfx/ui_shop_item_click.ogg",
+      "name": "ui_shop_item_click",
+      "bank": "SFX.bank",
+      "subsong": 262
+    },
+    "sfx/ui_shop_relic_click": {
+      "file": "sfx/ui_shop_relic_click.ogg",
+      "name": "ui_shop_relic_click",
+      "bank": "SFX.bank",
+      "subsong": 153
+    },
+    "sfx/ui_shop_reroll_click": {
+      "file": "sfx/ui_shop_reroll_click.ogg",
+      "name": "ui_shop_reroll_click",
+      "bank": "SFX.bank",
+      "subsong": 19
+    },
+    "sfx/ui_shop_sell_drop": {
+      "file": "sfx/ui_shop_sell_drop.ogg",
+      "name": "ui_shop_sell_drop",
+      "bank": "SFX.bank",
+      "subsong": 251
+    },
+    "sfx/ui_shop_unfreeze_click": {
+      "file": "sfx/ui_shop_unfreeze_click.ogg",
+      "name": "ui_shop_unfreeze_click",
+      "bank": "SFX.bank",
+      "subsong": 122
+    },
+    "vo/ayaka_aa01": {
+      "file": "vo/ayaka_aa01.ogg",
+      "name": "AYAKA_AA01",
+      "bank": "VO.bank",
+      "subsong": 196
+    },
+    "vo/ayaka_aa02": {
+      "file": "vo/ayaka_aa02.ogg",
+      "name": "AYAKA_AA02",
+      "bank": "VO.bank",
+      "subsong": 81
+    },
+    "vo/ayaka_aa03": {
+      "file": "vo/ayaka_aa03.ogg",
+      "name": "AYAKA_AA03",
+      "bank": "VO.bank",
+      "subsong": 47
+    },
+    "vo/ayaka_aa04": {
+      "file": "vo/ayaka_aa04.ogg",
+      "name": "AYAKA_AA04",
+      "bank": "VO.bank",
+      "subsong": 88
+    },
+    "vo/ayaka_od": {
+      "file": "vo/ayaka_od.ogg",
+      "name": "AYAKA_OD",
+      "bank": "VO.bank",
+      "subsong": 291
+    },
+    "vo/ayaka_od_lastonestanding": {
+      "file": "vo/ayaka_od_lastonestanding.ogg",
+      "name": "AYAKA_OD_LastOneStanding",
+      "bank": "VO.bank",
+      "subsong": 42
+    },
+    "vo/ayaka_op": {
+      "file": "vo/ayaka_op.ogg",
+      "name": "AYAKA_OP",
+      "bank": "VO.bank",
+      "subsong": 87
+    },
+    "vo/ayaka_or": {
+      "file": "vo/ayaka_or.ogg",
+      "name": "AYAKA_OR",
+      "bank": "VO.bank",
+      "subsong": 293
+    },
+    "vo/ayaka_or_a": {
+      "file": "vo/ayaka_or_a.ogg",
+      "name": "AYAKA_OR_A",
+      "bank": "VO.bank",
+      "subsong": 180
+    },
+    "vo/ayaka_or_s": {
+      "file": "vo/ayaka_or_s.ogg",
+      "name": "AYAKA_OR_S",
+      "bank": "VO.bank",
+      "subsong": 1
+    },
+    "vo/comb_funke_act_skill_cast_01": {
+      "file": "vo/comb_funke_act_skill_cast_01.ogg",
+      "name": "comb_funke_act_skill_cast_01",
+      "bank": "VO.bank",
+      "subsong": 135
+    },
+    "vo/comb_funke_act_skill_hit_01": {
+      "file": "vo/comb_funke_act_skill_hit_01.ogg",
+      "name": "comb_funke_act_skill_hit_01",
+      "bank": "VO.bank",
+      "subsong": 296
+    },
+    "vo/comb_funke_attack_cast_01": {
+      "file": "vo/comb_funke_attack_cast_01.ogg",
+      "name": "comb_funke_attack_cast_01",
+      "bank": "VO.bank",
+      "subsong": 188
+    },
+    "vo/comb_funke_attack_cast_02": {
+      "file": "vo/comb_funke_attack_cast_02.ogg",
+      "name": "comb_funke_attack_cast_02",
+      "bank": "VO.bank",
+      "subsong": 85
+    },
+    "vo/comb_funke_attack_cast_03": {
+      "file": "vo/comb_funke_attack_cast_03.ogg",
+      "name": "comb_funke_attack_cast_03",
+      "bank": "VO.bank",
+      "subsong": 127
+    },
+    "vo/comb_funke_attack_cast_04": {
+      "file": "vo/comb_funke_attack_cast_04.ogg",
+      "name": "comb_funke_attack_cast_04",
+      "bank": "VO.bank",
+      "subsong": 157
+    },
+    "vo/comb_funke_attack_hit_01": {
+      "file": "vo/comb_funke_attack_hit_01.ogg",
+      "name": "comb_funke_attack_hit_01",
+      "bank": "VO.bank",
+      "subsong": 160
+    },
+    "vo/comb_funke_attack_hit_02": {
+      "file": "vo/comb_funke_attack_hit_02.ogg",
+      "name": "comb_funke_attack_hit_02",
+      "bank": "VO.bank",
+      "subsong": 290
+    },
+    "vo/comb_funke_attack_hit_03": {
+      "file": "vo/comb_funke_attack_hit_03.ogg",
+      "name": "comb_funke_attack_hit_03",
+      "bank": "VO.bank",
+      "subsong": 126
+    },
+    "vo/comb_funke_attack_hit_04": {
+      "file": "vo/comb_funke_attack_hit_04.ogg",
+      "name": "comb_funke_attack_hit_04",
+      "bank": "VO.bank",
+      "subsong": 7
+    },
+    "vo/comb_niklas_act_skill_cast_01": {
+      "file": "vo/comb_niklas_act_skill_cast_01.ogg",
+      "name": "comb_niklas_act_skill_cast_01",
+      "bank": "VO.bank",
+      "subsong": 143
+    },
+    "vo/comb_niklas_attack_cast_01": {
+      "file": "vo/comb_niklas_attack_cast_01.ogg",
+      "name": "comb_niklas_attack_cast_01",
+      "bank": "VO.bank",
+      "subsong": 223
+    },
+    "vo/comb_niklas_attack_cast_02": {
+      "file": "vo/comb_niklas_attack_cast_02.ogg",
+      "name": "comb_niklas_attack_cast_02",
+      "bank": "VO.bank",
+      "subsong": 24
+    },
+    "vo/comb_niklas_attack_cast_03": {
+      "file": "vo/comb_niklas_attack_cast_03.ogg",
+      "name": "comb_niklas_attack_cast_03",
+      "bank": "VO.bank",
+      "subsong": 267
+    },
+    "vo/comb_niklas_attack_cast_04": {
+      "file": "vo/comb_niklas_attack_cast_04.ogg",
+      "name": "comb_niklas_attack_cast_04",
+      "bank": "VO.bank",
+      "subsong": 63
+    },
+    "vo/comb_nyxa_act_skill_cast_01": {
+      "file": "vo/comb_nyxa_act_skill_cast_01.ogg",
+      "name": "comb_nyxa_act_skill_cast_01",
+      "bank": "VO.bank",
+      "subsong": 155
+    },
+    "vo/comb_nyxa_attack_cast_01": {
+      "file": "vo/comb_nyxa_attack_cast_01.ogg",
+      "name": "comb_nyxa_attack_cast_01",
+      "bank": "VO.bank",
+      "subsong": 258
+    },
+    "vo/comb_nyxa_attack_cast_02": {
+      "file": "vo/comb_nyxa_attack_cast_02.ogg",
+      "name": "comb_nyxa_attack_cast_02",
+      "bank": "VO.bank",
+      "subsong": 305
+    },
+    "vo/comb_nyxa_attack_cast_03": {
+      "file": "vo/comb_nyxa_attack_cast_03.ogg",
+      "name": "comb_nyxa_attack_cast_03",
+      "bank": "VO.bank",
+      "subsong": 67
+    },
+    "vo/comb_nyxa_attack_cast_04": {
+      "file": "vo/comb_nyxa_attack_cast_04.ogg",
+      "name": "comb_nyxa_attack_cast_04",
+      "bank": "VO.bank",
+      "subsong": 195
+    },
+    "vo/comb_nyxa_attack_cast_05": {
+      "file": "vo/comb_nyxa_attack_cast_05.ogg",
+      "name": "comb_nyxa_attack_cast_05",
+      "bank": "VO.bank",
+      "subsong": 175
+    },
+    "vo/dragomir_disc_bossencounter": {
+      "file": "vo/dragomir_disc_bossencounter.ogg",
+      "name": "DRAGOMIR_DISC_BossEncounter",
+      "bank": "MASTER.bank",
+      "subsong": 13
+    },
+    "vo/dragomir_disc_itemgained": {
+      "file": "vo/dragomir_disc_itemgained.ogg",
+      "name": "DRAGOMIR_DISC_ItemGained",
+      "bank": "MASTER.bank",
+      "subsong": 12
+    },
+    "vo/dragomir_disc_itemremoved": {
+      "file": "vo/dragomir_disc_itemremoved.ogg",
+      "name": "DRAGOMIR_DISC_ItemRemoved",
+      "bank": "MASTER.bank",
+      "subsong": 4
+    },
+    "vo/dragomir_disc_kill": {
+      "file": "vo/dragomir_disc_kill.ogg",
+      "name": "DRAGOMIR_DISC_Kill",
+      "bank": "MASTER.bank",
+      "subsong": 11
+    },
+    "vo/dragomir_disc_rerollmod": {
+      "file": "vo/dragomir_disc_rerollmod.ogg",
+      "name": "DRAGOMIR_DISC_RerollMod",
+      "bank": "MASTER.bank",
+      "subsong": 9
+    },
+    "vo/dragomir_disc_revive": {
+      "file": "vo/dragomir_disc_revive.ogg",
+      "name": "DRAGOMIR_DISC_Revive",
+      "bank": "MASTER.bank",
+      "subsong": 5
+    },
+    "vo/dragomir_disc_victory": {
+      "file": "vo/dragomir_disc_victory.ogg",
+      "name": "DRAGOMIR_DISC_Victory",
+      "bank": "MASTER.bank",
+      "subsong": 2
+    },
+    "vo/dragomir_od_01": {
+      "file": "vo/dragomir_od_01.ogg",
+      "name": "DRAGOMIR_OD_01",
+      "bank": "MASTER.bank",
+      "subsong": 7
+    },
+    "vo/dragomir_od_02": {
+      "file": "vo/dragomir_od_02.ogg",
+      "name": "DRAGOMIR_OD_02",
+      "bank": "MASTER.bank",
+      "subsong": 6
+    },
+    "vo/dragomir_od_03": {
+      "file": "vo/dragomir_od_03.ogg",
+      "name": "DRAGOMIR_OD_03",
+      "bank": "MASTER.bank",
+      "subsong": 10
+    },
+    "vo/dragomir_op_shop_01": {
+      "file": "vo/dragomir_op_shop_01.ogg",
+      "name": "DRAGOMIR_OP_Shop_01",
+      "bank": "MASTER.bank",
+      "subsong": 3
+    },
+    "vo/dragomir_op_shop_02": {
+      "file": "vo/dragomir_op_shop_02.ogg",
+      "name": "DRAGOMIR_OP_Shop_02",
+      "bank": "MASTER.bank",
+      "subsong": 16
+    },
+    "vo/dragomir_op_start": {
+      "file": "vo/dragomir_op_start.ogg",
+      "name": "DRAGOMIR_OP_Start",
+      "bank": "MASTER.bank",
+      "subsong": 8
+    },
+    "vo/dragomir_or_a": {
+      "file": "vo/dragomir_or_a.ogg",
+      "name": "DRAGOMIR_OR_A",
+      "bank": "MASTER.bank",
+      "subsong": 14
+    },
+    "vo/dragomir_or_b": {
+      "file": "vo/dragomir_or_b.ogg",
+      "name": "DRAGOMIR_OR_B",
+      "bank": "MASTER.bank",
+      "subsong": 1
+    },
+    "vo/dragomir_or_s": {
+      "file": "vo/dragomir_or_s.ogg",
+      "name": "DRAGOMIR_OR_S",
+      "bank": "MASTER.bank",
+      "subsong": 15
+    },
+    "vo/fiona_aa_01": {
+      "file": "vo/fiona_aa_01.ogg",
+      "name": "FIONA_AA_01",
+      "bank": "VO.bank",
+      "subsong": 285
+    },
+    "vo/fiona_aa_02": {
+      "file": "vo/fiona_aa_02.ogg",
+      "name": "FIONA_AA_02",
+      "bank": "VO.bank",
+      "subsong": 210
+    },
+    "vo/fiona_od_01": {
+      "file": "vo/fiona_od_01.ogg",
+      "name": "FIONA_OD_01",
+      "bank": "VO.bank",
+      "subsong": 125
+    },
+    "vo/fiona_od_02": {
+      "file": "vo/fiona_od_02.ogg",
+      "name": "FIONA_OD_02",
+      "bank": "VO.bank",
+      "subsong": 233
+    },
+    "vo/fiona_od_03": {
+      "file": "vo/fiona_od_03.ogg",
+      "name": "FIONA_OD_03",
+      "bank": "VO.bank",
+      "subsong": 97
+    },
+    "vo/fiona_od_04": {
+      "file": "vo/fiona_od_04.ogg",
+      "name": "FIONA_OD_04",
+      "bank": "VO.bank",
+      "subsong": 245
+    },
+    "vo/fiona_op_shop": {
+      "file": "vo/fiona_op_shop.ogg",
+      "name": "FIONA_OP_Shop",
+      "bank": "VO.bank",
+      "subsong": 169
+    },
+    "vo/fiona_op_start": {
+      "file": "vo/fiona_op_start.ogg",
+      "name": "FIONA_OP_Start",
+      "bank": "VO.bank",
+      "subsong": 254
+    },
+    "vo/fiona_or_a": {
+      "file": "vo/fiona_or_a.ogg",
+      "name": "FIONA_OR_A",
+      "bank": "VO.bank",
+      "subsong": 2
+    },
+    "vo/fiona_or_b": {
+      "file": "vo/fiona_or_b.ogg",
+      "name": "FIONA_OR_B",
+      "bank": "VO.bank",
+      "subsong": 189
+    },
+    "vo/fiona_or_s": {
+      "file": "vo/fiona_or_s.ogg",
+      "name": "FIONA_OR_S",
+      "bank": "VO.bank",
+      "subsong": 203
+    },
+    "vo/funke_aa_01": {
+      "file": "vo/funke_aa_01.ogg",
+      "name": "FUNKE_AA_01",
+      "bank": "VO.bank",
+      "subsong": 109
+    },
+    "vo/funke_aa_02": {
+      "file": "vo/funke_aa_02.ogg",
+      "name": "FUNKE_AA_02",
+      "bank": "VO.bank",
+      "subsong": 276
+    },
+    "vo/funke_od_01": {
+      "file": "vo/funke_od_01.ogg",
+      "name": "FUNKE_OD_01",
+      "bank": "VO.bank",
+      "subsong": 159
+    },
+    "vo/funke_od_02": {
+      "file": "vo/funke_od_02.ogg",
+      "name": "FUNKE_OD_02",
+      "bank": "VO.bank",
+      "subsong": 226
+    },
+    "vo/funke_od_03": {
+      "file": "vo/funke_od_03.ogg",
+      "name": "FUNKE_OD_03",
+      "bank": "VO.bank",
+      "subsong": 178
+    },
+    "vo/funke_od_start": {
+      "file": "vo/funke_od_start.ogg",
+      "name": "FUNKE_OD_Start",
+      "bank": "VO.bank",
+      "subsong": 80
+    },
+    "vo/funke_op_shop": {
+      "file": "vo/funke_op_shop.ogg",
+      "name": "FUNKE_OP_Shop",
+      "bank": "VO.bank",
+      "subsong": 25
+    },
+    "vo/funke_or_a": {
+      "file": "vo/funke_or_a.ogg",
+      "name": "FUNKE_OR_A",
+      "bank": "VO.bank",
+      "subsong": 191
+    },
+    "vo/funke_or_b": {
+      "file": "vo/funke_or_b.ogg",
+      "name": "FUNKE_OR_B",
+      "bank": "VO.bank",
+      "subsong": 163
+    },
+    "vo/funke_or_s": {
+      "file": "vo/funke_or_s.ogg",
+      "name": "FUNKE_OR_S",
+      "bank": "VO.bank",
+      "subsong": 279
+    },
+    "vo/grace_aa": {
+      "file": "vo/grace_aa.ogg",
+      "name": "GRACE_AA",
+      "bank": "VO.bank",
+      "subsong": 227
+    },
+    "vo/grace_od": {
+      "file": "vo/grace_od.ogg",
+      "name": "GRACE_OD",
+      "bank": "VO.bank",
+      "subsong": 273
+    },
+    "vo/grace_op_atstart": {
+      "file": "vo/grace_op_atstart.ogg",
+      "name": "GRACE_OP_atStart",
+      "bank": "VO.bank",
+      "subsong": 301
+    },
+    "vo/grace_op_inshop": {
+      "file": "vo/grace_op_inshop.ogg",
+      "name": "GRACE_OP_inShop",
+      "bank": "VO.bank",
+      "subsong": 77
+    },
+    "vo/grace_or": {
+      "file": "vo/grace_or.ogg",
+      "name": "GRACE_OR",
+      "bank": "VO.bank",
+      "subsong": 30
+    },
+    "vo/grace_or_a": {
+      "file": "vo/grace_or_a.ogg",
+      "name": "GRACE_OR_A",
+      "bank": "VO.bank",
+      "subsong": 70
+    },
+    "vo/grace_or_s": {
+      "file": "vo/grace_or_s.ogg",
+      "name": "GRACE_OR_S",
+      "bank": "VO.bank",
+      "subsong": 123
+    },
+    "vo/gustav_aa_01": {
+      "file": "vo/gustav_aa_01.ogg",
+      "name": "GUSTAV_AA_01",
+      "bank": "VO.bank",
+      "subsong": 39
+    },
+    "vo/gustav_aa_02": {
+      "file": "vo/gustav_aa_02.ogg",
+      "name": "GUSTAV_AA_02",
+      "bank": "VO.bank",
+      "subsong": 138
+    },
+    "vo/gustav_disc_benched": {
+      "file": "vo/gustav_disc_benched.ogg",
+      "name": "GUSTAV_DISC_Benched",
+      "bank": "VO.bank",
+      "subsong": 214
+    },
+    "vo/gustav_disc_bossencounter": {
+      "file": "vo/gustav_disc_bossencounter.ogg",
+      "name": "GUSTAV_DISC_BossEncounter",
+      "bank": "VO.bank",
+      "subsong": 137
+    },
+    "vo/gustav_disc_itemgained": {
+      "file": "vo/gustav_disc_itemgained.ogg",
+      "name": "GUSTAV_DISC_ItemGained",
+      "bank": "VO.bank",
+      "subsong": 271
+    },
+    "vo/gustav_disc_rerollmod": {
+      "file": "vo/gustav_disc_rerollmod.ogg",
+      "name": "GUSTAV_DISC_RerollMod",
+      "bank": "VO.bank",
+      "subsong": 292
+    },
+    "vo/gustav_disc_teamwipeout": {
+      "file": "vo/gustav_disc_teamwipeout.ogg",
+      "name": "GUSTAV_DISC_TeamWipeOut",
+      "bank": "VO.bank",
+      "subsong": 307
+    },
+    "vo/gustav_disc_victory": {
+      "file": "vo/gustav_disc_victory.ogg",
+      "name": "GUSTAV_DISC_Victory",
+      "bank": "VO.bank",
+      "subsong": 294
+    },
+    "vo/gustav_od_01": {
+      "file": "vo/gustav_od_01.ogg",
+      "name": "GUSTAV_OD_01",
+      "bank": "VO.bank",
+      "subsong": 55
+    },
+    "vo/gustav_od_02": {
+      "file": "vo/gustav_od_02.ogg",
+      "name": "GUSTAV_OD_02",
+      "bank": "VO.bank",
+      "subsong": 148
+    },
+    "vo/gustav_od_03": {
+      "file": "vo/gustav_od_03.ogg",
+      "name": "GUSTAV_OD_03",
+      "bank": "VO.bank",
+      "subsong": 110
+    },
+    "vo/gustav_op": {
+      "file": "vo/gustav_op.ogg",
+      "name": "GUSTAV_OP",
+      "bank": "VO.bank",
+      "subsong": 302
+    },
+    "vo/gustav_or_a": {
+      "file": "vo/gustav_or_a.ogg",
+      "name": "GUSTAV_OR_A",
+      "bank": "VO.bank",
+      "subsong": 295
+    },
+    "vo/gustav_or_b": {
+      "file": "vo/gustav_or_b.ogg",
+      "name": "GUSTAV_OR_B",
+      "bank": "VO.bank",
+      "subsong": 286
+    },
+    "vo/gustav_or_s": {
+      "file": "vo/gustav_or_s.ogg",
+      "name": "GUSTAV_OR_S",
+      "bank": "VO.bank",
+      "subsong": 40
+    },
+    "vo/hoyoung_aa01": {
+      "file": "vo/hoyoung_aa01.ogg",
+      "name": "HOYOUNG_AA01",
+      "bank": "VO.bank",
+      "subsong": 168
+    },
+    "vo/hoyoung_aa02": {
+      "file": "vo/hoyoung_aa02.ogg",
+      "name": "HOYOUNG_AA02",
+      "bank": "VO.bank",
+      "subsong": 108
+    },
+    "vo/hoyoung_attack_cast_01": {
+      "file": "vo/hoyoung_attack_cast_01.ogg",
+      "name": "hoyoung_attack_cast_01",
+      "bank": "VO.bank",
+      "subsong": 200
+    },
+    "vo/hoyoung_attack_cast_02": {
+      "file": "vo/hoyoung_attack_cast_02.ogg",
+      "name": "hoyoung_attack_cast_02",
+      "bank": "VO.bank",
+      "subsong": 145
+    },
+    "vo/hoyoung_attack_cast_03": {
+      "file": "vo/hoyoung_attack_cast_03.ogg",
+      "name": "hoyoung_attack_cast_03",
+      "bank": "VO.bank",
+      "subsong": 32
+    },
+    "vo/hoyoung_attack_cast_04": {
+      "file": "vo/hoyoung_attack_cast_04.ogg",
+      "name": "hoyoung_attack_cast_04",
+      "bank": "VO.bank",
+      "subsong": 23
+    },
+    "vo/hoyoung_attack_hit_01": {
+      "file": "vo/hoyoung_attack_hit_01.ogg",
+      "name": "hoyoung_attack_hit_01",
+      "bank": "VO.bank",
+      "subsong": 45
+    },
+    "vo/hoyoung_attack_hit_02": {
+      "file": "vo/hoyoung_attack_hit_02.ogg",
+      "name": "hoyoung_attack_hit_02",
+      "bank": "VO.bank",
+      "subsong": 251
+    },
+    "vo/hoyoung_attack_hit_03": {
+      "file": "vo/hoyoung_attack_hit_03.ogg",
+      "name": "hoyoung_attack_hit_03",
+      "bank": "VO.bank",
+      "subsong": 101
+    },
+    "vo/hoyoung_attack_hit_04": {
+      "file": "vo/hoyoung_attack_hit_04.ogg",
+      "name": "hoyoung_attack_hit_04",
+      "bank": "VO.bank",
+      "subsong": 300
+    },
+    "vo/hoyoung_od01": {
+      "file": "vo/hoyoung_od01.ogg",
+      "name": "HOYOUNG_OD01",
+      "bank": "VO.bank",
+      "subsong": 253
+    },
+    "vo/hoyoung_od02": {
+      "file": "vo/hoyoung_od02.ogg",
+      "name": "HOYOUNG_OD02",
+      "bank": "VO.bank",
+      "subsong": 263
+    },
+    "vo/hoyoung_od03": {
+      "file": "vo/hoyoung_od03.ogg",
+      "name": "HOYOUNG_OD03",
+      "bank": "VO.bank",
+      "subsong": 270
+    },
+    "vo/hoyoung_op01": {
+      "file": "vo/hoyoung_op01.ogg",
+      "name": "HOYOUNG_OP01",
+      "bank": "VO.bank",
+      "subsong": 264
+    },
+    "vo/hoyoung_op02": {
+      "file": "vo/hoyoung_op02.ogg",
+      "name": "HOYOUNG_OP02",
+      "bank": "VO.bank",
+      "subsong": 236
+    },
+    "vo/hoyoung_or": {
+      "file": "vo/hoyoung_or.ogg",
+      "name": "HOYOUNG_OR",
+      "bank": "VO.bank",
+      "subsong": 174
+    },
+    "vo/hoyoung_osr": {
+      "file": "vo/hoyoung_osr.ogg",
+      "name": "HOYOUNG_OSR",
+      "bank": "VO.bank",
+      "subsong": 146
+    },
+    "vo/hoyoung_skill_cast_01": {
+      "file": "vo/hoyoung_skill_cast_01.ogg",
+      "name": "hoyoung_skill_cast_01",
+      "bank": "VO.bank",
+      "subsong": 289
+    },
+    "vo/hoyoung_skill_hit_01": {
+      "file": "vo/hoyoung_skill_hit_01.ogg",
+      "name": "hoyoung_skill_hit_01",
+      "bank": "VO.bank",
+      "subsong": 68
+    },
+    "vo/irini_aa01": {
+      "file": "vo/irini_aa01.ogg",
+      "name": "IRINI_AA01",
+      "bank": "VO.bank",
+      "subsong": 35
+    },
+    "vo/irini_aa02": {
+      "file": "vo/irini_aa02.ogg",
+      "name": "IRINI_AA02",
+      "bank": "VO.bank",
+      "subsong": 234
+    },
+    "vo/irini_aa03": {
+      "file": "vo/irini_aa03.ogg",
+      "name": "IRINI_AA03",
+      "bank": "VO.bank",
+      "subsong": 237
+    },
+    "vo/irini_aa04": {
+      "file": "vo/irini_aa04.ogg",
+      "name": "IRINI_AA04",
+      "bank": "VO.bank",
+      "subsong": 235
+    },
+    "vo/irini_od": {
+      "file": "vo/irini_od.ogg",
+      "name": "IRINI_OD",
+      "bank": "VO.bank",
+      "subsong": 202
+    },
+    "vo/irini_op": {
+      "file": "vo/irini_op.ogg",
+      "name": "IRINI_OP",
+      "bank": "VO.bank",
+      "subsong": 11
+    },
+    "vo/irini_or_a": {
+      "file": "vo/irini_or_a.ogg",
+      "name": "IRINI_OR_A",
+      "bank": "VO.bank",
+      "subsong": 46
+    },
+    "vo/irini_or_s": {
+      "file": "vo/irini_or_s.ogg",
+      "name": "IRINI_OR_S",
+      "bank": "VO.bank",
+      "subsong": 192
+    },
+    "vo/irini_or_t": {
+      "file": "vo/irini_or_t.ogg",
+      "name": "IRINI_OR_T",
+      "bank": "VO.bank",
+      "subsong": 105
+    },
+    "vo/irini_or_the_olympic": {
+      "file": "vo/irini_or_the_olympic.ogg",
+      "name": "IRINI_OR_The_Olympic",
+      "bank": "VO.bank",
+      "subsong": 8
+    },
+    "vo/irini_or_the_reforged": {
+      "file": "vo/irini_or_the_reforged.ogg",
+      "name": "IRINI_OR_The_Reforged",
+      "bank": "VO.bank",
+      "subsong": 36
+    },
+    "vo/javryn_attack_cast_01": {
+      "file": "vo/javryn_attack_cast_01.ogg",
+      "name": "javryn_attack_cast_01",
+      "bank": "VO.bank",
+      "subsong": 287
+    },
+    "vo/javryn_attack_cast_02": {
+      "file": "vo/javryn_attack_cast_02.ogg",
+      "name": "javryn_attack_cast_02",
+      "bank": "VO.bank",
+      "subsong": 17
+    },
+    "vo/javryn_attack_cast_03": {
+      "file": "vo/javryn_attack_cast_03.ogg",
+      "name": "javryn_attack_cast_03",
+      "bank": "VO.bank",
+      "subsong": 119
+    },
+    "vo/javryn_attack_cast_04": {
+      "file": "vo/javryn_attack_cast_04.ogg",
+      "name": "javryn_attack_cast_04",
+      "bank": "VO.bank",
+      "subsong": 231
+    },
+    "vo/javryn_attack_hit_01": {
+      "file": "vo/javryn_attack_hit_01.ogg",
+      "name": "javryn_attack_hit_01",
+      "bank": "VO.bank",
+      "subsong": 299
+    },
+    "vo/javryn_attack_hit_02": {
+      "file": "vo/javryn_attack_hit_02.ogg",
+      "name": "javryn_attack_hit_02",
+      "bank": "VO.bank",
+      "subsong": 98
+    },
+    "vo/javryn_attack_hit_03": {
+      "file": "vo/javryn_attack_hit_03.ogg",
+      "name": "javryn_attack_hit_03",
+      "bank": "VO.bank",
+      "subsong": 184
+    },
+    "vo/javryn_attack_hit_04": {
+      "file": "vo/javryn_attack_hit_04.ogg",
+      "name": "javryn_attack_hit_04",
+      "bank": "VO.bank",
+      "subsong": 12
+    },
+    "vo/javryn_skill_cast": {
+      "file": "vo/javryn_skill_cast.ogg",
+      "name": "javryn_skill_cast",
+      "bank": "VO.bank",
+      "subsong": 177
+    },
+    "vo/javryn_skill_hit": {
+      "file": "vo/javryn_skill_hit.ogg",
+      "name": "javryn_skill_hit",
+      "bank": "VO.bank",
+      "subsong": 171
+    },
+    "vo/kai_aa_grunt_end_01": {
+      "file": "vo/kai_aa_grunt_end_01.ogg",
+      "name": "KAI_AA_Grunt_End_01",
+      "bank": "VO.bank",
+      "subsong": 65
+    },
+    "vo/kai_aa_grunt_start_01": {
+      "file": "vo/kai_aa_grunt_start_01.ogg",
+      "name": "KAI_AA_Grunt_Start_01",
+      "bank": "VO.bank",
+      "subsong": 3
+    },
+    "vo/kai_aa_grunt_start_02": {
+      "file": "vo/kai_aa_grunt_start_02.ogg",
+      "name": "KAI_AA_Grunt_Start_02",
+      "bank": "VO.bank",
+      "subsong": 154
+    },
+    "vo/kai_aa_start": {
+      "file": "vo/kai_aa_start.ogg",
+      "name": "KAI_AA_Start",
+      "bank": "VO.bank",
+      "subsong": 107
+    },
+    "vo/kai_disc_benched": {
+      "file": "vo/kai_disc_benched.ogg",
+      "name": "KAI_DISC_Benched",
+      "bank": "VO.bank",
+      "subsong": 19
+    },
+    "vo/kai_disc_challengeaccepted": {
+      "file": "vo/kai_disc_challengeaccepted.ogg",
+      "name": "KAI_DISC_ChallengeAccepted",
+      "bank": "VO.bank",
+      "subsong": 167
+    },
+    "vo/kai_disc_crossroads": {
+      "file": "vo/kai_disc_crossroads.ogg",
+      "name": "KAI_DISC_Crossroads",
+      "bank": "VO.bank",
+      "subsong": 151
+    },
+    "vo/kai_disc_fightwin": {
+      "file": "vo/kai_disc_fightwin.ogg",
+      "name": "KAI_DISC_FightWin",
+      "bank": "VO.bank",
+      "subsong": 164
+    },
+    "vo/kai_disc_itemgained": {
+      "file": "vo/kai_disc_itemgained.ogg",
+      "name": "KAI_DISC_ItemGained",
+      "bank": "VO.bank",
+      "subsong": 230
+    },
+    "vo/kai_disc_itemremoved": {
+      "file": "vo/kai_disc_itemremoved.ogg",
+      "name": "KAI_DISC_ItemRemoved",
+      "bank": "VO.bank",
+      "subsong": 64
+    },
+    "vo/kai_disc_kill": {
+      "file": "vo/kai_disc_kill.ogg",
+      "name": "KAI_DISC_Kill",
+      "bank": "VO.bank",
+      "subsong": 114
+    },
+    "vo/kai_disc_overkill": {
+      "file": "vo/kai_disc_overkill.ogg",
+      "name": "KAI_DISC_Overkill",
+      "bank": "VO.bank",
+      "subsong": 288
+    },
+    "vo/kai_disc_revive": {
+      "file": "vo/kai_disc_revive.ogg",
+      "name": "KAI_DISC_Revive",
+      "bank": "VO.bank",
+      "subsong": 207
+    },
+    "vo/kai_disc_teamwipeout": {
+      "file": "vo/kai_disc_teamwipeout.ogg",
+      "name": "KAI_DISC_TeamWipeOut",
+      "bank": "VO.bank",
+      "subsong": 136
+    },
+    "vo/kai_disc_victory": {
+      "file": "vo/kai_disc_victory.ogg",
+      "name": "KAI_DISC_Victory",
+      "bank": "VO.bank",
+      "subsong": 162
+    },
+    "vo/kai_od_01": {
+      "file": "vo/kai_od_01.ogg",
+      "name": "KAI_OD_01",
+      "bank": "VO.bank",
+      "subsong": 147
+    },
+    "vo/kai_od_02": {
+      "file": "vo/kai_od_02.ogg",
+      "name": "KAI_OD_02",
+      "bank": "VO.bank",
+      "subsong": 90
+    },
+    "vo/kai_od_03": {
+      "file": "vo/kai_od_03.ogg",
+      "name": "KAI_OD_03",
+      "bank": "VO.bank",
+      "subsong": 75
+    },
+    "vo/kai_od_04": {
+      "file": "vo/kai_od_04.ogg",
+      "name": "KAI_OD_04",
+      "bank": "VO.bank",
+      "subsong": 256
+    },
+    "vo/kai_od_05": {
+      "file": "vo/kai_od_05.ogg",
+      "name": "KAI_OD_05",
+      "bank": "VO.bank",
+      "subsong": 33
+    },
+    "vo/kai_od_06": {
+      "file": "vo/kai_od_06.ogg",
+      "name": "KAI_OD_06",
+      "bank": "VO.bank",
+      "subsong": 113
+    },
+    "vo/kai_op_shop": {
+      "file": "vo/kai_op_shop.ogg",
+      "name": "KAI_OP_Shop",
+      "bank": "VO.bank",
+      "subsong": 204
+    },
+    "vo/kai_op_start": {
+      "file": "vo/kai_op_start.ogg",
+      "name": "KAI_OP_Start",
+      "bank": "VO.bank",
+      "subsong": 170
+    },
+    "vo/kai_or_a": {
+      "file": "vo/kai_or_a.ogg",
+      "name": "KAI_OR_A",
+      "bank": "VO.bank",
+      "subsong": 92
+    },
+    "vo/kai_or_b": {
+      "file": "vo/kai_or_b.ogg",
+      "name": "KAI_OR_B",
+      "bank": "VO.bank",
+      "subsong": 190
+    },
+    "vo/kai_or_s": {
+      "file": "vo/kai_or_s.ogg",
+      "name": "KAI_OR_S",
+      "bank": "VO.bank",
+      "subsong": 106
+    },
+    "vo/logan_aa_01": {
+      "file": "vo/logan_aa_01.ogg",
+      "name": "LOGAN_AA_01",
+      "bank": "VO.bank",
+      "subsong": 133
+    },
+    "vo/logan_aa_02": {
+      "file": "vo/logan_aa_02.ogg",
+      "name": "LOGAN_AA_02",
+      "bank": "VO.bank",
+      "subsong": 103
+    },
+    "vo/logan_aa_03": {
+      "file": "vo/logan_aa_03.ogg",
+      "name": "LOGAN_AA_03",
+      "bank": "VO.bank",
+      "subsong": 248
+    },
+    "vo/logan_aa_04": {
+      "file": "vo/logan_aa_04.ogg",
+      "name": "LOGAN_AA_04",
+      "bank": "VO.bank",
+      "subsong": 91
+    },
+    "vo/logan_od": {
+      "file": "vo/logan_od.ogg",
+      "name": "LOGAN_OD",
+      "bank": "VO.bank",
+      "subsong": 69
+    },
+    "vo/logan_op_shop": {
+      "file": "vo/logan_op_shop.ogg",
+      "name": "LOGAN_OP_Shop",
+      "bank": "VO.bank",
+      "subsong": 222
+    },
+    "vo/logan_op_start": {
+      "file": "vo/logan_op_start.ogg",
+      "name": "LOGAN_OP_Start",
+      "bank": "VO.bank",
+      "subsong": 141
+    },
+    "vo/logan_or_a": {
+      "file": "vo/logan_or_a.ogg",
+      "name": "LOGAN_OR_A",
+      "bank": "VO.bank",
+      "subsong": 22
+    },
+    "vo/logan_or_b": {
+      "file": "vo/logan_or_b.ogg",
+      "name": "LOGAN_OR_B",
+      "bank": "VO.bank",
+      "subsong": 156
+    },
+    "vo/logan_or_s": {
+      "file": "vo/logan_or_s.ogg",
+      "name": "LOGAN_OR_S",
+      "bank": "VO.bank",
+      "subsong": 282
+    },
+    "vo/ming_aa_end": {
+      "file": "vo/ming_aa_end.ogg",
+      "name": "MING_AA_End",
+      "bank": "VO.bank",
+      "subsong": 20
+    },
+    "vo/ming_aa_start": {
+      "file": "vo/ming_aa_start.ogg",
+      "name": "MING_AA_Start",
+      "bank": "VO.bank",
+      "subsong": 193
+    },
+    "vo/ming_attack_cast_01": {
+      "file": "vo/ming_attack_cast_01.ogg",
+      "name": "ming_attack_cast_01",
+      "bank": "VO.bank",
+      "subsong": 71
+    },
+    "vo/ming_attack_cast_02": {
+      "file": "vo/ming_attack_cast_02.ogg",
+      "name": "ming_attack_cast_02",
+      "bank": "VO.bank",
+      "subsong": 83
+    },
+    "vo/ming_attack_cast_03": {
+      "file": "vo/ming_attack_cast_03.ogg",
+      "name": "ming_attack_cast_03",
+      "bank": "VO.bank",
+      "subsong": 124
+    },
+    "vo/ming_od01": {
+      "file": "vo/ming_od01.ogg",
+      "name": "MING_OD01",
+      "bank": "VO.bank",
+      "subsong": 31
+    },
+    "vo/ming_od02": {
+      "file": "vo/ming_od02.ogg",
+      "name": "MING_OD02",
+      "bank": "VO.bank",
+      "subsong": 99
+    },
+    "vo/ming_op": {
+      "file": "vo/ming_op.ogg",
+      "name": "MING_OP",
+      "bank": "VO.bank",
+      "subsong": 240
+    },
+    "vo/ming_or": {
+      "file": "vo/ming_or.ogg",
+      "name": "MING_OR",
+      "bank": "VO.bank",
+      "subsong": 181
+    },
+    "vo/ming_osr": {
+      "file": "vo/ming_osr.ogg",
+      "name": "MING_OSR",
+      "bank": "VO.bank",
+      "subsong": 41
+    },
+    "vo/ming_skill_cast": {
+      "file": "vo/ming_skill_cast.ogg",
+      "name": "ming_skill_cast",
+      "bank": "VO.bank",
+      "subsong": 239
+    },
+    "vo/niklas_aa_kick": {
+      "file": "vo/niklas_aa_kick.ogg",
+      "name": "NIKLAS_AA_Kick",
+      "bank": "VO.bank",
+      "subsong": 269
+    },
+    "vo/niklas_aa_punch": {
+      "file": "vo/niklas_aa_punch.ogg",
+      "name": "NIKLAS_AA_Punch",
+      "bank": "VO.bank",
+      "subsong": 26
+    },
+    "vo/niklas_od": {
+      "file": "vo/niklas_od.ogg",
+      "name": "NIKLAS_OD",
+      "bank": "VO.bank",
+      "subsong": 140
+    },
+    "vo/niklas_op": {
+      "file": "vo/niklas_op.ogg",
+      "name": "NIKLAS_OP",
+      "bank": "VO.bank",
+      "subsong": 220
+    },
+    "vo/niklas_or": {
+      "file": "vo/niklas_or.ogg",
+      "name": "NIKLAS_OR",
+      "bank": "VO.bank",
+      "subsong": 306
+    },
+    "vo/niklas_osr": {
+      "file": "vo/niklas_osr.ogg",
+      "name": "NIKLAS_OSR",
+      "bank": "VO.bank",
+      "subsong": 37
+    },
+    "vo/nyx_aa": {
+      "file": "vo/nyx_aa.ogg",
+      "name": "NYX_AA",
+      "bank": "VO.bank",
+      "subsong": 28
+    },
+    "vo/nyx_od": {
+      "file": "vo/nyx_od.ogg",
+      "name": "NYX_OD",
+      "bank": "VO.bank",
+      "subsong": 194
+    },
+    "vo/nyx_op": {
+      "file": "vo/nyx_op.ogg",
+      "name": "NYX_OP",
+      "bank": "VO.bank",
+      "subsong": 9
+    },
+    "vo/nyx_or": {
+      "file": "vo/nyx_or.ogg",
+      "name": "NYX_OR",
+      "bank": "VO.bank",
+      "subsong": 228
+    },
+    "vo/nyx_osr": {
+      "file": "vo/nyx_osr.ogg",
+      "name": "NYX_OSR",
+      "bank": "VO.bank",
+      "subsong": 16
+    },
+    "vo/pimenta_aa": {
+      "file": "vo/pimenta_aa.ogg",
+      "name": "PIMENTA_AA",
+      "bank": "VO.bank",
+      "subsong": 60
+    },
+    "vo/pimenta_od": {
+      "file": "vo/pimenta_od.ogg",
+      "name": "PIMENTA_OD",
+      "bank": "VO.bank",
+      "subsong": 225
+    },
+    "vo/pimenta_op": {
+      "file": "vo/pimenta_op.ogg",
+      "name": "PIMENTA_OP",
+      "bank": "VO.bank",
+      "subsong": 185
+    },
+    "vo/pimenta_or_the_lover": {
+      "file": "vo/pimenta_or_the_lover.ogg",
+      "name": "PIMENTA_OR_The_Lover",
+      "bank": "VO.bank",
+      "subsong": 217
+    },
+    "vo/pimenta_or_the_spicy": {
+      "file": "vo/pimenta_or_the_spicy.ogg",
+      "name": "PIMENTA_OR_The_Spicy",
+      "bank": "VO.bank",
+      "subsong": 6
+    },
+    "vo/pimenta_osr": {
+      "file": "vo/pimenta_osr.ogg",
+      "name": "PIMENTA_OSR",
+      "bank": "VO.bank",
+      "subsong": 49
+    },
+    "vo/pollen_aa": {
+      "file": "vo/pollen_aa.ogg",
+      "name": "POLLEN_AA",
+      "bank": "VO.bank",
+      "subsong": 247
+    },
+    "vo/pollen_od": {
+      "file": "vo/pollen_od.ogg",
+      "name": "POLLEN_OD",
+      "bank": "VO.bank",
+      "subsong": 13
+    },
+    "vo/pollen_op_at_start": {
+      "file": "vo/pollen_op_at_start.ogg",
+      "name": "POLLEN_OP_At_Start",
+      "bank": "VO.bank",
+      "subsong": 275
+    },
+    "vo/pollen_op_in_shop": {
+      "file": "vo/pollen_op_in_shop.ogg",
+      "name": "POLLEN_OP_In_Shop",
+      "bank": "VO.bank",
+      "subsong": 257
+    },
+    "vo/pollen_or": {
+      "file": "vo/pollen_or.ogg",
+      "name": "POLLEN_OR",
+      "bank": "VO.bank",
+      "subsong": 261
+    },
+    "vo/pollen_osr": {
+      "file": "vo/pollen_osr.ogg",
+      "name": "POLLEN_OSR",
+      "bank": "VO.bank",
+      "subsong": 249
+    },
+    "vo/ratna_aa_01": {
+      "file": "vo/ratna_aa_01.ogg",
+      "name": "RATNA_AA_01",
+      "bank": "VO.bank",
+      "subsong": 120
+    },
+    "vo/ratna_aa_02": {
+      "file": "vo/ratna_aa_02.ogg",
+      "name": "RATNA_AA_02",
+      "bank": "VO.bank",
+      "subsong": 255
+    },
+    "vo/ratna_aa_03": {
+      "file": "vo/ratna_aa_03.ogg",
+      "name": "RATNA_AA_03",
+      "bank": "VO.bank",
+      "subsong": 205
+    },
+    "vo/ratna_aa_04": {
+      "file": "vo/ratna_aa_04.ogg",
+      "name": "RATNA_AA_04",
+      "bank": "VO.bank",
+      "subsong": 297
+    },
+    "vo/ratna_aa_05": {
+      "file": "vo/ratna_aa_05.ogg",
+      "name": "RATNA_AA_05",
+      "bank": "VO.bank",
+      "subsong": 74
+    },
+    "vo/ratna_aa_06": {
+      "file": "vo/ratna_aa_06.ogg",
+      "name": "RATNA_AA_06",
+      "bank": "VO.bank",
+      "subsong": 102
+    },
+    "vo/ratna_od_01": {
+      "file": "vo/ratna_od_01.ogg",
+      "name": "RATNA_OD_01",
+      "bank": "VO.bank",
+      "subsong": 72
+    },
+    "vo/ratna_od_02": {
+      "file": "vo/ratna_od_02.ogg",
+      "name": "RATNA_OD_02",
+      "bank": "VO.bank",
+      "subsong": 59
+    },
+    "vo/ratna_od_03": {
+      "file": "vo/ratna_od_03.ogg",
+      "name": "RATNA_OD_03",
+      "bank": "VO.bank",
+      "subsong": 243
+    },
+    "vo/ratna_od_04": {
+      "file": "vo/ratna_od_04.ogg",
+      "name": "RATNA_OD_04",
+      "bank": "VO.bank",
+      "subsong": 27
+    },
+    "vo/ratna_od_05": {
+      "file": "vo/ratna_od_05.ogg",
+      "name": "RATNA_OD_05",
+      "bank": "VO.bank",
+      "subsong": 252
+    },
+    "vo/ratna_od_06": {
+      "file": "vo/ratna_od_06.ogg",
+      "name": "RATNA_OD_06",
+      "bank": "VO.bank",
+      "subsong": 173
+    },
+    "vo/ratna_op_shop": {
+      "file": "vo/ratna_op_shop.ogg",
+      "name": "RATNA_OP_Shop",
+      "bank": "VO.bank",
+      "subsong": 277
+    },
+    "vo/ratna_op_start": {
+      "file": "vo/ratna_op_start.ogg",
+      "name": "RATNA_OP_Start",
+      "bank": "VO.bank",
+      "subsong": 303
+    },
+    "vo/ratna_or_a": {
+      "file": "vo/ratna_or_a.ogg",
+      "name": "RATNA_OR_A",
+      "bank": "VO.bank",
+      "subsong": 73
+    },
+    "vo/ratna_or_b": {
+      "file": "vo/ratna_or_b.ogg",
+      "name": "RATNA_OR_B",
+      "bank": "VO.bank",
+      "subsong": 250
+    },
+    "vo/ratna_or_s": {
+      "file": "vo/ratna_or_s.ogg",
+      "name": "RATNA_OR_S",
+      "bank": "VO.bank",
+      "subsong": 132
+    },
+    "vo/reyna_aa01": {
+      "file": "vo/reyna_aa01.ogg",
+      "name": "REYNA_AA01",
+      "bank": "VO.bank",
+      "subsong": 14
+    },
+    "vo/reyna_aa02": {
+      "file": "vo/reyna_aa02.ogg",
+      "name": "REYNA_AA02",
+      "bank": "VO.bank",
+      "subsong": 284
+    },
+    "vo/reyna_aa03": {
+      "file": "vo/reyna_aa03.ogg",
+      "name": "REYNA_AA03",
+      "bank": "VO.bank",
+      "subsong": 18
+    },
+    "vo/reyna_aa04": {
+      "file": "vo/reyna_aa04.ogg",
+      "name": "REYNA_AA04",
+      "bank": "VO.bank",
+      "subsong": 165
+    },
+    "vo/reyna_aa05": {
+      "file": "vo/reyna_aa05.ogg",
+      "name": "REYNA_AA05",
+      "bank": "VO.bank",
+      "subsong": 100
+    },
+    "vo/reyna_od": {
+      "file": "vo/reyna_od.ogg",
+      "name": "REYNA_OD",
+      "bank": "VO.bank",
+      "subsong": 144
+    },
+    "vo/reyna_od_firstonedying": {
+      "file": "vo/reyna_od_firstonedying.ogg",
+      "name": "REYNA_OD_FirstOneDying",
+      "bank": "VO.bank",
+      "subsong": 34
+    },
+    "vo/reyna_op": {
+      "file": "vo/reyna_op.ogg",
+      "name": "REYNA_OP",
+      "bank": "VO.bank",
+      "subsong": 131
+    },
+    "vo/reyna_or": {
+      "file": "vo/reyna_or.ogg",
+      "name": "REYNA_OR",
+      "bank": "VO.bank",
+      "subsong": 187
+    },
+    "vo/reyna_or_a": {
+      "file": "vo/reyna_or_a.ogg",
+      "name": "REYNA_OR_A",
+      "bank": "VO.bank",
+      "subsong": 272
+    },
+    "vo/reyna_or_s": {
+      "file": "vo/reyna_or_s.ogg",
+      "name": "REYNA_OR_S",
+      "bank": "VO.bank",
+      "subsong": 121
+    },
+    "vo/rip_aa_01": {
+      "file": "vo/rip_aa_01.ogg",
+      "name": "RIP_AA_01",
+      "bank": "VO.bank",
+      "subsong": 76
+    },
+    "vo/rip_aa_02": {
+      "file": "vo/rip_aa_02.ogg",
+      "name": "RIP_AA_02",
+      "bank": "VO.bank",
+      "subsong": 79
+    },
+    "vo/rip_aa_03": {
+      "file": "vo/rip_aa_03.ogg",
+      "name": "RIP_AA_03",
+      "bank": "VO.bank",
+      "subsong": 182
+    },
+    "vo/rip_od_01": {
+      "file": "vo/rip_od_01.ogg",
+      "name": "RIP_OD_01",
+      "bank": "VO.bank",
+      "subsong": 219
+    },
+    "vo/rip_od_02": {
+      "file": "vo/rip_od_02.ogg",
+      "name": "RIP_OD_02",
+      "bank": "VO.bank",
+      "subsong": 111
+    },
+    "vo/rip_od_03": {
+      "file": "vo/rip_od_03.ogg",
+      "name": "RIP_OD_03",
+      "bank": "VO.bank",
+      "subsong": 176
+    },
+    "vo/rip_op_shop": {
+      "file": "vo/rip_op_shop.ogg",
+      "name": "RIP_OP_Shop",
+      "bank": "VO.bank",
+      "subsong": 268
+    },
+    "vo/rip_op_start": {
+      "file": "vo/rip_op_start.ogg",
+      "name": "RIP_OP_Start",
+      "bank": "VO.bank",
+      "subsong": 44
+    },
+    "vo/rip_or_a": {
+      "file": "vo/rip_or_a.ogg",
+      "name": "RIP_OR_A",
+      "bank": "VO.bank",
+      "subsong": 197
+    },
+    "vo/rip_or_b": {
+      "file": "vo/rip_or_b.ogg",
+      "name": "RIP_OR_B",
+      "bank": "VO.bank",
+      "subsong": 211
+    },
+    "vo/rip_or_s": {
+      "file": "vo/rip_or_s.ogg",
+      "name": "RIP_OR_S",
+      "bank": "VO.bank",
+      "subsong": 84
+    },
+    "vo/rowan_aa_01": {
+      "file": "vo/rowan_aa_01.ogg",
+      "name": "ROWAN_AA_01",
+      "bank": "VO.bank",
+      "subsong": 116
+    },
+    "vo/rowan_aa_02": {
+      "file": "vo/rowan_aa_02.ogg",
+      "name": "ROWAN_AA_02",
+      "bank": "VO.bank",
+      "subsong": 262
+    },
+    "vo/rowan_aa_03": {
+      "file": "vo/rowan_aa_03.ogg",
+      "name": "ROWAN_AA_03",
+      "bank": "VO.bank",
+      "subsong": 94
+    },
+    "vo/rowan_od": {
+      "file": "vo/rowan_od.ogg",
+      "name": "ROWAN_OD",
+      "bank": "VO.bank",
+      "subsong": 29
+    },
+    "vo/rowan_op_shop": {
+      "file": "vo/rowan_op_shop.ogg",
+      "name": "ROWAN_OP_Shop",
+      "bank": "VO.bank",
+      "subsong": 51
+    },
+    "vo/rowan_op_start": {
+      "file": "vo/rowan_op_start.ogg",
+      "name": "ROWAN_OP_Start",
+      "bank": "VO.bank",
+      "subsong": 216
+    },
+    "vo/rowan_or_a": {
+      "file": "vo/rowan_or_a.ogg",
+      "name": "ROWAN_OR_A",
+      "bank": "VO.bank",
+      "subsong": 150
+    },
+    "vo/rowan_or_b": {
+      "file": "vo/rowan_or_b.ogg",
+      "name": "ROWAN_OR_B",
+      "bank": "VO.bank",
+      "subsong": 61
+    },
+    "vo/rowan_or_s": {
+      "file": "vo/rowan_or_s.ogg",
+      "name": "ROWAN_OR_S",
+      "bank": "VO.bank",
+      "subsong": 199
+    },
+    "vo/rr_vo_ming_aa_01": {
+      "file": "vo/rr_vo_ming_aa_01.ogg",
+      "name": "RR_VO_MING_AA_01",
+      "bank": "VO.bank",
+      "subsong": 56
+    },
+    "vo/rr_vo_ming_aa_02": {
+      "file": "vo/rr_vo_ming_aa_02.ogg",
+      "name": "RR_VO_MING_AA_02",
+      "bank": "VO.bank",
+      "subsong": 128
+    },
+    "vo/rr_vo_ming_aa_03": {
+      "file": "vo/rr_vo_ming_aa_03.ogg",
+      "name": "RR_VO_MING_AA_03",
+      "bank": "VO.bank",
+      "subsong": 298
+    },
+    "vo/rr_vo_ming_or_02": {
+      "file": "vo/rr_vo_ming_or_02.ogg",
+      "name": "RR_VO_MING_OR_02",
+      "bank": "VO.bank",
+      "subsong": 179
+    },
+    "vo/rr_vo_ming_osr_01": {
+      "file": "vo/rr_vo_ming_osr_01.ogg",
+      "name": "RR_VO_MING_OSR_01",
+      "bank": "VO.bank",
+      "subsong": 266
+    },
+    "vo/rr_vo_ming_osr_03": {
+      "file": "vo/rr_vo_ming_osr_03.ogg",
+      "name": "RR_VO_MING_OSR_03",
+      "bank": "VO.bank",
+      "subsong": 5
+    },
+    "vo/sal_aa": {
+      "file": "vo/sal_aa.ogg",
+      "name": "SAL_AA",
+      "bank": "VO.bank",
+      "subsong": 129
+    },
+    "vo/sal_od01": {
+      "file": "vo/sal_od01.ogg",
+      "name": "SAL_OD01",
+      "bank": "VO.bank",
+      "subsong": 244
+    },
+    "vo/sal_od02": {
+      "file": "vo/sal_od02.ogg",
+      "name": "SAL_OD02",
+      "bank": "VO.bank",
+      "subsong": 209
+    },
+    "vo/sal_op": {
+      "file": "vo/sal_op.ogg",
+      "name": "SAL_OP",
+      "bank": "VO.bank",
+      "subsong": 149
+    },
+    "vo/sal_or": {
+      "file": "vo/sal_or.ogg",
+      "name": "SAL_OR",
+      "bank": "VO.bank",
+      "subsong": 38
+    },
+    "vo/sal_osr": {
+      "file": "vo/sal_osr.ogg",
+      "name": "SAL_OSR",
+      "bank": "VO.bank",
+      "subsong": 201
+    },
+    "vo/seraphim_aa": {
+      "file": "vo/seraphim_aa.ogg",
+      "name": "SERAPHIM_AA",
+      "bank": "VO.bank",
+      "subsong": 115
+    },
+    "vo/seraphim_od": {
+      "file": "vo/seraphim_od.ogg",
+      "name": "SERAPHIM_OD",
+      "bank": "VO.bank",
+      "subsong": 118
+    },
+    "vo/seraphim_op": {
+      "file": "vo/seraphim_op.ogg",
+      "name": "SERAPHIM_OP",
+      "bank": "VO.bank",
+      "subsong": 265
+    },
+    "vo/seraphim_or": {
+      "file": "vo/seraphim_or.ogg",
+      "name": "SERAPHIM_OR",
+      "bank": "VO.bank",
+      "subsong": 232
+    },
+    "vo/seraphim_osr": {
+      "file": "vo/seraphim_osr.ogg",
+      "name": "SERAPHIM_OSR",
+      "bank": "VO.bank",
+      "subsong": 274
+    },
+    "vo/skorn_aa_01": {
+      "file": "vo/skorn_aa_01.ogg",
+      "name": "Skorn_AA_01",
+      "bank": "VO.bank",
+      "subsong": 224
+    },
+    "vo/skorn_aa_02": {
+      "file": "vo/skorn_aa_02.ogg",
+      "name": "Skorn_AA_02",
+      "bank": "VO.bank",
+      "subsong": 259
+    },
+    "vo/skorn_aa_03": {
+      "file": "vo/skorn_aa_03.ogg",
+      "name": "Skorn_AA_03",
+      "bank": "VO.bank",
+      "subsong": 221
+    },
+    "vo/skorn_aa_04": {
+      "file": "vo/skorn_aa_04.ogg",
+      "name": "Skorn_AA_04",
+      "bank": "VO.bank",
+      "subsong": 93
+    },
+    "vo/skorn_aa_05": {
+      "file": "vo/skorn_aa_05.ogg",
+      "name": "Skorn_AA_05",
+      "bank": "VO.bank",
+      "subsong": 48
+    },
+    "vo/skorn_aa_06": {
+      "file": "vo/skorn_aa_06.ogg",
+      "name": "Skorn_AA_06",
+      "bank": "VO.bank",
+      "subsong": 21
+    },
+    "vo/skorn_aa_07": {
+      "file": "vo/skorn_aa_07.ogg",
+      "name": "Skorn_AA_07",
+      "bank": "VO.bank",
+      "subsong": 86
+    },
+    "vo/skorn_aa_08": {
+      "file": "vo/skorn_aa_08.ogg",
+      "name": "Skorn_AA_08",
+      "bank": "VO.bank",
+      "subsong": 206
+    },
+    "vo/skorn_disc_benched": {
+      "file": "vo/skorn_disc_benched.ogg",
+      "name": "Skorn_DISC_Benched",
+      "bank": "VO.bank",
+      "subsong": 96
+    },
+    "vo/skorn_disc_bossencounter": {
+      "file": "vo/skorn_disc_bossencounter.ogg",
+      "name": "Skorn_DISC_BossEncounter",
+      "bank": "VO.bank",
+      "subsong": 158
+    },
+    "vo/skorn_disc_crossroads": {
+      "file": "vo/skorn_disc_crossroads.ogg",
+      "name": "Skorn_DISC_Crossroads",
+      "bank": "VO.bank",
+      "subsong": 43
+    },
+    "vo/skorn_disc_itemgained": {
+      "file": "vo/skorn_disc_itemgained.ogg",
+      "name": "Skorn_DISC_ItemGained",
+      "bank": "VO.bank",
+      "subsong": 208
+    },
+    "vo/skorn_disc_overkill": {
+      "file": "vo/skorn_disc_overkill.ogg",
+      "name": "Skorn_DISC_Overkill",
+      "bank": "VO.bank",
+      "subsong": 134
+    },
+    "vo/skorn_disc_revive": {
+      "file": "vo/skorn_disc_revive.ogg",
+      "name": "Skorn_DISC_Revive",
+      "bank": "VO.bank",
+      "subsong": 152
+    },
+    "vo/skorn_disc_whentakinglongtimetoprepare": {
+      "file": "vo/skorn_disc_whentakinglongtimetoprepare.ogg",
+      "name": "Skorn_DISC_WhenTakingLongTimetoPrepare",
+      "bank": "VO.bank",
+      "subsong": 142
+    },
+    "vo/skorn_od_01": {
+      "file": "vo/skorn_od_01.ogg",
+      "name": "Skorn_OD_01",
+      "bank": "VO.bank",
+      "subsong": 161
+    },
+    "vo/skorn_od_02": {
+      "file": "vo/skorn_od_02.ogg",
+      "name": "Skorn_OD_02",
+      "bank": "VO.bank",
+      "subsong": 50
+    },
+    "vo/skorn_od_03": {
+      "file": "vo/skorn_od_03.ogg",
+      "name": "Skorn_OD_03",
+      "bank": "VO.bank",
+      "subsong": 212
+    },
+    "vo/skorn_od_04": {
+      "file": "vo/skorn_od_04.ogg",
+      "name": "Skorn_OD_04",
+      "bank": "VO.bank",
+      "subsong": 52
+    },
+    "vo/skorn_op_shop_01": {
+      "file": "vo/skorn_op_shop_01.ogg",
+      "name": "Skorn_OP_Shop_01",
+      "bank": "VO.bank",
+      "subsong": 218
+    },
+    "vo/skorn_op_shop_02": {
+      "file": "vo/skorn_op_shop_02.ogg",
+      "name": "Skorn_OP_Shop_02",
+      "bank": "VO.bank",
+      "subsong": 238
+    },
+    "vo/skorn_op_start": {
+      "file": "vo/skorn_op_start.ogg",
+      "name": "Skorn_OP_Start",
+      "bank": "VO.bank",
+      "subsong": 78
+    },
+    "vo/skorn_or_a": {
+      "file": "vo/skorn_or_a.ogg",
+      "name": "Skorn_OR_A",
+      "bank": "VO.bank",
+      "subsong": 198
+    },
+    "vo/skorn_or_b": {
+      "file": "vo/skorn_or_b.ogg",
+      "name": "Skorn_OR_B",
+      "bank": "VO.bank",
+      "subsong": 213
+    },
+    "vo/skorn_or_s": {
+      "file": "vo/skorn_or_s.ogg",
+      "name": "Skorn_OR_S",
+      "bank": "VO.bank",
+      "subsong": 54
+    },
+    "vo/tilly_aa_01": {
+      "file": "vo/tilly_aa_01.ogg",
+      "name": "TILLY_AA_01",
+      "bank": "VO.bank",
+      "subsong": 139
+    },
+    "vo/tilly_aa_02": {
+      "file": "vo/tilly_aa_02.ogg",
+      "name": "TILLY_AA_02",
+      "bank": "VO.bank",
+      "subsong": 304
+    },
+    "vo/tilly_aa_03": {
+      "file": "vo/tilly_aa_03.ogg",
+      "name": "TILLY_AA_03",
+      "bank": "VO.bank",
+      "subsong": 186
+    },
+    "vo/tilly_aa_04": {
+      "file": "vo/tilly_aa_04.ogg",
+      "name": "TILLY_AA_04",
+      "bank": "VO.bank",
+      "subsong": 241
+    },
+    "vo/tilly_aa_05": {
+      "file": "vo/tilly_aa_05.ogg",
+      "name": "TILLY_AA_05",
+      "bank": "VO.bank",
+      "subsong": 280
+    },
+    "vo/tilly_od_01": {
+      "file": "vo/tilly_od_01.ogg",
+      "name": "TILLY_OD_01",
+      "bank": "VO.bank",
+      "subsong": 53
+    },
+    "vo/tilly_od_02": {
+      "file": "vo/tilly_od_02.ogg",
+      "name": "TILLY_OD_02",
+      "bank": "VO.bank",
+      "subsong": 15
+    },
+    "vo/tilly_od_03": {
+      "file": "vo/tilly_od_03.ogg",
+      "name": "TILLY_OD_03",
+      "bank": "VO.bank",
+      "subsong": 122
+    },
+    "vo/tilly_od_04": {
+      "file": "vo/tilly_od_04.ogg",
+      "name": "TILLY_OD_04",
+      "bank": "VO.bank",
+      "subsong": 58
+    },
+    "vo/tilly_op_shop": {
+      "file": "vo/tilly_op_shop.ogg",
+      "name": "TILLY_OP_Shop",
+      "bank": "VO.bank",
+      "subsong": 95
+    },
+    "vo/tilly_op_start": {
+      "file": "vo/tilly_op_start.ogg",
+      "name": "TILLY_OP_Start",
+      "bank": "VO.bank",
+      "subsong": 242
+    },
+    "vo/tilly_or_a": {
+      "file": "vo/tilly_or_a.ogg",
+      "name": "TILLY_OR_A",
+      "bank": "VO.bank",
+      "subsong": 183
+    },
+    "vo/tilly_or_b": {
+      "file": "vo/tilly_or_b.ogg",
+      "name": "TILLY_OR_B",
+      "bank": "VO.bank",
+      "subsong": 117
+    },
+    "vo/tilly_or_s": {
+      "file": "vo/tilly_or_s.ogg",
+      "name": "TILLY_OR_S",
+      "bank": "VO.bank",
+      "subsong": 112
+    },
+    "vo/zaya_aa": {
+      "file": "vo/zaya_aa.ogg",
+      "name": "ZAYA_AA",
+      "bank": "VO.bank",
+      "subsong": 4
+    },
+    "vo/zaya_od": {
+      "file": "vo/zaya_od.ogg",
+      "name": "ZAYA_OD",
+      "bank": "VO.bank",
+      "subsong": 57
+    },
+    "vo/zaya_op": {
+      "file": "vo/zaya_op.ogg",
+      "name": "ZAYA_OP",
+      "bank": "VO.bank",
+      "subsong": 62
+    },
+    "vo/zaya_or_a": {
+      "file": "vo/zaya_or_a.ogg",
+      "name": "ZAYA_OR_A",
+      "bank": "VO.bank",
+      "subsong": 260
+    },
+    "vo/zaya_or_b_the_breeze": {
+      "file": "vo/zaya_or_b_the_breeze.ogg",
+      "name": "ZAYA_OR_B_The_Breeze",
+      "bank": "VO.bank",
+      "subsong": 153
+    },
+    "vo/zaya_or_b_the_snow": {
+      "file": "vo/zaya_or_b_the_snow.ogg",
+      "name": "ZAYA_OR_B_The_Snow",
+      "bank": "VO.bank",
+      "subsong": 229
+    },
+    "vo/zaya_or_b_the_storm": {
+      "file": "vo/zaya_or_b_the_storm.ogg",
+      "name": "ZAYA_OR_B_The_Storm",
+      "bank": "VO.bank",
+      "subsong": 166
+    },
+    "vo/zaya_osr": {
+      "file": "vo/zaya_osr.ogg",
+      "name": "ZAYA_OSR",
+      "bank": "VO.bank",
+      "subsong": 82
+    },
+    "vo/zuri_aa_01": {
+      "file": "vo/zuri_aa_01.ogg",
+      "name": "ZURI_AA_01",
+      "bank": "VO.bank",
+      "subsong": 215
+    },
+    "vo/zuri_aa_02": {
+      "file": "vo/zuri_aa_02.ogg",
+      "name": "ZURI_AA_02",
+      "bank": "VO.bank",
+      "subsong": 283
+    },
+    "vo/zuri_aa_03": {
+      "file": "vo/zuri_aa_03.ogg",
+      "name": "ZURI_AA_03",
+      "bank": "VO.bank",
+      "subsong": 104
+    },
+    "vo/zuri_od_01": {
+      "file": "vo/zuri_od_01.ogg",
+      "name": "ZURI_OD_01",
+      "bank": "VO.bank",
+      "subsong": 89
+    },
+    "vo/zuri_od_02": {
+      "file": "vo/zuri_od_02.ogg",
+      "name": "ZURI_OD_02",
+      "bank": "VO.bank",
+      "subsong": 281
+    },
+    "vo/zuri_od_03": {
+      "file": "vo/zuri_od_03.ogg",
+      "name": "ZURI_OD_03",
+      "bank": "VO.bank",
+      "subsong": 130
+    },
+    "vo/zuri_op_shop": {
+      "file": "vo/zuri_op_shop.ogg",
+      "name": "ZURI_OP_Shop",
+      "bank": "VO.bank",
+      "subsong": 10
+    },
+    "vo/zuri_op_start": {
+      "file": "vo/zuri_op_start.ogg",
+      "name": "ZURI_OP_Start",
+      "bank": "VO.bank",
+      "subsong": 278
+    },
+    "vo/zuri_or_a": {
+      "file": "vo/zuri_or_a.ogg",
+      "name": "ZURI_OR_A",
+      "bank": "VO.bank",
+      "subsong": 172
+    },
+    "vo/zuri_or_b": {
+      "file": "vo/zuri_or_b.ogg",
+      "name": "ZURI_OR_B",
+      "bank": "VO.bank",
+      "subsong": 246
+    },
+    "vo/zuri_or_s": {
+      "file": "vo/zuri_or_s.ogg",
+      "name": "ZURI_OR_S",
+      "bank": "VO.bank",
+      "subsong": 66
+    }
+  },
+  "totalBytes": 24164179
+}

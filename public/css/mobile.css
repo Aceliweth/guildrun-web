@@ -1,0 +1,562 @@
+/* ============================================================================
+ * GUILDRUN: RIFT REBORN — True Mobile-Adapted Fullscreen UI (iPhone 18 Pro)
+ * - 100% Edge-to-Edge Fullscreen (zero black bars in both Landscape & Portrait)
+ * - Logical Mobile Height = 560px (2x larger UI, readable text, thumb-friendly docks)
+ * - Respects iOS Dynamic Island & Home Indicator safe areas
+ * ============================================================================ */
+
+:root {
+  --gr-ui-scale: 1;
+  --gr-logical-w: 1120px;
+  --gr-logical-h: 560px;
+  --gr-pad-left: 14px;
+  --gr-pad-right: 14px;
+  --gr-pad-top: 6px;
+  --gr-pad-bottom: 6px;
+}
+
+#gr-safe-area-probe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-left: env(safe-area-inset-left, 0px);
+  visibility: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+html,
+body {
+  background-color: #070a10;
+  overscroll-behavior: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+body.gr-mobile-scaled {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: #070a10;
+}
+
+body.gr-mobile-scaled #app {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: var(--gr-logical-w, 1120px) !important;
+  height: var(--gr-logical-h, 560px) !important;
+  transform-origin: 0 0 !important;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden !important;
+}
+
+/* ============================================================================
+ * 1. MAIN MENU (Screen 1) — Mobile Adapted for 560px height
+ * ============================================================================ */
+body.gr-mobile-scaled .gr-menu-left-panel {
+  left: calc(var(--gr-pad-left, 14px) + 18px) !important;
+  top: 18px !important;
+  transform: none !important;
+  width: 300px !important;
+  gap: 8px !important;
+}
+
+body.gr-mobile-scaled .gr-menu-logo {
+  width: 280px !important;
+  height: auto !important;
+  max-height: 88px !important;
+  margin-bottom: 10px !important;
+}
+
+body.gr-mobile-scaled .gr-menu-buttons {
+  margin-left: 0 !important;
+  width: 250px !important;
+  gap: 7px !important;
+}
+
+body.gr-mobile-scaled .gr-menu-buttons .gr-btn-primary,
+body.gr-mobile-scaled .gr-menu-buttons .gr-btn-secondary,
+body.gr-mobile-scaled .gr-menu-buttons .gr-btn-tertiary,
+body.gr-mobile-scaled .gr-menu-buttons .gr-btn-disabled {
+  width: 250px !important;
+  height: 44px !important;
+  font-size: 16px !important;
+}
+
+body.gr-mobile-scaled .gr-main-menu > .gr-leaderboard-panel,
+body.gr-mobile-scaled .gr-main-menu .gr-leaderboard-panel {
+  top: 14px !important;
+  right: calc(var(--gr-pad-right, 14px) + 12px) !important;
+  width: 350px !important;
+  max-height: 365px !important;
+  transform: scale(0.84) !important;
+  transform-origin: top right !important;
+}
+
+body.gr-mobile-scaled .gr-wishlist-widget {
+  right: calc(var(--gr-pad-right, 14px) + 12px) !important;
+  bottom: 12px !important;
+  transform: scale(0.74) !important;
+  transform-origin: bottom right !important;
+}
+
+body.gr-mobile-scaled .gr-menu-discord {
+  left: calc(var(--gr-pad-left, 14px) + 18px) !important;
+  bottom: 10px !important;
+  transform: scale(0.85) !important;
+  transform-origin: bottom left !important;
+}
+
+/* ============================================================================
+ * 2. DIFFICULTY SELECTION (Screen 2) — Mobile Adapted for 560px height
+ * ============================================================================ */
+body.gr-mobile-scaled .gr-difficulty-screen .gr-top-banner {
+  height: 46px !important;
+  min-height: 46px !important;
+  padding: 0 calc(var(--gr-pad-right, 14px) + 12px) 0 calc(var(--gr-pad-left, 14px) + 12px) !important;
+}
+
+body.gr-mobile-scaled .gr-difficulty-screen .gr-top-banner-title,
+body.gr-mobile-scaled .gr-difficulty-screen .gr-top-banner h1,
+body.gr-mobile-scaled .gr-difficulty-screen .gr-top-title {
+  font-size: 18px !important;
+}
+
+body.gr-mobile-scaled .gr-difficulty-screen .gr-top-banner-divider {
+  bottom: 4px !important;
+}
+
+body.gr-mobile-scaled .gr-diff-selector-area {
+  padding: 2px calc(var(--gr-pad-right, 14px) + 14px) 0 calc(var(--gr-pad-left, 14px) + 14px) !important;
+}
+
+body.gr-mobile-scaled .gr-diff-selector-label {
+  font-size: 12px !important;
+  margin-bottom: 5px !important;
+}
+
+body.gr-mobile-scaled .gr-diff-box {
+  height: 44px !important;
+  min-width: 60px !important;
+}
+
+body.gr-mobile-scaled .gr-diff-mode-group {
+  width: 132px !important;
+  margin-top: -18px !important;
+}
+
+body.gr-mobile-scaled .gr-diff-bottom-area {
+  padding: 8px calc(var(--gr-pad-right, 14px) + 14px) 58px calc(var(--gr-pad-left, 14px) + 14px) !important;
+  gap: 16px !important;
+}
+
+body.gr-mobile-scaled .gr-diff-modifiers-panel {
+  width: 52% !important;
+  max-width: 540px !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  padding: 10px 12px !important;
+}
+
+body.gr-mobile-scaled .gr-diff-modifiers-header {
+  font-size: 13px !important;
+  margin-bottom: 6px !important;
+}
+
+body.gr-mobile-scaled .gr-diff-mod-row {
+  min-height: 32px !important;
+  padding: 4px 10px !important;
+  font-size: 11.5px !important;
+  gap: 10px !important;
+}
+
+body.gr-mobile-scaled .gr-diff-mod-icon {
+  width: 32px !important;
+  height: 22px !important;
+}
+
+body.gr-mobile-scaled .gr-difficulty-screen .gr-leaderboard-panel {
+  width: 340px !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  overflow: hidden !important;
+}
+
+body.gr-mobile-scaled .gr-difficulty-screen .gr-lb-header {
+  padding: 8px 36px 6px 12px !important;
+}
+
+body.gr-mobile-scaled .gr-difficulty-screen .gr-lb-tabs {
+  height: 28px !important;
+}
+
+body.gr-mobile-scaled .gr-difficulty-screen .gr-lb-table-header {
+  padding: 6px 12px 4px 12px !important;
+  font-size: 11.5px !important;
+}
+
+body.gr-mobile-scaled .gr-difficulty-screen .gr-lb-rows {
+  min-height: 0 !important;
+  flex: 1 !important;
+  overflow-y: auto !important;
+}
+
+body.gr-mobile-scaled .gr-difficulty-screen .gr-lb-row {
+  height: 20px !important;
+  font-size: 11.5px !important;
+}
+
+body.gr-mobile-scaled .gr-difficulty-screen .gr-lb-footer {
+  padding: 6px 12px !important;
+}
+
+body.gr-mobile-scaled .gr-diff-start-area {
+  bottom: 8px !important;
+}
+
+body.gr-mobile-scaled .gr-diff-start-area .gr-btn-primary {
+  width: 210px !important;
+  height: 44px !important;
+}
+
+/* ============================================================================
+ * 3. CHOOSE HERO (Screen 3) — Mobile Adapted for 560px height
+ * ============================================================================ */
+body.gr-mobile-scaled .gr-choose-hero-title {
+  margin: 10px 0 4px 0 !important;
+  font-size: 20px !important;
+}
+
+body.gr-mobile-scaled .gr-initial-choice-row {
+  margin-top: 0 !important;
+  gap: 20px !important;
+  transform: scale(0.76) !important;
+  transform-origin: top center !important;
+}
+
+body.gr-mobile-scaled .gr-initial-reroll-btn {
+  bottom: 8px !important;
+  height: 38px !important;
+  min-width: 165px !important;
+  font-size: 14px !important;
+}
+
+body.gr-mobile-scaled .gr-choose-trees {
+  max-width: 260px !important;
+  opacity: 0.55 !important;
+}
+
+/* ============================================================================
+ * 4. PERSISTENT COREGAMEUI HUD & PLACEMENT / BATTLE (Screen 4)
+ * ============================================================================ */
+body.gr-mobile-scaled .gr-core-relics {
+  top: 6px !important;
+  left: var(--gr-pad-left, 14px) !important;
+  gap: 6px !important;
+  max-width: 28% !important;
+  flex-wrap: wrap !important;
+}
+
+body.gr-mobile-scaled .gr-relic-diamond,
+body.gr-mobile-scaled .gr-core-relics .relic-slot {
+  width: 32px !important;
+  height: 32px !important;
+}
+
+body.gr-mobile-scaled .gr-core-top-bar {
+  min-width: 380px !important;
+  height: 40px !important;
+  padding: 0 22px !important;
+  gap: 14px !important;
+}
+
+body.gr-mobile-scaled .gr-top-shards,
+body.gr-mobile-scaled .gr-top-stabilizer,
+body.gr-mobile-scaled .gr-chunk-shards,
+body.gr-mobile-scaled .gr-chunk-stabilizer {
+  font-size: 18px !important;
+}
+
+body.gr-mobile-scaled .gr-top-nodes,
+body.gr-mobile-scaled .gr-chunk-nodes {
+  gap: 10px !important;
+}
+
+body.gr-mobile-scaled .gr-chunk-timer {
+  top: 38px !important;
+  font-size: 13px !important;
+  padding: 1px 14px 3px !important;
+}
+
+body.gr-mobile-scaled .gr-core-speed {
+  top: 6px !important;
+  right: var(--gr-pad-right, 14px) !important;
+}
+
+body.gr-mobile-scaled .gr-core-left-inv {
+  top: 66px !important;
+  left: var(--gr-pad-left, 0px) !important;
+  transform: scale(0.86) !important;
+  transform-origin: top left !important;
+}
+
+body.gr-mobile-scaled .gr-core-right-tracker {
+  top: 66px !important;
+  right: var(--gr-pad-right, 0px) !important;
+  transform: scale(0.84) !important;
+  transform-origin: top right !important;
+}
+
+body.gr-mobile-scaled .gr-core-bottom-party {
+  bottom: 4px !important;
+  gap: 8px !important;
+  transform: translateX(-50%) scale(0.86) !important;
+  transform-origin: bottom center !important;
+}
+
+body.gr-mobile-scaled .gr-core-bottom-left {
+  bottom: 6px !important;
+  left: var(--gr-pad-left, 14px) !important;
+  transform: scale(0.82) !important;
+  transform-origin: bottom left !important;
+}
+
+body.gr-mobile-scaled .gr-core-bottom-right {
+  bottom: 6px !important;
+  right: var(--gr-pad-right, 14px) !important;
+  transform: scale(0.85) !important;
+  transform-origin: bottom right !important;
+}
+
+body.gr-mobile-scaled .gr-feedback-box,
+body.gr-mobile-scaled .gr-feedback-input {
+  display: none !important;
+}
+
+/* Stone Circle Hex Board scaled cleanly between top bar and bottom party dock */
+body.gr-mobile-scaled .gr-battlefield-stone-circle {
+  top: 50% !important;
+  left: 48.5% !important;
+  transform: translate(-50%, -50%) scale(0.76) !important;
+  transform-origin: center center !important;
+}
+
+body.gr-mobile-scaled .gr-fight-btn-placement {
+  right: calc(var(--gr-pad-right, 14px) + 18px) !important;
+  bottom: 68px !important;
+  width: 168px !important;
+  height: 48px !important;
+  font-size: 18px !important;
+}
+
+/* ============================================================================
+ * 5. BATTLE WON / RESULT (Screen 5) — Override vw/vh for Mobile Fullscreen
+ * ============================================================================ */
+body.gr-mobile-scaled .gr-battle-result-overlay {
+  padding-top: 38px !important;
+  padding-bottom: 58px !important;
+}
+
+body.gr-mobile-scaled .gr-result-big-title,
+body.gr-mobile-scaled .gr-result-header-title,
+body.gr-mobile-scaled .gr-battle-result-overlay > h1 {
+  font-size: 20px !important;
+  margin-bottom: 6px !important;
+}
+
+body.gr-mobile-scaled .gr-result-columns {
+  width: calc(var(--gr-logical-w, 1120px) - 120px) !important;
+  max-width: 980px !important;
+  height: 390px !important;
+  max-height: 390px !important;
+  gap: 10px !important;
+}
+
+body.gr-mobile-scaled .gr-result-stats-panel,
+body.gr-mobile-scaled .gr-result-rewards-panel {
+  padding: 10px 12px !important;
+}
+
+body.gr-mobile-scaled .gr-result-rewards-panel {
+  flex: 0 0 240px !important;
+}
+
+body.gr-mobile-scaled .gr-result-proceed-btn {
+  width: 190px !important;
+  height: 44px !important;
+}
+
+/* ============================================================================
+ * 6. SHOP & SUPERSHOP (Screen 6) — Override vw/vh for Mobile Fullscreen
+ * ============================================================================ */
+body.gr-mobile-scaled .gr-shop-overlay-wrap {
+  padding-top: 36px !important;
+  padding-bottom: 56px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-window {
+  width: calc(var(--gr-logical-w, 1120px) - 110px) !important;
+  max-width: 1000px !important;
+  height: 420px !important;
+  max-height: 420px !important;
+  padding: 10px 14px !important;
+  gap: 8px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-topbar {
+  margin-bottom: 2px !important;
+  padding-bottom: 6px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-btn {
+  height: 36px !important;
+  font-size: 12px !important;
+  padding: 0 10px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-sell-zone {
+  height: 38px !important;
+  padding: 0 10px !important;
+  font-size: 11px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-proceed-btn,
+body.gr-mobile-scaled .gr-shop-topbar .gr-btn-primary {
+  width: 165px !important;
+  height: 40px !important;
+  font-size: 15px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-left-col {
+  width: 310px !important;
+  flex: 0 0 310px !important;
+  overflow-y: auto !important;
+  max-height: 345px !important;
+  gap: 6px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-offer-textbox {
+  min-height: 62px !important;
+  padding: 5px 8px !important;
+}
+
+body.gr-mobile-scaled .gr-shop-heroes-area {
+  overflow: hidden !important;
+}
+
+body.gr-mobile-scaled .gr-shop-heroes-row {
+  gap: 8px !important;
+  transform: scale(0.74) !important;
+  transform-origin: center center !important;
+}
+
+/* ============================================================================
+ * 7. EVENTS, CAMPFIRE, CROSSROADS & MODALS — Override vw/vh for Mobile
+ * ============================================================================ */
+body.gr-mobile-scaled .gr-event-window,
+body.gr-mobile-scaled .gr-campfire-window {
+  width: calc(var(--gr-logical-w, 1120px) - 120px) !important;
+  max-width: 960px !important;
+  height: 400px !important;
+  max-height: 400px !important;
+  margin-top: 36px !important;
+  margin-bottom: 56px !important;
+  padding: 12px 16px !important;
+}
+
+body.gr-mobile-scaled .gr-crossroads-heading {
+  top: 52px !important;
+  font-size: 20px !important;
+}
+
+body.gr-mobile-scaled .gr-crossroads-gate {
+  transform: translate(-50%, -50%) scale(0.78) !important;
+}
+
+body.gr-mobile-scaled .gr-gate-anchored-box {
+  width: 220px !important;
+  transform: translateX(-50%) scale(0.84) !important;
+  transform-origin: top center !important;
+}
+
+body.gr-mobile-scaled .rankup-modal,
+body.gr-mobile-scaled .relic-picker-modal {
+  width: calc(var(--gr-logical-w, 1120px) - 80px) !important;
+  max-width: 920px !important;
+  max-height: 480px !important;
+  padding: 12px 16px !important;
+  overflow-y: auto !important;
+}
+
+body.gr-mobile-scaled .modal-backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+}
+
+body.gr-mobile-scaled .modal-backdrop > .modal {
+  transform: scale(calc(var(--gr-ui-scale, 1) * 0.92)) !important;
+  transform-origin: center center !important;
+  max-height: 510px !important;
+  overflow-y: auto !important;
+}
+
+body.gr-mobile-scaled .compendium-root {
+  width: 920px !important;
+  height: 460px !important;
+}
+
+body.gr-mobile-scaled #tooltip.tooltip {
+  max-width: 300px !important;
+  max-height: 320px !important;
+  padding: 8px 10px !important;
+  font-size: 11.5px !important;
+  overflow-y: auto !important;
+  z-index: 100000 !important;
+}
+
+/* ============================================================================
+ * 8. 120Hz Floating Ghost Clone for Touch Drag-and-Drop
+ * ============================================================================ */
+.gr-touch-drag-ghost {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  margin: 0 !important;
+  pointer-events: none !important;
+  z-index: 99999 !important;
+  opacity: 0.92 !important;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 12px rgba(76, 212, 196, 0.65)) !important;
+  will-change: transform;
+  transition: none !important;
+}
+
+.drop-hover {
+  outline: 2px solid #4cd4c4 !important;
+  box-shadow: 0 0 18px rgba(76, 212, 196, 0.65), inset 0 0 12px rgba(76, 212, 196, 0.35) !important;
+}
+
+.hex-cell.drop-hover svg polygon {
+  fill: rgba(76, 212, 196, 0.32) !important;
+  stroke: #4cd4c4 !important;
+  stroke-width: 3.5 !important;
+}
+
+body.gr-touch-device .gr-hero-card-help::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+}
