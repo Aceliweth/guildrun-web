@@ -804,7 +804,7 @@ async function boot() {
       loadLogicModules(),
     ]);
     for (const r of Object.values(data?.relics || {})) {
-      if (r && !r.icon) r.icon = '/assets/sprites/relics/Relic.png';
+      if (r && !r.icon) r.icon = './assets/sprites/relics/Relic.png';
     }
     for (const hh of Object.values(data?.heroes || {})) {
       if (hh?.stats && Object.prototype.hasOwnProperty.call(hh.stats, 'ManaLockTime')) {

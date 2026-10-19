@@ -22,9 +22,9 @@ import { makeDropTarget } from './components.js';
 
 const L = (fr, en) => (getLang() === 'en' ? en : fr);
 
-const UI = '/assets/sprites/ui';
-const BG = '/assets/sprites/backgrounds';
-const MAP = '/assets/sprites/map_events';
+const UI = './assets/sprites/ui';
+const BG = './assets/sprites/backgrounds';
+const MAP = './assets/sprites/map_events';
 
 const STORAGE_PLAYER_ID = 'guildrun_coop_pid_v1';
 const STORAGE_PLAYER_NAME = 'guildrun_coop_name_v1';

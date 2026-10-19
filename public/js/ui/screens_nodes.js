@@ -30,7 +30,7 @@ function valuesOf(o) {
   return o && (o.values ?? o.descriptionVars ?? o.descriptionValues ?? o.params ?? o.parameters ?? o.textVars ?? o.textValues);
 }
 
-const SHARD_ICON = '/assets/sprites/traits_stats/Shard_S.png';
+const SHARD_ICON = './assets/sprites/traits_stats/Shard_S.png';
 
 // ---------------- Shop & SuperShop (Screenshot 6 1:1) ----------------
 export function renderShop(ctx, vm) {
@@ -51,7 +51,7 @@ export function renderShop(ctx, vm) {
       ctx.call('reroll');
     },
   },
-    img('/assets/sprites/ui/RerollIcon.png', { class: 'gr-shop-btn-icon' }, SPR.reroll),
+    img('./assets/sprites/ui/RerollIcon.png', { class: 'gr-shop-btn-icon' }, SPR.reroll),
     h('span', { class: 'gr-shop-btn-lbl' }, L('RELANCER', 'REROLL SHOP')),
     h('span', { class: 'gr-shop-btn-cost' },
       img(SHARD_ICON, { class: 'gr-shard-inline' }, SPR.shard),
@@ -66,7 +66,7 @@ export function renderShop(ctx, vm) {
       ctx.call('freeze');
     },
   },
-    img('/assets/sprites/ui/FreezeIcon.png', { class: 'gr-shop-btn-icon' }, SPR.freeze),
+    img('./assets/sprites/ui/FreezeIcon.png', { class: 'gr-shop-btn-icon' }, SPR.freeze),
     h('span', { class: 'gr-shop-btn-lbl' }, shop.frozen ? L('DÉGELER', 'UNFREEZE SHOP') : L('GELER', 'FREEZE SHOP'))
   );
 
@@ -83,11 +83,11 @@ export function renderShop(ctx, vm) {
       ctx.rerender();
     },
   },
-    img('/assets/sprites/ui/SellButton_BottomLayer.png', { class: 'gr-sell-bg' }),
-    img('/assets/sprites/ui/SellButton_TopLayer.png', { class: 'gr-sell-bg' }),
+    img('./assets/sprites/ui/SellButton_BottomLayer.png', { class: 'gr-sell-bg' }),
+    img('./assets/sprites/ui/SellButton_TopLayer.png', { class: 'gr-sell-bg' }),
     h('div', { class: 'gr-sell-hex-wrap' },
-      img('/assets/sprites/ui/SellButton_IconFrame.png', { class: 'gr-sell-hex-frame' }),
-      img('/assets/sprites/ui/SellIcon.png', { class: 'gr-sell-hex-icon' }, SPR.sell)
+      img('./assets/sprites/ui/SellButton_IconFrame.png', { class: 'gr-sell-hex-frame' }),
+      img('./assets/sprites/ui/SellIcon.png', { class: 'gr-sell-hex-icon' }, SPR.sell)
     ),
     h('span', { class: 'gr-sell-label' }, ctx.shopSellMode ? L('MODE VENTE : CLIQUEZ HÉROS/OBJET', 'SELL MODE: CLICK HERO/ITEM') : L('DÉPOSEZ ICI POUR VENDRE', 'DROP HERE TO SELL'))
   );
@@ -134,7 +134,7 @@ export function renderShop(ctx, vm) {
       return h('div', { class: 'gr-shop-offer-row is-item is-sold' },
         h('div', { class: 'gr-shop-offer-left' },
           h('div', { class: 'gr-shop-icon-box' },
-            img('/assets/sprites/ui/UI_ItemFrame.png', { class: 'gr-shop-slot-frame' })
+            img('./assets/sprites/ui/UI_ItemFrame.png', { class: 'gr-shop-slot-frame' })
           ),
           h('div', { class: 'gr-shop-offer-price muted' }, L('VENDU', 'SOLD'))
         ),
@@ -233,7 +233,7 @@ export function renderShop(ctx, vm) {
     },
       h('div', { class: 'gr-shop-offer-left' },
         h('div', { class: 'gr-shop-icon-box' },
-          img('/assets/sprites/ui/UI_ItemFrame.png', { class: 'gr-shop-slot-frame' }),
+          img('./assets/sprites/ui/UI_ItemFrame.png', { class: 'gr-shop-slot-frame' }),
           img(itemIcon(slot.id), { class: 'gr-shop-slot-icon' })
         ),
         h('div', { class: 'gr-shop-offer-price' },
@@ -262,7 +262,7 @@ export function renderShop(ctx, vm) {
       return h('div', { class: 'gr-shop-offer-row is-relic is-sold' },
         h('div', { class: 'gr-shop-offer-left' },
           h('div', { class: 'gr-shop-icon-box' },
-            img('/assets/sprites/ui/RelicFrame_C.png', { class: 'gr-shop-slot-frame' })
+            img('./assets/sprites/ui/RelicFrame_C.png', { class: 'gr-shop-slot-frame' })
           ),
           h('div', { class: 'gr-shop-offer-price muted' }, L('VENDU', 'SOLD'))
         ),
@@ -339,7 +339,7 @@ export function renderShop(ctx, vm) {
 
     const saleBadge = isOnSale && !slot.sold
       ? h('div', { class: 'gr-shop-sale-badge' },
-          img('/assets/sprites/ui/SaleBox.png', { class: 'gr-shop-sale-bg' }),
+          img('./assets/sprites/ui/SaleBox.png', { class: 'gr-shop-sale-bg' }),
           h('span', { class: 'gr-shop-sale-txt' }, L('PROMO', 'SALE'))
         )
       : null;
@@ -393,7 +393,7 @@ export function renderShop(ctx, vm) {
     });
 
   const shopWindow = h('div', { class: 'gr-shop-window' },
-    img('/assets/sprites/backgrounds/Shop_WindowBackground_Deco.png', { class: 'gr-shop-deco-watermark', alt: '' }),
+    img('./assets/sprites/backgrounds/Shop_WindowBackground_Deco.png', { class: 'gr-shop-deco-watermark', alt: '' }),
     topBar,
     h('div', { class: 'gr-shop-body' },
       h('div', { class: 'gr-shop-left-col' },

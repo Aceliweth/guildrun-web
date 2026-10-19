@@ -414,7 +414,7 @@ export function renderResult(ctx, vm, lastMeta) {
               },
             },
               img(getMonsterCutoutUrl(eid), { class: 'gr-result-vs-avatar' }, enemyIcon(eid)),
-              img('/assets/sprites/ui/PortraitFrame_Small_C.png', { class: 'gr-result-vs-frame' })
+              img('./assets/sprites/ui/PortraitFrame_Small_C.png', { class: 'gr-result-vs-frame' })
             );
             attachTooltip(eWrap, () => enemyTooltip(eid));
             return eWrap;
@@ -631,7 +631,7 @@ export function renderResult(ctx, vm, lastMeta) {
     rewardRows.push({ label: isWin ? L('COMBAT GAGNÉ', 'BATTLE WON') : L('COMBAT PERDU', 'BATTLE LOST'), shards: defaultAmt });
   }
 
-  const shardIconUrl = '/assets/sprites/traits_stats/Shard_S.png';
+  const shardIconUrl = './assets/sprites/traits_stats/Shard_S.png';
 
   const statsPanel = h('section', { class: 'gr-result-stats-panel' },
     h('div', { class: 'gr-result-panel-header' }, L('STATISTIQUES', 'STATS')),
@@ -640,7 +640,7 @@ export function renderResult(ctx, vm, lastMeta) {
   );
 
   const rewardsPanel = h('section', { class: 'gr-result-rewards-panel' },
-    img('/assets/sprites/ui/BattleWon_Deco.png', { class: 'gr-result-watermark', alt: '' }),
+    img('./assets/sprites/ui/BattleWon_Deco.png', { class: 'gr-result-watermark', alt: '' }),
     h('div', { class: 'gr-result-panel-header' }, L('RÉSULTATS', 'RESULTS')),
     h('div', { class: 'gr-result-rewards-body' },
       h('div', { class: 'gr-result-reward-list' },
@@ -738,7 +738,7 @@ export function renderEndRun(ctx, vm) {
           h('span', { class: 'hud-chip' }, `${t('ui.act')} ${vm.act} · ${t('ui.floor')} ${vm.floor}`),
           vm.difficulty != null ? h('span', { class: 'hud-chip' }, `${L('DIFFICULTÉ', 'DIFFICULTY')}: ${vm.difficulty}`) : null,
           h('span', { class: 'hud-chip hud-shards' },
-            img('/assets/sprites/traits_stats/Shard_S.png', { class: 'gr-shard-inline' }, SPR.shard),
+            img('./assets/sprites/traits_stats/Shard_S.png', { class: 'gr-shard-inline' }, SPR.shard),
             String(vm.shards ?? 0)
           )
         ),

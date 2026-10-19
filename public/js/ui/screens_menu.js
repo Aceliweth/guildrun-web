@@ -7,9 +7,9 @@ import { SPR } from './assets.js';
 const isFr = () => getLang() === 'fr';
 const L = (fr, en) => (getLang() === 'fr' ? fr : en);
 
-const UI = '/assets/sprites/ui';
-const BG = '/assets/sprites/backgrounds';
-const ENEMIES = '/assets/sprites/enemies';
+const UI = './assets/sprites/ui';
+const BG = './assets/sprites/backgrounds';
+const ENEMIES = './assets/sprites/enemies';
 
 const LEADERBOARD_ROWS = [
   { rank: 1, name: 'ayayay', floor: 90, medal: `${UI}/First.png`, medalCls: 'gr-medal-gold', rowCls: 'gr-lb-row-1', altName: '刀锋擎空', altFloor: 82 },
@@ -100,34 +100,34 @@ const DIFFICULTY_MODIFIER_ROWS = [
 const COMIC_SETS = {
   intro: {
     title: { fr: 'Prologue — La Faille', en: 'Prologue — The Rift' },
-    fullPage: '/assets/sprites/comics/IntroductionComic_v5.png',
+    fullPage: './assets/sprites/comics/IntroductionComic_v5.png',
     panels: [
-      ['/assets/sprites/comics/Comic_Introduction_Panel1_Layer1.png', '/assets/sprites/comics/Comic_Introduction_Panel1_Layer2.png'],
-      ['/assets/sprites/comics/Comic_Introduction_Panel2_Layer1.png', '/assets/sprites/comics/Comic_Introduction_Panel2_Layer2.png', '/assets/sprites/comics/Comic_Introduction_Panel2_TealVFX.png', '/assets/sprites/comics/Comic_Introduction_Panel2_RedVFX.png'],
-      ['/assets/sprites/comics/Comic_Introduction_Panel3_Layer1.png', '/assets/sprites/comics/Comic_Introduction_Panel3_Layer2.png', '/assets/sprites/comics/Comic_Introduction_Panel3_Layer3.png', '/assets/sprites/comics/Comic_Introduction_Panel3_TealVFX.png'],
-      ['/assets/sprites/comics/Comic_Introduction_Panel4_Layer1.png', '/assets/sprites/comics/Comic_Introduction_Panel4_Layer2.png', '/assets/sprites/comics/Comic_Introduction_Panel4_Layer3.png', '/assets/sprites/comics/Comic_Introduction_Panel4_TealVFX.png'],
-      ['/assets/sprites/comics/Comic_Introduction_Panel5_Layer1.png', '/assets/sprites/comics/Comic_Introduction_Panel5_Layer2.png', '/assets/sprites/comics/Comic_Introduction_Panel5_RedVFX.png', '/assets/sprites/comics/Comic_Introduction_Panel5_RedVFX_2.png'],
-      ['/assets/sprites/comics/Comic_Introduction_Panel6_Layer1.png', '/assets/sprites/comics/Comic_Introduction_Panel6_Layer2.png', '/assets/sprites/comics/Comic_Introduction_Panel6_Layer3.png', '/assets/sprites/comics/Comic_Introduction_Panel6_Layer4.png', '/assets/sprites/comics/Comic_Introduction_Panel6_Layer5.png', '/assets/sprites/comics/Comic_Introduction_Panel6_Layer6.png', '/assets/sprites/comics/Comic_Introduction_Panel6_Layer7.png'],
+      ['./assets/sprites/comics/Comic_Introduction_Panel1_Layer1.png', './assets/sprites/comics/Comic_Introduction_Panel1_Layer2.png'],
+      ['./assets/sprites/comics/Comic_Introduction_Panel2_Layer1.png', './assets/sprites/comics/Comic_Introduction_Panel2_Layer2.png', './assets/sprites/comics/Comic_Introduction_Panel2_TealVFX.png', './assets/sprites/comics/Comic_Introduction_Panel2_RedVFX.png'],
+      ['./assets/sprites/comics/Comic_Introduction_Panel3_Layer1.png', './assets/sprites/comics/Comic_Introduction_Panel3_Layer2.png', './assets/sprites/comics/Comic_Introduction_Panel3_Layer3.png', './assets/sprites/comics/Comic_Introduction_Panel3_TealVFX.png'],
+      ['./assets/sprites/comics/Comic_Introduction_Panel4_Layer1.png', './assets/sprites/comics/Comic_Introduction_Panel4_Layer2.png', './assets/sprites/comics/Comic_Introduction_Panel4_Layer3.png', './assets/sprites/comics/Comic_Introduction_Panel4_TealVFX.png'],
+      ['./assets/sprites/comics/Comic_Introduction_Panel5_Layer1.png', './assets/sprites/comics/Comic_Introduction_Panel5_Layer2.png', './assets/sprites/comics/Comic_Introduction_Panel5_RedVFX.png', './assets/sprites/comics/Comic_Introduction_Panel5_RedVFX_2.png'],
+      ['./assets/sprites/comics/Comic_Introduction_Panel6_Layer1.png', './assets/sprites/comics/Comic_Introduction_Panel6_Layer2.png', './assets/sprites/comics/Comic_Introduction_Panel6_Layer3.png', './assets/sprites/comics/Comic_Introduction_Panel6_Layer4.png', './assets/sprites/comics/Comic_Introduction_Panel6_Layer5.png', './assets/sprites/comics/Comic_Introduction_Panel6_Layer6.png', './assets/sprites/comics/Comic_Introduction_Panel6_Layer7.png'],
     ],
   },
   signup: {
     title: { fr: 'Fondation de la Guilde', en: 'Guild Signup' },
-    fullPage: '/assets/sprites/ui/2_GuildSignup.png',
+    fullPage: './assets/sprites/ui/2_GuildSignup.png',
     panels: [
-      ['/assets/sprites/comics/Comic_GuildSignup_Panel1_Layer1.png'],
-      ['/assets/sprites/comics/Comic_GuildSignup_Panel2_Layer1.png', '/assets/sprites/comics/Comic_GuildSignup_Panel2_Layer2.png'],
-      ['/assets/sprites/comics/Comic_GuildSignup_Panel3_Layer1.png'],
-      ['/assets/sprites/comics/Comic_GuildSignup_Panel4_Layer1.png', '/assets/sprites/comics/Comic_GuildSignup_Panel4_Layer2.png', '/assets/sprites/comics/Comic_GuildSignup_Panel4_Layer3.png'],
-      ['/assets/sprites/comics/Comic_GuildSignup_Panel5_Layer1.png', '/assets/sprites/comics/Comic_GuildSignup_Panel5_Layer2.png', '/assets/sprites/comics/Comic_GuildSignup_Panel5_Layer3.png', '/assets/sprites/comics/Comic_GuildSignup_Panel5_Layer4.png', '/assets/sprites/comics/Comic_GuildSignup_Panel5_Layer5.png'],
+      ['./assets/sprites/comics/Comic_GuildSignup_Panel1_Layer1.png'],
+      ['./assets/sprites/comics/Comic_GuildSignup_Panel2_Layer1.png', './assets/sprites/comics/Comic_GuildSignup_Panel2_Layer2.png'],
+      ['./assets/sprites/comics/Comic_GuildSignup_Panel3_Layer1.png'],
+      ['./assets/sprites/comics/Comic_GuildSignup_Panel4_Layer1.png', './assets/sprites/comics/Comic_GuildSignup_Panel4_Layer2.png', './assets/sprites/comics/Comic_GuildSignup_Panel4_Layer3.png'],
+      ['./assets/sprites/comics/Comic_GuildSignup_Panel5_Layer1.png', './assets/sprites/comics/Comic_GuildSignup_Panel5_Layer2.png', './assets/sprites/comics/Comic_GuildSignup_Panel5_Layer3.png', './assets/sprites/comics/Comic_GuildSignup_Panel5_Layer4.png', './assets/sprites/comics/Comic_GuildSignup_Panel5_Layer5.png'],
     ],
   },
   defeat: {
     title: { fr: 'Repli Tactique', en: 'Defeat' },
-    fullPage: '/assets/sprites/ui/3_Defeat.png',
+    fullPage: './assets/sprites/ui/3_Defeat.png',
     panels: [
-      ['/assets/sprites/comics/Comic_Defeat_Panel1_Layer1.png', '/assets/sprites/comics/Comic_Defeat_Panel1_Layer2.png'],
-      ['/assets/sprites/comics/Comic_Defeat_Panel2_Layer1.png', '/assets/sprites/comics/Comic_Defeat_Panel2_Layer2.png', '/assets/sprites/comics/Comic_Defeat_Panel2_Layer3.png', '/assets/sprites/comics/Comic_Defeat_Panel2_Layer4.png', '/assets/sprites/comics/Comic_Defeat_Panel2_Layer5.png', '/assets/sprites/comics/Comic_Defeat_Panel2_Layer6.png'],
-      ['/assets/sprites/comics/Comic_Defeat_Panel3_Layer1.png', '/assets/sprites/comics/Comic_Defeat_Panel3_Layer2.png', '/assets/sprites/comics/Comic_Defeat_Panel3_Layer3.png'],
+      ['./assets/sprites/comics/Comic_Defeat_Panel1_Layer1.png', './assets/sprites/comics/Comic_Defeat_Panel1_Layer2.png'],
+      ['./assets/sprites/comics/Comic_Defeat_Panel2_Layer1.png', './assets/sprites/comics/Comic_Defeat_Panel2_Layer2.png', './assets/sprites/comics/Comic_Defeat_Panel2_Layer3.png', './assets/sprites/comics/Comic_Defeat_Panel2_Layer4.png', './assets/sprites/comics/Comic_Defeat_Panel2_Layer5.png', './assets/sprites/comics/Comic_Defeat_Panel2_Layer6.png'],
+      ['./assets/sprites/comics/Comic_Defeat_Panel3_Layer1.png', './assets/sprites/comics/Comic_Defeat_Panel3_Layer2.png', './assets/sprites/comics/Comic_Defeat_Panel3_Layer3.png'],
     ],
   },
 };
@@ -158,7 +158,7 @@ function ensureMenuStyles() {
       height: 100%;
       overflow: hidden;
       background-color: #071316;
-      background-image: url('/assets/sprites/backgrounds/RiftReborn_KeyArt.png');
+      background-image: url('./assets/sprites/backgrounds/RiftReborn_KeyArt.png');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
@@ -620,7 +620,7 @@ function ensureMenuStyles() {
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
       overflow: visible;
       background-color: #163330;
-      background-image: url('/assets/sprites/backgrounds/WishlistWidget_Background.png');
+      background-image: url('./assets/sprites/backgrounds/WishlistWidget_Background.png');
       background-size: cover;
       background-position: center;
     }
@@ -664,7 +664,7 @@ function ensureMenuStyles() {
       height: 100%;
       overflow: hidden;
       background-color: #133c38;
-      background-image: url('/assets/sprites/backgrounds/Background_01.png'), url('/assets/sprites/backgrounds/Background.png');
+      background-image: url('./assets/sprites/backgrounds/Background_01.png'), url('./assets/sprites/backgrounds/Background.png');
       background-size: cover, auto;
       background-position: center center, top left;
       background-repeat: no-repeat, repeat;

@@ -52,7 +52,7 @@ export function yawToward(dx, dy, scaleY = 0.66) {
 export function loadModelManifest() {
   if (manifestData) return Promise.resolve(manifestData);
   if (!manifestPromise) {
-    manifestPromise = fetch('/assets/models/manifest.json')
+    manifestPromise = fetch('./assets/models/manifest.json')
       .then((r) => (r.ok ? r.json() : null))
       .then((d) => {
         manifestData = d;
@@ -87,7 +87,7 @@ export function resolveUnitPrefabName(unit, manifest) {
 function loadModelData(prefabName) {
   if (modelDataCache.has(prefabName)) return modelDataCache.get(prefabName);
   const p = (async () => {
-    const metaRes = await fetch(`/assets/models/${prefabName}.json`);
+    const metaRes = await fetch(`./assets/models/${prefabName}.json`);
     if (!metaRes.ok) return null;
     const meta = await metaRes.json();
     const binRes = await fetch(meta.bin);

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "base": "/assets/audio/",
+  "base": "./assets/audio/",
   "logical": {
     "amb.forest": [
       "sfx/amb_biom1_forest_loop1.ogg",

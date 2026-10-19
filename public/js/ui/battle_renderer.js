@@ -9,7 +9,7 @@ import { createModel3DRenderer, yawToward } from './model3d_renderer.js';
 import { getInspectedUnitUid } from './tooltip.js';
 import { audio } from '../audio.js';
 
-const VFX_BASE = '/assets/sprites/vfx/';
+const VFX_BASE = './assets/sprites/vfx/';
 const VFX_TEX = {
   slash3: `${VFX_BASE}Slash3.png`,
   slash1: `${VFX_BASE}Slash1.png`,

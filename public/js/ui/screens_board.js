@@ -46,13 +46,13 @@ export function resolveStageComposite(stage, act = 1) {
   const env = String(stage?.environment || '').toLowerCase();
   const type = String(stage?.stageType || '').toLowerCase();
   if (type.includes('boss') && !type.includes('mini')) {
-    return '/assets/sprites/backgrounds/RuinsForest_Boss_Composite.png';
+    return './assets/sprites/backgrounds/RuinsForest_Boss_Composite.png';
   }
-  if (env.includes('purple')) return '/assets/sprites/backgrounds/PurpleCave_Composite.png';
-  if (env.includes('blue') || env.includes('cavern')) return '/assets/sprites/backgrounds/BlueCavern_Composite.png';
-  if (env.includes('desert') || act >= 3) return '/assets/sprites/backgrounds/RedDesert_Composite.png';
+  if (env.includes('purple')) return './assets/sprites/backgrounds/PurpleCave_Composite.png';
+  if (env.includes('blue') || env.includes('cavern')) return './assets/sprites/backgrounds/BlueCavern_Composite.png';
+  if (env.includes('desert') || act >= 3) return './assets/sprites/backgrounds/RedDesert_Composite.png';
   const tod = ['Morning', 'Evening', 'Dusk'][Math.max(0, Math.min(2, ((stage?.floor || 1) - 1) % 3))];
-  return `/assets/sprites/backgrounds/RuinsForest_${tod}_Composite.png`;
+  return `./assets/sprites/backgrounds/RuinsForest_${tod}_Composite.png`;
 }
 
 /** Generate cel-shaded SVG monster sprite data URL per enemy visual type (Turtle, Mushroom, Spider, etc.). */
@@ -1171,7 +1171,7 @@ export function ensureInRunStyles() {
       height: 40px;
       padding: 0 14px;
       background-color: rgba(18, 25, 34, 0.95);
-      background-image: url('/assets/sprites/ui/SecondaryButton.png');
+      background-image: url('./assets/sprites/ui/SecondaryButton.png');
       background-size: 100% 100%;
       border: 1px solid rgba(155, 175, 190, 0.45);
       color: #e2e8f0;
@@ -1712,7 +1712,7 @@ export function ensureInRunStyles() {
       text-align: left;
       padding: 10px 14px;
       background-color: rgba(18, 25, 34, 0.95);
-      background-image: url('/assets/sprites/ui/SecondaryButton.png');
+      background-image: url('./assets/sprites/ui/SecondaryButton.png');
       background-size: 100% 100%;
       border: 1px solid rgba(155, 175, 190, 0.45);
       color: #f1f5f9;
@@ -1958,11 +1958,11 @@ export function buildPrimaryButton(label, onClick, cls = 'gr-btn-primary') {
     class: `gr-btn-primary ${cls}`.trim(),
     onclick: onClick,
   },
-    img('/assets/sprites/ui/Button_01_BottomLayer.png', { class: 'gr-btn-bg', alt: '' }),
-    img('/assets/sprites/ui/Button_01_Hover.png', { class: 'gr-btn-hover', alt: '' }),
-    img('/assets/sprites/ui/Button_01_Decos.png', { class: 'gr-btn-deco gr-btn-deco-left', alt: '' }),
-    img('/assets/sprites/ui/Button_01_Decos.png', { class: 'gr-btn-deco gr-btn-deco-right', alt: '' }),
-    img('/assets/sprites/ui/Button_01_TopLayer.png', { class: 'gr-btn-frame', alt: '' }),
+    img('./assets/sprites/ui/Button_01_BottomLayer.png', { class: 'gr-btn-bg', alt: '' }),
+    img('./assets/sprites/ui/Button_01_Hover.png', { class: 'gr-btn-hover', alt: '' }),
+    img('./assets/sprites/ui/Button_01_Decos.png', { class: 'gr-btn-deco gr-btn-deco-left', alt: '' }),
+    img('./assets/sprites/ui/Button_01_Decos.png', { class: 'gr-btn-deco gr-btn-deco-right', alt: '' }),
+    img('./assets/sprites/ui/Button_01_TopLayer.png', { class: 'gr-btn-frame', alt: '' }),
     h('span', { class: 'gr-btn-label' }, label));
 }
 
@@ -2051,8 +2051,8 @@ export function renderInitialSelection(ctx, vm) {
       Array.from({ length: maxTokens }, (_, i) =>
         img(
           i < tokensLeft
-            ? '/assets/sprites/enemies/BossToken_Small_Available.png'
-            : '/assets/sprites/enemies/BossToken_Small_Empty.png',
+            ? './assets/sprites/enemies/BossToken_Small_Available.png'
+            : './assets/sprites/enemies/BossToken_Small_Empty.png',
           { class: 'gr-core-token-icon' },
         ))));
 
@@ -2079,22 +2079,22 @@ export function renderInitialSelection(ctx, vm) {
     },
   },
     h('span', { class: 'gr-reroll-cost-part' },
-      img('/assets/sprites/enemies/BossToken_Small_Available.png', { class: 'gr-core-token-icon' }),
+      img('./assets/sprites/enemies/BossToken_Small_Available.png', { class: 'gr-core-token-icon' }),
       h('span', null, '1')),
     h('span', { class: 'gr-reroll-divider' }),
     h('span', { class: 'gr-reroll-label-part' },
-      img('/assets/sprites/ui/icon_reset.png', { style: { width: '15px', height: '15px', objectFit: 'contain' } }),
+      img('./assets/sprites/ui/icon_reset.png', { style: { width: '15px', height: '15px', objectFit: 'contain' } }),
       h('span', null, L('RELANCER', 'REROLL'))));
 
-  const bgUrl = '/assets/sprites/backgrounds/RuinsForest_Morning_Composite.png';
+  const bgUrl = './assets/sprites/backgrounds/RuinsForest_Morning_Composite.png';
 
   return h('div', {
     class: 'screen screen-draft gr-choose-hero-screen',
     style: { backgroundImage: `url('${bgUrl}')` },
   },
     h('div', { class: 'gr-choose-hero-bg', style: { backgroundImage: `url('${bgUrl}')` } }),
-    img('/assets/sprites/ui/Trees_Morning_Left.png', { class: 'gr-choose-trees gr-choose-trees-left' }),
-    img('/assets/sprites/ui/Trees_Morning_Right.png', { class: 'gr-choose-trees gr-choose-trees-right' }),
+    img('./assets/sprites/ui/Trees_Morning_Left.png', { class: 'gr-choose-trees gr-choose-trees-left' }),
+    img('./assets/sprites/ui/Trees_Morning_Right.png', { class: 'gr-choose-trees gr-choose-trees-right' }),
     h('h1', { class: 'gr-choose-hero-title' }, L('CHOISISSEZ UN HÉROS', 'CHOOSE HERO')),
     h('div', { class: 'gr-initial-choice-row' }, cols),
     bottomLeft,

@@ -1,7 +1,7 @@
 // Sprite path helpers + canvas image cache.
 import { getGameData } from '../data.js';
 
-const S = '/assets/sprites';
+const S = './assets/sprites';
 export const SPR = {
   // Core backgrounds & logos
   keyArt: `${S}/backgrounds/RiftReborn_KeyArt.png`,

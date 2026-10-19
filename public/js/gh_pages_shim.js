@@ -16,7 +16,6 @@
   }
 
   window.__GUILDRUN_BASE__ = basePath;
-  if (!basePath || basePath === '') return; // Hosted at domain root '/', no rewriting needed
 
   const ROOT_PREFIX_RE = /^\/(assets|data|css|js|manifest\.json)(\/|$)/;
   const CSS_URL_RE = /url\(\s*(['"]?)\/(assets|data)\//g;
@@ -24,17 +23,21 @@
   function rewriteUrl(url) {
     if (typeof url !== 'string') return url;
     if (ROOT_PREFIX_RE.test(url)) {
-      return basePath + url;
+      return (basePath || '.') + url;
     }
     return url;
   }
 
   function rewriteCssText(css) {
-    if (typeof css !== 'string' || !css.includes('/assets/')) return css;
-    return css.replace(CSS_URL_RE, (_m, quote, dir) => `url(${quote}${basePath}/${dir}/`);
+    if (typeof css !== 'string' || (!css.includes('/assets/') && !css.includes('/data/'))) return css;
+    const prefix = basePath || '.';
+    return css.replace(CSS_URL_RE, (_m, quote, dir) => `url(${quote}${prefix}/${dir}/`);
   }
 
   window.__resolveGuildrunAssetUrl = rewriteUrl;
+  window.__resolveGuildrunCssText = rewriteCssText;
+
+  if (!basePath || basePath === '') return; // Hosted at domain root '/'
 
   // 1. Patch window.fetch
   const origFetch = window.fetch.bind(window);
@@ -83,7 +86,7 @@
     return origSetAttr.call(this, name, value);
   };
 
-  // 4. Patch CSSStyleDeclaration backgroundImage / background / setProperty
+  // 4. Patch CSSStyleDeclaration properties (Works across Chrome/Blink, Safari/WebKit, Firefox/Gecko)
   if (window.CSSStyleDeclaration && window.CSSStyleDeclaration.prototype) {
     const proto = window.CSSStyleDeclaration.prototype;
     const origSetProp = proto.setProperty;
@@ -93,10 +96,10 @@
         return origSetProp.call(this, prop, val, priority);
       };
     }
-    for (const propName of ['backgroundImage', 'background']) {
-      const d = Object.getOwnPropertyDescriptor(proto, propName);
+    for (const [jsProp, cssProp] of [['backgroundImage', 'background-image'], ['background', 'background']]) {
+      const d = Object.getOwnPropertyDescriptor(proto, jsProp);
       if (d && d.set && d.get) {
-        Object.defineProperty(proto, propName, {
+        Object.defineProperty(proto, jsProp, {
           configurable: true,
           enumerable: d.enumerable,
           get: d.get,
@@ -104,6 +107,19 @@
             d.set.call(this, rewriteCssText(val));
           },
         });
+      } else if (origSetProp) {
+        try {
+          Object.defineProperty(proto, jsProp, {
+            configurable: true,
+            enumerable: true,
+            get() {
+              return this.getPropertyValue(cssProp);
+            },
+            set(val) {
+              origSetProp.call(this, cssProp, rewriteCssText(val));
+            },
+          });
+        } catch {}
       }
     }
   }
@@ -117,3 +133,4 @@
     return origAppendChild.call(this, child);
   };
 })();
+

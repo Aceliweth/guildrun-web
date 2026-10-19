@@ -699,7 +699,7 @@ export function itemTooltip(itemOrId, opts = {}) {
         `+${fmtNum(m.value)}${m.percent ? '%' : ''} ${statName(m.stat)}`))) : null,
     d ? h('div', { class: 'tt-desc', html: richText(d, { values: valuesOf(it), vars: opts.vars, tracking }) }) : null,
     renderQuestBlock(it.quest, obj, opts, d),
-    it.price != null && it.price > 0 ? h('div', { class: 'tt-price' }, img('/assets/sprites/traits_stats/Shard_2.png', { class: 'tt-stat-icon' }), String(it.price)) : null);
+    it.price != null && it.price > 0 ? h('div', { class: 'tt-price' }, img('./assets/sprites/traits_stats/Shard_2.png', { class: 'tt-stat-icon' }), String(it.price)) : null);
 }
 
 export function relicTooltip(relicOrId, opts = {}) {
@@ -714,7 +714,7 @@ export function relicTooltip(relicOrId, opts = {}) {
     header(relicIcon(relicId), nameOf(r), formatRelicRarityLabel(r.rarity)),
     d ? h('div', { class: 'tt-desc', html: richText(d, { values: valuesOf(r), vars: opts.vars, tracking }) }) : null,
     renderQuestBlock(r.quest, obj, opts, d),
-    r.price != null && r.price > 0 ? h('div', { class: 'tt-price' }, img('/assets/sprites/traits_stats/Shard_2.png', { class: 'tt-stat-icon' }), String(r.price)) : null);
+    r.price != null && r.price > 0 ? h('div', { class: 'tt-price' }, img('./assets/sprites/traits_stats/Shard_2.png', { class: 'tt-stat-icon' }), String(r.price)) : null);
 }
 
 export function abilityTooltip(id, passive, heroOpts = {}) {
@@ -769,7 +769,7 @@ export function stabilizerTooltip(vm) {
   const active = vm?.lives == null || vm.lives > 1 || (vm?.raw?.isStabilizerActive !== false && cur > 0);
   const descKey = active ? 'UI.BattleInfo.ShardStabilizer.Description.Active' : 'UI.BattleInfo.ShardStabilizer.Description.Inactive';
   return h('div', { class: 'tt' },
-    header('/assets/sprites/traits_stats/Shard_2.png', t('UI.BattleInfo.ShardStabilizer.Title'), active ? t('ui.stabilizerActive') : t('ui.stabilizerBroken')),
+    header('./assets/sprites/traits_stats/Shard_2.png', t('UI.BattleInfo.ShardStabilizer.Title'), active ? t('ui.stabilizerActive') : t('ui.stabilizerBroken')),
     h('div', { class: 'tt-desc', html: richText(t(descKey), { values: [perFight, cur] }) }));
 }
 

@@ -5,7 +5,7 @@
 // - Unlocks on first user gesture (autoplay policy); queued music starts once unlocked.
 // - Every call is a silent no-op if the manifest / files / audio APIs are missing.
 
-const BASE = '/assets/audio/';
+const BASE = './assets/audio/';
 const FADE = 1.2;            // music crossfade seconds
 const MAX_VOICES = 24;       // concurrent sfx cap
 const SFX_THROTTLE_MS = 45;  // same sfx name can't retrigger faster than this

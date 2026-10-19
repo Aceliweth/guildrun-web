@@ -1,17 +1,43 @@
 // Tiny DOM helpers: element factory, toasts, modals, error panels.
 
+function fixUrl(u) {
+  if (typeof u !== 'string') return u;
+  if (typeof window !== 'undefined' && typeof window.__resolveGuildrunAssetUrl === 'function') {
+    return window.__resolveGuildrunAssetUrl(u);
+  }
+  if (/^\/(assets|data|css|js|manifest\.json)(\/|$)/.test(u)) {
+    return '.' + u;
+  }
+  return u;
+}
+
+function fixCss(s) {
+  if (typeof s !== 'string') return s;
+  if (typeof window !== 'undefined' && typeof window.__resolveGuildrunCssText === 'function') {
+    return window.__resolveGuildrunCssText(s);
+  }
+  return s.replace(/url\(\s*(['"]?)\/(assets|data)\//g, 'url($1./$2/');
+}
+
 export function h(tag, attrs, ...children) {
   const el = document.createElement(tag);
   if (attrs) {
     for (const [k, v] of Object.entries(attrs)) {
       if (v == null || v === false) continue;
       if (k === 'class' || k === 'className') el.className = v;
-      else if (k === 'style' && typeof v === 'object') Object.assign(el.style, v);
-      else if (k === 'html') el.innerHTML = v;
+      else if (k === 'style' && typeof v === 'object') {
+        for (const [sk, sv] of Object.entries(v)) {
+          if (sv == null) continue;
+          el.style[sk] = typeof sv === 'string' ? fixCss(sv) : sv;
+        }
+      }
+      else if (k === 'style' && typeof v === 'string') el.setAttribute('style', fixCss(v));
+      else if (k === 'html') el.innerHTML = typeof v === 'string' ? v.replace(/(src|href)=(['"])\/(assets|data)\//g, '$1=$2./$3/') : v;
       else if (k === 'text') el.textContent = v;
       else if (k.startsWith('on') && typeof v === 'function') el.addEventListener(k.slice(2).toLowerCase(), v);
       else if (k === 'dataset') Object.assign(el.dataset, v);
       else if (v === true) el.setAttribute(k, '');
+      else if (k === 'src' || k === 'href') el.setAttribute(k, fixUrl(String(v)));
       else el.setAttribute(k, v);
     }
   }
@@ -35,10 +61,10 @@ export function img(src, attrs = {}, fallback) {
   const el = h('img', { draggable: 'false', alt: '', ...attrs });
   let triedFallback = false;
   el.addEventListener('error', () => {
-    if (fallback && !triedFallback) { triedFallback = true; el.src = fallback; return; }
+    if (fallback && !triedFallback) { triedFallback = true; el.src = fixUrl(fallback); return; }
     el.style.visibility = 'hidden';
   });
-  if (src) el.src = src; else if (fallback) { triedFallback = true; el.src = fallback; } else el.style.visibility = 'hidden';
+  if (src) el.src = fixUrl(src); else if (fallback) { triedFallback = true; el.src = fixUrl(fallback); } else el.style.visibility = 'hidden';
   return el;
 }
 
