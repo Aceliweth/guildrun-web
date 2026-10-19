@@ -580,8 +580,12 @@ const ctx = {
     render();
   },
 
-  startBattleFlow() {
+  startBattleFlow(opts = {}) {
     if (!app.run) return;
+    if (this.coop?.state?.active && !opts?.fromCoopSync && typeof this.coop.requestRoundStart === 'function') {
+      const handledByCoop = this.coop.requestRoundStart();
+      if (handledByCoop) return;
+    }
     let battleArgs = null;
     if (typeof app.run.startBattle === 'function') {
       battleArgs = app.run.startBattle();
@@ -671,7 +675,11 @@ function render() {
     try { app.currentCleanup(); } catch { /* ignore */ }
     app.currentCleanup = null;
   }
+  const liveInsp = app.root.querySelector('#gr-live-unit-inspector');
+  const coopBanner = app.root.querySelector('.gr-coop-banner');
   clear(app.root);
+  if (liveInsp) app.root.appendChild(liveInsp);
+  if (coopBanner) app.root.appendChild(coopBanner);
 
   if (app.screenOverride === 'comic') {
     updateMusicForPhase('comic');

@@ -1304,7 +1304,7 @@ export function openUnitInspector(target, opts = {}) {
         e.stopPropagation();
       },
     });
-    document.body.appendChild(panel);
+    (document.getElementById('app') || document.body).appendChild(panel);
     _inspectorState.panelEl = panel;
 
     if (_inspectorState.customPos) {
@@ -1312,7 +1312,7 @@ export function openUnitInspector(target, opts = {}) {
       panel.style.top = `${_inspectorState.customPos.y}px`;
     } else {
       panel.style.left = '88px';
-      panel.style.top = '74px';
+      panel.style.top = '58px';
     }
   }
 

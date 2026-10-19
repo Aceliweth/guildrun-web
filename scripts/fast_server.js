@@ -56,6 +56,7 @@ function createRoom(hostId, hostName, difficulty = 6, seed = null) {
     status: 'lobby', // 'lobby' | 'running'
     difficulty: Number(difficulty ?? 6),
     seed: seed || (Date.now() & 0x7fffffff),
+    roundStartedFloor: 0,
     sharedRelics: [], // [{ relicId, fromPlayerId, fromName, ts }]
     crossroadsVotes: {}, // { [playerId]: gateIndex }
     players: {
@@ -65,7 +66,9 @@ function createRoom(hostId, hostName, difficulty = 6, seed = null) {
         name: hostName || 'Joueur 1',
         isHost: true,
         isBot: false,
-        ready: false,
+        ready: true,
+        roundReady: false,
+        readyFloor: 0,
         phase: 'Lobby',
         floor: 1,
         act: 1,
@@ -96,6 +99,8 @@ function serializeRoom(room, forPlayerId = null) {
       isHost: p.isHost,
       isBot: !!p.isBot,
       ready: !!p.ready,
+      roundReady: !!p.roundReady,
+      readyFloor: Number(p.readyFloor || 0),
       phase: p.phase,
       floor: p.floor,
       act: p.act,
@@ -117,6 +122,7 @@ function serializeRoom(room, forPlayerId = null) {
     status: room.status,
     difficulty: room.difficulty,
     seed: room.seed,
+    roundStartedFloor: Number(room.roundStartedFloor || 0),
     sharedRelics: room.sharedRelics,
     crossroadsVotes: room.crossroadsVotes,
     players: playersSummary,
@@ -160,6 +166,11 @@ function handleCoopAction(room, playerId, msg) {
       }
       break;
     }
+    case 'LOBBY_READY': {
+      player.ready = msg.ready !== undefined ? !!msg.ready : !player.ready;
+      broadcastRoom(room, { type: 'ROOM_SYNC', room: serializeRoom(room) });
+      break;
+    }
     case 'ADD_BOT': {
       if (Object.keys(room.players).length < 2) {
         const botId = 'bot_partner';
@@ -170,6 +181,8 @@ function handleCoopAction(room, playerId, msg) {
           isHost: false,
           isBot: true,
           ready: true,
+          roundReady: true,
+          readyFloor: 1,
           phase: 'Lobby',
           floor: 1,
           act: 1,
@@ -190,8 +203,13 @@ function handleCoopAction(room, playerId, msg) {
     }
     case 'START_COOP_RUN': {
       room.status = 'running';
+      room.roundStartedFloor = 0;
       room.difficulty = Number(msg.difficulty ?? room.difficulty ?? 6);
       room.seed = Number(msg.seed || room.seed || (Date.now() & 0x7fffffff));
+      for (const p of Object.values(room.players)) {
+        p.roundReady = !!p.isBot;
+        p.readyFloor = p.isBot ? 1 : 0;
+      }
       broadcastRoom(room, {
         type: 'START_COOP_RUN',
         difficulty: room.difficulty,
@@ -200,10 +218,53 @@ function handleCoopAction(room, playerId, msg) {
       });
       break;
     }
+    case 'ROUND_READY': {
+      const targetFloor = Number(msg.floor || player.floor || 1);
+      const isReady = msg.ready !== undefined ? !!msg.ready : true;
+      player.roundReady = isReady;
+      player.readyFloor = targetFloor;
+      player.floor = targetFloor;
+
+      if (partner && partner.isBot) {
+        partner.roundReady = true;
+        partner.readyFloor = targetFloor;
+        partner.floor = targetFloor;
+      }
+
+      const playersList = Object.values(room.players);
+      const allReady = playersList.length >= 2 && playersList.every((p) => p.isBot || (p.roundReady && Number(p.readyFloor) === targetFloor));
+
+      if (allReady) {
+        room.roundStartedFloor = targetFloor;
+        for (const p of playersList) {
+          p.roundReady = false;
+        }
+        broadcastRoom(room, {
+          type: 'START_ROUND_NOW',
+          floor: targetFloor,
+          room: serializeRoom(room),
+        });
+      } else {
+        broadcastRoom(room, {
+          type: 'ROUND_READY_SYNC',
+          fromId: playerId,
+          fromName: player.name,
+          ready: player.roundReady,
+          floor: targetFloor,
+          room: serializeRoom(room),
+        });
+      }
+      break;
+    }
     case 'STATE_UPDATE': {
-      const s = msg.state || {};
+      const s = msg.state || msg;
       if (s.phase) player.phase = s.phase;
-      if (s.floor != null) player.floor = s.floor;
+      if (s.floor != null) {
+        if (Number(s.floor) !== Number(player.readyFloor)) {
+          player.roundReady = false;
+        }
+        player.floor = s.floor;
+      }
       if (s.act != null) player.act = s.act;
       if (s.shards != null) player.shards = s.shards;
       if (s.stabilizerShards != null) player.stabilizerShards = s.stabilizerShards;
@@ -229,6 +290,7 @@ function handleCoopAction(room, playerId, msg) {
         sendEventToPlayer(room, partner.id, {
           type: 'PARTNER_STATE',
           partner: serializeRoom(room).players[playerId],
+          room: serializeRoom(room),
           sharedRelics: room.sharedRelics,
         });
       }
@@ -424,7 +486,10 @@ const server = http.createServer(async (req, res) => {
       if (!room) {
         return sendJson(res, 404, { ok: false, error: 'Salon introuvable. Vérifie le code à 4 caractères.' });
       }
-      const playerId = body.playerId || `p_${crypto.randomBytes(4).toString('hex')}`;
+      let playerId = body.playerId || `p_${crypto.randomBytes(4).toString('hex')}`;
+      if (room.players[playerId] && room.players[playerId].isHost && Object.keys(room.players).length < 2) {
+        playerId = `p_${crypto.randomBytes(4).toString('hex')}`;
+      }
       if (!room.players[playerId]) {
         const existingIds = Object.keys(room.players);
         // Replace bot if one was added, or add as slot 2
@@ -439,7 +504,9 @@ const server = http.createServer(async (req, res) => {
           name: body.playerName || 'Joueur 2',
           isHost: false,
           isBot: false,
-          ready: true,
+          ready: false,
+          roundReady: false,
+          readyFloor: 0,
           phase: 'Lobby',
           floor: 1,
           act: 1,

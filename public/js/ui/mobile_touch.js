@@ -117,6 +117,8 @@ export function updateMobileViewport() {
   document.documentElement.style.setProperty('--gr-ui-scale', scale.toFixed(5));
   document.documentElement.style.setProperty('--gr-logical-w', `${baseW}px`);
   document.documentElement.style.setProperty('--gr-logical-h', `${baseH}px`);
+  document.documentElement.style.setProperty('--gr-vw', `${vw}px`);
+  document.documentElement.style.setProperty('--gr-vh', `${vh}px`);
   document.documentElement.style.setProperty('--gr-pad-left', `${Math.max(10, padLeft)}px`);
   document.documentElement.style.setProperty('--gr-pad-right', `${Math.max(10, padRight)}px`);
   document.documentElement.style.setProperty('--gr-pad-top', `${Math.max(4, padTop)}px`);

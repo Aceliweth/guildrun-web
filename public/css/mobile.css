@@ -97,14 +97,77 @@ body.gr-mobile-scaled .gr-menu-buttons .gr-btn-disabled {
   font-size: 16px !important;
 }
 
+body.gr-mobile-scaled .gr-lang-pill,
+body.gr-mobile-scaled .gr-menu-lang-pill {
+  top: 14px !important;
+  left: calc(var(--gr-pad-left, 14px) + 310px) !important;
+  z-index: 30 !important;
+}
+
 body.gr-mobile-scaled .gr-main-menu > .gr-leaderboard-panel,
 body.gr-mobile-scaled .gr-main-menu .gr-leaderboard-panel {
-  top: 14px !important;
+  top: 12px !important;
   right: calc(var(--gr-pad-right, 14px) + 12px) !important;
   width: 350px !important;
+  height: 365px !important;
   max-height: 365px !important;
+  overflow: hidden !important;
   transform: scale(0.84) !important;
   transform-origin: top right !important;
+}
+
+body.gr-mobile-scaled .gr-leaderboard-panel .gr-lb-header {
+  padding: 6px 36px 5px 12px !important;
+  gap: 1px !important;
+  flex-shrink: 0 !important;
+}
+
+body.gr-mobile-scaled .gr-leaderboard-panel .gr-lb-title,
+body.gr-mobile-scaled .gr-leaderboard-panel .gr-leaderboard-title {
+  font-size: 12.5px !important;
+}
+
+body.gr-mobile-scaled .gr-leaderboard-panel .gr-lb-subtitle,
+body.gr-mobile-scaled .gr-leaderboard-panel .gr-leaderboard-diff {
+  font-size: 11.5px !important;
+}
+
+body.gr-mobile-scaled .gr-leaderboard-panel .gr-lb-tabs,
+body.gr-mobile-scaled .gr-leaderboard-panel .gr-leaderboard-tabs {
+  height: 26px !important;
+  flex-shrink: 0 !important;
+}
+
+body.gr-mobile-scaled .gr-leaderboard-panel .gr-lb-tab,
+body.gr-mobile-scaled .gr-leaderboard-panel .gr-leaderboard-tab {
+  font-size: 11px !important;
+}
+
+body.gr-mobile-scaled .gr-leaderboard-panel .gr-lb-table-header,
+body.gr-mobile-scaled .gr-leaderboard-panel .gr-leaderboard-cols {
+  padding: 4px 12px 3px 12px !important;
+  font-size: 11px !important;
+  flex-shrink: 0 !important;
+}
+
+body.gr-mobile-scaled .gr-leaderboard-panel .gr-lb-rows {
+  min-height: 0 !important;
+  flex: 1 1 auto !important;
+  overflow-y: auto !important;
+}
+
+body.gr-mobile-scaled .gr-leaderboard-panel .gr-lb-row {
+  height: 19px !important;
+  min-height: 19px !important;
+  font-size: 11px !important;
+  padding: 0 12px !important;
+}
+
+body.gr-mobile-scaled .gr-leaderboard-panel .gr-lb-footer {
+  padding: 5px 12px !important;
+  font-size: 10.5px !important;
+  flex-shrink: 0 !important;
+  margin-top: auto !important;
 }
 
 body.gr-mobile-scaled .gr-wishlist-widget {
@@ -355,6 +418,24 @@ body.gr-mobile-scaled .gr-battlefield-stone-circle {
   transform-origin: center center !important;
 }
 
+.gr-fight-btn-placement.is-waiting-coop,
+.gr-fight-btn-placement.is-ally-ready-coop {
+  width: auto !important;
+  min-width: 224px !important;
+  padding: 0 18px !important;
+  font-size: 16.5px !important;
+  white-space: nowrap !important;
+}
+
+.gr-fight-btn-placement.is-waiting-coop {
+  filter: hue-rotate(-25deg) saturate(1.15);
+  box-shadow: 0 0 18px rgba(251, 191, 36, 0.45);
+}
+
+.gr-fight-btn-placement.is-ally-ready-coop {
+  box-shadow: 0 0 22px rgba(74, 222, 128, 0.65);
+}
+
 body.gr-mobile-scaled .gr-fight-btn-placement {
   right: calc(var(--gr-pad-right, 14px) + 18px) !important;
   bottom: 68px !important;
@@ -363,26 +444,34 @@ body.gr-mobile-scaled .gr-fight-btn-placement {
   font-size: 18px !important;
 }
 
+body.gr-mobile-scaled .gr-fight-btn-placement.is-waiting-coop,
+body.gr-mobile-scaled .gr-fight-btn-placement.is-ally-ready-coop {
+  width: auto !important;
+  min-width: 188px !important;
+  padding: 0 14px !important;
+  font-size: 14px !important;
+}
+
 /* ============================================================================
  * 5. BATTLE WON / RESULT (Screen 5) — Override vw/vh for Mobile Fullscreen
  * ============================================================================ */
 body.gr-mobile-scaled .gr-battle-result-overlay {
-  padding-top: 38px !important;
-  padding-bottom: 58px !important;
+  padding-top: 56px !important;
+  padding-bottom: 52px !important;
 }
 
 body.gr-mobile-scaled .gr-result-big-title,
 body.gr-mobile-scaled .gr-result-header-title,
 body.gr-mobile-scaled .gr-battle-result-overlay > h1 {
-  font-size: 20px !important;
-  margin-bottom: 6px !important;
+  font-size: 19px !important;
+  margin-bottom: 5px !important;
 }
 
 body.gr-mobile-scaled .gr-result-columns {
   width: calc(var(--gr-logical-w, 1120px) - 120px) !important;
   max-width: 980px !important;
-  height: 390px !important;
-  max-height: 390px !important;
+  height: 374px !important;
+  max-height: 374px !important;
   gap: 10px !important;
 }
 
@@ -465,7 +554,7 @@ body.gr-mobile-scaled .gr-shop-heroes-row {
 }
 
 /* ============================================================================
- * 7. EVENTS, CAMPFIRE, CROSSROADS & MODALS — Override vw/vh for Mobile
+ * 7. EVENTS, CAMPFIRE, CROSSROADS, CO-OP & MODALS — Override vw/vh for Mobile
  * ============================================================================ */
 body.gr-mobile-scaled .gr-event-window,
 body.gr-mobile-scaled .gr-campfire-window {
@@ -479,8 +568,8 @@ body.gr-mobile-scaled .gr-campfire-window {
 }
 
 body.gr-mobile-scaled .gr-crossroads-heading {
-  top: 52px !important;
-  font-size: 20px !important;
+  top: 66px !important;
+  font-size: 18px !important;
 }
 
 body.gr-mobile-scaled .gr-crossroads-gate {
@@ -502,21 +591,269 @@ body.gr-mobile-scaled .relic-picker-modal {
   overflow-y: auto !important;
 }
 
-body.gr-mobile-scaled .modal-backdrop {
+/* Scale & Portrait-Rotate Body-Level Backdrops (.modal-backdrop & .gr-coop-backdrop) to match #app */
+body.gr-mobile-scaled .modal-backdrop,
+body.gr-mobile-scaled .gr-coop-backdrop {
   position: fixed !important;
-  inset: 0 !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: var(--gr-logical-w, 1120px) !important;
+  height: var(--gr-logical-h, 560px) !important;
+  padding: 8px calc(var(--gr-pad-right, 14px) + 8px) 8px calc(var(--gr-pad-left, 14px) + 8px) !important;
+  box-sizing: border-box !important;
+  transform-origin: 0 0 !important;
+  transform: translate3d(0px, 0px, 0) scale(var(--gr-ui-scale, 1)) !important;
+}
+
+body.gr-mobile-scaled.gr-portrait-rotated .modal-backdrop,
+body.gr-mobile-scaled.gr-portrait-rotated .gr-coop-backdrop {
+  transform: translate3d(var(--gr-vw, 390px), 0px, 0) rotate(90deg) scale(var(--gr-ui-scale, 1)) !important;
 }
 
 body.gr-mobile-scaled .modal-backdrop > .modal {
-  transform: scale(calc(var(--gr-ui-scale, 1) * 0.92)) !important;
-  transform-origin: center center !important;
-  max-height: 510px !important;
+  transform: none !important;
+  max-width: 780px !important;
+  max-height: calc(var(--gr-logical-h, 560px) - 20px) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+body.gr-mobile-scaled .modal-backdrop > .modal.modal-wide,
+body.gr-mobile-scaled .modal-backdrop > .modal.modal-compendium {
+  width: calc(var(--gr-logical-w, 1120px) - 36px) !important;
+  max-width: calc(var(--gr-logical-w, 1120px) - 36px) !important;
+  height: calc(var(--gr-logical-h, 560px) - 20px) !important;
+  max-height: calc(var(--gr-logical-h, 560px) - 20px) !important;
+}
+
+body.gr-mobile-scaled .modal-header {
+  padding: 8px 16px !important;
+  flex-shrink: 0 !important;
+}
+
+body.gr-mobile-scaled .modal-title {
+  font-size: 18px !important;
+}
+
+body.gr-mobile-scaled .modal-body {
+  padding: 10px 14px !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
   overflow-y: auto !important;
 }
 
+body.gr-mobile-scaled .modal-footer {
+  padding: 8px 16px !important;
+  flex-shrink: 0 !important;
+}
+
 body.gr-mobile-scaled .compendium-root {
-  width: 920px !important;
-  height: 460px !important;
+  width: 100% !important;
+  height: 416px !important;
+  max-height: 416px !important;
+  gap: 8px !important;
+}
+
+body.gr-mobile-scaled .comp-heroes-layout {
+  grid-template-columns: 185px 1fr !important;
+  gap: 10px !important;
+}
+
+body.gr-mobile-scaled .comp-hero-detail {
+  grid-template-columns: 165px 1fr !important;
+  padding: 10px !important;
+  gap: 12px !important;
+}
+
+body.gr-mobile-scaled .comp-fullbody {
+  max-height: 210px !important;
+  width: 100% !important;
+  object-fit: contain !important;
+}
+
+/* Co-Op Lobby, Waiting Room, Trade & Squad Windows on Mobile */
+body.gr-mobile-scaled .gr-coop-window {
+  width: calc(var(--gr-logical-w, 1120px) - 32px) !important;
+  max-width: 1060px !important;
+  max-height: calc(var(--gr-logical-h, 560px) - 18px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+body.gr-mobile-scaled .gr-coop-topbar {
+  padding: 8px 14px !important;
+  gap: 10px !important;
+  flex-shrink: 0 !important;
+}
+
+body.gr-mobile-scaled .gr-coop-title {
+  font-size: 17px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-subtitle {
+  font-size: 11px !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  line-height: 1.25 !important;
+}
+
+body.gr-mobile-scaled .gr-coop-body {
+  padding: 10px 14px 12px !important;
+  gap: 9px !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+}
+
+body.gr-mobile-scaled .gr-coop-rules-grid {
+  gap: 8px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-rule-card {
+  padding: 6px 10px !important;
+  gap: 8px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-rule-icon {
+  width: 32px !important;
+  height: 32px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-rule-title {
+  font-size: 11.5px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-rule-desc {
+  font-size: 10.5px !important;
+  line-height: 1.22 !important;
+}
+
+body.gr-mobile-scaled .gr-coop-panel {
+  padding: 9px 12px !important;
+  gap: 7px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-panel h3 {
+  font-size: 13px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-panel p {
+  font-size: 11.5px !important;
+  line-height: 1.28 !important;
+}
+
+body.gr-mobile-scaled .gr-coop-input {
+  height: 34px !important;
+  font-size: 13px !important;
+  padding: 0 10px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-code-input {
+  height: 36px !important;
+  font-size: 15px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-btn {
+  height: 36px !important;
+  padding: 0 12px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-btn-label {
+  font-size: 12px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-lobby-grid {
+  grid-template-columns: 260px 1fr !important;
+  gap: 10px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-qr-wrap {
+  padding: 5px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-qr-img {
+  width: 86px !important;
+  height: 86px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-code-big {
+  font-size: 20px !important;
+  padding: 5px 10px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-slot-card {
+  padding: 7px 10px !important;
+  gap: 10px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-medallion {
+  width: 44px !important;
+  height: 44px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-medallion-art {
+  width: 36px !important;
+  height: 36px !important;
+  margin: 4px !important;
+}
+
+/* Compact Top-Bar Co-Op HUD Widget on Mobile (Zero collision with Left Inv, Shop, Result, Speed Controls, or Hero Cards) */
+body.gr-mobile-scaled #gr-coop-hud-widget,
+body.gr-mobile-scaled .gr-coop-hud {
+  top: 4px !important;
+  left: var(--gr-pad-left, 14px) !important;
+  right: auto !important;
+  width: 210px !important;
+  padding: 4px 8px !important;
+  gap: 3px !important;
+  transform: scale(0.84) !important;
+  transform-origin: top left !important;
+  z-index: 45 !important;
+}
+
+body.gr-mobile-scaled #app:has(#gr-coop-hud-widget) .gr-core-relics {
+  left: calc(var(--gr-pad-left, 14px) + 184px) !important;
+  top: 8px !important;
+  max-width: 210px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-hud-top {
+  padding-bottom: 2px !important;
+  border-bottom: none !important;
+}
+
+body.gr-mobile-scaled .gr-coop-hud-squad {
+  display: none !important;
+}
+
+body.gr-mobile-scaled .gr-coop-mini-btn {
+  height: 22px !important;
+}
+
+body.gr-mobile-scaled .gr-coop-banner {
+  top: 58px !important;
+  padding: 6px 16px !important;
+  font-size: 11.5px !important;
+}
+
+/* Live Real-Time Unit Inspector on Mobile (Mounted inside #app) */
+body.gr-mobile-scaled #gr-live-unit-inspector,
+body.gr-mobile-scaled .gr-live-inspector {
+  top: 52px !important;
+  left: calc(var(--gr-pad-left, 14px) + 56px) !important;
+  width: 390px !important;
+  max-width: calc(var(--gr-logical-w, 1120px) - 120px) !important;
+  max-height: calc(var(--gr-logical-h, 560px) - 64px) !important;
+}
+
+body.gr-mobile-scaled .gr-live-inspector .gr-insp-body {
+  max-height: calc(var(--gr-logical-h, 560px) - 130px) !important;
+  padding: 8px 10px 10px !important;
+  gap: 7px !important;
 }
 
 body.gr-mobile-scaled #tooltip.tooltip {

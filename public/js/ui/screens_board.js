@@ -2443,17 +2443,23 @@ export function renderPlacement(ctx, vm) {
 
   attachPlacement3D(stoneCircleEl, boardW, boardH, units3dMeta);
 
+  const coopReadyInfo = ctx.coop?.getRoundReadyUI?.(vm) || null;
+  const fightBtnLabel = coopReadyInfo?.active ? coopReadyInfo.label : L('COMBAT', 'FIGHT');
+  const fightBtnExtraCls = coopReadyInfo?.active
+    ? `${coopReadyInfo.myReady ? 'is-waiting-coop' : ''} ${coopReadyInfo.partnerReady && !coopReadyInfo.myReady ? 'is-ally-ready-coop' : ''}`.trim()
+    : '';
+
   const fightBtn = buildPrimaryButton(
-    L('COMBAT', 'FIGHT'),
+    fightBtnLabel,
     () => {
       if (onBoardHeroes.length === 0 && benchHeroes.length > 0) {
         const free = findFirstFreeTile(W, playerRows, heroAt);
-        if (free) ctx.call('placeHero', benchHeroes[0].uid, free.col, free.row);
+        if (free) ctx.call('placeHero', benchHeroes[0].uid, free.row != null ? free.col : free.col, free.row);
       }
       audio.playSfx('ui.fight');
       ctx.startBattleFlow();
     },
-    'gr-fight-btn-placement btn-fight',
+    `gr-fight-btn-placement btn-fight ${fightBtnExtraCls}`.trim(),
   );
 
   const bgComposite = resolveStageComposite(vm.stage, vm.act);

@@ -30,16 +30,23 @@ const STORAGE_PLAYER_ID = 'guildrun_coop_pid_v1';
 const STORAGE_PLAYER_NAME = 'guildrun_coop_name_v1';
 
 function getOrCreatePlayerId() {
-  try {
-    let id = localStorage.getItem(STORAGE_PLAYER_ID);
-    if (!id) {
-      id = 'p_' + Math.random().toString(36).slice(2, 10);
-      localStorage.setItem(STORAGE_PLAYER_ID, id);
-    }
-    return id;
-  } catch {
-    return 'p_' + Math.random().toString(36).slice(2, 10);
+  if (typeof window !== 'undefined' && window.__guildrunCoopTabPid) {
+    return window.__guildrunCoopTabPid;
   }
+  let id = 'p_' + Math.random().toString(36).slice(2, 8) + '_' + Date.now().toString(36).slice(-4);
+  try {
+    if (typeof sessionStorage !== 'undefined') {
+      const existing = sessionStorage.getItem(STORAGE_PLAYER_ID);
+      if (existing && !window.opener) {
+        id = existing;
+      }
+      sessionStorage.setItem(STORAGE_PLAYER_ID, id);
+    }
+  } catch {}
+  if (typeof window !== 'undefined') {
+    window.__guildrunCoopTabPid = id;
+  }
+  return id;
 }
 
 function getSavedPlayerName() {
@@ -875,7 +882,7 @@ function buildHudMiniBtn(label, iconPath, onClick, extraCls = '') {
   );
 }
 
-export function showCoopBanner(text, durationMs = 3400, iconSrc = `${MAP}/FightRoom.png`) {
+export function showCoopBanner(text, durationMs = 2800, iconSrc = `${MAP}/FightRoom.png`) {
   ensureCoopStyles();
   const old = document.querySelector('.gr-coop-banner');
   if (old) old.remove();
@@ -885,7 +892,7 @@ export function showCoopBanner(text, durationMs = 3400, iconSrc = `${MAP}/FightR
     img(iconSrc, { alt: '' }),
     h('span', null, text)
   );
-  document.body.appendChild(el);
+  (document.getElementById('app') || document.body).appendChild(el);
   setTimeout(() => {
     try { el.remove(); } catch {}
   }, durationMs);
@@ -917,6 +924,9 @@ export function createCoopController(ctx) {
     bc: null,
     peer: null,
     p2pConn: null,
+    myRoundReady: false,
+    myReadyFloor: 0,
+    lastLaunchedRoundFloor: 0,
   };
 
   let peerJsPromise = null;
@@ -938,12 +948,39 @@ export function createCoopController(ctx) {
     return peerJsPromise;
   }
 
+  const seenP2PPktIds = new Set();
+
   function broadcastP2P(msg) {
+    const pktId = 'pkt_' + Math.random().toString(36).slice(2, 10) + '_' + Date.now().toString(36);
+    seenP2PPktIds.add(pktId);
+    const wrapped = { ...msg, __grPktId: pktId };
     try {
-      if (state.bc) state.bc.postMessage(msg);
+      if (state.bc) state.bc.postMessage(wrapped);
+    } catch {}
+    let sentViaRtc = false;
+    try {
+      if (state.p2pConn && state.p2pConn.open) {
+        state.p2pConn.send(wrapped);
+        sentViaRtc = true;
+      }
     } catch {}
     try {
-      if (state.p2pConn && state.p2pConn.open) state.p2pConn.send(msg);
+      if (Array.isArray(state.p2pConns)) {
+        for (const c of state.p2pConns) {
+          if (c && c !== state.p2pConn && c.open) {
+            c.send(wrapped);
+            sentViaRtc = true;
+          }
+        }
+      }
+    } catch {}
+    try {
+      if (!sentViaRtc && state.peer && state.peer.open && state.remotePeerId) {
+        state.peer.connect(state.remotePeerId, {
+          reliable: true,
+          metadata: { __grPktId: pktId, pkt: wrapped },
+        });
+      }
     } catch {}
   }
 
@@ -954,28 +991,49 @@ export function createCoopController(ctx) {
     room.sharedRelics = room.sharedRelics || [];
     const pid = full.playerId || state.playerId;
     const sender = room.players[pid];
+    const shouldBroadcast = state.isHost || !fromRemote;
 
     switch (full.type) {
       case 'JOIN_REQUEST': {
-        if (!room.players[full.playerId]) {
-          room.players[full.playerId] = {
-            id: full.playerId,
-            name: full.playerName || L('Coéquipier', 'Teammate'),
-            slot: Object.keys(room.players).length + 1,
-            isHost: false,
-            isBot: false,
-            ready: true,
-            floor: 1,
-            act: 1,
-            shards: 15,
-            lives: 1,
-            phase: 'Lobby',
-            board: [],
-            relics: [],
-          };
+        if (full.playerId && full.playerId !== state.playerId) {
+          delete room.players.host_placeholder;
+          const existingNonHost = Object.keys(room.players).filter((k) => !room.players[k].isHost);
+          if (!room.players[full.playerId]) {
+            const botKey = existingNonHost.find((k) => room.players[k]?.isBot);
+            if (botKey) delete room.players[botKey];
+            room.players[full.playerId] = {
+              id: full.playerId,
+              name: full.playerName || L('Coéquipier', 'Teammate'),
+              slot: 2,
+              isHost: false,
+              isBot: false,
+              ready: false,
+              roundReady: false,
+              readyFloor: 0,
+              floor: 1,
+              act: 1,
+              shards: 15,
+              lives: 1,
+              phase: 'Lobby',
+              board: [],
+              relics: [],
+            };
+          } else if (full.playerName) {
+            room.players[full.playerId].name = full.playerName;
+          }
+          applyRoomSnapshot(room);
+          if (state.isHost) {
+            broadcastP2P({ type: 'ROOM_SYNC', room });
+          }
+        }
+        break;
+      }
+      case 'LOBBY_READY': {
+        if (sender) {
+          sender.ready = full.ready !== undefined ? !!full.ready : !sender.ready;
         }
         applyRoomSnapshot(room);
-        broadcastP2P({ type: 'ROOM_SYNC', room });
+        if (shouldBroadcast) broadcastP2P({ type: 'ROOM_SYNC', room });
         break;
       }
       case 'ADD_BOT': {
@@ -987,6 +1045,8 @@ export function createCoopController(ctx) {
           isHost: false,
           isBot: true,
           ready: true,
+          roundReady: true,
+          readyFloor: 1,
           floor: 1,
           act: 1,
           shards: 15,
@@ -996,21 +1056,68 @@ export function createCoopController(ctx) {
           relics: [],
         };
         applyRoomSnapshot(room);
-        if (!fromRemote) broadcastP2P({ type: 'ROOM_SYNC', room });
+        if (shouldBroadcast) broadcastP2P({ type: 'ROOM_SYNC', room });
         break;
       }
       case 'START_COOP_RUN': {
         room.status = 'running';
+        room.roundStartedFloor = 0;
         room.difficulty = full.difficulty ?? room.difficulty ?? 6;
         room.seed = full.seed || room.seed || (Date.now() & 0x7fffffff);
+        for (const p of Object.values(room.players)) {
+          p.roundReady = !!p.isBot;
+          p.readyFloor = p.isBot ? 1 : 0;
+        }
         applyRoomSnapshot(room);
-        if (!fromRemote) broadcastP2P({ type: 'COOP_RUN_STARTED', room });
+        if (shouldBroadcast) broadcastP2P({ type: 'COOP_RUN_STARTED', room });
+        break;
+      }
+      case 'ROUND_READY': {
+        const targetFloor = Number(full.floor || sender?.floor || 1);
+        const isReady = full.ready !== undefined ? !!full.ready : true;
+        if (sender) {
+          sender.roundReady = isReady;
+          sender.readyFloor = targetFloor;
+          sender.floor = targetFloor;
+        }
+        const playersList = Object.values(room.players || {});
+        for (const p of playersList) {
+          if (p.isBot) {
+            p.roundReady = true;
+            p.readyFloor = targetFloor;
+            p.floor = targetFloor;
+          }
+        }
+        const allReady = playersList.length >= 2 && playersList.every((p) => p.isBot || (p.roundReady && Number(p.readyFloor) === targetFloor));
+        if (allReady) {
+          room.roundStartedFloor = targetFloor;
+          for (const p of playersList) p.roundReady = false;
+          const startEv = { type: 'START_ROUND_NOW', floor: targetFloor, room };
+          if (shouldBroadcast) broadcastP2P(startEv);
+          handleIncomingEvent(startEv);
+        } else {
+          const syncEv = {
+            type: 'ROUND_READY_SYNC',
+            fromId: pid,
+            fromName: sender?.name || state.playerName,
+            ready: isReady,
+            floor: targetFloor,
+            room,
+          };
+          if (shouldBroadcast) broadcastP2P(syncEv);
+          handleIncomingEvent(syncEv);
+        }
         break;
       }
       case 'STATE_UPDATE': {
         if (sender) {
           sender.phase = full.phase ?? sender.phase;
-          sender.floor = full.floor ?? sender.floor;
+          if (full.floor != null) {
+            if (Number(full.floor) !== Number(sender.readyFloor)) {
+              sender.roundReady = false;
+            }
+            sender.floor = full.floor;
+          }
           sender.act = full.act ?? sender.act;
           sender.shards = full.shards ?? sender.shards;
           sender.lives = full.lives ?? sender.lives;
@@ -1019,7 +1126,7 @@ export function createCoopController(ctx) {
           sender.battleState = full.battleState ?? sender.battleState;
         }
         applyRoomSnapshot(room);
-        if (!fromRemote) broadcastP2P({ type: 'PARTNER_STATE', room });
+        if (shouldBroadcast) broadcastP2P({ type: 'PARTNER_STATE', room });
         break;
       }
       case 'RELIC_ACQUIRED': {
@@ -1037,7 +1144,7 @@ export function createCoopController(ctx) {
             room.sharedRelics.push(entry);
             const ev = { type: 'SHARED_RELIC_ADDED', entry, sharedRelics: room.sharedRelics };
             handleIncomingEvent(ev);
-            if (!fromRemote) broadcastP2P(ev);
+            if (shouldBroadcast) broadcastP2P(ev);
           }
         }
         break;
@@ -1076,12 +1183,14 @@ export function createCoopController(ctx) {
           votes: room.crossroadsVotes,
         };
         handleIncomingEvent(ev);
-        if (!fromRemote) broadcastP2P(ev);
+        if (shouldBroadcast) broadcastP2P(ev);
         break;
       }
     }
     try {
-      localStorage.setItem('guildrun_coop_room_' + room.code, JSON.stringify(room));
+      if (!room.players?.host_placeholder) {
+        localStorage.setItem('guildrun_coop_room_' + room.code, JSON.stringify(room));
+      }
     } catch {}
     return { ok: true, room };
   }
@@ -1106,10 +1215,10 @@ export function createCoopController(ctx) {
       playerId: state.playerId,
     };
     if (state.serverless) {
-      if (!state.isHost && state.p2pConn && state.p2pConn.open) {
+      if (!state.isHost) {
         broadcastP2P({ type: 'P2P_ACTION', action: full });
       }
-      const res = applyServerlessAction(full, false);
+      const res = applyServerlessAction(full, !state.isHost);
       return Promise.resolve(res);
     }
     if (state.ws && state.ws.readyState === 1) {
@@ -1132,7 +1241,10 @@ export function createCoopController(ctx) {
       })
       .catch(() => {
         state.serverless = true;
-        return applyServerlessAction(full, false);
+        if (!state.isHost) {
+          broadcastP2P({ type: 'P2P_ACTION', action: full });
+        }
+        return applyServerlessAction(full, !state.isHost);
       });
   }
 
@@ -1163,6 +1275,10 @@ export function createCoopController(ctx) {
   function syncLocalStateToRoom(extraBattle = null) {
     if (!state.active || !state.code || !ctx.vm) return;
     const vm = ctx.vm;
+    const curFloor = vm.floor || 1;
+    if (state.myReadyFloor && state.myReadyFloor !== curFloor) {
+      state.myRoundReady = false;
+    }
     checkAndBroadcastNewLocalRelics(vm);
     const boardHeroes = (vm.board || []).map((u) => ({
       uid: u.uid,
@@ -1176,13 +1292,13 @@ export function createCoopController(ctx) {
     sendAction({
       type: 'STATE_UPDATE',
       phase: vm.phase,
-      floor: vm.floor || 1,
+      floor: curFloor,
       act: vm.act || 1,
       shards: vm.shards || 0,
       lives: vm.lives ?? 1,
       board: boardHeroes,
       relics: (vm.relics || []).map((r) => Number(r.relicId ?? r.id ?? r)).filter(Number.isFinite),
-      battleState: extraBattle || { status: vm.phase === 'resolution' ? 'fighting' : 'idle', floor: vm.floor || 1 },
+      battleState: extraBattle || { status: vm.phase === 'resolution' ? 'fighting' : 'idle', floor: curFloor },
     });
     if (state.partner?.isBot) {
       simulateBotPartnerSync();
@@ -1190,14 +1306,180 @@ export function createCoopController(ctx) {
     refreshHudWidget();
   }
 
+  function launchSynchronizedRound(floor) {
+    const curFloor = Number(floor || ctx.vm?.floor || 1);
+    if (!state.active || state.lastLaunchedRoundFloor === curFloor) return;
+    state.lastLaunchedRoundFloor = curFloor;
+    state.myRoundReady = false;
+    if (state.partner) {
+      state.partner.roundReady = false;
+    }
+    audio.playSfx('ui.fight');
+    showCoopBanner(
+      L(
+        `ESCOUADE PRÊTE (2/2) — LANCEMENT DU ROUND (ÉTAGE ${curFloor})`,
+        `SQUAD READY (2/2) — LAUNCHING ROUND (FLOOR ${curFloor})`,
+      ),
+      2200,
+      `${MAP}/FightRoom.png`,
+    );
+    refreshHudWidget();
+    ctx.startBattleFlow?.({ fromCoopSync: true });
+  }
+
+  function requestRoundStart() {
+    if (!state.active) return false;
+    const curFloor = Number(ctx.vm?.floor || 1);
+
+    // Toggle off if already waiting on this floor
+    if (state.myRoundReady && state.myReadyFloor === curFloor) {
+      state.myRoundReady = false;
+      sendAction({ type: 'ROUND_READY', ready: false, floor: curFloor });
+      toast(L('Attente annulée — tu peux ajuster ton placement', 'Wait cancelled — you can adjust your board'), 'info');
+      refreshHudWidget();
+      (ctx.rerender || ctx.render)?.call(ctx);
+      return true;
+    }
+
+    state.myRoundReady = true;
+    state.myReadyFloor = curFloor;
+
+    if (state.partner?.isBot) {
+      state.partner.roundReady = true;
+      state.partner.readyFloor = curFloor;
+      refreshHudWidget();
+      launchSynchronizedRound(curFloor);
+      return true;
+    }
+
+    const partnerAlreadyReady = Boolean(
+      state.partner?.roundReady && Number(state.partner?.readyFloor || state.partner?.floor) === curFloor
+    );
+
+    sendAction({ type: 'ROUND_READY', ready: true, floor: curFloor });
+
+    if (partnerAlreadyReady) {
+      launchSynchronizedRound(curFloor);
+    } else {
+      const allyName = state.partner?.name || L('ton allié', 'your ally');
+      toast(
+        L(
+          `Prêt (1/2) — En attente de ${allyName} pour lancer le round...`,
+          `Ready (1/2) — Waiting for ${allyName} to launch the round...`,
+        ),
+        'info',
+      );
+      refreshHudWidget();
+      (ctx.rerender || ctx.render)?.call(ctx);
+    }
+    return true;
+  }
+
+  function getRoundReadyUI(vm) {
+    const curFloor = Number(vm?.floor || ctx.vm?.floor || 1);
+    const isCoop = Boolean(state.active);
+    const myReady = Boolean(isCoop && state.myRoundReady && state.myReadyFloor === curFloor);
+    const partnerReady = Boolean(
+      isCoop && (state.partner?.isBot || (state.partner?.roundReady && Number(state.partner?.readyFloor || state.partner?.floor) === curFloor))
+    );
+    const readyCount = (myReady ? 1 : 0) + (partnerReady ? 1 : 0);
+    let buttonLabel = L('COMBAT', 'FIGHT');
+    if (isCoop) {
+      if (myReady && !partnerReady) {
+        buttonLabel = L('ATTENTE ALLIÉ (1/2)', 'WAITING ALLY (1/2)');
+      } else if (!myReady && partnerReady) {
+        buttonLabel = L('COMBAT (ALLIÉ PRÊT)', 'FIGHT (ALLY READY)');
+      } else {
+        buttonLabel = L('COMBAT', 'FIGHT');
+      }
+    }
+    return { active: isCoop, isCoop, myReady, partnerReady, readyCount, label: buttonLabel, buttonLabel };
+  }
+
   function handleIncomingEvent(ev) {
     if (!ev || !ev.type) return;
     switch (ev.type) {
+      case 'HOST_HELLO':
       case 'ROOM_SYNC':
       case 'PLAYER_JOINED':
       case 'PARTNER_STATE':
       case 'COOP_RUN_STARTED': {
+        if (ev.room) {
+          if (!state.isHost && state.serverless && ev.room.players) {
+            if (ev.room.players.host_placeholder && state.room?.players && !state.room.players.host_placeholder) {
+              break;
+            }
+            if (!ev.room.players[state.playerId]) {
+              broadcastP2P({
+                type: 'JOIN_REQUEST',
+                code: state.code || ev.room.code,
+                playerId: state.playerId,
+                playerName: state.playerName,
+              });
+              if (state.room?.players?.[state.playerId]) {
+                const merged = {
+                  ...ev.room,
+                  players: {
+                    ...ev.room.players,
+                    [state.playerId]: state.room.players[state.playerId],
+                  },
+                };
+                delete merged.players.host_placeholder;
+                applyRoomSnapshot(merged);
+              }
+              break;
+            }
+            state.hostConfirmedJoin = true;
+          }
+          applyRoomSnapshot(ev.room);
+        }
+        break;
+      }
+      case 'ROUND_READY_SYNC': {
         if (ev.room) applyRoomSnapshot(ev.room);
+        const curFloor = Number(ctx.vm?.floor || 1);
+        if (ev.fromId && ev.fromId !== state.playerId) {
+          if (state.partner) {
+            state.partner.roundReady = !!ev.ready;
+            state.partner.readyFloor = Number(ev.floor || curFloor);
+          }
+          if (ev.ready) {
+            toast(
+              L(
+                `${ev.fromName || 'Ton allié'} est PRÊT pour le round (1/2) !`,
+                `${ev.fromName || 'Your ally'} is READY for the round (1/2)!`,
+              ),
+              'info',
+            );
+            audio.playSfx('ui.click');
+          } else {
+            toast(
+              L(
+                `${ev.fromName || 'Ton allié'} ajuste encore son placement...`,
+                `${ev.fromName || 'Your ally'} is still adjusting their placement...`,
+              ),
+              'info',
+            );
+          }
+        }
+        if (
+          state.myRoundReady &&
+          state.myReadyFloor === curFloor &&
+          state.partner?.roundReady &&
+          Number(state.partner?.readyFloor) === curFloor
+        ) {
+          launchSynchronizedRound(curFloor);
+        } else {
+          refreshHudWidget();
+          if (ctx.vm?.phase === 'placement' || ctx.vm?.phase === 'rankup') {
+            (ctx.rerender || ctx.render)?.call(ctx);
+          }
+        }
+        break;
+      }
+      case 'START_ROUND_NOW': {
+        if (ev.room) applyRoomSnapshot(ev.room);
+        launchSynchronizedRound(Number(ev.floor || ctx.vm?.floor || 1));
         break;
       }
       case 'SHARED_RELIC_ADDED': {
@@ -1259,7 +1541,7 @@ export function createCoopController(ctx) {
         const fromName = ev.fromName || state.partner?.name || L('Allié', 'Ally');
         if (!gift || !ctx.run) break;
         ctx.run.coopReceiveGift(gift);
-        ctx.syncState();
+        ctx.syncState?.();
         audio.playSfx('buy');
         const d = getGameData();
         if (gift.kind === 'shards') {
@@ -1288,7 +1570,7 @@ export function createCoopController(ctx) {
             heroPortrait(gift.heroId, 'round', gift.rank || 1),
           );
         }
-        ctx.render();
+        (ctx.rerender || ctx.render)?.call(ctx);
         break;
       }
       case 'CROSSROADS_VOTES': {
@@ -1316,6 +1598,7 @@ export function createCoopController(ctx) {
   function applyRoomSnapshot(room) {
     if (!room) return;
     const wasRunning = state.room?.status === 'running';
+    const prevPartnerReady = Boolean(state.partner?.roundReady);
     state.room = room;
     state.code = room.code;
     state.partner = getPartnerFromRoom(room);
@@ -1340,12 +1623,35 @@ export function createCoopController(ctx) {
       }
       startSynchronizedCoopRun(room.difficulty, room.seed);
     }
+    const curFloor = Number(ctx.vm?.floor || 1);
+    if (
+      state.active &&
+      state.myRoundReady &&
+      state.myReadyFloor === curFloor &&
+      state.lastLaunchedRoundFloor !== curFloor &&
+      (Number(room.roundStartedFloor) === curFloor ||
+        (state.partner?.roundReady && Number(state.partner?.readyFloor) === curFloor))
+    ) {
+      launchSynchronizedRound(curFloor);
+      return;
+    }
+    if (
+      state.active &&
+      Boolean(state.partner?.roundReady) !== prevPartnerReady &&
+      (ctx.vm?.phase === 'placement' || ctx.vm?.phase === 'rankup')
+    ) {
+      (ctx.rerender || ctx.render)?.call(ctx);
+    }
     if (state.lobbyRefreshFn) state.lobbyRefreshFn();
     refreshHudWidget();
   }
 
   function handleP2PPacket(pkt) {
     if (!pkt || !pkt.type) return;
+    if (pkt.__grPktId) {
+      if (seenP2PPktIds.has(pkt.__grPktId)) return;
+      seenP2PPktIds.add(pkt.__grPktId);
+    }
     if (pkt.type === 'P2P_ACTION' && pkt.action) {
       applyServerlessAction(pkt.action, true);
       return;
@@ -1367,6 +1673,24 @@ export function createCoopController(ctx) {
       }
     } catch {}
 
+    try {
+      if (state.storageListener) {
+        window.removeEventListener('storage', state.storageListener);
+      }
+      state.storageListener = (e) => {
+        if (!state.serverless || state.code !== code) return;
+        if (e.key === 'guildrun_coop_room_' + code && e.newValue) {
+          try {
+            const updatedRoom = JSON.parse(e.newValue);
+            if (updatedRoom && !updatedRoom.players?.host_placeholder) {
+              applyRoomSnapshot(updatedRoom);
+            }
+          } catch {}
+        }
+      };
+      window.addEventListener('storage', state.storageListener);
+    } catch {}
+
     loadPeerJs().then((PeerCls) => {
       if (!PeerCls || state.code !== code) return;
       try {
@@ -1374,32 +1698,42 @@ export function createCoopController(ctx) {
           try { state.peer.destroy(); } catch {}
           state.peer = null;
         }
+        state.p2pConns = [];
         const hostPeerId = `guildrun-coop-v1-${code.toUpperCase()}`;
+        const onIncomingPeerConn = (conn) => {
+          if (!conn) return;
+          if (conn.peer) state.remotePeerId = conn.peer;
+          if (!state.p2pConn || !state.p2pConn.open) state.p2pConn = conn;
+          if (!state.p2pConns.includes(conn)) state.p2pConns.push(conn);
+          conn.on('data', (data) => handleP2PPacket(data));
+          conn.on('open', () => {
+            state.p2pConn = conn;
+            if (isHost && state.room) {
+              conn.send({ type: 'HOST_HELLO', room: state.room });
+            }
+          });
+          if (conn.metadata && conn.metadata.pkt) {
+            handleP2PPacket(conn.metadata.pkt);
+          }
+        };
+
         if (isHost) {
+          state.remotePeerId = null;
           const peer = new PeerCls(hostPeerId);
           state.peer = peer;
-          peer.on('connection', (conn) => {
-            state.p2pConn = conn;
-            conn.on('data', (data) => handleP2PPacket(data));
-            conn.on('open', () => {
-              if (state.room) conn.send({ type: 'ROOM_SYNC', room: state.room });
-            });
-          });
+          peer.on('connection', onIncomingPeerConn);
         } else {
+          state.remotePeerId = hostPeerId;
           const peer = new PeerCls();
           state.peer = peer;
+          peer.on('connection', onIncomingPeerConn);
           peer.on('open', () => {
-            const conn = peer.connect(hostPeerId, { reliable: true });
-            state.p2pConn = conn;
-            conn.on('open', () => {
-              conn.send({
-                type: 'JOIN_REQUEST',
-                code,
-                playerId: state.playerId,
-                playerName: state.playerName,
-              });
+            broadcastP2P({
+              type: 'JOIN_REQUEST',
+              code,
+              playerId: state.playerId,
+              playerName: state.playerName,
             });
-            conn.on('data', (data) => handleP2PPacket(data));
           });
         }
       } catch {}
@@ -1418,6 +1752,7 @@ export function createCoopController(ctx) {
       status: 'lobby',
       difficulty: Number(difficulty ?? 6),
       seed: Date.now() & 0x7fffffff,
+      roundStartedFloor: 0,
       sharedRelics: [],
       crossroadsVotes: {},
       players: {
@@ -1428,6 +1763,8 @@ export function createCoopController(ctx) {
           isHost: true,
           isBot: false,
           ready: true,
+          roundReady: false,
+          readyFloor: 0,
           floor: 1,
           act: 1,
           shards: 15,
@@ -1446,6 +1783,7 @@ export function createCoopController(ctx) {
 
   function joinServerlessRoom(cleanCode) {
     state.serverless = true;
+    state.hostConfirmedJoin = false;
     let room = null;
     try {
       const saved = localStorage.getItem('guildrun_coop_room_' + cleanCode);
@@ -1457,6 +1795,7 @@ export function createCoopController(ctx) {
         status: 'lobby',
         difficulty: 6,
         seed: Date.now() & 0x7fffffff,
+        roundStartedFloor: 0,
         sharedRelics: [],
         crossroadsVotes: {},
         players: {
@@ -1467,6 +1806,8 @@ export function createCoopController(ctx) {
             isHost: true,
             isBot: false,
             ready: true,
+            roundReady: false,
+            readyFloor: 0,
             floor: 1,
             act: 1,
             shards: 15,
@@ -1477,6 +1818,8 @@ export function createCoopController(ctx) {
           },
         },
       };
+    } else {
+      delete room.players.host_placeholder;
     }
     room.players[state.playerId] = {
       id: state.playerId,
@@ -1484,7 +1827,9 @@ export function createCoopController(ctx) {
       slot: 2,
       isHost: false,
       isBot: false,
-      ready: true,
+      ready: false,
+      roundReady: false,
+      readyFloor: 0,
       floor: 1,
       act: 1,
       shards: 15,
@@ -1493,6 +1838,11 @@ export function createCoopController(ctx) {
       board: [],
       relics: [],
     };
+    if (!room.players.host_placeholder) {
+      try {
+        localStorage.setItem('guildrun_coop_room_' + cleanCode, JSON.stringify(room));
+      } catch {}
+    }
     return { ok: true, room };
   }
 
@@ -1505,12 +1855,16 @@ export function createCoopController(ctx) {
       clearInterval(state.pollTimer);
       state.pollTimer = null;
     }
+    if (state.joinRetryTimer) {
+      clearInterval(state.joinRetryTimer);
+      state.joinRetryTimer = null;
+    }
 
     setupServerlessRealtime(code, state.isHost);
 
     if (state.serverless) {
-      setTimeout(() => {
-        if (!state.isHost) {
+      const sendJoin = () => {
+        if (!state.isHost && state.code === code) {
           broadcastP2P({
             type: 'JOIN_REQUEST',
             code,
@@ -1518,7 +1872,23 @@ export function createCoopController(ctx) {
             playerName: state.playerName,
           });
         }
-      }, 200);
+      };
+      setTimeout(sendJoin, 80);
+      if (!state.isHost) {
+        state.joinRetryTimer = setInterval(() => {
+          if (state.code !== code || !state.serverless || state.isHost) {
+            clearInterval(state.joinRetryTimer);
+            state.joinRetryTimer = null;
+            return;
+          }
+          if (state.reconnectPeerFn && (!state.p2pConn || !state.p2pConn.open)) {
+            state.reconnectPeerFn();
+          }
+          if (!state.hostConfirmedJoin || state.room?.players?.host_placeholder || !state.room?.players?.[state.playerId]) {
+            sendJoin();
+          }
+        }, 700);
+      }
       return;
     }
 
@@ -1549,12 +1919,15 @@ export function createCoopController(ctx) {
           if (res?.ok && res.room) applyRoomSnapshot(res.room);
         })
         .catch(() => {});
-    }, 1500);
+    }, 1000);
   }
 
   async function startSynchronizedCoopRun(difficulty = 6, baseSeed = Date.now()) {
     if (state.active) return;
     state.active = true;
+    state.myRoundReady = false;
+    state.myReadyFloor = 0;
+    state.lastLaunchedRoundFloor = 0;
     const mySlot = state.room?.players?.[state.playerId]?.slot || (state.isHost ? 1 : 2);
     const mySeed = (Number(baseSeed) ^ (mySlot === 1 ? 0x13579bdf : 0x2468ace0)) >>> 0;
     await ctx.startNewRun({ difficulty: Number(difficulty ?? 6), seed: mySeed, skipIntroComic: true });
@@ -1610,6 +1983,8 @@ export function createCoopController(ctx) {
     state.partner.floor = botFloor;
     state.partner.act = vm.act || 1;
     state.partner.phase = vm.phase;
+    state.partner.roundReady = true;
+    state.partner.readyFloor = botFloor;
     state.partner.shards = 12 + (botFloor * 3) % 25;
     state.partner.board = botHeroes;
 
@@ -1629,6 +2004,8 @@ export function createCoopController(ctx) {
   function onBattleStart(battle) {
     if (!state.active || !battle) return;
     const curFloor = ctx.vm?.floor ?? 1;
+    state.myRoundReady = false;
+    state.lastLaunchedRoundFloor = curFloor;
     syncLocalStateToRoom({ status: 'fighting', floor: curFloor });
 
     if (state.pendingReinforcements && state.spawnedReinforcementsThisFloor !== curFloor) {
@@ -2193,22 +2570,28 @@ export function createCoopController(ctx) {
 
     const app = document.getElementById('app') || document.body;
     const p = state.partner;
+    const curFloor = Number(ctx.vm?.floor || 1);
     const partnerName = p ? p.name : L('En attente...', 'Waiting...');
-    const partnerFloor = p?.floor || ctx.vm?.floor || 1;
+    const partnerFloor = p?.floor || curFloor;
     const rawPhase = String(p?.phase || 'Placement');
     const isBattle = /battle|resolution|fighting/i.test(rawPhase);
+    const partnerRoundReady = Boolean(p?.isBot || (p?.roundReady && Number(p?.readyFloor || p?.floor) === curFloor));
+    const myRoundReady = Boolean(state.myRoundReady && state.myReadyFloor === curFloor);
     const phaseLabel = isBattle
       ? L('EN COMBAT', 'IN BATTLE')
-      : /shop/i.test(rawPhase)
-        ? L('BOUTIQUE', 'SHOP')
-        : L('PRÉPARATION', 'PREPARATION');
+      : partnerRoundReady
+        ? L('PRÊT ✓', 'READY ✓')
+        : /shop/i.test(rawPhase)
+          ? L('BOUTIQUE', 'SHOP')
+          : L('PRÉPARATION', 'PREPARATION');
     const partnerShards = p?.shards ?? 15;
     const partnerBoard = p?.board || [];
 
     const portraitsRow = h('div', { class: 'gr-coop-hud-Portraits' });
     if (partnerBoard.length === 0) {
       portraitsRow.appendChild(
-        h('span', { style: 'font-size: 10.5px; color: #94a3b8;' }, L('Déploiement...', 'Deploying...'))
+        h('span', { class: 'gr-coop-hud-deploy-lbl', style: 'font-size: 10.5px; color: #94a3b8;' },
+          myRoundReady ? L('Attente allié (1/2)...', 'Waiting ally (1/2)...') : L('Déploiement...', 'Deploying...'))
       );
     } else {
       for (const u of partnerBoard.slice(0, 4)) {
@@ -2227,7 +2610,7 @@ export function createCoopController(ctx) {
 
     const widget = h(
       'aside',
-      { id: 'gr-coop-hud-widget', class: 'gr-coop-hud' },
+      { id: 'gr-coop-hud-widget', class: `gr-coop-hud ${myRoundReady ? 'is-waiting-ally' : ''} ${partnerRoundReady ? 'is-ally-ready' : ''}`.trim() },
       h(
         'div',
         { class: 'gr-coop-hud-top' },
@@ -2247,7 +2630,7 @@ export function createCoopController(ctx) {
       h(
         'div',
         { class: 'gr-coop-hud-meta' },
-        h('span', null, L(`ÉTAGE ${partnerFloor} · #${state.code || 'COOP'}`, `FLOOR ${partnerFloor} · #${state.code || 'COOP'}`)),
+        h('span', { class: 'gr-coop-hud-floor-lbl' }, L(`ÉTAGE ${partnerFloor} · #${state.code || 'COOP'}`, `FLOOR ${partnerFloor} · #${state.code || 'COOP'}`)),
         h('span', { class: `gr-coop-hud-phase ${isBattle ? 'is-battle' : ''}` }, phaseLabel)
       ),
       h(
@@ -2285,24 +2668,24 @@ export function createCoopController(ctx) {
         if (dragPayload.kind === 'item') {
           const res = ctx.run.coopSendItem(dragPayload.uid ?? dragPayload.itemId);
           if (res?.ok) {
-            ctx.syncState();
+            ctx.syncState?.();
             sendAction({ type: 'TRADE_SEND', gift: { kind: 'item', itemId: res.itemId } });
             const itName = txt(d?.items?.[res.itemId]?.name) || `${L('Objet', 'Item')} #${res.itemId}`;
             toast(L(`${itName} envoyé à ${partnerName}`, `${itName} sent to ${partnerName}`), 'info');
             audio.playSfx('equip');
             syncLocalStateToRoom();
-            ctx.render();
+            (ctx.rerender || ctx.render)?.call(ctx);
           }
         } else if (dragPayload.kind === 'hero') {
           const res = ctx.run.coopSendHero(dragPayload.uid);
           if (res?.ok) {
-            ctx.syncState();
+            ctx.syncState?.();
             sendAction({ type: 'TRADE_SEND', gift: { kind: 'hero', heroId: res.hero.heroId, rank: res.hero.rank } });
             const hName = txt(d?.heroes?.[res.hero.heroId]?.name) || L('Héros', 'Hero');
             toast(L(`${hName} transféré à ${partnerName}`, `${hName} transferred to ${partnerName}`), 'info');
             audio.playSfx('rankUp');
             syncLocalStateToRoom();
-            ctx.render();
+            (ctx.rerender || ctx.render)?.call(ctx);
           } else {
             toast(L('Garde au moins 1 héros dans ton escouade', 'Keep at least 1 hero in your squad'), 'warn');
           }
@@ -2340,7 +2723,7 @@ export function createCoopController(ctx) {
 
     const nameInput = h('input', {
       type: 'text',
-      class: 'gr-coop-input',
+      class: 'gr-coop-input gr-coop-name-input',
       value: state.playerName,
       placeholder: L('Pseudo...', 'Nickname...'),
       style: 'width: 170px;',
@@ -2355,7 +2738,7 @@ export function createCoopController(ctx) {
 
       const rulesRows = h(
         'div',
-        { style: 'display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;' },
+        { class: 'gr-coop-rules-grid', style: 'display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;' },
         h(
           'div',
           { class: 'gr-coop-rule-row' },
@@ -2363,8 +2746,8 @@ export function createCoopController(ctx) {
           h(
             'div',
             null,
-            h('div', { style: 'font-weight: 700; color: #eef5f2; font-size: 11.5px; text-transform: uppercase;' }, L('RENFORTS DE FAILLE', 'RIFT REINFORCEMENTS')),
-            h('div', { style: 'font-size: 11px; color: #94a3b8;' }, L('Tes survivants rejoignent le combat de ton allié en direct.', "Your survivors join your ally's battle live."))
+            h('div', { class: 'gr-coop-rule-title', style: 'font-weight: 700; color: #eef5f2; font-size: 11.5px; text-transform: uppercase;' }, L('RENFORTS DE FAILLE', 'RIFT REINFORCEMENTS')),
+            h('div', { class: 'gr-coop-rule-desc', style: 'font-size: 11px; color: #94a3b8;' }, L('Tes survivants rejoignent le combat de ton allié en direct.', "Your survivors join your ally's battle live."))
           )
         ),
         h(
@@ -2374,8 +2757,8 @@ export function createCoopController(ctx) {
           h(
             'div',
             null,
-            h('div', { style: 'font-weight: 700; color: #eef5f2; font-size: 11.5px; text-transform: uppercase;' }, L("PORTAIL D'ÉCHANGE", 'TRADE PORTAL')),
-            h('div', { style: 'font-size: 11px; color: #94a3b8;' }, L('Échangez des Shards, des Objets et des Héros à tout moment.', 'Trade Shards, Items, and Heroes at any time.'))
+            h('div', { class: 'gr-coop-rule-title', style: 'font-weight: 700; color: #eef5f2; font-size: 11.5px; text-transform: uppercase;' }, L("PORTAIL D'ÉCHANGE", 'TRADE PORTAL')),
+            h('div', { class: 'gr-coop-rule-desc', style: 'font-size: 11px; color: #94a3b8;' }, L('Échangez des Shards, des Objets et des Héros à tout moment.', 'Trade Shards, Items, and Heroes at any time.'))
           )
         ),
         h(
@@ -2385,8 +2768,8 @@ export function createCoopController(ctx) {
           h(
             'div',
             null,
-            h('div', { style: 'font-weight: 700; color: #eef5f2; font-size: 11.5px; text-transform: uppercase;' }, L("RELIQUES D'ESCOUADE", 'SQUAD RELICS')),
-            h('div', { style: 'font-size: 11px; color: #94a3b8;' }, L('Chaque relique obtenue renforce les deux joueurs.', 'Every relic acquired empowers both players.'))
+            h('div', { class: 'gr-coop-rule-title', style: 'font-weight: 700; color: #eef5f2; font-size: 11.5px; text-transform: uppercase;' }, L("RELIQUES D'ESCOUADE", 'SQUAD RELICS')),
+            h('div', { class: 'gr-coop-rule-desc', style: 'font-size: 11px; color: #94a3b8;' }, L('Chaque relique obtenue renforce les deux joueurs.', 'Every relic acquired empowers both players.'))
           )
         )
       );
@@ -2406,11 +2789,11 @@ export function createCoopController(ctx) {
 
         const columns = h(
           'div',
-          { style: 'display: grid; grid-template-columns: 1fr 1fr; gap: 16px;' },
+          { class: 'gr-coop-hub-cols', style: 'display: grid; grid-template-columns: 1fr 1fr; gap: 16px;' },
           // Left: Host Contract
           h(
             'div',
-            { class: 'gr-coop-panel', style: 'justify-content: space-between; min-height: 210px;' },
+            { class: 'gr-coop-panel gr-coop-host-card', style: 'justify-content: space-between; min-height: 210px;' },
             h(
               'div',
               { style: 'display: flex; flex-direction: column; gap: 10px;' },
@@ -2426,7 +2809,7 @@ export function createCoopController(ctx) {
               ),
               h(
                 'div',
-                { style: 'font-size: 12.5px; color: #cbd5e1; line-height: 1.45;' },
+                { class: 'gr-coop-panel-desc', style: 'font-size: 12.5px; color: #cbd5e1; line-height: 1.45;' },
                 L(
                   "Ouvre un contrat Co-Op avec un code à 4 lettres et un QR Code d'invitation directe. Jouable entre PC et iPhone ou entre deux téléphones (Wi-Fi / 4G / 5G).",
                   'Open a Co-Op contract with a 4-letter code and a direct invite QR code. Playable across PC and iPhone or between two phones (Wi-Fi / 4G / 5G).',
@@ -2466,7 +2849,7 @@ export function createCoopController(ctx) {
           // Right: Join Contract
           h(
             'div',
-            { class: 'gr-coop-panel', style: 'justify-content: space-between; min-height: 210px;' },
+            { class: 'gr-coop-panel gr-coop-join-card', style: 'justify-content: space-between; min-height: 210px;' },
             h(
               'div',
               { style: 'display: flex; flex-direction: column; gap: 10px;' },
@@ -2482,7 +2865,7 @@ export function createCoopController(ctx) {
               ),
               h(
                 'div',
-                { style: 'font-size: 12.5px; color: #cbd5e1;' },
+                { class: 'gr-coop-panel-desc', style: 'font-size: 12.5px; color: #cbd5e1;' },
                 L("Saisis le code à 4 caractères affiché sur l'écran de ton partenaire :", "Enter the 4-character code shown on your partner's screen:")
               ),
               h('div', { style: 'display: flex; justify-content: center; padding: 4px 0;' }, codeField)
@@ -2512,6 +2895,7 @@ export function createCoopController(ctx) {
                   res = joinServerlessRoom(cleanCode);
                 }
                 if (res?.ok && res.room) {
+                  if (res.playerId) state.playerId = res.playerId;
                   state.isHost = false;
                   state.code = res.room.code;
                   applyRoomSnapshot(res.room);
@@ -2519,7 +2903,7 @@ export function createCoopController(ctx) {
                 } else {
                   toast(res?.error || L('Salon introuvable', 'Room not found'), 'error');
                 }
-              }, { style: 'width: 240px; height: 46px;' })
+              }, { cls: 'gr-coop-join-btn', style: 'width: 240px; height: 46px;' })
             )
           )
         );
@@ -2531,17 +2915,20 @@ export function createCoopController(ctx) {
       // ---------------- ACTIVE LOBBY ROOM VIEW ----------------
       const room = state.room;
       const playersList = Object.values(room.players || {});
+      const readyPlayersCount = playersList.filter((p) => p.ready || p.isBot).length;
+      const allLobbyReady = playersList.length >= 2 && readyPlayersCount >= playersList.length;
+      const myPlayer = room.players?.[state.playerId];
       const basePath = location.pathname.replace(/\/index\.html$/i, '').replace(/\/$/, '');
       const inviteUrl = `${location.origin}${basePath}/?ios=1&coop=${encodeURIComponent(room.code)}`;
       const qrSrc = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&margin=8&data=${encodeURIComponent(inviteUrl)}`;
 
       const lobbyMainGrid = h(
         'div',
-        { style: 'display: grid; grid-template-columns: 340px 1fr; gap: 16px;' },
+        { class: 'gr-coop-lobby-grid gr-coop-waiting', style: 'display: grid; grid-template-columns: 340px 1fr; gap: 16px;' },
         // Left Column: QR & Room Code Plaque
         h(
           'div',
-          { class: 'gr-coop-panel', style: 'align-items: center; text-align: center; justify-content: space-between;' },
+          { class: 'gr-coop-panel gr-coop-invite-panel', style: 'align-items: center; text-align: center; justify-content: space-between;' },
           h(
             'div',
             { class: 'gr-coop-panel-header', style: 'width: 100%;' },
@@ -2554,17 +2941,17 @@ export function createCoopController(ctx) {
           ),
           h(
             'div',
-            { style: 'padding: 6px; background: #ffffff; border: 2px solid #c5a059; box-shadow: 0 6px 20px rgba(0,0,0,0.6);' },
-            img(qrSrc, { style: 'width: 124px; height: 124px; display: block;', alt: 'QR Invite' })
+            { class: 'gr-coop-qr-wrap', style: 'padding: 6px; background: #ffffff; border: 2px solid #c5a059; box-shadow: 0 6px 20px rgba(0,0,0,0.6);' },
+            img(qrSrc, { class: 'gr-coop-qr-img', style: 'width: 124px; height: 124px; display: block;', alt: 'QR Invite' })
           ),
           h(
             'div',
-            { style: 'width: 100%; display: flex; flex-direction: column; align-items: center; gap: 8px;' },
+            { class: 'gr-coop-code-col', style: 'width: 100%; display: flex; flex-direction: column; align-items: center; gap: 8px;' },
             h('div', { style: 'font-size: 10.5px; color: #94a3b8; font-weight: 700; letter-spacing: 0.1em;' }, L('CODE DU SALON', 'ROOM CODE')),
             h(
               'div',
               {
-                class: 'gr-coop-textbox',
+                class: 'gr-coop-textbox gr-coop-room-code-box',
                 style: 'font-size: 26px; font-weight: 800; letter-spacing: 0.24em; color: #e8d399; padding: 6px 22px; border-color: rgba(197, 160, 89, 0.65);',
               },
               room.code
@@ -2572,16 +2959,16 @@ export function createCoopController(ctx) {
             buildCoopSecondaryBtn(L("COPIER LE LIEN D'INVITATION", 'COPY INVITE LINK'), () => {
               navigator.clipboard?.writeText(inviteUrl);
               toast(L("Lien d'invitation Co-Op copié", 'Co-Op invite link copied'), 'info');
-            }, { style: 'width: 100%; height: 36px;' })
+            }, { cls: 'gr-coop-copy-btn', style: 'width: 100%; height: 36px;' })
           )
         ),
         // Right Column: Squad Slots (Slot 1 & Slot 2) + Start Bar
         h(
           'div',
-          { class: 'gr-coop-panel', style: 'justify-content: space-between;' },
+          { class: 'gr-coop-panel gr-coop-squad-panel', style: 'justify-content: space-between;' },
           h(
             'div',
-            { style: 'display: flex; flex-direction: column; gap: 12px;' },
+            { class: 'gr-coop-slots-col', style: 'display: flex; flex-direction: column; gap: 12px;' },
             h(
               'div',
               { class: 'gr-coop-panel-header' },
@@ -2602,12 +2989,14 @@ export function createCoopController(ctx) {
               const p = playersList[idx];
               const portraitHeroId = idx === 0 ? 1 : 2;
               if (p) {
+                const isReady = Boolean(p.ready || p.isBot);
+                const isMe = p.id === state.playerId;
                 return h(
                   'div',
-                  { class: 'gr-coop-slot-card is-ready' },
+                  { class: `gr-coop-slot-card ${isReady ? 'is-ready' : ''}` },
                   h(
                     'div',
-                    { style: 'display: flex; align-items: center; gap: 14px;' },
+                    { style: 'display: flex; align-items: center; gap: 14px; min-width: 0;' },
                     h(
                       'div',
                       { class: 'gr-coop-medallion' },
@@ -2617,7 +3006,7 @@ export function createCoopController(ctx) {
                     ),
                     h(
                       'div',
-                      null,
+                      { style: 'min-width: 0;' },
                       h(
                         'div',
                         { style: 'font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; color: #c5a059; text-transform: uppercase;' },
@@ -2626,15 +3015,24 @@ export function createCoopController(ctx) {
                           `SLOT 0${idx + 1} · ${p.isHost ? 'CONTRACT HOST' : p.isBot ? 'AI PARTNER' : 'TEAMMATE'}`,
                         )
                       ),
-                      h('div', { style: 'font-size: 16px; font-weight: 700; color: #eef5f2; margin-top: 2px;' }, p.name)
+                      h('div', { style: 'font-size: 16px; font-weight: 700; color: #eef5f2; margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;' }, p.name)
                     )
                   ),
                   h(
-                    'div',
+                    'button',
                     {
-                      style: 'padding: 4px 12px; border: 1px solid rgba(74, 222, 128, 0.55); background: rgba(22, 101, 52, 0.25); color: #4ade80; font-size: 11px; font-weight: 800; letter-spacing: 0.08em;',
+                      type: 'button',
+                      class: 'gr-coop-ready-pill',
+                      style: isReady
+                        ? 'padding: 4px 12px; border: 1px solid rgba(74, 222, 128, 0.55); background: rgba(22, 101, 52, 0.25); color: #4ade80; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; cursor: pointer; flex-shrink: 0;'
+                        : 'padding: 4px 12px; border: 1px solid rgba(251, 191, 36, 0.55); background: rgba(120, 53, 15, 0.25); color: #fbbf24; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; cursor: pointer; flex-shrink: 0;',
+                      onclick: () => {
+                        if (!isMe || p.isBot) return;
+                        audio.playSfx('ui.click');
+                        sendAction({ type: 'LOBBY_READY', ready: !isReady });
+                      },
                     },
-                    L('PRÊT', 'READY')
+                    isReady ? L('PRÊT ✓', 'READY ✓') : L('NON PRÊT', 'NOT READY')
                   )
                 );
               }
@@ -2643,7 +3041,7 @@ export function createCoopController(ctx) {
                 { class: 'gr-coop-slot-card' },
                 h(
                   'div',
-                  { style: 'display: flex; align-items: center; gap: 14px;' },
+                  { style: 'display: flex; align-items: center; gap: 14px; min-width: 0;' },
                   h(
                     'div',
                     { class: 'gr-coop-medallion', style: 'opacity: 0.45;' },
@@ -2651,7 +3049,7 @@ export function createCoopController(ctx) {
                   ),
                   h(
                     'div',
-                    null,
+                    { style: 'min-width: 0;' },
                     h('div', { style: 'font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; color: #94a3b8;' }, L('EMPLACEMENT 02 · PARTENAIRE', 'SLOT 02 · PARTNER')),
                     h('div', { style: 'font-size: 13px; color: #64748b; margin-top: 2px;' }, L("En attente d'un joueur ou d'un allié IA...", 'Waiting for a player or AI ally...'))
                   )
@@ -2659,26 +3057,39 @@ export function createCoopController(ctx) {
                 buildCoopSecondaryBtn(L('+ BOT ALLIÉ IA (ARIA)', '+ AI ALLY BOT (ARIA)'), () => {
                   audio.playSfx('ui.click');
                   sendAction({ type: 'ADD_BOT', botName: L('Aria (Bot Allié)', 'Aria (AI Ally)') });
-                }, { icon: `${MAP}/FightRoom.png`, style: 'height: 38px;' })
+                }, { cls: 'gr-coop-add-bot-btn', icon: `${MAP}/FightRoom.png`, style: 'height: 38px;' })
               );
             })
           ),
           // Bottom Action Row inside Squad Panel
           h(
             'div',
-            { style: 'display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid rgba(175, 190, 185, 0.22);' },
+            { class: 'gr-coop-lobby-actions', style: 'display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid rgba(175, 190, 185, 0.22); gap: 10px;' },
             buildCoopSecondaryBtn(L('QUITTER LE SALON', 'LEAVE ROOM'), () => {
               audio.playSfx('ui.click');
               state.room = null;
               state.code = null;
               renderLobbyBody();
-            }),
+            }, { cls: 'gr-coop-leave-btn' }),
             buildCoopPrimaryBtn(
-              playersList.length >= 2
-                ? L('LANCER LA PARTIE CO-OP (2/2)', 'START CO-OP RUN (2/2)')
-                : L("EN ATTENTE D'UN ALLIÉ (1/2)", 'WAITING FOR ALLY (1/2)'),
+              playersList.length < 2
+                ? L("EN ATTENTE D'UN ALLIÉ (1/2)", 'WAITING FOR ALLY (1/2)')
+                : myPlayer && !myPlayer.ready
+                  ? L('JE SUIS PRÊT ✓ (VALIDER)', 'I AM READY ✓ (CONFIRM)')
+                  : !allLobbyReady
+                    ? L(`ATTENTE ALLIÉ (${readyPlayersCount}/2 PRÊTS)`, `WAITING ALLY (${readyPlayersCount}/2 READY)`)
+                    : L('LANCER LA PARTIE CO-OP (2/2)', 'START CO-OP RUN (2/2)'),
               () => {
                 if (playersList.length < 2) return;
+                if (myPlayer && !myPlayer.ready) {
+                  audio.playSfx('ui.click');
+                  sendAction({ type: 'LOBBY_READY', ready: true });
+                  return;
+                }
+                if (!allLobbyReady) {
+                  toast(L('En attente que tous les joueurs soient prêts...', 'Waiting for all players to be ready...'), 'info');
+                  return;
+                }
                 audio.playSfx('battleStart');
                 sendAction({
                   type: 'START_COOP_RUN',
@@ -2689,7 +3100,8 @@ export function createCoopController(ctx) {
                 startSynchronizedCoopRun(room.difficulty ?? 6, room.seed);
               },
               {
-                disabled: playersList.length < 2,
+                cls: 'gr-coop-start-run-btn',
+                disabled: playersList.length < 2 || (myPlayer?.ready && !allLobbyReady),
                 icon: `${MAP}/FightRoom.png`,
                 style: 'width: 300px; height: 52px;',
               }
@@ -2757,6 +3169,7 @@ export function createCoopController(ctx) {
         .then((res) => {
           const finalRes = res?.ok && res.room ? res : joinServerlessRoom(initialJoinCode.toUpperCase());
           if (finalRes?.ok && finalRes.room) {
+            if (finalRes.playerId) state.playerId = finalRes.playerId;
             state.isHost = false;
             state.code = finalRes.room.code;
             applyRoomSnapshot(finalRes.room);
@@ -2775,6 +3188,8 @@ export function createCoopController(ctx) {
     syncLocalStateToRoom,
     onBattleStart,
     onBattleEnd,
+    requestRoundStart,
+    getRoundReadyUI,
     voteCrossroads(gateIndex) {
       if (!state.active) return;
       sendAction({ type: 'CROSSROADS_VOTE', gateIndex });
